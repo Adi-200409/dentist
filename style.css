@@ -148,7 +148,119 @@ section{
 }
 
 /*about section styling*/
-
+.ezy__about13 {
+    /* Bootstrap variables */
+    --bs-body-color: #1e2329;
+    --bs-body-bg: rgb(255, 255, 255);
+  
+    /* Easy Frontend variables */
+    --ezy-theme-color: rgb(13, 110, 253);
+    --ezy-theme-color-rgb: 13, 110, 253;
+  
+    background-color: var(--bs-body-bg);
+    color: var(--bs-body-color);
+    overflow: hidden;
+    padding: 60px 0;
+    position: relative;
+  }
+  @media (min-width: 768px) {
+    .ezy__about13 {
+      padding: 100px 0;
+    }
+  }
+  
+  /* Gray Block Style */
+  .gray .ezy__about13,
+  .ezy__about13.gray {
+    /* Bootstrap variables */
+    --bs-body-bg: rgb(246, 246, 246);
+  }
+  
+  /* Dark Gray Block Style */
+  .dark-gray .ezy__about13,
+  .ezy__about13.dark-gray {
+    /* Bootstrap variables */
+    --bs-body-color: #ffffff;
+    --bs-body-bg: rgb(30, 39, 53);
+  }
+  
+  /* Dark Block Style */
+  .dark .ezy__about13,
+  .ezy__about13.dark {
+    /* Bootstrap variables */
+    --bs-body-color: #ffffff;
+    --bs-body-bg: rgb(11, 23, 39);
+  }
+  
+  .ezy__about13-heading {
+    font-size: 35px;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+  @media (min-width: 768px) {
+    .ezy__about13-heading {
+      font-size: 55px;
+    }
+  }
+  
+  .ezy__about13-sub-heading {
+    font-size: 17px;
+    line-height: 1.5;
+    opacity: 0.75;
+  }
+  
+  .ezy__about13-divider {
+    width: 100px;
+    height: 3px !important;
+    color: var(--bs-body-color);
+    opacity: 1;
+  }
+  .ezy__about13 img {
+    transform: rotate(45deg);
+    position: relative;
+    top: 60px;
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+  }
+  .ezy__about13-img2 {
+    top: -400px;
+    left: 300px !important;
+    position: absolute !important;
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .ezy__about13-img2 {
+      display: block;
+    }
+  }
+  
+  @media (min-width: 991px) {
+    .ezy__about13 img {
+      transform: rotate(45deg);
+      position: relative;
+      left: 100px;
+      width: 400px;
+      height: 400px;
+      object-fit: cover;
+    }
+    .ezy__about13-img2 {
+      top: 0px !important;
+      left: 100px !important;
+      position: relative !important;
+    }
+  }
+  
+  .ezy__about13-bg-holder {
+    width: 36vw;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(var(--ezy-theme-color-rgb), 0.3);
+    float: left;
+  }
+/* 
 .container_about {
     max-width: 800px;
     margin: auto;
@@ -156,32 +268,28 @@ section{
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
 }
-
-/* Animations */
+*/
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
-.about h2, .about h3 ,.about p ,.about ul{
-    animation: fadeIn 1s ease-in-out;
-}
-.about ul{
+
+  ul{
     list-style: none;
     padding: 0;
     margin: 0;
     font-size: 13px;
-}
-.about h3{
+} 
+ h3{
     font-size: 20px;
     
 }
-.about p{
+ p{
     font-size: 15px;
     
 }
 
-/* Hover Effects */
 blockquote {
     background: #c1efef;
     padding: 15px;
@@ -193,7 +301,7 @@ blockquote {
 
 blockquote:hover {
     transform: scale(1.05);
-}
+} 
 
 /*services styling starts*/
 /* .services{
@@ -527,7 +635,7 @@ blockquote:hover {
     background-color: rgba(var(--ezy-theme-color-rgb), 0.9);
   }
 /*reviews section styling*/
-.reviews  {
+/* .reviews  {
     font-size: 2.5rem;
     color: #0077b6;
     margin-bottom: 30px;
@@ -584,8 +692,112 @@ blockquote:hover {
 
 .reviews img{
     object-fit: cover;
-}
-
+} */
+.ezy__testimonial23 {
+    /* Bootstrap variables */
+    --bs-body-color: #28303b;
+    --bs-body-bg: rgb(255, 255, 255);
+  
+    /* Easy Frontend variables */
+    --ezy-theme-color: rgb(13, 110, 253);
+    --ezy-theme-color-rgb: 13, 110, 253;
+    --ezy-card-bg: #ffffff;
+    --ezy-card-box-shadow: 0px 6px 44px rgba(173, 174, 197, 0.2);
+  
+    background-color: var(--bs-body-bg);
+    color: var(--bs-body-color);
+    overflow: hidden;
+    position: relative;
+    padding: 60px 0;
+  }
+  
+  @media (min-width: 768px) {
+    .ezy__testimonial23 {
+      padding: 100px 0;
+    }
+  }
+  
+  /* Gray Block Style */
+  .gray .ezy__testimonial23,
+  .ezy__testimonial23.gray {
+    /* Bootstrap variables */
+    --bs-body-bg: rgb(246, 246, 246);
+  
+    /* Easy Frontend variables */
+    --ezy-card-bg: #fff;
+  }
+  
+  /* Dark Gray Block Style */
+  .dark-gray .ezy__testimonial23,
+  .ezy__testimonial23.dark-gray {
+    /* Bootstrap variables */
+    --bs-body-color: #ffffff;
+    --bs-body-bg: rgb(30, 39, 53);
+  
+    /* Easy Frontend variables */
+    --ezy-card-bg: rgb(30, 39, 53);
+    --ezy-card-box-shadow: 0px 6px 44px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Dark Block Style */
+  .dark .ezy__testimonial23,
+  .ezy__testimonial23.dark {
+    /* Bootstrap variables */
+    --bs-body-color: #ffffff;
+    --bs-body-bg: rgb(11, 23, 39);
+  
+    /* Easy Frontend variables */
+    --ezy-card-bg: rgb(11, 23, 39);
+    --ezy-card-box-shadow: 0px 6px 44px rgba(0, 0, 0, 0.2);
+  }
+  
+  .ezy__testimonial23-heading {
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 1.5;
+  }
+  .ezy__testimonial23-sub-heading {
+    opacity: 0.8;
+    font-size: 18px;
+    line-height: 1.7;
+  }
+  
+  /* shapes */
+  .ezy__testimonial23-shape-one {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  .ezy__testimonial23-shape-two {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  
+  .ezy__testimonial23-item {
+    background-color: var(--ezy-card-bg);
+    box-shadow: var(--ezy-card-box-shadow);
+  }
+  
+  /* indicators */
+  .ezy__testimonial23 .carousel-indicators {
+    margin: 0;
+    bottom: -50px;
+  }
+  
+  .ezy__testimonial23 .carousel-indicators button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--bs-body-color);
+    opacity: 0.2;
+  }
+  
+  .ezy__testimonial23 .carousel-indicators button.active {
+    background-color: rgba(var(--ezy-theme-color-rgb), 1) !important;
+    color: rgba(var(--ezy-theme-color-rgb), 1) !important;
+    opacity: 1;
+  }
 /*contact styling*/
 .contact form{
     border-radius: .5rem;
