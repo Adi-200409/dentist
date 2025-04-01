@@ -23,7 +23,17 @@
     animation: fadeIn 1s ease-in-out;
 
 }
+.color{
+  color: #00b8b8;
+  font-size: 2.5rem;
+}
 
+.margin{
+  margin-right: 153px;
+}
+.size{
+  font-size: 15px;
+}
 ::-webkit-scrollbar{
     height: .5rem;
     width: 1rem;
@@ -255,20 +265,15 @@ section{
     width: 36vw;
     position: absolute;
     top: 0;
-    right: 0;
+    right:-150px;
     bottom: 0;
     background-color: rgba(var(--ezy-theme-color-rgb), 0.3);
     float: left;
   }
-/* 
-.container_about {
-    max-width: 800px;
-    margin: auto;
-    padding: 20px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-}
-*/
+  .position-relative img{
+    margin-left: 103px;
+  }
+
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
@@ -839,6 +844,189 @@ blockquote:hover {
     cursor: pointer;
     margin: auto;
 }
+/* Contact */
+<section class="ezy__contact13 dark-gray" id="ezy__contact13"
+	style="background-image: url(https://cdn.easyfrontend.com/pictures/contact/contact13.jpg)">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-sm-10 col-md-8">
+				<div class="form-body">
+					<div class="row">
+						<div class="col-12 text-center pb-5">
+							<h3 class="ezy__contact13-heading">Contact Us</h3>
+							<p class="ezy__contact13-sub-heading pt-2 pb-4">
+								Lorem ipsum dolor sit amet consectetur.
+							</p>
+						</div>
+
+						<form id="ezy__contact13-form" class="ezy__contact13-single-form row" action="">
+							<div class="form-group col-12 col-md-6">
+								<input class="ezy__contact13-contact-name form-control" type="text" name="name"
+									placeholder="FULL NAME" />
+							</div>
+							<div class="form-group col-12 col-md-6">
+								<input class="ezy__contact13-contact-email form-control" type="text" name="email"
+									placeholder="EMAIL" />
+							</div>
+							<div class="form-group col-12">
+								<textarea class="ezy__contact13-contact-message form-control" name="message"
+									placeholder="MESSAGE" rows="5"></textarea>
+							</div>
+
+							<div class="col-12">
+								<div class="text-center mt-4">
+									<button class="btn ezy__contact13-btn">SEND MESSAGE</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+.ezy__contact13 {
+  --bs-body-color: #212529;
+  --bs-body-bg: #f6f6f6;
+
+  /* Easy Frontend variables */
+  --ezy-theme-color: rgb(13, 110, 253);
+  --ezy-theme-color-rgb: 13, 110, 253;
+  --ezy-form-bg: rgba(255, 255, 255, 0.7);
+  --ezy-border-color: rgba(0, 0, 0, 0.3);
+  --ezy-btn-bg: #00bfa5;
+  --ezy-border-color-hover: #00bfa5;
+
+  background-color: var(--bs-body-bg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: initial;
+  background-repeat: no-repeat;
+  padding: 100px 0;
+}
+
+/* Gray Block Style */
+.gray .ezy__contact13,
+.ezy__contact13.gray {
+  /* Bootstrap variables */
+  --bs-body-bg: rgb(246, 246, 246);
+  --ezy-content-color: #f6f6f6;
+
+  /* Easy Frontend variables */
+  --ezy-form-bg: rgba(246, 246, 246, 0.7);
+}
+
+/* Dark Gray Block Style */
+.dark-gray .ezy__contact13,
+.ezy__contact13.dark-gray {
+  /* Bootstrap variables */
+  --bs-body-color: #ffffff;
+  --bs-body-bg: rgb(30, 39, 53);
+
+  /* Easy Frontend variables */
+  --ezy-form-bg: rgba(30, 39, 53, 0.4);
+  --ezy-border-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Dark Block Style */
+.dark .ezy__contact13,
+.ezy__contact13.dark {
+  /* Bootstrap variables */
+  --bs-body-color: #ffffff;
+  --bs-body-bg: rgb(11, 23, 39);
+
+  /* Easy Frontend variables */
+  --ezy-form-bg: rgba(11, 23, 39, 0.4);
+  --ezy-border-color: rgba(255, 255, 255, 0.9);
+}
+
+.ezy__contact13-heading {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--bs-body-color);
+}
+
+@media (min-width: 768px) {
+  .ezy__contact13-heading {
+    font-size: 45px;
+  }
+}
+
+.ezy__contact13-sub-heading {
+  font-size: 17px;
+  color: var(--bs-body-color);
+  line-height: 1.5;
+  opacity: 0.8;
+}
+
+.ezy__contact13 .form-body {
+  display: inline-block;
+  background-color: var(--ezy-form-bg);
+  padding: 100px 75px;
+  backdrop-filter: blur(9px);
+}
+
+.ezy__contact13-single-form .form-control::-webkit-input-placeholder {
+  color: var(--bs-body-color) !important;
+  opacity: 0.9;
+}
+
+.ezy__contact13-single-form .form-control:focus {
+  border-bottom-color: var(--ezy-border-color-hover);
+}
+
+.ezy__contact13-single-form .form-control {
+  height: 54px;
+  border: 0;
+  border-bottom: 2px solid var(--ezy-border-color);
+  border-radius: 0;
+  padding: 0;
+  box-shadow: var(--ezy-box-shadow);
+  font-size: 15px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  background-color: transparent;
+  color: var(--bs-body-color);
+  margin-bottom: 30px;
+  transition: all 0.4s ease-out;
+}
+
+.ezy__contact13-single-form .form-control::-webkit-input-placeholder {
+  color: var(--bs-body-color) !important;
+  opacity: 0.8;
+}
+
+.ezy__contact13-single-form .form-control:focus {
+  border-color: var(--ezy-theme-color);
+}
+
+.ezy__contact13-single-form textarea {
+  height: 180px !important;
+}
+
+.ezy__contact13-single-form .form-group {
+  margin: 0px;
+}
+
+.ezy__contact13-btn {
+  font-size: 16px;
+  padding: 13px 45px;
+  min-width: 200px;
+  border-radius: 0;
+  color: #fff;
+  background-color: var(--ezy-theme-color);
+  border-color: var(--ezy-theme-color);
+}
+
+.ezy__contact13-btn:hover {
+  color: #fff;
+  background-color: rgba(var(--ezy-theme-color-rgb), 0.9);
+  border-color: rgba(var(--ezy-theme-color-rgb), 0.9);
+}
+
 /*footer styling*/
 
 .ezy__footer15 {
