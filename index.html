@@ -35,15 +35,17 @@ include "./conn.php";
 
           <nav class="nav">
             <a href="#home">home</a>
-            <a href="#about">about</a>
+            <a href="#ezy__about13">about</a>
             <a href="#services">services</a>
-            <a href="#reviews">reviews</a>
-            <a href="#contact">contact</a>
+            <a href="#treatment">Treatment</a>
+            <a href="#ezy__contact13">contact</a>
           </nav>
 
           <!-- <a href="" class="link-btn">Emergency call</a> -->
           <div class="nav-btn">
-
+            <button class="btn_nav">
+              <span>Emergency</span>
+          </button>
           </div>
           <div id="menu-btn" class="fas fa-bars"></div>
         </div>
@@ -206,7 +208,7 @@ include "./conn.php";
           <div class="col-12 col-lg-6">
             <div class="ezy__about13-bg-holder"></div>
             <div class="position-relative">
-              <img src="img/general-dentistry-img.jpeg" alt class="img-fluid" />
+              <img src="img/images (1).jpeg" alt class="img-fluid" />
               <img
                 src="img/0170678001639425089.jpg"
                 alt
@@ -217,7 +219,7 @@ include "./conn.php";
       </div>
     </section>
 
-    <section class="ezy__service20 light">
+    <section class="ezy__service20 light" id="services">
       <!-- shape one -->
       <svg
         class="ezy__service20-shape-one position-absolute"
@@ -629,12 +631,14 @@ include "./conn.php";
             <input type="submit" value="make appointment" name="appointment" class="link-btn">
         </form>
     </section> -->
+
+    <!-- appointment -->
     <section class="contact" id="contact">
       <h1 class="heading">Our Appointment</h1>
       <section class="appointment">
-        <div class="contact">
+        <div class="contact ">
           <h2 class="text">Book an Appointment</h2>
-          <form id="appointmentForm">
+          <form id="appointmentForm" class="">
             <div class="form-group">
               <label for="name">Full Name</label>
               <input type="text" id="name" name="name" class="box"
@@ -670,7 +674,7 @@ include "./conn.php";
               <textarea id="message" name="message" rows="4"
                 class="box"></textarea>
             </div>
-            <button class="button" type="submit">Book Now</button>
+            <button class="button" id="submit" type="submit">Book Now</button>
           </form>
         </div>
       </section>
@@ -767,6 +771,9 @@ include "./conn.php";
             <h5 class="mb-3">Menu</h5>
             <ul class="nav flex-column ezy__footer15-quick-links size">
               <li>
+                <a href="#!">Home</a>
+              </li>
+              <li>
                 <a href="#!">About</a>
               </li>
               <li>
@@ -775,6 +782,11 @@ include "./conn.php";
               <li>
                 <a href="#!">Process</a>
               </li>
+            </ul>
+          </div>
+          <div class="col-sm-6 col-lg-2 mt-4 mt-lg-0">
+            <h5 class="mb-3">Menu</h5>
+            <ul class="nav flex-column ezy__footer15-quick-links size">
               <li>
                 <a href="#!">Treatment</a>
               </li>

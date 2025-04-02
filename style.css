@@ -101,7 +101,46 @@ section{
 .header .nav a:hover{
     color: #00b8b8;
 }
+.btn_nav {
+  background: #fff;
+  border: none;
+  padding: 10px 20px;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 600;
+  width: 120px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transform: skew(-21deg);
+}
 
+.btn_nav span {
+  display: inline-block;
+  transform: skew(21deg);
+}
+
+ button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 100%;
+  left: 0;
+  background: rgb(20, 20, 20);
+  opacity: 0;
+  z-index: -1;
+  transition: all 0.5s;
+}
+
+button:hover {
+  color: #fff;
+}
+
+button:hover::before {
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
 .link-btn{
     display: inline-block;
     padding: 1rem 3rem;
@@ -132,9 +171,7 @@ section{
     background-size: cover;
     background-position: center;
 }
-.home_dis {
-    
-}
+
 .home .content{
     width: 50rem;
     backdrop-filter: blur(5px);
@@ -491,7 +528,7 @@ blockquote:hover {
 }
 
 #search:focus {
-    border-color: #007bff;
+    border-color: #00b8b8;
     outline: none;
 }
 
@@ -503,12 +540,13 @@ blockquote:hover {
 }
 
 #treatmentsTable thead {
-    background: #007bff;
+    background: #00b8b8;
     color: white;
 }
 
 #treatmentsTable th, 
 #treatmentsTable td {
+  font-size: 13px;
     padding: 12px;
     text-align: left;
     border-bottom: 1px solid #ddd;
@@ -807,6 +845,7 @@ blockquote:hover {
 .contact form{
     border-radius: .5rem;
     background-color:#eee ;
+    
     padding: 2rem;
     margin: 0 auto;
     max-width: 80rem;
@@ -845,54 +884,14 @@ blockquote:hover {
     margin: auto;
 }
 /* Contact */
-<section class="ezy__contact13 dark-gray" id="ezy__contact13"
-	style="background-image: url(https://cdn.easyfrontend.com/pictures/contact/contact13.jpg)">
-	<div class="container">
-		<div class="row justify-content-center">
-			<div class="col-sm-10 col-md-8">
-				<div class="form-body">
-					<div class="row">
-						<div class="col-12 text-center pb-5">
-							<h3 class="ezy__contact13-heading">Contact Us</h3>
-							<p class="ezy__contact13-sub-heading pt-2 pb-4">
-								Lorem ipsum dolor sit amet consectetur.
-							</p>
-						</div>
 
-						<form id="ezy__contact13-form" class="ezy__contact13-single-form row" action="">
-							<div class="form-group col-12 col-md-6">
-								<input class="ezy__contact13-contact-name form-control" type="text" name="name"
-									placeholder="FULL NAME" />
-							</div>
-							<div class="form-group col-12 col-md-6">
-								<input class="ezy__contact13-contact-email form-control" type="text" name="email"
-									placeholder="EMAIL" />
-							</div>
-							<div class="form-group col-12">
-								<textarea class="ezy__contact13-contact-message form-control" name="message"
-									placeholder="MESSAGE" rows="5"></textarea>
-							</div>
 
-							<div class="col-12">
-								<div class="text-center mt-4">
-									<button class="btn ezy__contact13-btn">SEND MESSAGE</button>
-								</div>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-
-<style>
-.ezy__contact13 {
+/* .ezy__contact13 {
   --bs-body-color: #212529;
-  --bs-body-bg: #f6f6f6;
+  --bs-body-bg: #f6f6f6; */
 
   /* Easy Frontend variables */
-  --ezy-theme-color: rgb(13, 110, 253);
+  /* --ezy-theme-color: rgb(13, 110, 253);
   --ezy-theme-color-rgb: 13, 110, 253;
   --ezy-form-bg: rgba(255, 255, 255, 0.7);
   --ezy-border-color: rgba(0, 0, 0, 0.3);
@@ -905,7 +904,7 @@ blockquote:hover {
   background-attachment: initial;
   background-repeat: no-repeat;
   padding: 100px 0;
-}
+} */
 
 /* Gray Block Style */
 .gray .ezy__contact13,
