@@ -119,7 +119,7 @@ section{
   transform: skew(21deg);
 }
 
-button::before {
+.btn_nav::before {
   content: '';
   position: absolute;
   top: 0;
@@ -132,11 +132,11 @@ button::before {
   transition: all 0.5s;
 }
 
-button:hover {
+.btn_nav:hover {
   color: #ff0101;
 }
 
-button:hover::before {
+.btn_nav:hover::before {
   left: 0;
   right: 0;
   opacity: 1;
@@ -884,6 +884,176 @@ blockquote:hover {
     align-items: center;
     cursor: pointer;
     margin: auto;
+}
+
+/* appointment-details */
+.appointment-details
+{
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);  
+  margin: auto;
+  padding: 10px;
+    height: 320px;
+    backdrop-filter: blur(9px);
+    border-radius: 2px;
+    width: 70%;
+}
+.appointment-details h2{
+    font-size: 2.5rem;
+    color: #00b8b8;
+    padding: 1rem 0;
+    text-align: center;
+}
+ .cancal_btn {
+  width: 100px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgb(20, 20, 20);
+  border: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
+  cursor: pointer;
+  transition-duration: .3s;
+  overflow: hidden;
+  position: relative;
+}
+
+ .svgIcon {
+  width: 12px;
+  transition-duration: .3s;
+}
+
+ .svgIcon path {
+  fill: white;
+}
+
+ .cancal_btn:hover {
+  width: 140px;
+  border-radius: 50px;
+  transition-duration: .3s;
+  background-color: rgb(255, 69, 69);
+  align-items: center;
+}
+
+.cancal_btn:hover .svgIcon {
+  width: 50px;
+  transition-duration: .3s;
+  transform: translateY(60%);
+}
+
+.cancal_btn::before {
+  position: absolute;
+  top: -20px;
+  content: "Cancel Appointment";
+  color: rgb(0, 0, 0);
+  transition-duration: .3s;
+  font-size: 2px;
+}
+
+.cancal_btn:hover::before {
+  font-size: 13px;
+  opacity: 1;
+  transform: translateY(30px);
+  transition-duration: .3s;
+}
+
+/* custom alrt */
+:root {
+  --bg-clr: #fecaca;
+  --border-clr: #fca5a5;
+}
+
+.alert-container {
+  position: fixed;
+  top: 80px;
+  right: 50px;
+  min-width: 200px;
+}
+
+.alert-container div {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  background-color: var(--bg-clr);
+  border: 1px solid var(--border-clr);
+  padding: 8px 20px 8px 8px;
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  animation: animate 0.25s linear 1s;
+}
+
+@keyframes animate {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.alert-message {
+  font-size: 14px;
+  font-weight: 600;
+}
+.close-btn {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.close-btn svg {
+  width: 12px;
+  height: 12px;
+  font-weight: 500;
+}
+
+/* custom confirm */
+.confirm-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: none;
+  text-align: center;
+  z-index: 1000;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 999;
+}
+.buttons {
+  margin-top: 15px;
+}
+.btn {
+  padding: 8px 15px;
+  margin: 5px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.btn-confirm {
+  background-color: green;
+  color: white;
+}
+.btn-cancel {
+  background-color: red;
+  color: white;
 }
 /* Contact */
 /* Gray Block Style */
