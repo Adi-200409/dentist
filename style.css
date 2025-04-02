@@ -119,7 +119,7 @@ section{
   transform: skew(21deg);
 }
 
- button::before {
+button::before {
   content: '';
   position: absolute;
   top: 0;
@@ -133,7 +133,7 @@ section{
 }
 
 button:hover {
-  color: #fff;
+  color: #ff0101;
 }
 
 button:hover::before {
@@ -141,20 +141,21 @@ button:hover::before {
   right: 0;
   opacity: 1;
 }
-.link-btn{
-    display: inline-block;
-    padding: 1rem 3rem;
-    border-radius: .5rem;
-    background-color: #00b8b8;
-    cursor: pointer;
-    font-size: 1.7rem;
-    color: white;
+.btn_nav a{
+  color: #000000;
+}
+.btn_nav a:hover{
+    color: #00b8b8;
+    text-decoration: none;
+}
+.btns button{
+  width: 210px;
 }
 
-.link-btn:hover{
-    background-color: black;
-    color:white ;
-    text-decoration: none;
+.btns{
+  display: flex;
+  gap: 2rem;
+
 }
 
 
