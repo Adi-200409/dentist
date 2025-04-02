@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Dental Call</title>
+    <link rel="shortcut icon" href="images/Emergency-logo-removebg-preview.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: url(images/Emergency1.jpg) no-repeat;
+    background-size: 100vw 100vh;
+    background-color: #e5ebeb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.emg{
+    animation: fadeInUp 1s ease-out forwards;
+
+}
+/* Emergency Container */
+.emergency-container {
+    width: 100%;
+    max-width: 500px;
+    background-image:url(https://moulanahospital.com/wp-content/uploads/2021/05/Endodontis-pedodontis-orthodontis-dental-surgery.jpg);
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    padding: 30px;
+    text-align: center;
+    animation: pulse 2s infinite;
+}
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes pulse {
+    0%, 100% { box-shadow: 0 0 15px rgba(9, 9, 9, 0.5); }
+    50% { box-shadow: 0 0 30px rgba(16, 15, 15, 0.8); }
+}
+
+.emergency-container h2 {
+    color: #0a021c;
+    margin-bottom: 10px;
+}
+
+.emergency-container p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* Call Now Button */
+.call-now-btn {
+    display: inline-block;
+    background-color: #020303;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.call-now-btn:hover {
+    background-color: #178fa2;
+}
+
+/* Form Styles */
+form {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.input-group input,
+.input-group textarea,
+.input-group select {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus,
+.input-group textarea:focus,
+.input-group select:focus {
+    border-color: #2287df;
+    outline: none;
+}
+
+.submit-btn {
+    width: 100%;
+    background-color: #131716;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #1a86a7;
+}
+
+/* Alert Message */
+#alertMessage {
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+#alertMessage.success {
+    color: #1d052e;
+}
+
+#alertMessage.error {
+    color: #660d0d;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .emergency-container {
+        padding: 20px;
+    }
+}
+
+
+    </style>
+</head>
+<body>
+<div class="emg">
+    <!-- Emergency Call Section -->
+    <div class="emergency-container">
+        <h2>Dental Emergency?</h2>
+        <p>We’re here to help. Call now or fill out the form for immediate attention.</p>
+        
+        <!-- Immediate Call Button -->
+        <a href="tel:+91 9148074307" class="call-now-btn">📞 Call Now</a>
+
+        <!-- Emergency Form -->
+        <form id="emergencyForm" method="post" action="emer.php">
+            <div class="input-group">
+                <label for="name">Full Name*</label>
+                <input type="text" id="name" placeholder="Enter your full name" name="name" required>
+            </div>
+
+            <div class="input-group">
+                <label for="phone">Phone Number*</label>
+                <input type="tel" id="phone" placeholder="Enter your contact number"  name="phone" required>
+            </div>
+
+            <div class="input-group">
+                <label for="issue">Describe the Issue*</label>
+                <textarea id="issue" rows="4" placeholder="Briefly explain the dental emergency" name="message" required></textarea>
+            </div>
+
+            <div class="input-group">
+                <label for="urgency">Urgency Level*</label>
+                <select id="urgency"  name="urgency"required>
+                    <option value="" disabled selected>Select urgency</option>
+                    <option value="Severe Pain">Severe Pain</option>
+                    <option value="Broken Tooth">Broken Tooth</option>
+                    <option value="Bleeding">Bleeding</option>
+                    <option value="Swelling">Swelling</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <button type="submit" class="submit-btn" name="submit">Request Immediate Help</button>
+        </form>
+
+        <!-- Success/Alert Message -->
+        <div id="alertMessage"></div>
+    </div>
+</div>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("emergencyForm");
+    const alertMessage = document.getElementById("alertMessage");
+
+    form.addEventListener("submit", (e) => {
+        e.preventDefault(); // Prevent form from submitting immediately
+
+        // Get form values
+        const name = document.getElementById("name").value.trim();
+        const phone = document.getElementById("phone").value.trim();
+        const issue = document.getElementById("issue").value.trim();
+        const urgency = document.getElementById("urgency").value;
+
+        // Validate Name (Only Letters & Spaces)
+        const nameRegex = /^[A-Za-z\s]+$/;
+        if (!name || !nameRegex.test(name)) {
+            showAlert("❌ Please enter a valid full name (letters only).", "error");
+            return;
+        }
+
+        // Validate Phone Number (10-digit format)
+        const phoneRegex = /^[6-9]\d{9}$/; // Assumes Indian numbers starting with 6-9
+        if (!phone || !phoneRegex.test(phone)) {
+            showAlert("❌ Please enter a valid 10-digit phone number.", "error");
+            return;
+        }
+
+        // Validate Issue (Should not be empty)
+        if (!issue || issue.length < 5) {
+            showAlert("❌ Please describe your issue (at least 5 characters).", "error");
+            return;
+        }
+
+        // Validate Urgency Selection
+        if (!urgency) {
+            showAlert("❌ Please select an urgency level.", "error");
+            return;
+        }
+
+        // If all validations pass, submit the form
+        setTimeout(() => {
+            showAlert("🚑 Emergency request sent! We will contact you ASAP.", "success");
+            form.reset(); // Clear form after success
+        }, 1000);
+    });
+
+    function showAlert(message, type) {
+        alertMessage.textContent = message;
+        alertMessage.className = type;
+        setTimeout(() => {
+            alertMessage.textContent = "";
+        }, 5000);
+    }
+});
+
+    </script>
+</body>
+</html>

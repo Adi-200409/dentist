@@ -844,9 +844,10 @@ blockquote:hover {
   }
 /*contact styling*/
 .contact form{
+  backdrop-filter: blur(9px);
+  /* background-color: var(--ezy-form-bg); */
     border-radius: .5rem;
     background-color:#eee ;
-    
     padding: 2rem;
     margin: 0 auto;
     max-width: 80rem;
@@ -885,28 +886,6 @@ blockquote:hover {
     margin: auto;
 }
 /* Contact */
-
-
-/* .ezy__contact13 {
-  --bs-body-color: #212529;
-  --bs-body-bg: #f6f6f6; */
-
-  /* Easy Frontend variables */
-  /* --ezy-theme-color: rgb(13, 110, 253);
-  --ezy-theme-color-rgb: 13, 110, 253;
-  --ezy-form-bg: rgba(255, 255, 255, 0.7);
-  --ezy-border-color: rgba(0, 0, 0, 0.3);
-  --ezy-btn-bg: #00bfa5;
-  --ezy-border-color-hover: #00bfa5;
-
-  background-color: var(--bs-body-bg);
-  background-size: cover;
-  background-position: center;
-  background-attachment: initial;
-  background-repeat: no-repeat;
-  padding: 100px 0;
-} */
-
 /* Gray Block Style */
 .gray .ezy__contact13,
 .ezy__contact13.gray {
