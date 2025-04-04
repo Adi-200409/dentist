@@ -32,17 +32,19 @@ include "./conn.php";
     <div class="overlay" id="overlay"></div>
 
     <div class="confirm-box" id="confirmBox">
-        <p>Confirm your details...!</p>
-        <div class="buttons">
-            <button class="btn btn-confirm" onclick="confirmAction()">Confirm</button>
-            <button class="btn btn-cancel" onclick="closeConfirmBox()">Cancel</button>
-        </div>
+      <p>Confirm your details...!</p>
+      <div class="buttons">
+        <button class="btn btn-confirm"
+          onclick="confirmAction()">Confirm</button>
+        <button class="btn btn-cancel"
+          onclick="closeConfirmBox()">Cancel</button>
+      </div>
     </div>
     <div class="alert-container" id="alert-container"></div>
     <header class="header fixed-top" id="header">
       <div class="container">
         <div class="row align-items-center justify-content-between">
-          <a href="#home" class="logo">JUST<span>Smile</span></a>
+          <b><a href="#home" class="logo">JUST<span>Smile</span></a></b>
 
           <nav class="nav">
             <a href="#home">home</a>
@@ -578,6 +580,8 @@ include "./conn.php";
           <div class="contact ">
             <h2 class="text">Book an Appointment</h2>
             <form id="appointmentForm" class="appointmentForm dark-gray">
+              
+
               <div class="form-group">
                 <label for="name">Full Name</label>
                 <input type="text" id="name" name="name" class="box"
@@ -618,58 +622,27 @@ include "./conn.php";
           </div>
         </section>
 
-        <section  id="appointmentDetails">
-          
+        <section id="appointmentDetails">
+
         </section>
       </section>
       <!-- contact -->
-      <section class="ezy__contact13 dark-gray" id="ezy__contact13"
-        style="background-image: url(https://cdn.easyfrontend.com/pictures/contact/contact13.jpg)">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-sm-10 col-md-8">
-              <div class="form-body">
-                <div class="row">
-                  <div class="col-12 text-center pb-5">
-                    <h3 class="ezy__contact13-heading">Contact Us</h3>
-                    <p class="ezy__contact13-sub-heading pt-2 pb-4">
-                      Lorem ipsum dolor sit amet consectetur.
-                    </p>
-                  </div>
-
-                  <form id="ezy__contact13-form"
-                    class="ezy__contact13-single-form row" action>
-                    <div class="form-group col-12 col-md-6">
-                      <input class="ezy__contact13-contact-name form-control"
-                        type="text" name="name"
-                        placeholder="FULL NAME" />
-                    </div>
-                    <div class="form-group col-12 col-md-6">
-                      <input class="ezy__contact13-contact-email form-control"
-                        type="text" name="email"
-                        placeholder="EMAIL" />
-                    </div>
-                    <div class="form-group col-12">
-                      <textarea
-                        class="ezy__contact13-contact-message form-control"
-                        name="message"
-                        placeholder="MESSAGE" rows="5"></textarea>
-                    </div>
-
-                    <div class="col-12">
-                      <div class="text-center mt-4">
-                        <button class="btn ezy__contact13-btn">SEND
-                          MESSAGE</button>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
+     <div class="get_tuch">
+<div class="form-container">
+  <div class="form">
+      <span class="heading">Get in touch</span>
+      <input placeholder="Name" type="text" class="input">
+      <input placeholder="Email" id="mail" type="email" class="input">
+      <textarea placeholder="Write Message" rows="10" cols="30" id="message" name="message" class="textarea"></textarea>
+      <div class="button-container">
+      <div class="send-button reset-button">Send</div>
+      <div class="reset-button-container">
+          <div id="reset-btn" class="reset-button">Reset</div>
+      </div>
+  </div>
+</div>
+</div>
+</div>
       <!--footer section starst-->
       <section class="ezy__footer15 dark">
         <div class="container">
