@@ -82,8 +82,9 @@ section{
 
 .header .logo{
     font-size: 2rem;
-    color: black;
+    color: rgb(0, 0, 0);
     text-decoration: none;
+    text-shadow: #c1efef 1px 0px 2px;
 }
 
 .header .logo span{
@@ -93,7 +94,7 @@ section{
 .header .nav a{
     margin: 0 1rem;
     font-size: 1.9rem;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     font-weight: 500;
     text-decoration: none;
 }
@@ -156,6 +157,103 @@ section{
   display: flex;
   gap: 2rem;
 
+}
+
+.ezy__header34 {
+  /* Bootstrap variables */
+  --bs-body-bg: rgb(255, 255, 255);
+  --bs-body-bg-invert: rgb(246, 246, 246);
+
+  /* Easy Frontend variables */
+  --ezy-theme-color: rgb(13, 110, 253);
+  --ezy-theme-color-rgb: 13, 110, 253;
+  --ezy-body-color-invert: rgb(246, 246, 246);
+
+  background-color: var(--bs-body-bg);
+  color: var(--bs-body-color);
+  overflow: hidden;
+  position: relative;
+  padding: 60px 0 0;
+  z-index: 1;
+}
+@media (min-width: 768px) {
+  .ezy__header34 {
+    padding: 100px 0 0;
+  }
+}
+
+/* Gray Block Style */
+.gray .ezy__header34,
+.ezy__header34.gray {
+  /* Bootstrap variables */
+  --bs-body-bg: rgb(246, 246, 246);
+
+  /* Easy Frontend variables */
+  --ezy-body-color-invert: rgb(255, 255, 255);
+}
+
+/* Dark Gray Block Style */
+.dark-gray .ezy__header34,
+.ezy__header34.dark-gray {
+  /* Bootstrap variables */
+  --bs-body-color: #ffffff;
+  --bs-body-bg: rgb(30, 39, 53);
+
+  /* Easy Frontend variables */
+  --ezy-body-color-invert: rgb(11, 23, 39);
+}
+
+/* Dark Block Style */
+.dark .ezy__header34,
+.ezy__header34.dark {
+  /* Bootstrap variables */
+  --bs-body-color: #ffffff;
+  --bs-body-bg: rgb(11, 23, 39);
+
+  /* Easy Frontend variables */
+  --ezy-body-color-invert: rgb(30, 39, 53);
+}
+
+.ezy__header34-heading {
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 1.2;
+  letter-spacing: 1px;
+}
+.col-12{
+position: relative;
+left: 100px;
+}
+@media (min-width: 991px) {
+  .ezy__header34-heading {
+    font-size: 70px;
+  }
+}
+.main_img{
+  height: 801px;
+}
+.ezy__header34-sub-heading {
+  font-size: 17px;
+  line-height: 1.8;
+  opacity: 0.8;
+}
+
+.ezy__header34-shape-two {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+}
+
+.ezy__header34-shape-four {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+}
+
+.ezy__header34-shape-six {
+  position: absolute;
+  right: 0;
+  top: 10%;
 }
 
 
@@ -836,7 +934,9 @@ blockquote:hover {
     background-color: var(--bs-body-color);
     opacity: 0.2;
   }
-  
+  .img-fluid{
+    object-fit: fill;
+  }
   .ezy__testimonial23 .carousel-indicators button.active {
     background-color: rgba(var(--ezy-theme-color-rgb), 1) !important;
     color: rgba(var(--ezy-theme-color-rgb), 1) !important;
@@ -1086,7 +1186,7 @@ blockquote:hover {
 }
 
 .form-container .form .input {
-  color: #87a4b6;
+  color: #ffffff;
   width: 100%;
   background-color: #002733;
   border: none;
@@ -1109,7 +1209,7 @@ blockquote:hover {
   border: none;
   outline: none;
   background-color: #013747;
-  color: #00b8b8;
+  color: #ffffff;
   font-weight: bold;
   font-size: 15px;
   resize: none;
