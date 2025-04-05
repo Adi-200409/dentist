@@ -222,7 +222,7 @@ include "./conn.php";
                       <span> <a href="#contact">Make appointment</a></span>
                     </button>
                     <button class="btn_nav">
-                      <span> <a href="#contact">online Consultation</a></span>
+                      <span> <a href="consultation.html">online Consultation</a></span>
                     </button>
                   </div>
                 </div>
@@ -527,11 +527,11 @@ include "./conn.php";
               <div class="ezy__team20-item mt-4 p-3">
                 <div class="ezy__team20-content">
                   <img
-                    src="https://cdn.easyfrontend.com/pictures/team/team_square_1.jpeg"
+                    src="img/adi.jpg"
                     alt="Dr. Aryan Sharma"
                     class="img-fluid w-100" />
                   <div class="p-3">
-                    <h5 class="mb-1 fw-bold">Dr. Aryan Sharma</h5>
+                    <h5 class="mb-1 fw-bold">Dr. ADITYA Patil</h5>
                     <p class="mb-0 small opacity-75">Founder / Chief Dentist</p>
                   </div>
                 </div>
@@ -541,11 +541,11 @@ include "./conn.php";
               <div class="ezy__team20-item mt-4 p-3">
                 <div class="ezy__team20-content">
                   <img
-                    src="https://cdn.easyfrontend.com/pictures/team/team_square_2.jpeg"
+                    src="img/Shreepati.jpg"
                     alt="Dr. Priya Mehta"
                     class="img-fluid w-100" />
                   <div class="p-3">
-                    <h5 class="mb-1 fw-bold">Dr. Priya Mehta</h5>
+                    <h5 class="mb-1 fw-bold">Dr. SHREEPATI Patil</h5>
                     <p class="mb-0 small opacity-75">Pediatric Dentist</p>
                   </div>
                 </div>
@@ -555,11 +555,11 @@ include "./conn.php";
               <div class="ezy__team20-item mt-4 p-3">
                 <div class="ezy__team20-content">
                   <img
-                    src="https://cdn.easyfrontend.com/pictures/team/team_square_4.jpeg"
+                    src="img/nutti.jpg"
                     alt="Dr. Raj Malhotra"
                     class="img-fluid w-100" />
                   <div class="p-3">
-                    <h5 class="mb-1 fw-bold">Dr. Raj Malhotra</h5>
+                    <h5 class="mb-1 fw-bold">Dr. NUTAN Holi</h5>
                     <p class="mb-0 small opacity-75">Orthodontist</p>
                   </div>
                 </div>
@@ -569,11 +569,11 @@ include "./conn.php";
               <div class="ezy__team20-item mt-4 p-3">
                 <div class="ezy__team20-content">
                   <img
-                    src="https://cdn.easyfrontend.com/pictures/team/team_square_3.jpeg"
+                    src="img/akash.jpg"
                     alt="Dr. Anjali Verma"
                     class="img-fluid w-100" />
                   <div class="p-3">
-                    <h5 class="mb-1 fw-bold">Dr. Anjali Verma</h5>
+                    <h5 class="mb-1 fw-bold">Dr. AKASH Manlokar</h5>
                     <p class="mb-0 small opacity-75">Cosmetic Dentist</p>
                   </div>
                 </div>
@@ -635,7 +635,7 @@ include "./conn.php";
                         <div class="d-flex align-items-center mb-4">
                           <div class="me-3">
                             <img
-                              src="https://cdn.easyfrontend.com/pictures/testimonial/testimonial_square_1.jpeg"
+                              src="img/arpita.jpg"
                               alt class="img-fluid rounded-circle border"
                               width="65" />
                           </div>
@@ -726,50 +726,122 @@ include "./conn.php";
 
       <!-- appointment -->
       <section class="contact" id="contact">
-        <h1 class="heading">Our Appointment</h1>
-        <section class="appointment">
-          <div class="contact ">
-            <h2 class="text">Book an Appointment</h2>
-            <form id="appointmentForm" class="appointmentForm dark-gray">
-              
-
-              <div class="form-group">
-                <label for="name">Full Name</label>
-                <input type="text" id="name" name="name" class="box"
-                  required>
+        <h1 class="appointment_heading">BOOK YOUR APPOINTMENT</h1>
+        <div class="formbold-main-wrapper">
+          <div class="formbold-form-wrapper">
+            <form action="https://formbold.com/s/FORM_ID" method="POST">
+              <div class="formbold-mb-5">
+                <label for="name" class="formbold-form-label"> Full Name </label>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Full Name"
+                  class="formbold-form-input"
+                />
               </div>
-
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email"
-                  class="box" required>
+              <div class="formbold-mb-5">
+                <label for="phone" class="formbold-form-label"> Phone Number </label>
+                <input
+                  type="text"
+                  name="phone"
+                  id="phone"
+                  placeholder="Enter your phone number"
+                  class="formbold-form-input"
+                />
               </div>
-
-              <div class="form-group">
-                <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" name="phone"
-                  class="box" required>
+              <div class="formbold-mb-5">
+                <label for="email" class="formbold-form-label"> Email Address </label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Enter your email"
+                  class="formbold-form-input"
+                />
               </div>
-
-              <div class="form-group">
-                <label for="date">Preferred Date</label>
-                <input type="date" id="date" name="date" class="box"
-                  required>
+              <div class="flex flex-wrap formbold--mx-3">
+                <div class="w-full sm:w-half formbold-px-3">
+                  <div class="formbold-mb-5 w-full">
+                    <label for="date" class="formbold-form-label"> Date </label>
+                    <input
+                      type="date"
+                      name="date"
+                      id="date"
+                      class="formbold-form-input"
+                    />
+                  </div>
+                </div>
+                <div class="w-full sm:w-half formbold-px-3">
+                  <div class="formbold-mb-5">
+                    <label for="time" class="formbold-form-label"> Time </label>
+                    <input
+                      type="time"
+                      name="time"
+                      id="time"
+                      class="formbold-form-input"
+                    />
+                  </div>
+                </div>
               </div>
-
-              <div class="form-group">
-                <label for="time">Preferred Time</label>
-                <input type="time" id="time" name="time" class="box"
-                  required>
+        
+              <div class="formbold-mb-5 formbold-pt-3">
+                <label class="formbold-form-label formbold-form-label-2">
+                  Address Details
+                </label>
+                <div class="flex flex-wrap formbold--mx-3">
+                  <div class="w-full sm:w-half formbold-px-3">
+                    <div class="formbold-mb-5">
+                      <input
+                        type="text"
+                        name="area"
+                        id="area"
+                        placeholder="Enter area"
+                        class="formbold-form-input"
+                      />
+                    </div>
+                  </div>
+                  <div class="w-full sm:w-half formbold-px-3">
+                    <div class="formbold-mb-5">
+                      <input
+                        type="text"
+                        name="city"
+                        id="city"
+                        placeholder="Enter city"
+                        class="formbold-form-input"
+                      />
+                    </div>
+                  </div>
+                  <div class="w-full sm:w-half formbold-px-3">
+                    <div class="formbold-mb-5">
+                      <input
+                        type="text"
+                        name="state"
+                        id="state"
+                        placeholder="Enter state"
+                        class="formbold-form-input"
+                      />
+                    </div>
+                  </div>
+                  <div class="w-full sm:w-half formbold-px-3">
+                    <div class="formbold-mb-5">
+                      <input
+                        type="text"
+                        name="post-code"
+                        id="post-code"
+                        placeholder="Post Code"
+                        class="formbold-form-input"
+                      />
+                    </div>
+                  </div>
+                </div>
               </div>
-
-              <div class="form-group">
-                <label for="message">Additional Message</label>
-                <textarea id="message" name="message" rows="4"
-                  class="box"></textarea>
+        
+              <div>
+                <button class="formbold-btn">Book Appointment</button>
               </div>
-              <button class="button" id="submit" type="submit">Book Now</button>
             </form>
+          </div>
           </div>
         </section>
 

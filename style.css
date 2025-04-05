@@ -60,6 +60,7 @@ section{
     text-align: center;
 }
 .heading{
+  z-index: 10;
     text-align: center;
     font-size: 4rem;
     color: black;
@@ -94,7 +95,7 @@ section{
 .header .nav a{
     margin: 0 1rem;
     font-size: 1.9rem;
-    color: rgb(255, 255, 255);
+    color: rgb(79, 76, 76);
     font-weight: 500;
     text-decoration: none;
 }
@@ -445,41 +446,7 @@ blockquote:hover {
 } 
 
 /*services styling starts*/
-/* .services{
-    background: #eee;
-}
 
-.services .box-container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit , minmax(30rem,1fr));
-    gap: 2rem;
-}
-
-.services .box-container .box{
-    text-align: center;
-    padding: 2rem;
-    background-color: white;
-    box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
-    border: .2rem solid rgba(0,0,0,.1);
-    border-radius: .5rem;
-}
-
-.services .box-container .box img{
-    margin: 1rem 0;
-    height: 4rem;
-}
-
-.services .box-container .box h3{
-    font-size: 2rem;
-    padding: 1rem 0;
-    color: black;
-}
-
-.services .box-container .box p{
-    color: #666;
-    font-size: 1.5rem;
-    line-height: 2;
-} */
 .ezy__service20 {
     /* Bootstrap variables */
     --bs-body-color: #28303b;
@@ -777,64 +744,7 @@ blockquote:hover {
     background-color: rgba(var(--ezy-theme-color-rgb), 0.9);
   }
 /*reviews section styling*/
-/* .reviews  {
-    font-size: 2.5rem;
-    color: #0077b6;
-    margin-bottom: 30px;
-}
 
-.box-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.box {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-    width: 300px;
-    text-align: center;
-}
-
-.box:hover {
-    transform: scale(1.05);
-}
-
-.box img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-}
-
-.box p {
-    font-size: 1rem;
-    color: #555;
-    margin-bottom: 10px;
-}
-
-.stars {
-    color: #ffdd57;
-    margin-bottom: 10px;
-}
-
-.box h3 {
-    font-size: 1.2rem;
-    color: #0077b6;
-}
-
-.box span {
-    font-size: 0.9rem;
-    color: #777;
-}
-
-.reviews img{
-    object-fit: cover;
-} */
 .ezy__testimonial23 {
     /* Bootstrap variables */
     --bs-body-color: #28303b;
@@ -943,16 +853,16 @@ blockquote:hover {
     opacity: 1;
   }
 /*contact styling*/
-.contact form{
-  backdrop-filter: blur(9px);
-  /* background-color: var(--ezy-form-bg); */
-    border-radius: .5rem;
-    background-color:#eee ;
-    padding: 2rem;
-    margin: 0 auto;
-    max-width: 80rem;
-    /* margin-top: -2rem; */
+ .contact form{
+   border-radius: .5rem;
+   padding: 2rem;
+   margin: 0 auto;
+   max-width: 80rem;
+   box-shadow: #002733 1px 2px 6px;
+   backdrop-filter: blur(9px);
+    
 }
+/*
 .contact label{
     font-size: 1.7rem;
  
@@ -984,6 +894,99 @@ blockquote:hover {
     align-items: center;
     cursor: pointer;
     margin: auto;
+} */
+
+.appointment_heading{
+  font-size: 2.7rem;
+  text-align: center;
+
+}
+.formbold-mb-5 {
+  margin-bottom: 20px;
+}
+.formbold-pt-3 {
+  padding-top: 12px;
+}
+.formbold-main-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px;
+}
+
+.formbold-form-wrapper {
+  margin: 0 auto;
+  max-width: 550px;
+  width: 100%;
+  background: white;
+}
+.formbold-form-label {
+  display: block;
+  font-weight: 500;
+  font-size: 16px;
+  color: #07074d;
+  margin-bottom: 12px;
+}
+.formbold-form-label-2 {
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.formbold-form-input {
+  width: 100%;
+  padding: 12px 24px;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+  background: white;
+  font-weight: 500;
+  font-size: 16px;
+  color: #6b7280;
+  outline: none;
+  resize: none;
+}
+.formbold-form-input:focus {
+  border-color: #6a64f1;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+.formbold-btn {
+  text-align: center;
+  font-size: 16px;
+  border-radius: 6px;
+  padding: 14px 32px;
+  border: none;
+  font-weight: 600;
+  background-color: #6a64f1;
+  color: white;
+  width: 100%;
+  cursor: pointer;
+}
+.formbold-btn:hover {
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+.formbold--mx-3 {
+  margin-left: -12px;
+  margin-right: -12px;
+}
+.formbold-px-3 {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.flex {
+  display: flex;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.w-full {
+  width: 100%;
+}
+@media (min-width: 540px) {
+  .sm\:w-half {
+    width: 50%;
+  }
 }
 
 /* appointment-details */
