@@ -309,6 +309,12 @@ left: 100px;
     overflow: hidden;
     padding: 60px 0;
     position: relative;
+    margin-left: 130px;
+  }
+  .ezy__about13 .container{
+    /* padding:0PX; */
+    margin: 0;
+
   }
   @media (min-width: 768px) {
     .ezy__about13 {
@@ -404,11 +410,13 @@ left: 100px;
     top: 0;
     right:-150px;
     bottom: 0;
-    background-color: rgba(var(--ezy-theme-color-rgb), 0.3);
+    background-color: #a3eaea;
     float: left;
+    border-left: #00b8b8 5px solid;
+    border-right: #00b8b8 5px solid;
   }
   .position-relative img{
-    margin-left: 103px;
+    margin-left: 102px;
   }
 
 @keyframes fadeIn {
