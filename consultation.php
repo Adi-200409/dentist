@@ -1,12 +1,11 @@
 <?php
+
+include "conn.php";
+
+?> 
+<?php
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Database connection
-    $conn = new mysqli("localhost", "root", "", "dentist");
-
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
-
     // Collect form data
     $name = $_POST["name"];
     $email = $_POST["email"];

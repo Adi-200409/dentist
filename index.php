@@ -1,8 +1,7 @@
-<!-- <?php
+<?php
 
-include "./conn.php";
-
-?> -->
+include "conn.php";
+?> 
 
 <!DOCTYPE html>
 <html lang="en">
@@ -57,7 +56,7 @@ include "./conn.php";
           <!-- <a href="" class="link-btn">Emergency call</a> -->
           <div class="nav-btn">
             <button class="btn_nav">
-              <span><a href="emergengy.html">Emergency</a></span>
+              <span><a href="emergengy.php">Emergency</a></span>
             </button>
           </div>
           <div id="menu-btn" class="fas fa-bars"></div>
@@ -710,7 +709,7 @@ include "./conn.php";
         <h1 class="appointment_heading">BOOK YOUR APPOINTMENT</h1>
         <div class="formbold-main-wrapper">
           <div class="formbold-form-wrapper">
-            <form action="" method="POST" id="appointmentForm">
+            <form action="appointment.php" method="POST" id="appointmentForm">
               <div class="formbold-mb-5">
                 <label for="name" class="formbold-form-label"> Full Name </label>
                 <input
@@ -808,7 +807,7 @@ include "./conn.php";
                     <div class="formbold-mb-5">
                       <input
                         type="text"
-                        name="post-code"
+                        name="postcode"
                         id="postcode"
                         placeholder="Post Code"
                         class="formbold-form-input" required
@@ -819,7 +818,7 @@ include "./conn.php";
               </div>
         
               <div>
-                <button type="submit" class="formbold-btn">Book Appointment</button>
+                <button type="submit" class="formbold-btn" name="book">Book Appointment</button>
               </div>
             </form>
           </div>

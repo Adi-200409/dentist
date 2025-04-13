@@ -1,31 +1,31 @@
 <?php
 
-include "./conn.php";
 
-if(isset($_POST['appointment'])){
+if (isset($_POST['book'])) {
+    include 'conn.php'; // make sure this file has a valid DB connection
+
     $name = $_POST['name'];
-    $email = $_POST['email'];
     $phone = $_POST['phone'];
-    $date = $_POST['date'];
+    $email = $_POST['email'];
+    $appointmentdate = $_POST['date'];
+    $appointmenttime = $_POST['time'];
+    $area = $_POST['area'];
+    $city = $_POST['city'];
+    $state = $_POST['state'];
+    $postcode = $_POST['postcode'];
 
-    $q = " INSERT INTO `appt`(`name`, `email`, `phone`, `date`) VALUES ('$name','$email','$phone','$date') ";
-    $res = mysqli_query($conn, $q);
+    // Optional: You can add basic validation here before saving to DB
 
-    if($res)
-    {
-        $msg = "your appointment booked!";
-        echo ("<script LANGUAGE='JavaScript'>
-            window.alert('$msg');
-            window.location.href='./index.php';
-            </script>");
+    $stmt = $conn->prepare("INSERT INTO appointment (name, phone, email, appointmentdate, appointmenttime, area, city, state, postcode) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
+    $stmt->bind_param("sssssssss", $name, $phone, $email, $appointmentdate, $appointmenttime, $area, $city, $state, $postcode);
+
+    if ($stmt->execute()) {
+        echo "<script>alert('Appointment booked successfully!'); window.location.href='thankyou.html';</script>";
+    } else {
+        echo "Error: " . $stmt->error;
     }
-    else{
-        $msg = "Failed to book your appointment";
-        echo ("<script LANGUAGE='JavaScript'>
-            window.alert('$msg');
-            window.location.href='./index.php;
-            </script>");
-    }
+
+    $stmt->close();
+    $conn->close();
 }
-
 ?>

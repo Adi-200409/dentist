@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -181,7 +182,7 @@ form {
 
             <div class="input-group">
                 <label for="issue">Describe the Issue*</label>
-                <textarea id="issue" rows="4" placeholder="Briefly explain the dental emergency" name="message" required></textarea>
+                <textarea id="issue" rows="4" placeholder="Briefly explain the dental emergency" name="issue" required></textarea>
             </div>
 
             <div class="input-group">
@@ -200,11 +201,11 @@ form {
         </form>
 
         <!-- Success/Alert Message -->
-        <div id="alertMessage"></div>
+        <!-- <div id="alertMessage"></div> -->
     </div>
 </div>
 
-    <script>
+    <!-- <script>
     document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("emergencyForm");
     const alertMessage = document.getElementById("alertMessage");
@@ -258,7 +259,7 @@ form {
             alertMessage.textContent = "";
         }, 5000);
     }
-});
+}); -->
 
     </script>
 </body>

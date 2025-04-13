@@ -1,18 +1,16 @@
 <?php
 
 $server = "localhost";
-$username = "username";
-$password = "yourpassword";
+$username = "root";
+$password = ""; // Keep it empty if you're using XAMPP
 $dbname = "dentist";
 
-$conn = mysqli_connect($server, $username, $password, $dbname);
+$conn = new mysqli($server, $username, $password, $dbname);
 
-if($conn)
-{
-    echo "connection successful!";
-}
-else{
-    echo "Error";
-}
+// if ($conn->connect_error) {
+//     die("Connection failed: " . $conn->connect_error);
+// } else {
+//     echo "Connection successful!";
+// }
 
 ?>
