@@ -46,121 +46,7 @@ function filterTreatments() {
     }
 }
 
-// document.addEventListener("DOMContentLoaded", () => {
-//     // Smooth Scrolling for Navigation Links
-//     document.querySelectorAll("nav ul li a").forEach(anchor => {
-//         anchor.addEventListener("click", function (e) {
-//             e.preventDefault();
-//             const targetId = this.getAttribute("href").substring(1);
-//             const targetElement = document.getElementById(targetId);
-//             if (targetElement) {
-//                 window.scrollTo({
-//                     top: targetElement.offsetTop - 50,
-//                     behavior: "smooth"
-//                 });
-//             }
-//         });
-//     });
-
-//     // Fade-in Effect on Scroll
-//     const elements = document.querySelectorAll(".about h2, .about h3, .about p, .about ul, blockquote");
-//     const observer = new IntersectionObserver(entries => {
-//         entries.forEach(entry => {
-//             if (entry.isIntersecting) {
-//                 entry.target.style.opacity = 1;
-//                 entry.target.style.transform = "translateY(0)";
-//             }
-//         });
-//     }, { threshold: 0.1 });
-    
-//     elements.forEach(element => {
-//         element.style.opacity = 0;
-//         element.style.transform = "translateY(20px)";
-//         observer.observe(element);
-//     });
-// });
-
-// document.addEventListener("DOMContentLoaded", function () {
-//     document.getElementById("appointmentForm").addEventListener("submit", function (event) {
-//         event.preventDefault(); // Prevent form submission
-
-//         let selectedDate = document.getElementById("date").value;
-//         let selectedTime = document.getElementById("time").value;
-
-//         console.log("Selected Date:", selectedDate);
-//         console.log("Selected Time:", selectedTime);
-
-//         if (!selectedDate || !selectedTime) {
-//             showCustomAlert("Please select both date and time.");
-//             return;
-//         }
-
-//         let dateObj = new Date(selectedDate);
-//         let selectedDay = dateObj.getDay(); // 0 = Sunday
-
-//         let [hours, minutes] = selectedTime.split(":").map(Number);
-
-//         if (selectedDay === 0) {
-//             showCustomAlert("We are closed on Sundays. Please select another day.");
-//             return;
-//         }
-
-//         if (hours < 9 || hours >= 21) {
-//             showCustomAlert("We are closed during this time. Please select a time between 9 AM and 9 PM.");
-//             return;
-//         }
-
-//         // If all validations pass, proceed with the booking
-//         showCustomAlert("Your appointment has been booked successfully!", "success");
-//     });
-
-//     // Custom alert function
-//     function showCustomAlert(message, type = "error") {
-//         let alertBox = document.createElement("div");
-//         alertBox.className = `custom-alert ${type}`;
-//         alertBox.innerHTML = `<p>${message}</p><button onclick="this.parentElement.remove()">OK</button>`;
-//         document.body.appendChild(alertBox);
-//     }
-
-//     // Add CSS for styling the custom alert
-//     let style = document.createElement("style");
-//     style.innerHTML = `
-//         .custom-alert {
-//             position: fixed;
-//             top: 50%;
-//             left: 50%;
-//             transform: translate(-50%, -50%);
-//             background: #ff4d4d;
-//             color: white;
-//             padding: 20px;
-//             border-radius: 10px;
-//             text-align: center;
-//             font-size: 18px;
-//             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-//             z-index: 1000;
-//         }
-//         .custom-alert.success {
-//             background: #4caf50;
-//         }
-//         .custom-alert button {
-//             margin-top: 10px;
-//             background: white;
-//             color: #ff4d4d;
-//             border: none;
-//             padding: 5px 10px;
-//             font-size: 16px;
-//             cursor: pointer;
-//             border-radius: 5px;
-//         }
-//         .custom-alert.success button {
-//             color: #4caf50;
-//         }
-//         .custom-alert button:hover {
-//             background: #f1f1f1;
-//         }
-//     `;
-//     document.head.appendChild(style);
-// });
+const appointmentForm =document.getElementById("appointmentForm");
 const appointmentDetails = document.getElementById("appointmentDetails");
 
 function handleFormSubmit(event) {
@@ -168,12 +54,7 @@ function handleFormSubmit(event) {
   const data = {};
   const form = event.target;
   const allInputs = form.querySelectorAll("input");
-  const textarea = form.querySelector("textarea");
   const submitBtn = form.querySelector("button[type='submit']");
-
-  if (textarea) {
-    data[textarea.name] = textarea.value;
-  }
 
   allInputs.forEach((inp) => {
     if (inp.name) {
@@ -223,6 +104,8 @@ function handleFormSubmit(event) {
   }, 2 * 1000);
 }
 
+
+
 appointmentForm.addEventListener("submit", handleFormSubmit);
 
 function showDetails(data) {
@@ -234,7 +117,6 @@ function showDetails(data) {
         <p><strong>Phone:</strong> <span id="displayPhone">${data.phone}</span></p>
         <p><strong>Date:</strong> <span id="displayDate">${data.date}</span></p>
         <p><strong>Time:</strong> <span id="displayTime">${data.time.toLocaleString()}</span></p>
-        <p><strong>Message:</strong> <span id="displayMessage">${data.message}</span></p>
         <button class="cancal_btn">
             <svg viewBox="0 0 448 512" class="svgIcon"><path
                 d="M135.2 17.7L128 32H32C14.3 32 0 46.3 0 64S14.3 96 32 96H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H320l-7.2-14.3C307.4 6.8 296.3 0 284.2 0H163.8c-12.1 0-23.2 6.8-28.6 17.7zM416 128H32L53.2 467c1.6 25.3 22.6 45 47.9 45H346.9c25.3 0 46.3-19.7 47.9-45L416 128z"></path></svg>

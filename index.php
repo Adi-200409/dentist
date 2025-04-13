@@ -507,8 +507,8 @@ include "./conn.php";
             <div class="col-md-6 col-lg-3">
               <div class="ezy__team20-item mt-4 p-3">
                 <div class="ezy__team20-content">
-                  <img
-                    src="img/adi.jpg"
+                  <img class="profile_pic"
+                    src="img/489529876_18046618604370679_6801083904091207359_n.webp"
                     alt="Dr. Aryan Sharma"
                     class="img-fluid w-100" />
                   <div class="p-3">
@@ -521,7 +521,7 @@ include "./conn.php";
             <div class="col-md-6 col-lg-3">
               <div class="ezy__team20-item mt-4 p-3">
                 <div class="ezy__team20-content">
-                  <img
+                  <img class="profile_pic"
                     src="img/Shreepati.jpg"
                     alt="Dr. Priya Mehta"
                     class="img-fluid w-100" />
@@ -535,7 +535,7 @@ include "./conn.php";
             <div class="col-md-6 col-lg-3">
               <div class="ezy__team20-item mt-4 p-3">
                 <div class="ezy__team20-content">
-                  <img
+                  <img class="profile_pic"
                     src="img/nutti.jpg"
                     alt="Dr. Raj Malhotra"
                     class="img-fluid w-100" />
@@ -549,7 +549,7 @@ include "./conn.php";
             <div class="col-md-6 col-lg-3">
               <div class="ezy__team20-item mt-4 p-3">
                 <div class="ezy__team20-content">
-                  <img
+                  <img class="profile_pic"
                     src="img/akash.jpg"
                     alt="Dr. Anjali Verma"
                     class="img-fluid w-100" />
@@ -710,7 +710,7 @@ include "./conn.php";
         <h1 class="appointment_heading">BOOK YOUR APPOINTMENT</h1>
         <div class="formbold-main-wrapper">
           <div class="formbold-form-wrapper">
-            <form action="" method="POST">
+            <form action="" method="POST" id="appointmentForm">
               <div class="formbold-mb-5">
                 <label for="name" class="formbold-form-label"> Full Name </label>
                 <input
@@ -718,7 +718,7 @@ include "./conn.php";
                   name="name"
                   id="name"
                   placeholder="Full Name"
-                  class="formbold-form-input"
+                  class="formbold-form-input" 
                 />
               </div>
               <div class="formbold-mb-5">
@@ -728,7 +728,7 @@ include "./conn.php";
                   name="phone"
                   id="phone"
                   placeholder="Enter your phone number"
-                  class="formbold-form-input"
+                  class="formbold-form-input" 
                 />
               </div>
               <div class="formbold-mb-5">
@@ -738,7 +738,7 @@ include "./conn.php";
                   name="email"
                   id="email"
                   placeholder="Enter your email"
-                  class="formbold-form-input"
+                  class="formbold-form-input" required
                 />
               </div>
               <div class="flex flex-wrap formbold--mx-3">
@@ -749,7 +749,7 @@ include "./conn.php";
                       type="date"
                       name="date"
                       id="date"
-                      class="formbold-form-input"
+                      class="formbold-form-input" required
                     />
                   </div>
                 </div>
@@ -760,7 +760,7 @@ include "./conn.php";
                       type="time"
                       name="time"
                       id="time"
-                      class="formbold-form-input"
+                      class="formbold-form-input" required
                     />
                   </div>
                 </div>
@@ -778,7 +778,7 @@ include "./conn.php";
                         name="area"
                         id="area"
                         placeholder="Enter area"
-                        class="formbold-form-input"
+                        class="formbold-form-input" required
                       />
                     </div>
                   </div>
@@ -789,7 +789,7 @@ include "./conn.php";
                         name="city"
                         id="city"
                         placeholder="Enter city"
-                        class="formbold-form-input"
+                        class="formbold-form-input" required
                       />
                     </div>
                   </div>
@@ -800,7 +800,7 @@ include "./conn.php";
                         name="state"
                         id="state"
                         placeholder="Enter state"
-                        class="formbold-form-input"
+                        class="formbold-form-input" required
                       />
                     </div>
                   </div>
@@ -809,9 +809,9 @@ include "./conn.php";
                       <input
                         type="text"
                         name="post-code"
-                        id="post-code"
+                        id="postcode"
                         placeholder="Post Code"
-                        class="formbold-form-input"
+                        class="formbold-form-input" required
                       />
                     </div>
                   </div>
@@ -819,7 +819,7 @@ include "./conn.php";
               </div>
         
               <div>
-                <button class="formbold-btn">Book Appointment</button>
+                <button type="submit" class="formbold-btn">Book Appointment</button>
               </div>
             </form>
           </div>
@@ -831,7 +831,7 @@ include "./conn.php";
         </section>
       </section>
       <!-- contact -->
-     <div class="get_tuch">
+     <!-- <div class="get_tuch">
 <div class="form-container">
   <div class="form">
       <span class="heading">Get in touch</span>
@@ -846,7 +846,7 @@ include "./conn.php";
   </div>
 </div>
 </div>
-</div>
+</div> -->
       <!--footer section starst-->
       <section class="ezy__footer15 dark">
         <div class="container">
