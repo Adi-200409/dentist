@@ -203,7 +203,7 @@ print_r($_POST); // Debugging line to check if data is being received correctly
                       <span> <a href="#contact">Make appointment</a></span>
                     </button>
                     <button class="btn_nav">
-                      <span> <a href="consultation.html">online Consultation</a></span>
+                      <span> <a href="consultation1.php">online Consultation</a></span>
                     </button>
                   </div>
                 </div>

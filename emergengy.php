@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,9 +19,7 @@
 }
 
 body {
-    background: url(images/Emergency1.jpg) no-repeat;
-    background-size: 100vw 100vh;
-    /* background-color: #e5ebeb; */
+    background-color: #e5ebeb;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -134,18 +131,26 @@ form {
     background-color: #1a86a7;
 }
 
-/* Alert Message */
-#alertMessage {
-    margin-top: 15px;
+/* Alert Message Styles */
+.alert-message {
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 8px;
+    display: none;
     font-weight: 600;
+    text-align: center;
 }
 
-#alertMessage.success {
-    color: #1d052e;
+.alert-message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
 }
 
-#alertMessage.error {
-    color: #660d0d;
+.alert-message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
 }
 
 /* Responsive */
@@ -155,112 +160,158 @@ form {
     }
 }
 
+.form-container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
 
-    </style>
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.input-group input,
+.input-group textarea,
+.input-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.submit-btn {
+    background: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+.submit-btn:hover {
+    background: #45a049;
+}
+
+</style>
 </head>
 <body>
 <div class="emg">
     <!-- Emergency Call Section -->
     <div class="emergency-container">
         <h2>Dental Emergency?</h2>
-        <p>We’re here to help. Call now or fill out the form for immediate attention.</p>
+        <p>We're here to help. Call now or fill out the form for immediate attention.</p>
         
         <!-- Immediate Call Button -->
         <a href="tel:+91 9148074307" class="call-now-btn">📞 Call Now</a>
 
+        <!-- Add alert message container -->
+        <div id="alertMessage" class="alert-message"></div>
+
         <!-- Emergency Form -->
-        <form id="emergencyForm" method="post" action="emer.php">
-            <div class="input-group">
-                <label for="name">Full Name*</label>
-                <input type="text" id="name" placeholder="Enter your full name" name="name" required>
-            </div>
+        <div class="form-container">
+            <form id="emergencyForm" method="POST">
+                <div class="input-group">
+                    <label for="name">Full Name*</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
 
-            <div class="input-group">
-                <label for="phone">Phone Number*</label>
-                <input type="tel" id="phone" placeholder="Enter your contact number"  name="phone" required>
-            </div>
+                <div class="input-group">
+                    <label for="phone">Phone Number*</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
 
-            <div class="input-group">
-                <label for="issue">Describe the Issue*</label>
-                <textarea id="issue" rows="4" placeholder="Briefly explain the dental emergency" name="issue" required></textarea>
-            </div>
+                <div class="input-group">
+                    <label for="issue">Describe Your Issue*</label>
+                    <textarea id="issue" name="issue" rows="4" required></textarea>
+                </div>
 
-            <div class="input-group">
-                <label for="urgency">Urgency Level*</label>
-                <select id="urgency"  name="urgency"required>
-                    <option value="" disabled selected>Select urgency</option>
-                    <option value="Severe Pain">Severe Pain</option>
-                    <option value="Broken Tooth">Broken Tooth</option>
-                    <option value="Bleeding">Bleeding</option>
-                    <option value="Swelling">Swelling</option>
-                    <option value="Other">Other</option>
-                </select>
-            </div>
+                <div class="input-group">
+                    <label for="urgency">Urgency Level*</label>
+                    <select id="urgency" name="urgency" required>
+                        <option value="">Select urgency level</option>
+                        <option value="Severe Pain">Severe Pain</option>
+                        <option value="Broken Tooth">Broken Tooth</option>
+                        <option value="Bleeding">Bleeding</option>
+                        <option value="Swelling">Swelling</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
 
-            <button type="submit" class="submit-btn" name="submit">Request Immediate Help</button>
-        </form>
-
-        <!-- Success/Alert Message -->
-        <!-- <div id="alertMessage"></div> -->
+                <button type="submit" class="submit-btn">Submit Emergency Request</button>
+            </form>
+        </div>
     </div>
 </div>
 
-    <!-- <script>
-    document.addEventListener("DOMContentLoaded", () => {
-    const form = document.getElementById("emergencyForm");
-    const alertMessage = document.getElementById("alertMessage");
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('emergencyForm');
+        const alertMessage = document.getElementById('alertMessage');
 
-    form.addEventListener("submit", (e) => {
-        e.preventDefault(); // Prevent form from submitting immediately
-
-        // Get form values
-        const name = document.getElementById("name").value.trim();
-        const phone = document.getElementById("phone").value.trim();
-        const issue = document.getElementById("issue").value.trim();
-        const urgency = document.getElementById("urgency").value;
-
-        // Validate Name (Only Letters & Spaces)
-        const nameRegex = /^[A-Za-z\s]+$/;
-        if (!name || !nameRegex.test(name)) {
-            showAlert("❌ Please enter a valid full name (letters only).", "error");
-            return;
+        function showAlert(message, type) {
+            alertMessage.textContent = message;
+            alertMessage.className = `alert-message ${type}`;
+            alertMessage.style.display = 'block';
+            
+            // Hide after 5 seconds
+            setTimeout(() => {
+                alertMessage.style.display = 'none';
+            }, 5000);
         }
 
-        // Validate Phone Number (10-digit format)
-        const phoneRegex = /^[6-9]\d{9}$/; // Assumes Indian numbers starting with 6-9
-        if (!phone || !phoneRegex.test(phone)) {
-            showAlert("❌ Please enter a valid 10-digit phone number.", "error");
-            return;
-        }
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
 
-        // Validate Issue (Should not be empty)
-        if (!issue || issue.length < 5) {
-            showAlert("❌ Please describe your issue (at least 5 characters).", "error");
-            return;
-        }
+            // Get form values
+            const formData = new FormData(form);
 
-        // Validate Urgency Selection
-        if (!urgency) {
-            showAlert("❌ Please select an urgency level.", "error");
-            return;
-        }
+            // Log form data for debugging
+            for (let pair of formData.entries()) {
+                console.log(pair[0] + ': ' + pair[1]);
+            }
 
-        // If all validations pass, submit the form
-        setTimeout(() => {
-            showAlert("🚑 Emergency request sent! We will contact you ASAP.", "success");
-            form.reset(); // Clear form after success
-        }, 1000);
+            // Send the form data
+            fetch('emer.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(text => {
+                console.log('Server response:', text);
+                try {
+                    const data = JSON.parse(text);
+                    if (data.status === 'success') {
+                        showAlert('✅ ' + data.message, 'success');
+                        form.reset();
+                    } else {
+                        showAlert('❌ ' + data.message, 'error');
+                    }
+                } catch (e) {
+                    console.error('Error parsing response:', e);
+                    showAlert('❌ Server error. Please try again.', 'error');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                showAlert('❌ ' + error.message, 'error');
+            });
+        });
     });
-
-    function showAlert(message, type) {
-        alertMessage.textContent = message;
-        alertMessage.className = type;
-        setTimeout(() => {
-            alertMessage.textContent = "";
-        }, 5000);
-    }
-}); -->
-
     </script>
 </body>
 </html>
