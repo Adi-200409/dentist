@@ -1,6 +1,7 @@
 <?php
 
 include "conn.php";
+print_r($_POST); // Debugging line to check if data is being received correctly
 ?> 
 
 <!DOCTYPE html>
@@ -709,7 +710,7 @@ include "conn.php";
         <h1 class="appointment_heading">BOOK YOUR APPOINTMENT</h1>
         <div class="formbold-main-wrapper">
           <div class="formbold-form-wrapper">
-            <form action="appointment.php" method="POST" id="appointmentForm">
+            <!-- <form action="appointment.php" method="POST" id="appointmentForm">
               <div class="formbold-mb-5">
                 <label for="name" class="formbold-form-label"> Full Name </label>
                 <input
@@ -820,7 +821,166 @@ include "conn.php";
               <div>
                 <button type="submit" class="formbold-btn" name="book">Book Appointment</button>
               </div>
-            </form>
+            </form> -->
+            <?php if (isset($success)): ?>
+        <div class="success">
+            <?php echo htmlspecialchars($success); ?>
+        </div>
+    <?php endif; ?>
+
+    <form action="appointment.php" method="POST" id="appointmentForm">
+        <div class="formbold-mb-5">
+            <label for="name" class="formbold-form-label">Full Name</label>
+            <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Full Name"
+                class="formbold-form-input"
+                required
+            />
+            <?php if (isset($errors['name'])): ?>
+                <span class="error"><?php echo $errors['name']; ?></span>
+            <?php endif; ?>
+        </div>
+
+        <div class="formbold-mb-5">
+            <label for="phone" class="formbold-form-label">Phone Number</label>
+            <input
+                type="text"
+                name="phone"
+                id="phone"
+                placeholder="Enter your phone number"
+                class="formbold-form-input"
+                required
+            />
+            <?php if (isset($errors['phone'])): ?>
+                <span class="error"><?php echo $errors['phone']; ?></span>
+            <?php endif; ?>
+        </div>
+
+        <div class="formbold-mb-5">
+            <label for="email" class="formbold-form-label">Email Address</label>
+            <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Enter your email"
+                class="formbold-form-input"
+                required
+            />
+            <?php if (isset($errors['email'])): ?>
+                <span class="error"><?php echo $errors['email']; ?></span>
+            <?php endif; ?>
+        </div>
+
+        <div class="flex flex-wrap formbold--mx-3">
+            <div class="w-full sm:w-half formbold-px-3">
+                <div class="formbold-mb-5 w-full">
+                    <label for="date" class="formbold-form-label">Date</label>
+                    <input
+                        type="date"
+                        name="date"
+                        id="date"
+                        class="formbold-form-input"
+                        required
+                    />
+                    <?php if (isset($errors['date'])): ?>
+                        <span class="error"><?php echo $errors['date']; ?></span>
+                    <?php endif; ?>
+                </div>
+            </div>
+            <div class="w-full sm:w-half formbold-px-3">
+                <div class="formbold-mb-5">
+                    <label for="time" class="formbold-form-label">Time</label>
+                    <input
+                        type="time"
+                        name="time"
+                        id="time"
+                        class="formbold-form-input"
+                        required
+                    />
+                    <?php if (isset($errors['time'])): ?>
+                        <span class="error"><?php echo $errors['time']; ?></span>
+                    <?php endif; ?>
+                </div>
+            </div>
+        </div>
+
+        <div class="formbold-mb-5 formbold-pt-3">
+            <label class="formbold-form-label formbold-form-label-2">
+                Address Details
+            </label>
+            <div class="flex flex-wrap formbold--mx-3">
+                <div class="w-full sm:w-half formbold-px-3">
+                    <div class="formbold-mb-5">
+                        <input
+                            type="text"
+                            name="area"
+                            id="area"
+                            placeholder="Enter area"
+                            class="formbold-form-input"
+                            required
+                        />
+                        <?php if (isset($errors['area'])): ?>
+                            <span class="error"><?php echo $errors['area']; ?></span>
+                        <?php endif; ?>
+                    </div>
+                </div>
+                <div class="w-full sm:w-half formbold-px-3">
+                    <div class="formbold-mb-5">
+                        <input
+                            type="text"
+                            name="city"
+                            id="city"
+                            placeholder="Enter city"
+                            class="formbold-form-input"
+                            required
+                        />
+                        <?php if (isset($errors['city'])): ?>
+                            <span class="error"><?php echo $errors['city']; ?></span>
+                        <?php endif; ?>
+                    </div>
+                </div>
+                <div class="w-full sm:w-half formbold-px-3">
+                    <div class="formbold-mb-5">
+                        <input
+                            type="text"
+                            name="state"
+                            id="state"
+                            placeholder="Enter state"
+                            class="formbold-form-input"
+                            required
+                        />
+                        <?php if (isset($errors['state'])): ?>
+                            <span class="error"><?php echo $errors['state']; ?></span>
+                        <?php endif; ?>
+                    </div>
+                </div>
+                <div class="w-full sm:w-half formbold-px-3">
+                    <div class="formbold-mb-5">
+                        <input
+                            type="text"
+                            name="postcode"
+                            id="postcode"
+                            placeholder="Post Code"
+                            class="formbold-form-input"
+                            required
+                        />
+                        <?php if (isset($errors['postcode'])): ?>
+                            <span class="error"><?php echo $errors['postcode']; ?></span>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <button type="submit" class="formbold-btn" name="book">
+                <?php echo isset($_POST['book']) ? 'Processing...' : 'Book Appointment'; ?>
+            </button>
+        </div>
+       
+    </form>
           </div>
           </div>
         </section>
