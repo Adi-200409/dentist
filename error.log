@@ -9,3 +9,166 @@
 [14-Apr-2025 10:07:53 Europe/Berlin] PHP Warning:  mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\xampp\htdocs\Dentist\forgot_password.php on line 94
 [14-Apr-2025 10:07:53 Europe/Berlin] Failed to send email to: adityap4til@gmail.com
 [14-Apr-2025 10:07:53 Europe/Berlin] Error in forgot_password.php: Error sending email. Please try again.
+[14-Apr-2025 10:12:38 Europe/Berlin] Received request: Array
+(
+    [email] => adityap4til@gmail.com
+)
+
+[14-Apr-2025 10:12:38 Europe/Berlin] Processing email: adityap4til@gmail.com
+[14-Apr-2025 10:12:38 Europe/Berlin] Generated OTP: 714990
+[14-Apr-2025 10:12:38 Europe/Berlin] Stored email in session: adityap4til@gmail.com
+[14-Apr-2025 10:12:40 Europe/Berlin] PHP Warning:  mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\xampp\htdocs\Dentist\forgot_password.php on line 94
+[14-Apr-2025 10:12:40 Europe/Berlin] Failed to send email to: adityap4til@gmail.com
+[14-Apr-2025 10:12:40 Europe/Berlin] Error in forgot_password.php: Error sending email. Please try again.
+[14-Apr-2025 10:14:21 Europe/Berlin] Received request: Array
+(
+    [email] => adityap4til@gmail.com
+)
+
+[14-Apr-2025 10:14:21 Europe/Berlin] Raw input: 
+[14-Apr-2025 10:14:21 Europe/Berlin] Processing email: adityap4til@gmail.com
+[14-Apr-2025 10:14:21 Europe/Berlin] Generated OTP: 958198
+[14-Apr-2025 10:14:21 Europe/Berlin] Stored email in session: adityap4til@gmail.com
+[14-Apr-2025 10:14:24 Europe/Berlin] PHP Warning:  mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\xampp\htdocs\Dentist\forgot_password.php on line 110
+[14-Apr-2025 10:14:24 Europe/Berlin] Failed to send email to: adityap4til@gmail.com
+[14-Apr-2025 10:14:24 Europe/Berlin] Error in forgot_password.php: Error sending email. Please try again.
+[14-Apr-2025 10:17:42 Europe/Berlin] Received request: Array
+(
+    [email] => adityap4til@gmail.com
+)
+
+[14-Apr-2025 10:17:42 Europe/Berlin] Processing email: adityap4til@gmail.com
+[14-Apr-2025 10:17:42 Europe/Berlin] Generated OTP: 683152
+[14-Apr-2025 10:17:42 Europe/Berlin] Stored email in session: adityap4til@gmail.com
+[14-Apr-2025 10:36:41 Europe/Berlin] Received request: Array
+(
+    [email] => adityap4til@gmail.com
+)
+
+[14-Apr-2025 10:36:41 Europe/Berlin] Processing email: adityap4til@gmail.com
+[14-Apr-2025 10:36:41 Europe/Berlin] Generated OTP: 126084
+[14-Apr-2025 10:36:41 Europe/Berlin] Stored email in session: adityap4til@gmail.com
+[14-Apr-2025 10:36:42 Europe/Berlin] PHP Warning:  stream_socket_enable_crypto(): SSL operation failed with code 1. OpenSSL Error messages:
+error:0A00010B:SSL routines::wrong version number in C:\xampp\htdocs\Dentist\forgot_password.php on line 135
+[14-Apr-2025 10:40:43 Europe/Berlin] Received request: Array
+(
+    [email] => adityap4til@gmail.com
+)
+
+[14-Apr-2025 10:40:43 Europe/Berlin] Processing email: adityap4til@gmail.com
+[14-Apr-2025 10:40:43 Europe/Berlin] Generated OTP: 612244
+[14-Apr-2025 10:40:43 Europe/Berlin] Stored email in session: adityap4til@gmail.com
+[14-Apr-2025 10:41:19 Europe/Berlin] Received request: Array
+(
+    [email] => adityap4til@gmail.com
+)
+
+[14-Apr-2025 10:41:19 Europe/Berlin] Processing email: adityap4til@gmail.com
+[14-Apr-2025 10:41:19 Europe/Berlin] Generated OTP: 513894
+[14-Apr-2025 10:41:19 Europe/Berlin] Stored email in session: adityap4til@gmail.com
+[14-Apr-2025 10:43:13 Europe/Berlin] Received request: Array
+(
+    [email] => adityap4til@gmail.com
+)
+
+[14-Apr-2025 10:43:13 Europe/Berlin] Processing email: adityap4til@gmail.com
+[14-Apr-2025 10:43:13 Europe/Berlin] Generated OTP: 225320
+[14-Apr-2025 10:43:13 Europe/Berlin] Stored email in session: adityap4til@gmail.com
+[14-Apr-2025 10:47:13 Europe/Berlin] PHP Warning:  require(PHPMailer/src/Exception.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Dentist\forgot_password.php on line 17
+[14-Apr-2025 10:47:13 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'PHPMailer/src/Exception.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Dentist\forgot_password.php:17
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Dentist\forgot_password.php on line 17
+[14-Apr-2025 10:47:14 Europe/Berlin] PHP Warning:  require(PHPMailer/src/Exception.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Dentist\forgot_password.php on line 17
+[14-Apr-2025 10:47:14 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'PHPMailer/src/Exception.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Dentist\forgot_password.php:17
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Dentist\forgot_password.php on line 17
+[14-Apr-2025 10:51:22 Europe/Berlin] PHP Warning:  require(PHPMailer/src/Exception.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Dentist\forgot_password.php on line 17
+[14-Apr-2025 10:51:22 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'PHPMailer/src/Exception.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Dentist\forgot_password.php:17
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Dentist\forgot_password.php on line 17
+[14-Apr-2025 10:53:19 Europe/Berlin] PHP Warning:  require(PHPMailer/src/Exception.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Dentist\forgot_password.php on line 32
+[14-Apr-2025 10:53:19 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'PHPMailer/src/Exception.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Dentist\forgot_password.php:32
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Dentist\forgot_password.php on line 32
+[14-Apr-2025 10:54:30 Europe/Berlin] Received raw input: {"email":"adityap4til@gmail.com"}
+[14-Apr-2025 10:54:30 Europe/Berlin] Processing email: adityap4til@gmail.com
+[14-Apr-2025 10:54:30 Europe/Berlin] Generated OTP: 652913
+[14-Apr-2025 10:54:30 Europe/Berlin] Stored email in session: adityap4til@gmail.com
+[14-Apr-2025 10:56:04 Europe/Berlin] Received raw input: {"email":"adityap4til@gmail.com"}
+[14-Apr-2025 10:56:04 Europe/Berlin] Processing email: adityap4til@gmail.com
+[14-Apr-2025 10:56:04 Europe/Berlin] Generated OTP: 574591
+[14-Apr-2025 10:56:04 Europe/Berlin] Stored email in session: adityap4til@gmail.com
+[14-Apr-2025 10:58:58 Europe/Berlin] PHP Warning:  require(vendor/autoload.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Dentist\forgot_password.php on line 16
+[14-Apr-2025 10:58:58 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Dentist\forgot_password.php:16
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Dentist\forgot_password.php on line 16
+[14-Apr-2025 11:00:58 Europe/Berlin] PHP Warning:  require(PHPMailer/PHPMailer-master/src/Exception.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Dentist\forgot_password.php on line 17
+[14-Apr-2025 11:00:58 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'PHPMailer/PHPMailer-master/src/Exception.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Dentist\forgot_password.php:17
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Dentist\forgot_password.php on line 17
+[14-Apr-2025 11:02:53 Europe/Berlin] Received raw input: {"email":"adityap4til@gmail.com"}
+[14-Apr-2025 11:02:53 Europe/Berlin] Processing email: adityap4til@gmail.com
+[14-Apr-2025 11:02:53 Europe/Berlin] Generated OTP: 354247
+[14-Apr-2025 11:02:53 Europe/Berlin] Stored email in session: adityap4til@gmail.com
+[14-Apr-2025 11:19:17 Europe/Berlin] Received request data: {"otp":"900976"}
+[14-Apr-2025 11:19:17 Europe/Berlin] Session data: Array
+(
+    [user_id] => 1
+    [user_name] => ADITYA 007
+    [user_email] => adityap4til@gmail.com
+    [reset_email] => adityap4til@gmail.com
+)
+
+[14-Apr-2025 11:19:17 Europe/Berlin] Attempting to verify OTP: 900976 for email: adityap4til@gmail.com
+[14-Apr-2025 11:19:17 Europe/Berlin] OTP verification failed for email: adityap4til@gmail.com with OTP: 900976
+[14-Apr-2025 11:19:17 Europe/Berlin] Error in verify_otp.php: Invalid or expired OTP
+[14-Apr-2025 11:19:24 Europe/Berlin] Received request data: {"otp":"900976"}
+[14-Apr-2025 11:19:24 Europe/Berlin] Session data: Array
+(
+    [user_id] => 1
+    [user_name] => ADITYA 007
+    [user_email] => adityap4til@gmail.com
+    [reset_email] => adityap4til@gmail.com
+)
+
+[14-Apr-2025 11:19:24 Europe/Berlin] Attempting to verify OTP: 900976 for email: adityap4til@gmail.com
+[14-Apr-2025 11:19:24 Europe/Berlin] OTP verification failed for email: adityap4til@gmail.com with OTP: 900976
+[14-Apr-2025 11:19:24 Europe/Berlin] Error in verify_otp.php: Invalid or expired OTP
+[14-Apr-2025 11:27:31 Europe/Berlin] Received request data: {"otp":"005040"}
+[14-Apr-2025 11:27:31 Europe/Berlin] Session data: Array
+(
+    [user_id] => 1
+    [user_name] => ADITYA 007
+    [user_email] => adityap4til@gmail.com
+    [reset_email] => adityap4til@gmail.com
+)
+
+[14-Apr-2025 11:27:31 Europe/Berlin] Attempting to verify OTP: 005040 for email: adityap4til@gmail.com
+[14-Apr-2025 11:27:31 Europe/Berlin] Stored OTP: 005040, Received OTP: 005040
+[14-Apr-2025 11:27:31 Europe/Berlin] OTP Expiry: 2025-04-14 11:42:23, Current Time: 2025-04-14 11:27:31
+[14-Apr-2025 11:27:31 Europe/Berlin] OTP verified successfully for email: adityap4til@gmail.com
+[14-Apr-2025 11:33:34 Europe/Berlin] Received request data: {"otp":"376012"}
+[14-Apr-2025 11:33:34 Europe/Berlin] Session data: Array
+(
+    [user_id] => 1
+    [user_name] => ADITYA 007
+    [user_email] => adityap4til@gmail.com
+    [reset_email] => adityap4til@gmail.com
+)
+
+[14-Apr-2025 11:33:34 Europe/Berlin] Attempting to verify OTP: 376012 for email: adityap4til@gmail.com
+[14-Apr-2025 11:33:34 Europe/Berlin] Stored OTP: 376012, Received OTP: 376012
+[14-Apr-2025 11:33:34 Europe/Berlin] OTP Expiry: 2025-04-14 11:48:25, Current Time: 2025-04-14 11:33:34
+[14-Apr-2025 11:33:34 Europe/Berlin] OTP verified successfully for email: adityap4til@gmail.com
+[14-Apr-2025 11:33:54 Europe/Berlin] Login attempt for email: adityap4til@gmail.com
+[14-Apr-2025 11:34:23 Europe/Berlin] Login attempt for email: adityap4til@gmail.com
+[14-Apr-2025 11:35:57 Europe/Berlin] Login attempt for email: demo@gmail.com
+[14-Apr-2025 11:40:48 Europe/Berlin] Registration attempt for email: demo@gmail.com
+[14-Apr-2025 11:40:48 Europe/Berlin] Registration successful for email: demo@gmail.com
+[14-Apr-2025 11:41:04 Europe/Berlin] Login attempt for email: demo@gmail.com

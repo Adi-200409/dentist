@@ -1,0 +1,213 @@
+[14-Apr-2025 12:17:45 Europe/Berlin] Attempting to connect to database: dentist
+[14-Apr-2025 12:17:45 Europe/Berlin] Connected to MySQL server successfully
+[14-Apr-2025 12:17:45 Europe/Berlin] Database dentist selected successfully
+[14-Apr-2025 12:17:45 Europe/Berlin] Database connection and setup completed successfully
+[14-Apr-2025 12:17:48 Europe/Berlin] Attempting to connect to database: dentist
+[14-Apr-2025 12:17:48 Europe/Berlin] Connected to MySQL server successfully
+[14-Apr-2025 12:17:48 Europe/Berlin] Database dentist selected successfully
+[14-Apr-2025 12:17:48 Europe/Berlin] Database connection and setup completed successfully
+[14-Apr-2025 12:17:48 Europe/Berlin] Database connection included
+[14-Apr-2025 12:17:48 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\Dentist\process_emergency.php on line 29
+[14-Apr-2025 12:17:48 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\Dentist\process_emergency.php on line 30
+[14-Apr-2025 12:17:48 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\Dentist\process_emergency.php on line 31
+[14-Apr-2025 12:17:48 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\Dentist\process_emergency.php on line 32
+[14-Apr-2025 12:17:48 Europe/Berlin] Sanitized data - Name: Sage Webb, Phone: (118) 836-6993, Type: swelling
+[14-Apr-2025 12:17:48 Europe/Berlin] Attempting database connection check
+[14-Apr-2025 12:17:48 Europe/Berlin] Checking if emergency_requests table exists
+[14-Apr-2025 12:17:48 Europe/Berlin] Preparing to insert emergency request
+[14-Apr-2025 12:17:48 Europe/Berlin] Emergency form error: Unknown column 'emergency_type' in 'field list'
+[14-Apr-2025 12:17:48 Europe/Berlin] Stack trace: #0 C:\xampp\htdocs\Dentist\process_emergency.php(104): mysqli->prepare('INSERT INTO eme...')
+#1 {main}
+[14-Apr-2025 12:20:37 Europe/Berlin] Attempting to connect to database: dentist
+[14-Apr-2025 12:20:37 Europe/Berlin] Connected to MySQL server successfully
+[14-Apr-2025 12:20:37 Europe/Berlin] Database dentist selected successfully
+[14-Apr-2025 12:20:37 Europe/Berlin] Database connection and setup completed successfully
+[14-Apr-2025 12:20:41 Europe/Berlin] Attempting to connect to database: dentist
+[14-Apr-2025 12:20:41 Europe/Berlin] Connected to MySQL server successfully
+[14-Apr-2025 12:20:41 Europe/Berlin] Database dentist selected successfully
+[14-Apr-2025 12:20:41 Europe/Berlin] Database connection and setup completed successfully
+[14-Apr-2025 12:21:04 Europe/Berlin] Attempting to connect to database: dentist
+[14-Apr-2025 12:21:04 Europe/Berlin] Connected to MySQL server successfully
+[14-Apr-2025 12:21:04 Europe/Berlin] Database dentist selected successfully
+[14-Apr-2025 12:21:04 Europe/Berlin] Database connection and setup completed successfully
+[14-Apr-2025 12:21:04 Europe/Berlin] Database connection included
+[14-Apr-2025 12:21:04 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\Dentist\process_emergency.php on line 29
+[14-Apr-2025 12:21:04 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\Dentist\process_emergency.php on line 30
+[14-Apr-2025 12:21:04 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\Dentist\process_emergency.php on line 31
+[14-Apr-2025 12:21:04 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\Dentist\process_emergency.php on line 32
+[14-Apr-2025 12:21:04 Europe/Berlin] Sanitized data - Name: Shellie Harper, Phone: 9148074387, Type: swelling
+[14-Apr-2025 12:21:04 Europe/Berlin] Attempting database connection check
+[14-Apr-2025 12:21:04 Europe/Berlin] Checking if emergency_requests table exists
+[14-Apr-2025 12:21:04 Europe/Berlin] Preparing to insert emergency request
+[14-Apr-2025 12:21:04 Europe/Berlin] Emergency form error: Unknown column 'emergency_type' in 'field list'
+[14-Apr-2025 12:21:04 Europe/Berlin] Stack trace: #0 C:\xampp\htdocs\Dentist\process_emergency.php(104): mysqli->prepare('INSERT INTO eme...')
+#1 {main}
+[14-Apr-2025 12:23:15 Europe/Berlin] Attempting to connect to database: dentist
+[14-Apr-2025 12:23:15 Europe/Berlin] Connected to MySQL server successfully
+[14-Apr-2025 12:23:15 Europe/Berlin] Database dentist selected successfully
+[14-Apr-2025 12:23:15 Europe/Berlin] Database connection and setup completed successfully
+[14-Apr-2025 12:23:33 Europe/Berlin] Attempting to connect to database: dentist
+[14-Apr-2025 12:23:33 Europe/Berlin] Connected to MySQL server successfully
+[14-Apr-2025 12:23:33 Europe/Berlin] Database dentist selected successfully
+[14-Apr-2025 12:23:33 Europe/Berlin] Database connection and setup completed successfully
+[14-Apr-2025 12:23:33 Europe/Berlin] Database connection verified
+[14-Apr-2025 12:23:33 Europe/Berlin] Database connection ping successful
+[14-Apr-2025 12:23:33 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\Dentist\process_emergency.php on line 40
+[14-Apr-2025 12:23:33 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\Dentist\process_emergency.php on line 41
+[14-Apr-2025 12:23:33 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\Dentist\process_emergency.php on line 42
+[14-Apr-2025 12:23:33 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\Dentist\process_emergency.php on line 43
+[14-Apr-2025 12:23:33 Europe/Berlin] Sanitized data - Name: Nina Schroeder, Phone: 9148074307, Type: bleeding
+[14-Apr-2025 12:23:33 Europe/Berlin] Attempting database connection check
+[14-Apr-2025 12:23:33 Europe/Berlin] Checking if emergency_requests table exists
+[14-Apr-2025 12:23:33 Europe/Berlin] Preparing to insert emergency request
+[14-Apr-2025 12:23:33 Europe/Berlin] Emergency form error: Unknown column 'emergency_type' in 'field list'
+[14-Apr-2025 12:23:33 Europe/Berlin] Stack trace: #0 C:\xampp\htdocs\Dentist\process_emergency.php(115): mysqli->prepare('INSERT INTO eme...')
+#1 {main}
+[14-Apr-2025 12:26:53 Europe/Berlin] Attempting to connect to MySQL server
+[14-Apr-2025 12:26:53 Europe/Berlin] Connected to MySQL server successfully
+[14-Apr-2025 12:26:53 Europe/Berlin] Database created/verified successfully
+[14-Apr-2025 12:26:53 Europe/Berlin] Database selected successfully
+[14-Apr-2025 12:26:53 Europe/Berlin] Emergency requests table created/verified successfully
+[14-Apr-2025 12:26:53 Europe/Berlin] Database connection and setup completed successfully
+[14-Apr-2025 12:27:06 Europe/Berlin] Attempting to connect to MySQL server
+[14-Apr-2025 12:27:06 Europe/Berlin] Connected to MySQL server successfully
+[14-Apr-2025 12:27:06 Europe/Berlin] Database created/verified successfully
+[14-Apr-2025 12:27:06 Europe/Berlin] Database selected successfully
+[14-Apr-2025 12:27:06 Europe/Berlin] Emergency requests table created/verified successfully
+[14-Apr-2025 12:27:06 Europe/Berlin] Database connection and setup completed successfully
+[14-Apr-2025 12:27:06 Europe/Berlin] Database connection verified
+[14-Apr-2025 12:27:06 Europe/Berlin] Database connection ping successful
+[14-Apr-2025 12:27:06 Europe/Berlin] Received data - Name: Price Guthrie, Phone: 9148074307, Type: broken_tooth, Message length: 19
+[14-Apr-2025 12:27:06 Europe/Berlin] Attempting database connection check
+[14-Apr-2025 12:27:06 Europe/Berlin] Checking if emergency_requests table exists
+[14-Apr-2025 12:27:06 Europe/Berlin] Preparing to insert emergency request
+[14-Apr-2025 12:27:06 Europe/Berlin] Emergency form error: Unknown column 'emergency_type' in 'field list'
+[14-Apr-2025 12:27:06 Europe/Berlin] Stack trace: #0 C:\xampp\htdocs\Dentist\process_emergency.php(116): mysqli->prepare('INSERT INTO eme...')
+#1 {main}
+[14-Apr-2025 12:28:53 Europe/Berlin] Attempting to connect to MySQL server
+[14-Apr-2025 12:28:53 Europe/Berlin] MySQL server is running
+[14-Apr-2025 12:28:53 Europe/Berlin] Connected to MySQL server successfully
+[14-Apr-2025 12:28:53 Europe/Berlin] Database created/verified successfully
+[14-Apr-2025 12:28:53 Europe/Berlin] Database selected successfully
+[14-Apr-2025 12:28:53 Europe/Berlin] Emergency requests table created/verified successfully
+[14-Apr-2025 12:28:53 Europe/Berlin] Database connection and setup completed successfully
+[14-Apr-2025 12:28:53 Europe/Berlin] Database connection verified
+[14-Apr-2025 12:28:53 Europe/Berlin] Database connection ping successful
+[14-Apr-2025 12:28:53 Europe/Berlin] Received data - Name: Dominic Graves, Phone: 9148074307, Type: severe_pain, Message length: 19
+[14-Apr-2025 12:28:53 Europe/Berlin] Attempting database connection check
+[14-Apr-2025 12:28:53 Europe/Berlin] Checking if emergency_requests table exists
+[14-Apr-2025 12:28:53 Europe/Berlin] Preparing to insert emergency request
+[14-Apr-2025 12:28:53 Europe/Berlin] Emergency form error: Unknown column 'emergency_type' in 'field list'
+[14-Apr-2025 12:28:53 Europe/Berlin] Stack trace: #0 C:\xampp\htdocs\Dentist\process_emergency.php(116): mysqli->prepare('INSERT INTO eme...')
+#1 {main}
+[14-Apr-2025 12:35:46 Europe/Berlin] Attempting to connect to MySQL server
+[14-Apr-2025 12:35:46 Europe/Berlin] MySQL server is running
+[14-Apr-2025 12:35:46 Europe/Berlin] Connected to MySQL server successfully
+[14-Apr-2025 12:35:46 Europe/Berlin] Database created/verified successfully
+[14-Apr-2025 12:35:46 Europe/Berlin] Database selected successfully
+[14-Apr-2025 12:35:46 Europe/Berlin] Emergency requests table created/verified successfully
+[14-Apr-2025 12:35:46 Europe/Berlin] Database connection and setup completed successfully
+[14-Apr-2025 12:35:46 Europe/Berlin] Sanitized input - Name: Linus Lowe, Phone: 9148074307, Type: severe_pain
+[14-Apr-2025 12:35:46 Europe/Berlin] Database connection verified
+[14-Apr-2025 12:35:46 Europe/Berlin] Emergency request error: Unknown column 'emergency_type' in 'field list'
+[14-Apr-2025 12:35:46 Europe/Berlin] Stack trace: #0 C:\xampp\htdocs\Dentist\process_emergency.php(84): mysqli->prepare('INSERT INTO eme...')
+#1 {main}
+[14-Apr-2025 12:38:06 Europe/Berlin] Attempting to connect to MySQL server
+[14-Apr-2025 12:38:06 Europe/Berlin] MySQL server is running
+[14-Apr-2025 12:38:06 Europe/Berlin] Connected to MySQL server successfully
+[14-Apr-2025 12:38:06 Europe/Berlin] Database created/verified successfully
+[14-Apr-2025 12:38:06 Europe/Berlin] Database selected successfully
+[14-Apr-2025 12:38:06 Europe/Berlin] Emergency requests table created/verified successfully
+[14-Apr-2025 12:38:06 Europe/Berlin] Database connection and setup completed successfully
+[14-Apr-2025 12:38:06 Europe/Berlin] Sanitized input - Name: Blaze Walsh, Phone: 9148074307, Type: Bleeding
+[14-Apr-2025 12:38:06 Europe/Berlin] Database connection verified
+[14-Apr-2025 12:38:06 Europe/Berlin] Emergency request error: Unknown column 'emergency_type' in 'field list'
+[14-Apr-2025 12:38:06 Europe/Berlin] Stack trace: #0 C:\xampp\htdocs\Dentist\process_emergency.php(84): mysqli->prepare('INSERT INTO eme...')
+#1 {main}
+[14-Apr-2025 12:38:37 Europe/Berlin] Attempting to connect to MySQL server
+[14-Apr-2025 12:38:37 Europe/Berlin] MySQL server is running
+[14-Apr-2025 12:38:37 Europe/Berlin] Connected to MySQL server successfully
+[14-Apr-2025 12:38:37 Europe/Berlin] Database created/verified successfully
+[14-Apr-2025 12:38:37 Europe/Berlin] Database selected successfully
+[14-Apr-2025 12:38:37 Europe/Berlin] Emergency requests table created/verified successfully
+[14-Apr-2025 12:38:37 Europe/Berlin] Database connection and setup completed successfully
+[14-Apr-2025 12:38:53 Europe/Berlin] Attempting to connect to MySQL server
+[14-Apr-2025 12:38:53 Europe/Berlin] MySQL server is running
+[14-Apr-2025 12:38:53 Europe/Berlin] Connected to MySQL server successfully
+[14-Apr-2025 12:38:53 Europe/Berlin] Database created/verified successfully
+[14-Apr-2025 12:38:53 Europe/Berlin] Database selected successfully
+[14-Apr-2025 12:38:53 Europe/Berlin] Emergency requests table created/verified successfully
+[14-Apr-2025 12:38:53 Europe/Berlin] Database connection and setup completed successfully
+[14-Apr-2025 12:39:04 Europe/Berlin] Attempting to connect to MySQL server
+[14-Apr-2025 12:39:04 Europe/Berlin] MySQL server is running
+[14-Apr-2025 12:39:04 Europe/Berlin] Connected to MySQL server successfully
+[14-Apr-2025 12:39:04 Europe/Berlin] Database created/verified successfully
+[14-Apr-2025 12:39:04 Europe/Berlin] Database selected successfully
+[14-Apr-2025 12:39:04 Europe/Berlin] Emergency requests table created/verified successfully
+[14-Apr-2025 12:39:04 Europe/Berlin] Database connection and setup completed successfully
+[14-Apr-2025 12:39:12 Europe/Berlin] Attempting to connect to MySQL server
+[14-Apr-2025 12:39:12 Europe/Berlin] MySQL server is running
+[14-Apr-2025 12:39:12 Europe/Berlin] Connected to MySQL server successfully
+[14-Apr-2025 12:39:12 Europe/Berlin] Database created/verified successfully
+[14-Apr-2025 12:39:12 Europe/Berlin] Database selected successfully
+[14-Apr-2025 12:39:12 Europe/Berlin] Emergency requests table created/verified successfully
+[14-Apr-2025 12:39:12 Europe/Berlin] Database connection and setup completed successfully
+[14-Apr-2025 12:39:12 Europe/Berlin] Sanitized input - Name: Anne Mcfadden, Phone: +1 (738) 554-2773, Type: Swelling
+[14-Apr-2025 12:39:12 Europe/Berlin] Database connection verified
+[14-Apr-2025 12:39:12 Europe/Berlin] Emergency request error: Unknown column 'emergency_type' in 'field list'
+[14-Apr-2025 12:39:12 Europe/Berlin] Stack trace: #0 C:\xampp\htdocs\Dentist\process_emergency.php(84): mysqli->prepare('INSERT INTO eme...')
+#1 {main}
+[14-Apr-2025 12:44:09 Europe/Berlin] Attempting to connect to MySQL server
+[14-Apr-2025 12:44:09 Europe/Berlin] MySQL server is running
+[14-Apr-2025 12:44:09 Europe/Berlin] Connected to MySQL server successfully
+[14-Apr-2025 12:44:09 Europe/Berlin] Database created/verified successfully
+[14-Apr-2025 12:44:09 Europe/Berlin] Database selected successfully
+[14-Apr-2025 12:44:09 Europe/Berlin] Emergency requests table created/verified successfully
+[14-Apr-2025 12:44:09 Europe/Berlin] Database connection and setup completed successfully
+[14-Apr-2025 12:46:56 Europe/Berlin] Attempting to connect to MySQL server
+[14-Apr-2025 12:46:56 Europe/Berlin] MySQL server is running
+[14-Apr-2025 12:46:56 Europe/Berlin] Connected to MySQL server successfully
+[14-Apr-2025 12:46:56 Europe/Berlin] Database created/verified successfully
+[14-Apr-2025 12:46:56 Europe/Berlin] Database selected successfully
+[14-Apr-2025 12:46:56 Europe/Berlin] Emergency requests table created/verified successfully
+[14-Apr-2025 12:46:56 Europe/Berlin] Database connection and setup completed successfully
+[14-Apr-2025 12:46:56 Europe/Berlin] Sanitized input - Name: Ryan Aguirre, Phone: +1722532-3445, Type: Other
+[14-Apr-2025 12:46:56 Europe/Berlin] Database connection verified
+[14-Apr-2025 12:46:56 Europe/Berlin] Emergency request error: Unknown column 'emergency_type' in 'field list'
+[14-Apr-2025 12:46:56 Europe/Berlin] Stack trace: #0 C:\xampp\htdocs\Dentist\process_emergency.php(84): mysqli->prepare('INSERT INTO eme...')
+#1 {main}
+[14-Apr-2025 12:47:16 Europe/Berlin] Attempting to connect to MySQL server
+[14-Apr-2025 12:47:16 Europe/Berlin] MySQL server is running
+[14-Apr-2025 12:47:16 Europe/Berlin] Connected to MySQL server successfully
+[14-Apr-2025 12:47:16 Europe/Berlin] Database created/verified successfully
+[14-Apr-2025 12:47:16 Europe/Berlin] Database selected successfully
+[14-Apr-2025 12:47:16 Europe/Berlin] Emergency requests table created/verified successfully
+[14-Apr-2025 12:47:16 Europe/Berlin] Database connection and setup completed successfully
+[14-Apr-2025 12:49:39 Europe/Berlin] Attempting to connect to MySQL server
+[14-Apr-2025 12:49:39 Europe/Berlin] MySQL server is running
+[14-Apr-2025 12:49:39 Europe/Berlin] Connected to MySQL server successfully
+[14-Apr-2025 12:49:39 Europe/Berlin] Database created/verified successfully
+[14-Apr-2025 12:49:39 Europe/Berlin] Database selected successfully
+[14-Apr-2025 12:49:39 Europe/Berlin] Emergency requests table created/verified successfully
+[14-Apr-2025 12:49:39 Europe/Berlin] Database connection and setup completed successfully
+[14-Apr-2025 12:49:49 Europe/Berlin] Attempting to connect to MySQL server
+[14-Apr-2025 12:49:49 Europe/Berlin] MySQL server is running
+[14-Apr-2025 12:49:49 Europe/Berlin] Connected to MySQL server successfully
+[14-Apr-2025 12:49:49 Europe/Berlin] Database created/verified successfully
+[14-Apr-2025 12:49:49 Europe/Berlin] Database selected successfully
+[14-Apr-2025 12:49:49 Europe/Berlin] Emergency requests table created/verified successfully
+[14-Apr-2025 12:49:49 Europe/Berlin] Database connection and setup completed successfully
+[14-Apr-2025 12:49:58 Europe/Berlin] Attempting to connect to MySQL server
+[14-Apr-2025 12:49:58 Europe/Berlin] MySQL server is running
+[14-Apr-2025 12:49:58 Europe/Berlin] Connected to MySQL server successfully
+[14-Apr-2025 12:49:58 Europe/Berlin] Database created/verified successfully
+[14-Apr-2025 12:49:58 Europe/Berlin] Database selected successfully
+[14-Apr-2025 12:49:58 Europe/Berlin] Emergency requests table created/verified successfully
+[14-Apr-2025 12:49:58 Europe/Berlin] Database connection and setup completed successfully
+[14-Apr-2025 12:50:12 Europe/Berlin] Attempting to connect to MySQL server
+[14-Apr-2025 12:50:12 Europe/Berlin] MySQL server is running
+[14-Apr-2025 12:50:12 Europe/Berlin] Connected to MySQL server successfully
+[14-Apr-2025 12:50:12 Europe/Berlin] Database created/verified successfully
+[14-Apr-2025 12:50:12 Europe/Berlin] Database selected successfully
+[14-Apr-2025 12:50:12 Europe/Berlin] Emergency requests table created/verified successfully
+[14-Apr-2025 12:50:12 Europe/Berlin] Database connection and setup completed successfully

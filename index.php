@@ -57,7 +57,7 @@ print_r($_POST); // Debugging line to check if data is being received correctly
           <!-- <a href="" class="link-btn">Emergency call</a> -->
           <div class="nav-btn">
             <button class="btn_nav">
-              <span><a href="emergengy.php">Emergency</a></span>
+              <span><a href="emergency.php">Emergency</a></span>
             </button>
           </div>
           <div id="menu-btn" class="fas fa-bars"></div>
@@ -223,7 +223,7 @@ print_r($_POST); // Debugging line to check if data is being received correctly
         <div class="container">
           <div class="row justify-content-center align-items-center">
             <div class="col-12 col-lg-5 mb-5 mb-lg-0">
-              <div class>
+              <div>
                 <h1 class="ezy__about13-heading">ABOUT US</h1>
                 <hr class="ezy__about13-divider my-4" />
                 <p class="ezy__about13-sub-heading mb-2">
@@ -237,13 +237,13 @@ print_r($_POST); // Debugging line to check if data is being received correctly
                 <p class="ezy__about13-sub-heading mb-0">
                   We believe that everyone deserves a healthy and confident
                   smile. Our mission is to deliver high-quality dental care
-                  tailored to each patient’s needs, ensuring comfort and
+                  tailored to each patient's needs, ensuring comfort and
                   satisfaction in every visit.
                 </p>
                 <h3>Patient Testimonials</h3>
                 <p class="ezy__about13-sub-heading mb-0">
                   Our patients love the care and attention they receive at Your
-                  Dental Clinic. Here’s what they have to say:
+                  Dental Clinic. Here's what they have to say:
                 </p>
 
                 <blockquote>
@@ -650,7 +650,7 @@ print_r($_POST); // Debugging line to check if data is being received correctly
                         </div>
                         <p class="opacity-75">
                           My teeth have never looked whiter! The treatment was
-                          quick and painless. I’m so happy with my new smile.
+                          quick and painless. I'm so happy with my new smile.
                         </p>
                       </div>
                     </div>
