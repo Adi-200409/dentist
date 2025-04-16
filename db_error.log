@@ -211,3 +211,1210 @@
 [14-Apr-2025 12:50:12 Europe/Berlin] Database selected successfully
 [14-Apr-2025 12:50:12 Europe/Berlin] Emergency requests table created/verified successfully
 [14-Apr-2025 12:50:12 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 07:05:32 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 07:05:32 Europe/Berlin] MySQL server is running
+[16-Apr-2025 07:05:32 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 07:05:32 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 07:05:32 Europe/Berlin] Database selected successfully
+[16-Apr-2025 07:05:32 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 07:05:32 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 07:05:45 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 07:05:45 Europe/Berlin] MySQL server is running
+[16-Apr-2025 07:05:45 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 07:05:45 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 07:05:45 Europe/Berlin] Database selected successfully
+[16-Apr-2025 07:05:45 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 07:05:45 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 07:06:14 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 07:06:14 Europe/Berlin] MySQL server is running
+[16-Apr-2025 07:06:14 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 07:06:14 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 07:06:14 Europe/Berlin] Database selected successfully
+[16-Apr-2025 07:06:14 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 07:06:14 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 07:06:16 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 07:06:16 Europe/Berlin] MySQL server is running
+[16-Apr-2025 07:06:16 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 07:06:16 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 07:06:16 Europe/Berlin] Database selected successfully
+[16-Apr-2025 07:06:16 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 07:06:16 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 07:08:30 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 07:08:30 Europe/Berlin] MySQL server is running
+[16-Apr-2025 07:08:30 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 07:08:30 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 07:08:30 Europe/Berlin] Database selected successfully
+[16-Apr-2025 07:08:30 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 07:08:30 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 07:08:30 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 9
+[16-Apr-2025 07:08:30 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 10
+[16-Apr-2025 07:08:30 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 12
+[16-Apr-2025 07:08:30 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 13
+[16-Apr-2025 07:08:30 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 14
+[16-Apr-2025 07:08:30 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 15
+[16-Apr-2025 07:08:30 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 16
+[16-Apr-2025 07:08:30 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 17
+[16-Apr-2025 07:11:09 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 07:11:09 Europe/Berlin] MySQL server is running
+[16-Apr-2025 07:11:09 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 07:11:09 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 07:11:09 Europe/Berlin] Database selected successfully
+[16-Apr-2025 07:11:09 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 07:11:09 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 07:11:18 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 07:11:18 Europe/Berlin] MySQL server is running
+[16-Apr-2025 07:11:18 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 07:11:18 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 07:11:18 Europe/Berlin] Database selected successfully
+[16-Apr-2025 07:11:18 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 07:11:18 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 07:11:26 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 07:11:26 Europe/Berlin] MySQL server is running
+[16-Apr-2025 07:11:26 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 07:11:26 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 07:11:26 Europe/Berlin] Database selected successfully
+[16-Apr-2025 07:11:26 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 07:11:26 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 07:11:28 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 07:11:28 Europe/Berlin] MySQL server is running
+[16-Apr-2025 07:11:28 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 07:11:28 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 07:11:28 Europe/Berlin] Database selected successfully
+[16-Apr-2025 07:11:28 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 07:11:28 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 07:17:02 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 07:17:02 Europe/Berlin] MySQL server is running
+[16-Apr-2025 07:17:02 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 07:17:02 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 07:17:02 Europe/Berlin] Database selected successfully
+[16-Apr-2025 07:17:02 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 07:17:02 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 07:17:30 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 07:17:30 Europe/Berlin] MySQL server is running
+[16-Apr-2025 07:17:30 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 07:17:30 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 07:17:30 Europe/Berlin] Database selected successfully
+[16-Apr-2025 07:17:30 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 07:17:30 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 07:17:30 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 9
+[16-Apr-2025 07:17:30 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 10
+[16-Apr-2025 07:17:30 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 12
+[16-Apr-2025 07:17:30 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 13
+[16-Apr-2025 07:17:30 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 14
+[16-Apr-2025 07:17:30 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 15
+[16-Apr-2025 07:17:30 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 16
+[16-Apr-2025 07:17:30 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 17
+[16-Apr-2025 07:23:23 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 07:23:23 Europe/Berlin] MySQL server is running
+[16-Apr-2025 07:23:23 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 07:23:23 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 07:23:23 Europe/Berlin] Database selected successfully
+[16-Apr-2025 07:23:23 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 07:23:23 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 07:24:33 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 07:24:33 Europe/Berlin] MySQL server is running
+[16-Apr-2025 07:24:33 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 07:24:33 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 07:24:33 Europe/Berlin] Database selected successfully
+[16-Apr-2025 07:24:33 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 07:24:33 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 07:25:01 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 07:25:01 Europe/Berlin] MySQL server is running
+[16-Apr-2025 07:25:01 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 07:25:01 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 07:25:01 Europe/Berlin] Database selected successfully
+[16-Apr-2025 07:25:01 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 07:25:01 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 07:25:19 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 07:25:19 Europe/Berlin] MySQL server is running
+[16-Apr-2025 07:25:19 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 07:25:19 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 07:25:19 Europe/Berlin] Database selected successfully
+[16-Apr-2025 07:25:19 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 07:25:19 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 07:25:19 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 9
+[16-Apr-2025 07:25:19 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 10
+[16-Apr-2025 07:25:19 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 12
+[16-Apr-2025 07:25:19 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 13
+[16-Apr-2025 07:25:19 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 14
+[16-Apr-2025 07:25:19 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 15
+[16-Apr-2025 07:25:19 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 16
+[16-Apr-2025 07:25:19 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 17
+[16-Apr-2025 07:26:03 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 07:26:03 Europe/Berlin] MySQL server is running
+[16-Apr-2025 07:26:03 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 07:26:03 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 07:26:03 Europe/Berlin] Database selected successfully
+[16-Apr-2025 07:26:03 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 07:26:03 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 07:27:05 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 07:27:05 Europe/Berlin] MySQL server is running
+[16-Apr-2025 07:27:05 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 07:27:05 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 07:27:05 Europe/Berlin] Database selected successfully
+[16-Apr-2025 07:27:05 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 07:27:05 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 07:28:14 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 07:28:14 Europe/Berlin] MySQL server is running
+[16-Apr-2025 07:28:14 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 07:28:14 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 07:28:14 Europe/Berlin] Database selected successfully
+[16-Apr-2025 07:28:14 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 07:28:14 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 07:28:33 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 07:28:33 Europe/Berlin] MySQL server is running
+[16-Apr-2025 07:28:33 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 07:28:33 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 07:28:33 Europe/Berlin] Database selected successfully
+[16-Apr-2025 07:28:33 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 07:28:33 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 07:28:35 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 07:28:35 Europe/Berlin] MySQL server is running
+[16-Apr-2025 07:28:35 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 07:28:35 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 07:28:35 Europe/Berlin] Database selected successfully
+[16-Apr-2025 07:28:35 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 07:28:35 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 07:28:36 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 07:28:36 Europe/Berlin] MySQL server is running
+[16-Apr-2025 07:28:36 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 07:28:36 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 07:28:36 Europe/Berlin] Database selected successfully
+[16-Apr-2025 07:28:36 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 07:28:36 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 07:28:47 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 07:28:47 Europe/Berlin] MySQL server is running
+[16-Apr-2025 07:28:47 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 07:28:47 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 07:28:47 Europe/Berlin] Database selected successfully
+[16-Apr-2025 07:28:47 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 07:28:47 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 07:29:10 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 07:29:10 Europe/Berlin] MySQL server is running
+[16-Apr-2025 07:29:10 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 07:29:10 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 07:29:10 Europe/Berlin] Database selected successfully
+[16-Apr-2025 07:29:10 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 07:29:10 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 07:30:16 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 07:30:16 Europe/Berlin] MySQL server is running
+[16-Apr-2025 07:30:16 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 07:30:16 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 07:30:16 Europe/Berlin] Database selected successfully
+[16-Apr-2025 07:30:16 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 07:30:16 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 07:30:16 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 9
+[16-Apr-2025 07:30:16 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 10
+[16-Apr-2025 07:30:16 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 12
+[16-Apr-2025 07:30:16 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 13
+[16-Apr-2025 07:30:16 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 14
+[16-Apr-2025 07:30:16 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 15
+[16-Apr-2025 07:30:16 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 16
+[16-Apr-2025 07:30:16 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 17
+[16-Apr-2025 07:32:06 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 07:32:06 Europe/Berlin] MySQL server is running
+[16-Apr-2025 07:32:06 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 07:32:06 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 07:32:06 Europe/Berlin] Database selected successfully
+[16-Apr-2025 07:32:06 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 07:32:06 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 07:32:31 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 07:32:31 Europe/Berlin] MySQL server is running
+[16-Apr-2025 07:32:31 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 07:32:31 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 07:32:31 Europe/Berlin] Database selected successfully
+[16-Apr-2025 07:32:31 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 07:32:31 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 07:32:31 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 9
+[16-Apr-2025 07:32:31 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 10
+[16-Apr-2025 07:32:31 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 12
+[16-Apr-2025 07:32:31 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 13
+[16-Apr-2025 07:32:31 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 14
+[16-Apr-2025 07:32:31 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 15
+[16-Apr-2025 07:32:31 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 16
+[16-Apr-2025 07:32:31 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 17
+[16-Apr-2025 07:33:11 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 07:33:11 Europe/Berlin] MySQL server is running
+[16-Apr-2025 07:33:11 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 07:33:11 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 07:33:11 Europe/Berlin] Database selected successfully
+[16-Apr-2025 07:33:11 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 07:33:11 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 07:33:26 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 07:33:26 Europe/Berlin] MySQL server is running
+[16-Apr-2025 07:33:26 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 07:33:26 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 07:33:26 Europe/Berlin] Database selected successfully
+[16-Apr-2025 07:33:26 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 07:33:26 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 07:34:31 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 07:34:31 Europe/Berlin] MySQL server is running
+[16-Apr-2025 07:34:31 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 07:34:31 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 07:34:31 Europe/Berlin] Database selected successfully
+[16-Apr-2025 07:34:31 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 07:34:31 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 07:35:42 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 07:35:42 Europe/Berlin] MySQL server is running
+[16-Apr-2025 07:35:42 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 07:35:42 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 07:35:42 Europe/Berlin] Database selected successfully
+[16-Apr-2025 07:35:42 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 07:35:42 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 07:36:28 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 07:36:28 Europe/Berlin] MySQL server is running
+[16-Apr-2025 07:36:28 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 07:36:28 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 07:36:28 Europe/Berlin] Database selected successfully
+[16-Apr-2025 07:36:28 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 07:36:28 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 07:37:17 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 07:37:17 Europe/Berlin] MySQL server is running
+[16-Apr-2025 07:37:17 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 07:37:17 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 07:37:17 Europe/Berlin] Database selected successfully
+[16-Apr-2025 07:37:17 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 07:37:17 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 07:37:17 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 9
+[16-Apr-2025 07:37:17 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 10
+[16-Apr-2025 07:37:17 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 12
+[16-Apr-2025 07:37:17 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 13
+[16-Apr-2025 07:37:17 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 14
+[16-Apr-2025 07:37:17 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 15
+[16-Apr-2025 07:37:17 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 16
+[16-Apr-2025 07:37:17 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 17
+[16-Apr-2025 07:37:57 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 07:37:57 Europe/Berlin] MySQL server is running
+[16-Apr-2025 07:37:57 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 07:37:57 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 07:37:57 Europe/Berlin] Database selected successfully
+[16-Apr-2025 07:37:57 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 07:37:57 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 07:38:08 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 07:38:08 Europe/Berlin] MySQL server is running
+[16-Apr-2025 07:38:08 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 07:38:08 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 07:38:08 Europe/Berlin] Database selected successfully
+[16-Apr-2025 07:38:08 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 07:38:08 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 07:38:08 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 9
+[16-Apr-2025 07:38:08 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 10
+[16-Apr-2025 07:38:08 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 12
+[16-Apr-2025 07:38:08 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 13
+[16-Apr-2025 07:38:08 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 14
+[16-Apr-2025 07:38:08 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 15
+[16-Apr-2025 07:38:08 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 16
+[16-Apr-2025 07:38:08 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 17
+[16-Apr-2025 07:38:20 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 07:38:20 Europe/Berlin] MySQL server is running
+[16-Apr-2025 07:38:20 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 07:38:20 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 07:38:20 Europe/Berlin] Database selected successfully
+[16-Apr-2025 07:38:20 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 07:38:20 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 07:38:20 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 9
+[16-Apr-2025 07:38:20 Europe/Berlin] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 9
+[16-Apr-2025 07:38:20 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 10
+[16-Apr-2025 07:38:20 Europe/Berlin] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 10
+[16-Apr-2025 07:38:20 Europe/Berlin] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 11
+[16-Apr-2025 07:38:20 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 12
+[16-Apr-2025 07:38:20 Europe/Berlin] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 12
+[16-Apr-2025 07:38:20 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 13
+[16-Apr-2025 07:38:20 Europe/Berlin] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 13
+[16-Apr-2025 07:38:20 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 14
+[16-Apr-2025 07:38:20 Europe/Berlin] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 14
+[16-Apr-2025 07:38:20 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 15
+[16-Apr-2025 07:38:20 Europe/Berlin] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 15
+[16-Apr-2025 07:38:20 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 16
+[16-Apr-2025 07:38:20 Europe/Berlin] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 16
+[16-Apr-2025 07:38:20 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 17
+[16-Apr-2025 07:38:20 Europe/Berlin] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 17
+[16-Apr-2025 07:38:48 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 07:38:48 Europe/Berlin] MySQL server is running
+[16-Apr-2025 07:38:48 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 07:38:48 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 07:38:48 Europe/Berlin] Database selected successfully
+[16-Apr-2025 07:38:48 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 07:38:48 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 07:38:48 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 9
+[16-Apr-2025 07:38:48 Europe/Berlin] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 9
+[16-Apr-2025 07:38:48 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 10
+[16-Apr-2025 07:38:48 Europe/Berlin] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 10
+[16-Apr-2025 07:38:48 Europe/Berlin] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 11
+[16-Apr-2025 07:38:48 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 12
+[16-Apr-2025 07:38:48 Europe/Berlin] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 12
+[16-Apr-2025 07:38:48 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 13
+[16-Apr-2025 07:38:48 Europe/Berlin] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 13
+[16-Apr-2025 07:38:48 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 14
+[16-Apr-2025 07:38:48 Europe/Berlin] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 14
+[16-Apr-2025 07:38:48 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 15
+[16-Apr-2025 07:38:48 Europe/Berlin] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 15
+[16-Apr-2025 07:38:48 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 16
+[16-Apr-2025 07:38:48 Europe/Berlin] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 16
+[16-Apr-2025 07:38:48 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 17
+[16-Apr-2025 07:38:48 Europe/Berlin] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 17
+[16-Apr-2025 07:40:24 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 07:40:24 Europe/Berlin] MySQL server is running
+[16-Apr-2025 07:40:24 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 07:40:24 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 07:40:24 Europe/Berlin] Database selected successfully
+[16-Apr-2025 07:40:24 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 07:40:24 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 07:40:28 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 07:40:28 Europe/Berlin] MySQL server is running
+[16-Apr-2025 07:40:28 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 07:40:28 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 07:40:28 Europe/Berlin] Database selected successfully
+[16-Apr-2025 07:40:28 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 07:40:28 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 07:41:16 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 07:41:16 Europe/Berlin] MySQL server is running
+[16-Apr-2025 07:41:16 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 07:41:16 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 07:41:16 Europe/Berlin] Database selected successfully
+[16-Apr-2025 07:41:16 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 07:41:16 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 07:41:22 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 07:41:22 Europe/Berlin] MySQL server is running
+[16-Apr-2025 07:41:22 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 07:41:22 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 07:41:22 Europe/Berlin] Database selected successfully
+[16-Apr-2025 07:41:22 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 07:41:22 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 07:42:25 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 07:42:25 Europe/Berlin] MySQL server is running
+[16-Apr-2025 07:42:25 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 07:42:25 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 07:42:25 Europe/Berlin] Database selected successfully
+[16-Apr-2025 07:42:25 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 07:42:25 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 07:42:52 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 07:42:52 Europe/Berlin] MySQL server is running
+[16-Apr-2025 07:42:52 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 07:42:52 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 07:42:52 Europe/Berlin] Database selected successfully
+[16-Apr-2025 07:42:52 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 07:42:52 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 07:43:36 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 07:43:36 Europe/Berlin] MySQL server is running
+[16-Apr-2025 07:43:36 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 07:43:36 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 07:43:36 Europe/Berlin] Database selected successfully
+[16-Apr-2025 07:43:36 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 07:43:36 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 07:44:03 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 07:44:03 Europe/Berlin] MySQL server is running
+[16-Apr-2025 07:44:03 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 07:44:03 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 07:44:03 Europe/Berlin] Database selected successfully
+[16-Apr-2025 07:44:03 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 07:44:03 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 07:44:15 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 07:44:15 Europe/Berlin] MySQL server is running
+[16-Apr-2025 07:44:15 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 07:44:15 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 07:44:15 Europe/Berlin] Database selected successfully
+[16-Apr-2025 07:44:15 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 07:44:15 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 07:56:37 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 07:56:37 Europe/Berlin] MySQL server is running
+[16-Apr-2025 07:56:37 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 07:56:37 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 07:56:37 Europe/Berlin] Database selected successfully
+[16-Apr-2025 07:56:37 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 07:56:37 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 07:56:37 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 9
+[16-Apr-2025 07:56:37 Europe/Berlin] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 9
+[16-Apr-2025 07:56:37 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 10
+[16-Apr-2025 07:56:37 Europe/Berlin] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 10
+[16-Apr-2025 07:56:37 Europe/Berlin] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 11
+[16-Apr-2025 07:56:37 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 12
+[16-Apr-2025 07:56:37 Europe/Berlin] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 12
+[16-Apr-2025 07:56:37 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 13
+[16-Apr-2025 07:56:37 Europe/Berlin] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 13
+[16-Apr-2025 07:56:37 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 14
+[16-Apr-2025 07:56:37 Europe/Berlin] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 14
+[16-Apr-2025 07:56:37 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 15
+[16-Apr-2025 07:56:37 Europe/Berlin] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 15
+[16-Apr-2025 07:56:37 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 16
+[16-Apr-2025 07:56:37 Europe/Berlin] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 16
+[16-Apr-2025 07:56:37 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 17
+[16-Apr-2025 07:56:37 Europe/Berlin] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 17
+[16-Apr-2025 07:56:47 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 07:56:47 Europe/Berlin] MySQL server is running
+[16-Apr-2025 07:56:47 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 07:56:47 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 07:56:47 Europe/Berlin] Database selected successfully
+[16-Apr-2025 07:56:47 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 07:56:47 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 07:57:14 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 07:57:14 Europe/Berlin] MySQL server is running
+[16-Apr-2025 07:57:14 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 07:57:14 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 07:57:14 Europe/Berlin] Database selected successfully
+[16-Apr-2025 07:57:14 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 07:57:14 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 07:57:14 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 9
+[16-Apr-2025 07:57:14 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 10
+[16-Apr-2025 07:57:14 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 12
+[16-Apr-2025 07:57:14 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 13
+[16-Apr-2025 07:57:14 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 14
+[16-Apr-2025 07:57:14 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 15
+[16-Apr-2025 07:57:14 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 16
+[16-Apr-2025 07:57:14 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 17
+[16-Apr-2025 07:59:13 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 07:59:13 Europe/Berlin] MySQL server is running
+[16-Apr-2025 07:59:13 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 07:59:13 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 07:59:13 Europe/Berlin] Database selected successfully
+[16-Apr-2025 07:59:13 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 07:59:13 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 07:59:23 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 07:59:23 Europe/Berlin] MySQL server is running
+[16-Apr-2025 07:59:23 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 07:59:23 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 07:59:23 Europe/Berlin] Database selected successfully
+[16-Apr-2025 07:59:23 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 07:59:23 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 07:59:23 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 9
+[16-Apr-2025 07:59:23 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 10
+[16-Apr-2025 07:59:23 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 12
+[16-Apr-2025 07:59:23 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 13
+[16-Apr-2025 07:59:23 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 14
+[16-Apr-2025 07:59:23 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 15
+[16-Apr-2025 07:59:23 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 16
+[16-Apr-2025 07:59:23 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 17
+[16-Apr-2025 08:01:06 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 08:01:06 Europe/Berlin] MySQL server is running
+[16-Apr-2025 08:01:06 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 08:01:06 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 08:01:06 Europe/Berlin] Database selected successfully
+[16-Apr-2025 08:01:06 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 08:01:06 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 08:02:48 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 08:02:48 Europe/Berlin] MySQL server is running
+[16-Apr-2025 08:02:48 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 08:02:48 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 08:02:48 Europe/Berlin] Database selected successfully
+[16-Apr-2025 08:02:48 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 08:02:48 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 08:02:58 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 08:02:58 Europe/Berlin] MySQL server is running
+[16-Apr-2025 08:02:58 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 08:02:58 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 08:02:58 Europe/Berlin] Database selected successfully
+[16-Apr-2025 08:02:58 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 08:02:58 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 08:02:58 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 9
+[16-Apr-2025 08:02:58 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 10
+[16-Apr-2025 08:02:58 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 12
+[16-Apr-2025 08:02:58 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 13
+[16-Apr-2025 08:02:58 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 14
+[16-Apr-2025 08:02:58 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 15
+[16-Apr-2025 08:02:58 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 16
+[16-Apr-2025 08:02:58 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 17
+[16-Apr-2025 08:05:29 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 08:05:29 Europe/Berlin] MySQL server is running
+[16-Apr-2025 08:05:29 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 08:05:29 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 08:05:29 Europe/Berlin] Database selected successfully
+[16-Apr-2025 08:05:29 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 08:05:29 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 08:05:51 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 08:05:51 Europe/Berlin] MySQL server is running
+[16-Apr-2025 08:05:51 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 08:05:51 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 08:05:51 Europe/Berlin] Database selected successfully
+[16-Apr-2025 08:05:51 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 08:05:51 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 08:05:51 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 9
+[16-Apr-2025 08:05:51 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 10
+[16-Apr-2025 08:05:51 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 12
+[16-Apr-2025 08:05:51 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 13
+[16-Apr-2025 08:05:51 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 14
+[16-Apr-2025 08:05:51 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 15
+[16-Apr-2025 08:05:51 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 16
+[16-Apr-2025 08:05:51 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 17
+[16-Apr-2025 08:09:00 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 08:09:00 Europe/Berlin] MySQL server is running
+[16-Apr-2025 08:09:00 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 08:09:00 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 08:09:00 Europe/Berlin] Database selected successfully
+[16-Apr-2025 08:09:00 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 08:09:00 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 08:09:12 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 08:09:12 Europe/Berlin] MySQL server is running
+[16-Apr-2025 08:09:12 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 08:09:12 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 08:09:12 Europe/Berlin] Database selected successfully
+[16-Apr-2025 08:09:12 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 08:09:12 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 08:09:12 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 9
+[16-Apr-2025 08:09:12 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 10
+[16-Apr-2025 08:09:12 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 12
+[16-Apr-2025 08:09:12 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 13
+[16-Apr-2025 08:09:12 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 14
+[16-Apr-2025 08:09:12 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 15
+[16-Apr-2025 08:09:12 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 16
+[16-Apr-2025 08:09:12 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 17
+[16-Apr-2025 08:11:27 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 08:11:27 Europe/Berlin] MySQL server is running
+[16-Apr-2025 08:11:27 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 08:11:27 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 08:11:27 Europe/Berlin] Database selected successfully
+[16-Apr-2025 08:11:27 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 08:11:27 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 08:11:39 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 08:11:39 Europe/Berlin] MySQL server is running
+[16-Apr-2025 08:11:39 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 08:11:39 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 08:11:39 Europe/Berlin] Database selected successfully
+[16-Apr-2025 08:11:39 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 08:11:39 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 08:11:39 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 9
+[16-Apr-2025 08:11:39 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 10
+[16-Apr-2025 08:11:39 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 12
+[16-Apr-2025 08:11:39 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 13
+[16-Apr-2025 08:11:39 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 14
+[16-Apr-2025 08:11:39 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 15
+[16-Apr-2025 08:11:39 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 16
+[16-Apr-2025 08:11:39 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 17
+[16-Apr-2025 08:15:00 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 08:15:00 Europe/Berlin] MySQL server is running
+[16-Apr-2025 08:15:00 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 08:15:00 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 08:15:00 Europe/Berlin] Database selected successfully
+[16-Apr-2025 08:15:00 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 08:15:00 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 08:15:13 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 08:15:13 Europe/Berlin] MySQL server is running
+[16-Apr-2025 08:15:13 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 08:15:13 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 08:15:13 Europe/Berlin] Database selected successfully
+[16-Apr-2025 08:15:13 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 08:15:13 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 08:15:23 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 08:15:23 Europe/Berlin] MySQL server is running
+[16-Apr-2025 08:15:23 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 08:15:23 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 08:15:23 Europe/Berlin] Database selected successfully
+[16-Apr-2025 08:15:23 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 08:15:23 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 08:15:55 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 08:15:55 Europe/Berlin] MySQL server is running
+[16-Apr-2025 08:15:55 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 08:15:55 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 08:15:55 Europe/Berlin] Database selected successfully
+[16-Apr-2025 08:15:55 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 08:15:55 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 08:16:09 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 08:16:09 Europe/Berlin] MySQL server is running
+[16-Apr-2025 08:16:09 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 08:16:09 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 08:16:09 Europe/Berlin] Database selected successfully
+[16-Apr-2025 08:16:09 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 08:16:09 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 08:16:09 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 9
+[16-Apr-2025 08:16:09 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 10
+[16-Apr-2025 08:16:09 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 12
+[16-Apr-2025 08:16:09 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 13
+[16-Apr-2025 08:16:09 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 14
+[16-Apr-2025 08:16:09 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 15
+[16-Apr-2025 08:16:09 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 16
+[16-Apr-2025 08:16:09 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 17
+[16-Apr-2025 08:17:41 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 08:17:41 Europe/Berlin] MySQL server is running
+[16-Apr-2025 08:17:41 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 08:17:41 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 08:17:41 Europe/Berlin] Database selected successfully
+[16-Apr-2025 08:17:41 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 08:17:41 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 08:17:55 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 08:17:55 Europe/Berlin] MySQL server is running
+[16-Apr-2025 08:17:55 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 08:17:55 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 08:17:55 Europe/Berlin] Database selected successfully
+[16-Apr-2025 08:17:55 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 08:17:55 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 08:17:55 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 9
+[16-Apr-2025 08:17:55 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 10
+[16-Apr-2025 08:17:55 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 12
+[16-Apr-2025 08:17:55 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 13
+[16-Apr-2025 08:17:55 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 14
+[16-Apr-2025 08:17:55 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 15
+[16-Apr-2025 08:17:55 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 16
+[16-Apr-2025 08:17:55 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 17
+[16-Apr-2025 08:19:28 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 08:19:28 Europe/Berlin] MySQL server is running
+[16-Apr-2025 08:19:28 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 08:19:28 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 08:19:28 Europe/Berlin] Database selected successfully
+[16-Apr-2025 08:19:28 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 08:19:28 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 08:21:00 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 08:21:00 Europe/Berlin] MySQL server is running
+[16-Apr-2025 08:21:00 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 08:21:00 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 08:21:00 Europe/Berlin] Database selected successfully
+[16-Apr-2025 08:21:00 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 08:21:00 Europe/Berlin] Appointments table created/verified successfully
+[16-Apr-2025 08:21:00 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 08:21:04 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 08:21:04 Europe/Berlin] MySQL server is running
+[16-Apr-2025 08:21:04 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 08:21:04 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 08:21:04 Europe/Berlin] Database selected successfully
+[16-Apr-2025 08:21:04 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 08:21:04 Europe/Berlin] Appointments table created/verified successfully
+[16-Apr-2025 08:21:04 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 08:21:07 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 08:21:07 Europe/Berlin] MySQL server is running
+[16-Apr-2025 08:21:07 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 08:21:07 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 08:21:07 Europe/Berlin] Database selected successfully
+[16-Apr-2025 08:21:07 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 08:21:07 Europe/Berlin] Appointments table created/verified successfully
+[16-Apr-2025 08:21:07 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 08:21:30 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 08:21:30 Europe/Berlin] MySQL server is running
+[16-Apr-2025 08:21:30 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 08:21:30 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 08:21:30 Europe/Berlin] Database selected successfully
+[16-Apr-2025 08:21:30 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 08:21:30 Europe/Berlin] Appointments table created/verified successfully
+[16-Apr-2025 08:21:30 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 08:21:30 Europe/Berlin] Error in cancel_appointment.php: Appointment ID is required
+[16-Apr-2025 08:21:36 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 08:21:36 Europe/Berlin] MySQL server is running
+[16-Apr-2025 08:21:36 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 08:21:36 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 08:21:36 Europe/Berlin] Database selected successfully
+[16-Apr-2025 08:21:36 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 08:21:36 Europe/Berlin] Appointments table created/verified successfully
+[16-Apr-2025 08:21:36 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 08:21:46 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 08:21:46 Europe/Berlin] MySQL server is running
+[16-Apr-2025 08:21:46 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 08:21:46 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 08:21:46 Europe/Berlin] Database selected successfully
+[16-Apr-2025 08:21:46 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 08:21:46 Europe/Berlin] Appointments table created/verified successfully
+[16-Apr-2025 08:21:46 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 08:21:46 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 9
+[16-Apr-2025 08:21:46 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 10
+[16-Apr-2025 08:21:46 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 12
+[16-Apr-2025 08:21:46 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 13
+[16-Apr-2025 08:21:46 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 14
+[16-Apr-2025 08:21:46 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 15
+[16-Apr-2025 08:21:46 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 16
+[16-Apr-2025 08:21:46 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 17
+[16-Apr-2025 08:21:50 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 08:21:50 Europe/Berlin] MySQL server is running
+[16-Apr-2025 08:21:50 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 08:21:50 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 08:21:50 Europe/Berlin] Database selected successfully
+[16-Apr-2025 08:21:50 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 08:21:50 Europe/Berlin] Appointments table created/verified successfully
+[16-Apr-2025 08:21:50 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 08:21:50 Europe/Berlin] Error in cancel_appointment.php: Appointment ID is required
+[16-Apr-2025 08:23:53 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 08:23:53 Europe/Berlin] MySQL server is running
+[16-Apr-2025 08:23:53 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 08:23:53 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 08:23:53 Europe/Berlin] Database selected successfully
+[16-Apr-2025 08:23:53 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 08:23:53 Europe/Berlin] Appointments table created/verified successfully
+[16-Apr-2025 08:23:53 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 08:24:02 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 08:24:02 Europe/Berlin] MySQL server is running
+[16-Apr-2025 08:24:02 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 08:24:02 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 08:24:02 Europe/Berlin] Database selected successfully
+[16-Apr-2025 08:24:02 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 08:24:02 Europe/Berlin] Appointments table created/verified successfully
+[16-Apr-2025 08:24:02 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 08:24:02 Europe/Berlin] PHP Fatal error:  Uncaught Error: mysqli_stmt object is already closed in C:\xampp\htdocs\dentist\appointment.php:84
+Stack trace:
+#0 C:\xampp\htdocs\dentist\appointment.php(84): mysqli_stmt->close()
+#1 {main}
+  thrown in C:\xampp\htdocs\dentist\appointment.php on line 84
+[16-Apr-2025 08:24:05 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 08:24:05 Europe/Berlin] MySQL server is running
+[16-Apr-2025 08:24:05 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 08:24:05 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 08:24:05 Europe/Berlin] Database selected successfully
+[16-Apr-2025 08:24:05 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 08:24:05 Europe/Berlin] Appointments table created/verified successfully
+[16-Apr-2025 08:24:05 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 08:24:46 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 08:24:46 Europe/Berlin] MySQL server is running
+[16-Apr-2025 08:24:46 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 08:24:46 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 08:24:46 Europe/Berlin] Database selected successfully
+[16-Apr-2025 08:24:46 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 08:24:46 Europe/Berlin] Appointments table created/verified successfully
+[16-Apr-2025 08:24:46 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 08:24:46 Europe/Berlin] PHP Fatal error:  Uncaught Error: mysqli_stmt object is already closed in C:\xampp\htdocs\dentist\appointment.php:84
+Stack trace:
+#0 C:\xampp\htdocs\dentist\appointment.php(84): mysqli_stmt->close()
+#1 {main}
+  thrown in C:\xampp\htdocs\dentist\appointment.php on line 84
+[16-Apr-2025 08:25:26 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 08:25:26 Europe/Berlin] MySQL server is running
+[16-Apr-2025 08:25:26 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 08:25:26 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 08:25:26 Europe/Berlin] Database selected successfully
+[16-Apr-2025 08:25:26 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 08:25:26 Europe/Berlin] Appointments table created/verified successfully
+[16-Apr-2025 08:25:26 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 08:25:35 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 08:25:35 Europe/Berlin] MySQL server is running
+[16-Apr-2025 08:25:35 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 08:25:35 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 08:25:35 Europe/Berlin] Database selected successfully
+[16-Apr-2025 08:25:35 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 08:25:35 Europe/Berlin] Appointments table created/verified successfully
+[16-Apr-2025 08:25:35 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 08:25:35 Europe/Berlin] PHP Fatal error:  Uncaught Error: mysqli_stmt object is already closed in C:\xampp\htdocs\dentist\appointment.php:84
+Stack trace:
+#0 C:\xampp\htdocs\dentist\appointment.php(84): mysqli_stmt->close()
+#1 {main}
+  thrown in C:\xampp\htdocs\dentist\appointment.php on line 84
+[16-Apr-2025 08:29:24 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 08:29:24 Europe/Berlin] MySQL server is running
+[16-Apr-2025 08:29:24 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 08:29:24 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 08:29:24 Europe/Berlin] Database selected successfully
+[16-Apr-2025 08:29:24 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 08:29:24 Europe/Berlin] Appointments table created/verified successfully
+[16-Apr-2025 08:29:24 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 08:29:44 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 08:29:44 Europe/Berlin] MySQL server is running
+[16-Apr-2025 08:29:44 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 08:29:44 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 08:29:44 Europe/Berlin] Database selected successfully
+[16-Apr-2025 08:29:44 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 08:29:44 Europe/Berlin] Appointments table created/verified successfully
+[16-Apr-2025 08:29:44 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 08:29:44 Europe/Berlin] PHP Fatal error:  Uncaught Error: mysqli_stmt object is already closed in C:\xampp\htdocs\dentist\appointment.php:84
+Stack trace:
+#0 C:\xampp\htdocs\dentist\appointment.php(84): mysqli_stmt->close()
+#1 {main}
+  thrown in C:\xampp\htdocs\dentist\appointment.php on line 84
+[16-Apr-2025 08:31:08 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 08:31:08 Europe/Berlin] MySQL server is running
+[16-Apr-2025 08:31:08 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 08:31:08 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 08:31:08 Europe/Berlin] Database selected successfully
+[16-Apr-2025 08:31:08 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 08:31:08 Europe/Berlin] Appointments table created/verified successfully
+[16-Apr-2025 08:31:08 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 08:31:27 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 08:31:27 Europe/Berlin] MySQL server is running
+[16-Apr-2025 08:31:27 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 08:31:27 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 08:31:27 Europe/Berlin] Database selected successfully
+[16-Apr-2025 08:31:27 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 08:31:27 Europe/Berlin] Appointments table created/verified successfully
+[16-Apr-2025 08:31:27 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 08:31:27 Europe/Berlin] PHP Fatal error:  Uncaught Error: mysqli_stmt object is already closed in C:\xampp\htdocs\dentist\appointment.php:84
+Stack trace:
+#0 C:\xampp\htdocs\dentist\appointment.php(84): mysqli_stmt->close()
+#1 {main}
+  thrown in C:\xampp\htdocs\dentist\appointment.php on line 84
+[16-Apr-2025 08:31:50 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 08:31:50 Europe/Berlin] MySQL server is running
+[16-Apr-2025 08:31:50 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 08:31:50 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 08:31:50 Europe/Berlin] Database selected successfully
+[16-Apr-2025 08:31:50 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 08:31:50 Europe/Berlin] Appointments table created/verified successfully
+[16-Apr-2025 08:31:50 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 08:39:26 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 08:39:26 Europe/Berlin] MySQL server is running
+[16-Apr-2025 08:39:26 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 08:39:26 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 08:39:26 Europe/Berlin] Database selected successfully
+[16-Apr-2025 08:39:26 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 08:39:26 Europe/Berlin] Appointments table created/verified successfully
+[16-Apr-2025 08:39:26 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 08:39:34 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 08:39:34 Europe/Berlin] MySQL server is running
+[16-Apr-2025 08:39:34 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 08:39:34 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 08:39:34 Europe/Berlin] Database selected successfully
+[16-Apr-2025 08:39:34 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 08:39:34 Europe/Berlin] Appointments table created/verified successfully
+[16-Apr-2025 08:39:34 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 08:39:38 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 08:39:38 Europe/Berlin] MySQL server is running
+[16-Apr-2025 08:39:38 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 08:39:38 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 08:39:38 Europe/Berlin] Database selected successfully
+[16-Apr-2025 08:39:38 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 08:39:38 Europe/Berlin] Appointments table created/verified successfully
+[16-Apr-2025 08:39:38 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 08:41:06 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 08:41:06 Europe/Berlin] MySQL server is running
+[16-Apr-2025 08:41:06 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 08:41:06 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 08:41:06 Europe/Berlin] Database selected successfully
+[16-Apr-2025 08:41:06 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 08:41:06 Europe/Berlin] Appointments table created/verified successfully
+[16-Apr-2025 08:41:06 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 08:50:28 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 08:50:28 Europe/Berlin] MySQL server is running
+[16-Apr-2025 08:50:28 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 08:50:28 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 08:50:28 Europe/Berlin] Database selected successfully
+[16-Apr-2025 08:50:28 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 08:50:28 Europe/Berlin] Appointments table created/verified successfully
+[16-Apr-2025 08:50:28 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 08:54:43 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 08:54:43 Europe/Berlin] MySQL server is running
+[16-Apr-2025 08:54:44 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 08:54:44 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 08:54:44 Europe/Berlin] Database selected successfully
+[16-Apr-2025 08:54:44 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 08:54:44 Europe/Berlin] Appointments table created/verified successfully
+[16-Apr-2025 08:54:44 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 08:54:45 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 08:54:45 Europe/Berlin] MySQL server is running
+[16-Apr-2025 08:54:45 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 08:54:45 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 08:54:45 Europe/Berlin] Database selected successfully
+[16-Apr-2025 08:54:45 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 08:54:45 Europe/Berlin] Appointments table created/verified successfully
+[16-Apr-2025 08:54:45 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 08:55:00 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 08:55:00 Europe/Berlin] MySQL server is running
+[16-Apr-2025 08:55:00 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 08:55:00 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 08:55:00 Europe/Berlin] Database selected successfully
+[16-Apr-2025 08:55:00 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 08:55:00 Europe/Berlin] Appointments table created/verified successfully
+[16-Apr-2025 08:55:00 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 08:55:06 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 08:55:06 Europe/Berlin] MySQL server is running
+[16-Apr-2025 08:55:06 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 08:55:06 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 08:55:06 Europe/Berlin] Database selected successfully
+[16-Apr-2025 08:55:06 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 08:55:06 Europe/Berlin] Appointments table created/verified successfully
+[16-Apr-2025 08:55:06 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 08:57:39 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 08:57:39 Europe/Berlin] MySQL server is running
+[16-Apr-2025 08:57:39 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 08:57:39 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 08:57:39 Europe/Berlin] Database selected successfully
+[16-Apr-2025 08:57:39 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 08:57:39 Europe/Berlin] Appointments table created/verified successfully
+[16-Apr-2025 08:57:39 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 08:57:41 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 08:57:41 Europe/Berlin] MySQL server is running
+[16-Apr-2025 08:57:41 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 08:57:41 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 08:57:41 Europe/Berlin] Database selected successfully
+[16-Apr-2025 08:57:41 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 08:57:41 Europe/Berlin] Appointments table created/verified successfully
+[16-Apr-2025 08:57:41 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 08:57:46 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 08:57:46 Europe/Berlin] MySQL server is running
+[16-Apr-2025 08:57:46 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 08:57:46 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 08:57:46 Europe/Berlin] Database selected successfully
+[16-Apr-2025 08:57:46 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 08:57:46 Europe/Berlin] Appointments table created/verified successfully
+[16-Apr-2025 08:57:46 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 08:59:52 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 08:59:52 Europe/Berlin] MySQL server is running
+[16-Apr-2025 08:59:52 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 08:59:52 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 08:59:52 Europe/Berlin] Database selected successfully
+[16-Apr-2025 08:59:52 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 08:59:52 Europe/Berlin] Appointments table created/verified successfully
+[16-Apr-2025 08:59:52 Europe/Berlin] Users table created/verified successfully
+[16-Apr-2025 08:59:52 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 08:59:55 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 08:59:55 Europe/Berlin] MySQL server is running
+[16-Apr-2025 08:59:55 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 08:59:55 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 08:59:55 Europe/Berlin] Database selected successfully
+[16-Apr-2025 08:59:55 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 08:59:55 Europe/Berlin] Appointments table created/verified successfully
+[16-Apr-2025 08:59:55 Europe/Berlin] Users table created/verified successfully
+[16-Apr-2025 08:59:55 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 09:02:13 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 09:02:13 Europe/Berlin] MySQL server is running
+[16-Apr-2025 09:02:13 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 09:02:13 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 09:02:13 Europe/Berlin] Database selected successfully
+[16-Apr-2025 09:02:13 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 09:02:13 Europe/Berlin] Appointments table created/verified successfully
+[16-Apr-2025 09:02:13 Europe/Berlin] Users table created/verified successfully
+[16-Apr-2025 09:02:13 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 09:02:14 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 09:02:14 Europe/Berlin] MySQL server is running
+[16-Apr-2025 09:02:14 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 09:02:14 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 09:02:14 Europe/Berlin] Database selected successfully
+[16-Apr-2025 09:02:14 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 09:02:14 Europe/Berlin] Appointments table created/verified successfully
+[16-Apr-2025 09:02:14 Europe/Berlin] Users table created/verified successfully
+[16-Apr-2025 09:02:14 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 09:02:15 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 09:02:15 Europe/Berlin] MySQL server is running
+[16-Apr-2025 09:02:15 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 09:02:15 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 09:02:15 Europe/Berlin] Database selected successfully
+[16-Apr-2025 09:02:15 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 09:02:15 Europe/Berlin] Appointments table created/verified successfully
+[16-Apr-2025 09:02:15 Europe/Berlin] Users table created/verified successfully
+[16-Apr-2025 09:02:15 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 09:03:44 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 09:03:44 Europe/Berlin] MySQL server is running
+[16-Apr-2025 09:03:44 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 09:03:44 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 09:03:44 Europe/Berlin] Database selected successfully
+[16-Apr-2025 09:03:44 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 09:03:44 Europe/Berlin] Appointments table created/verified successfully
+[16-Apr-2025 09:03:44 Europe/Berlin] Users table created/verified successfully
+[16-Apr-2025 09:03:44 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 09:03:46 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 09:03:46 Europe/Berlin] MySQL server is running
+[16-Apr-2025 09:03:47 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 09:03:47 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 09:03:47 Europe/Berlin] Database selected successfully
+[16-Apr-2025 09:03:47 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 09:03:47 Europe/Berlin] Appointments table created/verified successfully
+[16-Apr-2025 09:03:47 Europe/Berlin] Users table created/verified successfully
+[16-Apr-2025 09:03:47 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 09:05:47 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 09:05:47 Europe/Berlin] MySQL server is running
+[16-Apr-2025 09:05:47 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 09:05:47 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 09:05:47 Europe/Berlin] Database selected successfully
+[16-Apr-2025 09:05:47 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 09:05:47 Europe/Berlin] Appointments table created/verified successfully
+[16-Apr-2025 09:05:47 Europe/Berlin] Users table created/verified successfully
+[16-Apr-2025 09:05:47 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 09:08:19 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 09:08:19 Europe/Berlin] MySQL server is running
+[16-Apr-2025 09:08:19 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 09:08:19 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 09:08:19 Europe/Berlin] Database selected successfully
+[16-Apr-2025 09:08:19 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 09:08:19 Europe/Berlin] Appointments table created/verified successfully
+[16-Apr-2025 09:08:19 Europe/Berlin] Users table created/verified successfully
+[16-Apr-2025 09:08:19 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 09:09:59 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 09:09:59 Europe/Berlin] MySQL server is running
+[16-Apr-2025 09:09:59 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 09:09:59 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 09:09:59 Europe/Berlin] Database selected successfully
+[16-Apr-2025 09:09:59 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 09:09:59 Europe/Berlin] Appointments table created/verified successfully
+[16-Apr-2025 09:09:59 Europe/Berlin] Users table created/verified successfully
+[16-Apr-2025 09:09:59 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 09:11:56 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 09:11:56 Europe/Berlin] MySQL server is running
+[16-Apr-2025 09:11:56 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 09:11:56 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 09:11:56 Europe/Berlin] Database selected successfully
+[16-Apr-2025 09:11:56 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 09:11:56 Europe/Berlin] Appointments table created/verified successfully
+[16-Apr-2025 09:11:56 Europe/Berlin] Users table created/verified successfully
+[16-Apr-2025 09:11:56 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 09:14:22 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 09:14:22 Europe/Berlin] MySQL server is running
+[16-Apr-2025 09:14:22 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 09:14:22 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 09:14:22 Europe/Berlin] Database selected successfully
+[16-Apr-2025 09:14:22 Europe/Berlin] Users table created/verified successfully
+[16-Apr-2025 09:14:22 Europe/Berlin] Database connection error: Duplicate entry '' for key 'unique_phone'
+[16-Apr-2025 09:14:22 Europe/Berlin] Error trace: #0 C:\xampp\htdocs\dentist\conn.php(79): mysqli->query('ALTER TABLE use...')
+#1 C:\xampp\htdocs\dentist\forgot_password.php(3): require_once('C:\\xampp\\htdocs...')
+#2 {main}
+[16-Apr-2025 09:14:23 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 09:14:23 Europe/Berlin] MySQL server is running
+[16-Apr-2025 09:14:23 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 09:14:23 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 09:14:23 Europe/Berlin] Database selected successfully
+[16-Apr-2025 09:14:23 Europe/Berlin] Users table created/verified successfully
+[16-Apr-2025 09:14:23 Europe/Berlin] Database connection error: Duplicate entry '' for key 'unique_phone'
+[16-Apr-2025 09:14:23 Europe/Berlin] Error trace: #0 C:\xampp\htdocs\dentist\conn.php(79): mysqli->query('ALTER TABLE use...')
+#1 C:\xampp\htdocs\dentist\forgot_password.php(3): require_once('C:\\xampp\\htdocs...')
+#2 {main}
+[16-Apr-2025 09:14:35 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 09:14:35 Europe/Berlin] MySQL server is running
+[16-Apr-2025 09:14:35 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 09:14:35 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 09:14:35 Europe/Berlin] Database selected successfully
+[16-Apr-2025 09:14:35 Europe/Berlin] Users table created/verified successfully
+[16-Apr-2025 09:14:35 Europe/Berlin] Database connection error: Duplicate entry '' for key 'unique_phone'
+[16-Apr-2025 09:14:35 Europe/Berlin] Error trace: #0 C:\xampp\htdocs\dentist\conn.php(79): mysqli->query('ALTER TABLE use...')
+#1 C:\xampp\htdocs\dentist\forgot_password.php(3): require_once('C:\\xampp\\htdocs...')
+#2 {main}
+[16-Apr-2025 09:18:33 Europe/Berlin] Error: Duplicate entry '' for key 'unique_phone'
+[16-Apr-2025 09:20:36 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 09:20:36 Europe/Berlin] MySQL server is running
+[16-Apr-2025 09:20:36 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 09:20:36 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 09:20:36 Europe/Berlin] Database selected successfully
+[16-Apr-2025 09:20:36 Europe/Berlin] Users table created/verified successfully
+[16-Apr-2025 09:20:36 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 09:20:36 Europe/Berlin] Appointments table created/verified successfully
+[16-Apr-2025 09:20:36 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 09:20:40 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 09:20:40 Europe/Berlin] MySQL server is running
+[16-Apr-2025 09:20:40 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 09:20:40 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 09:20:40 Europe/Berlin] Database selected successfully
+[16-Apr-2025 09:20:40 Europe/Berlin] Users table created/verified successfully
+[16-Apr-2025 09:20:40 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 09:20:40 Europe/Berlin] Appointments table created/verified successfully
+[16-Apr-2025 09:20:40 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 09:26:09 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 09:26:09 Europe/Berlin] MySQL server is running
+[16-Apr-2025 09:26:09 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 09:26:09 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 09:26:09 Europe/Berlin] Database selected successfully
+[16-Apr-2025 09:26:09 Europe/Berlin] Users table created/verified successfully
+[16-Apr-2025 09:26:09 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 09:26:09 Europe/Berlin] Appointments table created/verified successfully
+[16-Apr-2025 09:26:09 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 09:26:18 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 09:26:18 Europe/Berlin] MySQL server is running
+[16-Apr-2025 09:26:18 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 09:26:18 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 09:26:18 Europe/Berlin] Database selected successfully
+[16-Apr-2025 09:26:18 Europe/Berlin] Users table created/verified successfully
+[16-Apr-2025 09:26:18 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 09:26:18 Europe/Berlin] Appointments table created/verified successfully
+[16-Apr-2025 09:26:18 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 09:26:49 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 09:26:49 Europe/Berlin] MySQL server is running
+[16-Apr-2025 09:26:49 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 09:26:49 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 09:26:49 Europe/Berlin] Database selected successfully
+[16-Apr-2025 09:26:49 Europe/Berlin] Users table created/verified successfully
+[16-Apr-2025 09:26:49 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 09:26:49 Europe/Berlin] Appointments table created/verified successfully
+[16-Apr-2025 09:26:49 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 09:28:32 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 09:28:32 Europe/Berlin] MySQL server is running
+[16-Apr-2025 09:28:32 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 09:28:32 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 09:28:32 Europe/Berlin] Database selected successfully
+[16-Apr-2025 09:28:32 Europe/Berlin] Users table created/verified successfully
+[16-Apr-2025 09:28:32 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 09:28:32 Europe/Berlin] Appointments table created/verified successfully
+[16-Apr-2025 09:28:32 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 09:29:24 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 09:29:24 Europe/Berlin] MySQL server is running
+[16-Apr-2025 09:29:24 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 09:29:24 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 09:29:24 Europe/Berlin] Database selected successfully
+[16-Apr-2025 09:29:24 Europe/Berlin] Users table created/verified successfully
+[16-Apr-2025 09:29:24 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 09:29:24 Europe/Berlin] Appointments table created/verified successfully
+[16-Apr-2025 09:29:24 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 09:31:59 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 09:31:59 Europe/Berlin] MySQL server is running
+[16-Apr-2025 09:31:59 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 09:31:59 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 09:31:59 Europe/Berlin] Database selected successfully
+[16-Apr-2025 09:31:59 Europe/Berlin] Users table created/verified successfully
+[16-Apr-2025 09:31:59 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 09:31:59 Europe/Berlin] Appointments table created/verified successfully
+[16-Apr-2025 09:31:59 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 09:36:10 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 09:36:11 Europe/Berlin] MySQL server is running
+[16-Apr-2025 09:36:11 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 09:36:11 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 09:36:11 Europe/Berlin] Database selected successfully
+[16-Apr-2025 09:36:11 Europe/Berlin] Users table created/verified successfully
+[16-Apr-2025 09:36:11 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 09:36:11 Europe/Berlin] Appointments table created/verified successfully
+[16-Apr-2025 09:36:11 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 09:36:11 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 09:36:11 Europe/Berlin] MySQL server is running
+[16-Apr-2025 09:36:11 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 09:36:11 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 09:36:11 Europe/Berlin] Database selected successfully
+[16-Apr-2025 09:36:11 Europe/Berlin] Users table created/verified successfully
+[16-Apr-2025 09:36:11 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 09:36:11 Europe/Berlin] Appointments table created/verified successfully
+[16-Apr-2025 09:36:11 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 09:36:11 Europe/Berlin] PHP Warning:  Undefined array key "role" in C:\xampp\htdocs\dentist\view_otp.php on line 10
+[16-Apr-2025 09:38:00 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 09:38:00 Europe/Berlin] MySQL server is running
+[16-Apr-2025 09:38:00 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 09:38:00 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 09:38:00 Europe/Berlin] Database selected successfully
+[16-Apr-2025 09:38:00 Europe/Berlin] Users table created/verified successfully
+[16-Apr-2025 09:38:00 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 09:38:00 Europe/Berlin] Appointments table created/verified successfully
+[16-Apr-2025 09:38:00 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 09:38:00 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 09:38:00 Europe/Berlin] MySQL server is running
+[16-Apr-2025 09:38:00 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 09:38:00 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 09:38:00 Europe/Berlin] Database selected successfully
+[16-Apr-2025 09:38:00 Europe/Berlin] Users table created/verified successfully
+[16-Apr-2025 09:38:00 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 09:38:00 Europe/Berlin] Appointments table created/verified successfully
+[16-Apr-2025 09:38:00 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 09:38:00 Europe/Berlin] PHP Warning:  Undefined array key "role" in C:\xampp\htdocs\dentist\view_otp.php on line 10
+[16-Apr-2025 09:40:21 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 09:40:21 Europe/Berlin] MySQL server is running
+[16-Apr-2025 09:40:21 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 09:40:21 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 09:40:21 Europe/Berlin] Database selected successfully
+[16-Apr-2025 09:40:21 Europe/Berlin] Users table created/verified successfully
+[16-Apr-2025 09:40:21 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 09:40:21 Europe/Berlin] Appointments table created/verified successfully
+[16-Apr-2025 09:40:21 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 09:40:21 Europe/Berlin] PHP Warning:  require_once(vendor/autoload.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\dentist\forgot_password.php on line 4
+[16-Apr-2025 09:40:21 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\dentist\forgot_password.php:4
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\dentist\forgot_password.php on line 4
+[16-Apr-2025 09:42:20 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 09:42:20 Europe/Berlin] MySQL server is running
+[16-Apr-2025 09:42:20 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 09:42:20 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 09:42:20 Europe/Berlin] Database selected successfully
+[16-Apr-2025 09:42:20 Europe/Berlin] Users table created/verified successfully
+[16-Apr-2025 09:42:20 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 09:42:20 Europe/Berlin] Appointments table created/verified successfully
+[16-Apr-2025 09:42:20 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 09:42:20 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 09:42:20 Europe/Berlin] MySQL server is running
+[16-Apr-2025 09:42:20 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 09:42:20 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 09:42:20 Europe/Berlin] Database selected successfully
+[16-Apr-2025 09:42:20 Europe/Berlin] Users table created/verified successfully
+[16-Apr-2025 09:42:20 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 09:42:20 Europe/Berlin] Appointments table created/verified successfully
+[16-Apr-2025 09:42:20 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 09:42:20 Europe/Berlin] PHP Warning:  Undefined array key "role" in C:\xampp\htdocs\dentist\view_otp.php on line 10
+[16-Apr-2025 09:45:24 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 09:45:24 Europe/Berlin] MySQL server is running
+[16-Apr-2025 09:45:24 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 09:45:24 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 09:45:24 Europe/Berlin] Database selected successfully
+[16-Apr-2025 09:45:24 Europe/Berlin] Users table created/verified successfully
+[16-Apr-2025 09:45:24 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 09:45:24 Europe/Berlin] Appointments table created/verified successfully
+[16-Apr-2025 09:45:24 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 09:45:25 Europe/Berlin] Attempting to connect to MySQL server
+[16-Apr-2025 09:45:25 Europe/Berlin] MySQL server is running
+[16-Apr-2025 09:45:25 Europe/Berlin] Connected to MySQL server successfully
+[16-Apr-2025 09:45:25 Europe/Berlin] Database created/verified successfully
+[16-Apr-2025 09:45:25 Europe/Berlin] Database selected successfully
+[16-Apr-2025 09:45:25 Europe/Berlin] Users table created/verified successfully
+[16-Apr-2025 09:45:25 Europe/Berlin] Emergency requests table created/verified successfully
+[16-Apr-2025 09:45:25 Europe/Berlin] Appointments table created/verified successfully
+[16-Apr-2025 09:45:25 Europe/Berlin] Database connection and setup completed successfully
+[16-Apr-2025 09:45:25 Europe/Berlin] PHP Warning:  Undefined array key "role" in C:\xampp\htdocs\dentist\view_otp.php on line 10

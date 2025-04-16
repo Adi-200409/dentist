@@ -47,6 +47,41 @@ try {
 
     error_log("Database selected successfully");
 
+    // Create users table if not exists with all required fields
+    $create_users_table = "CREATE TABLE IF NOT EXISTS users (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        name VARCHAR(100) NOT NULL,
+        phone VARCHAR(15) NOT NULL,
+        password VARCHAR(255) NOT NULL,
+        reset_otp VARCHAR(6),
+        otp_expiry DATETIME,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+        UNIQUE KEY unique_phone (phone)
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4";
+    
+    if (!$conn->query($create_users_table)) {
+        throw new Exception("Error creating users table: " . $conn->error);
+    }
+
+    error_log("Users table created/verified successfully");
+
+    // Check if phone column exists and add it if it doesn't
+    $check_phone_column = "SHOW COLUMNS FROM users LIKE 'phone'";
+    $result = $conn->query($check_phone_column);
+    
+    if ($result && $result->num_rows === 0) {
+        // Add phone column if it doesn't exist
+        $add_phone_column = "ALTER TABLE users 
+            ADD COLUMN phone VARCHAR(15) NOT NULL AFTER name,
+            ADD UNIQUE KEY unique_phone (phone)";
+        
+        if (!$conn->query($add_phone_column)) {
+            throw new Exception("Error adding phone column: " . $conn->error);
+        }
+        error_log("Phone column added successfully");
+    }
+
     // Create emergency_requests table if not exists
     $create_table = "CREATE TABLE IF NOT EXISTS emergency_requests (
         id INT AUTO_INCREMENT PRIMARY KEY,
@@ -64,6 +99,26 @@ try {
     }
 
     error_log("Emergency requests table created/verified successfully");
+
+    // Create appointments table if not exists
+    $create_appointments_table = "CREATE TABLE IF NOT EXISTS appointments (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        name VARCHAR(100) NOT NULL,
+        email VARCHAR(100) NOT NULL,
+        phone VARCHAR(20) NOT NULL,
+        appointment_date DATE NOT NULL,
+        appointment_time TIME NOT NULL,
+        address TEXT NOT NULL,
+        status ENUM('scheduled', 'cancelled', 'completed') DEFAULT 'scheduled',
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4";
+    
+    if (!$conn->query($create_appointments_table)) {
+        throw new Exception("Error creating appointments table: " . $conn->error);
+    }
+
+    error_log("Appointments table created/verified successfully");
     
     // Set charset
     if (!$conn->set_charset("utf8mb4")) {
@@ -77,17 +132,17 @@ try {
     error_log("Error trace: " . $e->getTraceAsString());
     
     // For API requests, return JSON error
-    if (strpos($_SERVER['REQUEST_URI'], 'process_emergency.php') !== false) {
+    if (strpos($_SERVER['REQUEST_URI'], '.php') !== false) {
         header('Content-Type: application/json');
         echo json_encode([
             'status' => 'error',
-            'message' => 'Database connection error. Please try again later or call our emergency number.',
+            'message' => 'Database connection error. Please try again later.',
             'debug' => $e->getMessage()
         ]);
         exit;
     }
     
     // For regular pages, show a user-friendly message
-    die("An error occurred while connecting to the database. Please try again later or call our emergency number.");
+    die("An error occurred while connecting to the database. Please try again later.");
 }
 ?>

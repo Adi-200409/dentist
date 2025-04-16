@@ -1,7 +1,6 @@
 <?php
 
 include "conn.php";
-print_r($_POST); // Debugging line to check if data is being received correctly
 ?> 
 
 <!DOCTYPE html>
@@ -396,6 +395,10 @@ print_r($_POST); // Debugging line to check if data is being received correctly
                           Enhance your smile with cosmetic treatments, including
                           veneers, bonding, and contouring for a perfect look.
                         </p>
+                          <button id="btn_cap"><a href="dental_caps.html">Dental Caps</a></button>
+
+
+                        
                       </div>
                     </div>
                   </div>
@@ -684,144 +687,14 @@ print_r($_POST); // Debugging line to check if data is being received correctly
           </div>
         </div>
       </section>
-      <!--conatct section starts-->
-      <!-- <section class="contact" id="contact">
-        <h1 class="heading">our appointment</h1>
-
-        <form action="./appointment.php" method="POST">
-            <span>your name:</span>
-            <input type="text" name="name" placeholder="Enter your name" class="box">
-
-            <span>your meail:</span>
-            <input type="email" name="email" placeholder="Enter your email" class="box">
-
-            <span>your number:</span>
-            <input type="number" name="phone" placeholder="Enter your mobile number" class="box">
-
-            <span>appointment date:</span>
-            <input type="datetime-local" name="date" class="box">
-
-            <input type="submit" value="make appointment" name="appointment" class="link-btn">
-        </form>
-    </section> -->
+     
 
       <!-- appointment -->
       <section class="contact" id="contact">
         <h1 class="appointment_heading">BOOK YOUR APPOINTMENT</h1>
         <div class="formbold-main-wrapper">
           <div class="formbold-form-wrapper">
-            <!-- <form action="appointment.php" method="POST" id="appointmentForm">
-              <div class="formbold-mb-5">
-                <label for="name" class="formbold-form-label"> Full Name </label>
-                <input
-                  type="text"
-                  name="name"
-                  id="name"
-                  placeholder="Full Name"
-                  class="formbold-form-input" 
-                />
-              </div>
-              <div class="formbold-mb-5">
-                <label for="phone" class="formbold-form-label"> Phone Number </label>
-                <input
-                  type="text"
-                  name="phone"
-                  id="phone"
-                  placeholder="Enter your phone number"
-                  class="formbold-form-input" 
-                />
-              </div>
-              <div class="formbold-mb-5">
-                <label for="email" class="formbold-form-label"> Email Address </label>
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  placeholder="Enter your email"
-                  class="formbold-form-input" required
-                />
-              </div>
-              <div class="flex flex-wrap formbold--mx-3">
-                <div class="w-full sm:w-half formbold-px-3">
-                  <div class="formbold-mb-5 w-full">
-                    <label for="date" class="formbold-form-label"> Date </label>
-                    <input
-                      type="date"
-                      name="date"
-                      id="date"
-                      class="formbold-form-input" required
-                    />
-                  </div>
-                </div>
-                <div class="w-full sm:w-half formbold-px-3">
-                  <div class="formbold-mb-5">
-                    <label for="time" class="formbold-form-label"> Time </label>
-                    <input
-                      type="time"
-                      name="time"
-                      id="time"
-                      class="formbold-form-input" required
-                    />
-                  </div>
-                </div>
-              </div>
-        
-              <div class="formbold-mb-5 formbold-pt-3">
-                <label class="formbold-form-label formbold-form-label-2">
-                  Address Details
-                </label>
-                <div class="flex flex-wrap formbold--mx-3">
-                  <div class="w-full sm:w-half formbold-px-3">
-                    <div class="formbold-mb-5">
-                      <input
-                        type="text"
-                        name="area"
-                        id="area"
-                        placeholder="Enter area"
-                        class="formbold-form-input" required
-                      />
-                    </div>
-                  </div>
-                  <div class="w-full sm:w-half formbold-px-3">
-                    <div class="formbold-mb-5">
-                      <input
-                        type="text"
-                        name="city"
-                        id="city"
-                        placeholder="Enter city"
-                        class="formbold-form-input" required
-                      />
-                    </div>
-                  </div>
-                  <div class="w-full sm:w-half formbold-px-3">
-                    <div class="formbold-mb-5">
-                      <input
-                        type="text"
-                        name="state"
-                        id="state"
-                        placeholder="Enter state"
-                        class="formbold-form-input" required
-                      />
-                    </div>
-                  </div>
-                  <div class="w-full sm:w-half formbold-px-3">
-                    <div class="formbold-mb-5">
-                      <input
-                        type="text"
-                        name="postcode"
-                        id="postcode"
-                        placeholder="Post Code"
-                        class="formbold-form-input" required
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-        
-              <div>
-                <button type="submit" class="formbold-btn" name="book">Book Appointment</button>
-              </div>
-            </form> -->
+           
             <?php if (isset($success)): ?>
         <div class="success">
             <?php echo htmlspecialchars($success); ?>
@@ -985,27 +858,30 @@ print_r($_POST); // Debugging line to check if data is being received correctly
           </div>
         </section>
 
-        <section id="appointmentDetails">
-
+        <section id="appointmentDetails" style="display: none;">
+            <div class="appointment-summary">
+                <h2>Appointment Details</h2>
+                <div class="appointment-content">
+                    <!-- Content will be dynamically inserted here -->
+                </div>
+                <div class="appointment-actions">
+                    <button onclick="cancelAppointment()" class="cancel-appointment-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                        Cancel Appointment
+                    </button>
+                    <button onclick="hideAppointmentDetails()" class="close-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                        </svg>
+                        Close
+                    </button>
+                </div>
+            </div>
         </section>
       </section>
-      <!-- contact -->
-     <!-- <div class="get_tuch">
-<div class="form-container">
-  <div class="form">
-      <span class="heading">Get in touch</span>
-      <input placeholder="Name" type="text" class="input">
-      <input placeholder="Email" id="mail" type="email" class="input">
-      <textarea placeholder="Write Message" rows="10" cols="30" id="message" name="message" class="textarea"></textarea>
-      <div class="button-container">
-      <div class="send-button reset-button">Send</div>
-      <div class="reset-button-container">
-          <div id="reset-btn" class="reset-button">Reset</div>
-      </div>
-  </div>
-</div>
-</div>
-</div> -->
+     
       <!--footer section starst-->
       <section class="ezy__footer15 dark">
         <div class="container">

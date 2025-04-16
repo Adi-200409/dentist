@@ -20,10 +20,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 }
 
 try {
-    // Log request data
-    error_log("Received request data: " . file_get_contents('php://input'));
-    error_log("Session data: " . print_r($_SESSION, true));
-
     // Get JSON data
     $json = file_get_contents('php://input');
     $data = json_decode($json, true);
@@ -32,29 +28,30 @@ try {
         throw new Exception('Invalid JSON data: ' . json_last_error_msg());
     }
 
-    if (!isset($data['otp'])) {
-        throw new Exception('OTP is required');
-    }
-
-    if (!isset($_SESSION['reset_email'])) {
-        throw new Exception('Reset session expired. Please try again.');
+    if (!isset($data['otp']) || !isset($data['phone'])) {
+        throw new Exception('OTP and phone number are required');
     }
 
     $otp = $data['otp'];
-    $email = $_SESSION['reset_email'];
+    $phone = preg_replace('/\D/', '', $data['phone']); // Remove non-digits
 
-    // Log values for debugging
-    error_log("Attempting to verify OTP: " . $otp . " for email: " . $email);
-
-    // First check if user exists and get their current OTP details
-    $stmt = $conn->prepare("SELECT reset_otp, otp_expiry FROM users WHERE email = ?");
-    if (!$stmt) {
-        throw new Exception("Database prepare error: " . $conn->error);
+    // Validate phone number format
+    if (!preg_match('/^[6-9]\d{9}$/', $phone)) {
+        throw new Exception('Invalid phone number format');
     }
 
-    $stmt->bind_param("s", $email);
+    // Log verification attempt
+    error_log("Attempting to verify OTP: " . $otp . " for phone: " . $phone);
+
+    // Check if user exists and get their current OTP details
+    $stmt = $conn->prepare("SELECT reset_otp, otp_expiry FROM users WHERE phone = ?");
+    if (!$stmt) {
+        throw new Exception("Database error: " . $conn->error);
+    }
+
+    $stmt->bind_param("s", $phone);
     if (!$stmt->execute()) {
-        throw new Exception("Database execute error: " . $stmt->error);
+        throw new Exception("Database error: " . $stmt->error);
     }
 
     $result = $stmt->get_result();
@@ -62,27 +59,27 @@ try {
         throw new Exception("User not found");
     }
 
-    $row = $result->fetch_assoc();
-    $stored_otp = $row['reset_otp'];
-    $otp_expiry = strtotime($row['otp_expiry']);
+    $user = $result->fetch_assoc();
+    
+    // Log OTP details for debugging
+    error_log("Stored OTP: " . $user['reset_otp'] . ", Received OTP: " . $otp);
+    error_log("OTP Expiry: " . $user['otp_expiry'] . ", Current Time: " . date('Y-m-d H:i:s'));
 
-    // Log the comparison
-    error_log("Stored OTP: " . $stored_otp . ", Received OTP: " . $otp);
-    error_log("OTP Expiry: " . date('Y-m-d H:i:s', $otp_expiry) . ", Current Time: " . date('Y-m-d H:i:s'));
-
-    // Check if OTP matches
-    if ($stored_otp !== $otp) {
+    // Verify OTP
+    if ($user['reset_otp'] !== $otp) {
         throw new Exception("Invalid OTP");
     }
 
-    // Check if OTP is expired
-    if ($otp_expiry < time()) {
+    // Check if OTP has expired
+    if (strtotime($user['otp_expiry']) < time()) {
         throw new Exception("OTP has expired. Please request a new one.");
     }
 
-    // Set session variable to indicate OTP is verified
+    // Store phone in session for password reset
+    $_SESSION['reset_phone'] = $phone;
     $_SESSION['otp_verified'] = true;
-    error_log("OTP verified successfully for email: " . $email);
+
+    error_log("OTP verified successfully for phone: " . $phone);
 
     echo json_encode([
         'status' => 'success',

@@ -172,3 +172,183 @@ Stack trace:
 [14-Apr-2025 11:40:48 Europe/Berlin] Registration attempt for email: demo@gmail.com
 [14-Apr-2025 11:40:48 Europe/Berlin] Registration successful for email: demo@gmail.com
 [14-Apr-2025 11:41:04 Europe/Berlin] Login attempt for email: demo@gmail.com
+[16-Apr-2025 07:06:14 Europe/Berlin] Login attempt for email: demo@gmail.com
+[16-Apr-2025 07:11:09 Europe/Berlin] Registration attempt for email: demo1@gmail.com
+[16-Apr-2025 07:11:09 Europe/Berlin] Registration successful for email: demo1@gmail.com
+[16-Apr-2025 07:11:18 Europe/Berlin] Login attempt for email: demo@gmail.com
+[16-Apr-2025 07:11:18 Europe/Berlin] Invalid password for email: demo@gmail.com
+[16-Apr-2025 07:11:18 Europe/Berlin] Login error: Invalid email or password
+[16-Apr-2025 07:11:26 Europe/Berlin] Login attempt for email: demo1@gmail.com
+[16-Apr-2025 08:21:00 Europe/Berlin] Error in forgot_password.php: Phone number is required
+[16-Apr-2025 08:21:04 Europe/Berlin] Error in forgot_password.php: Phone number is required
+[16-Apr-2025 08:21:07 Europe/Berlin] Error in forgot_password.php: Phone number is required
+[16-Apr-2025 08:39:26 Europe/Berlin] Error in forgot_password.php: Phone number is required
+[16-Apr-2025 08:39:34 Europe/Berlin] Error in forgot_password.php: Phone number is required
+[16-Apr-2025 08:39:38 Europe/Berlin] Error in forgot_password.php: Phone number is required
+[16-Apr-2025 08:41:06 Europe/Berlin] Error in forgot_password.php: Phone number is required
+[16-Apr-2025 08:50:28 Europe/Berlin] Error in forgot_password.php: Unknown column 'phone' in 'where clause'
+[16-Apr-2025 08:54:44 Europe/Berlin] Error in forgot_password.php: Unknown column 'phone' in 'where clause'
+[16-Apr-2025 08:54:45 Europe/Berlin] Error in forgot_password.php: Unknown column 'phone' in 'where clause'
+[16-Apr-2025 08:55:00 Europe/Berlin] Error in forgot_password.php: Unknown column 'phone' in 'where clause'
+[16-Apr-2025 08:55:06 Europe/Berlin] Error in forgot_password.php: Unknown column 'phone' in 'where clause'
+[16-Apr-2025 08:57:39 Europe/Berlin] Error in forgot_password.php: Unknown column 'phone' in 'where clause'
+[16-Apr-2025 08:57:41 Europe/Berlin] Error in forgot_password.php: Unknown column 'phone' in 'where clause'
+[16-Apr-2025 08:57:46 Europe/Berlin] Error in forgot_password.php: Unknown column 'phone' in 'where clause'
+[16-Apr-2025 08:59:52 Europe/Berlin] Error in forgot_password.php: Unknown column 'phone' in 'where clause'
+[16-Apr-2025 08:59:55 Europe/Berlin] Error in forgot_password.php: Unknown column 'phone' in 'where clause'
+[16-Apr-2025 09:02:13 Europe/Berlin] Error in forgot_password.php: Unknown column 'phone' in 'where clause'
+[16-Apr-2025 09:02:14 Europe/Berlin] Error in forgot_password.php: Unknown column 'phone' in 'where clause'
+[16-Apr-2025 09:02:15 Europe/Berlin] Error in forgot_password.php: Unknown column 'phone' in 'where clause'
+[16-Apr-2025 09:03:44 Europe/Berlin] Error in forgot_password.php: Unknown column 'phone' in 'where clause'
+[16-Apr-2025 09:03:47 Europe/Berlin] Error in forgot_password.php: Unknown column 'phone' in 'where clause'
+[16-Apr-2025 09:05:47 Europe/Berlin] Error in forgot_password.php: Unknown column 'phone' in 'where clause'
+[16-Apr-2025 09:08:19 Europe/Berlin] Request Method: POST
+[16-Apr-2025 09:08:19 Europe/Berlin] Content-Type: application/json
+[16-Apr-2025 09:08:19 Europe/Berlin] Raw input: {"phone":"9148074307"}
+[16-Apr-2025 09:08:19 Europe/Berlin] Decoded data: Array
+(
+    [phone] => 9148074307
+)
+
+[16-Apr-2025 09:08:19 Europe/Berlin] Processed phone number: 9148074307
+[16-Apr-2025 09:08:19 Europe/Berlin] Error in forgot_password.php: Unknown column 'phone' in 'where clause'
+[16-Apr-2025 09:08:19 Europe/Berlin] Sending error response: {"status":"error","message":"Unknown column 'phone' in 'where clause'"}
+[16-Apr-2025 09:09:59 Europe/Berlin] Request Method: POST
+[16-Apr-2025 09:09:59 Europe/Berlin] Content-Type: application/json
+[16-Apr-2025 09:09:59 Europe/Berlin] Raw input: {"phone":"9148074307"}
+[16-Apr-2025 09:09:59 Europe/Berlin] Decoded data: Array
+(
+    [phone] => 9148074307
+)
+
+[16-Apr-2025 09:09:59 Europe/Berlin] Processed phone number: 9148074307
+[16-Apr-2025 09:09:59 Europe/Berlin] Error in forgot_password.php: Unknown column 'phone' in 'where clause'
+[16-Apr-2025 09:09:59 Europe/Berlin] Sending error response: {"status":"error","message":"Unknown column 'phone' in 'where clause'"}
+[16-Apr-2025 09:11:56 Europe/Berlin] Request Method: POST
+[16-Apr-2025 09:11:56 Europe/Berlin] Content-Type: application/json
+[16-Apr-2025 09:11:56 Europe/Berlin] Raw input: {"phone":"9148074307"}
+[16-Apr-2025 09:11:56 Europe/Berlin] Decoded data: Array
+(
+    [phone] => 9148074307
+)
+
+[16-Apr-2025 09:11:56 Europe/Berlin] Processed phone number: 9148074307
+[16-Apr-2025 09:11:56 Europe/Berlin] Error in forgot_password.php: Unknown column 'phone' in 'where clause'
+[16-Apr-2025 09:11:56 Europe/Berlin] Sending error response: {"status":"error","message":"Unknown column 'phone' in 'where clause'"}
+[16-Apr-2025 09:20:36 Europe/Berlin] Request Method: POST
+[16-Apr-2025 09:20:36 Europe/Berlin] Content-Type: application/json
+[16-Apr-2025 09:20:36 Europe/Berlin] Raw input: {"phone":"9148074307"}
+[16-Apr-2025 09:20:36 Europe/Berlin] Decoded data: Array
+(
+    [phone] => 9148074307
+)
+
+[16-Apr-2025 09:20:36 Europe/Berlin] Processed phone number: 9148074307
+[16-Apr-2025 09:20:36 Europe/Berlin] Error in forgot_password.php: No account found with this phone number
+[16-Apr-2025 09:20:36 Europe/Berlin] Sending error response: {"status":"error","message":"No account found with this phone number"}
+[16-Apr-2025 09:20:40 Europe/Berlin] Request Method: POST
+[16-Apr-2025 09:20:40 Europe/Berlin] Content-Type: application/json
+[16-Apr-2025 09:20:40 Europe/Berlin] Raw input: {"phone":"9148074307"}
+[16-Apr-2025 09:20:40 Europe/Berlin] Decoded data: Array
+(
+    [phone] => 9148074307
+)
+
+[16-Apr-2025 09:20:40 Europe/Berlin] Processed phone number: 9148074307
+[16-Apr-2025 09:20:40 Europe/Berlin] Error in forgot_password.php: No account found with this phone number
+[16-Apr-2025 09:20:40 Europe/Berlin] Sending error response: {"status":"error","message":"No account found with this phone number"}
+[16-Apr-2025 09:26:09 Europe/Berlin] Registration attempt for phone: 9148074307
+[16-Apr-2025 09:26:09 Europe/Berlin] Registration successful for phone: 9148074307
+[16-Apr-2025 09:26:18 Europe/Berlin] Request Method: POST
+[16-Apr-2025 09:26:18 Europe/Berlin] Content-Type: application/json
+[16-Apr-2025 09:26:18 Europe/Berlin] Raw input: {"phone":"9148074307"}
+[16-Apr-2025 09:26:18 Europe/Berlin] Decoded data: Array
+(
+    [phone] => 9148074307
+)
+
+[16-Apr-2025 09:26:18 Europe/Berlin] Processed phone number: 9148074307
+[16-Apr-2025 09:26:18 Europe/Berlin] Successfully generated OTP for phone: 9148074307, OTP: 308879
+[16-Apr-2025 09:26:18 Europe/Berlin] Sending response: {"status":"success","message":"OTP has been sent to your phone number. Please check your messages.","debug_otp":"308879"}
+[16-Apr-2025 09:26:49 Europe/Berlin] Attempting to verify OTP: 308879 for phone: 9148074307
+[16-Apr-2025 09:26:49 Europe/Berlin] Stored OTP: 308879, Received OTP: 308879
+[16-Apr-2025 09:26:49 Europe/Berlin] OTP Expiry: 2025-04-16 09:41:18, Current Time: 2025-04-16 09:26:49
+[16-Apr-2025 09:26:49 Europe/Berlin] OTP verified successfully for phone: 9148074307
+[16-Apr-2025 09:28:32 Europe/Berlin] Request Method: POST
+[16-Apr-2025 09:28:32 Europe/Berlin] Content-Type: application/json
+[16-Apr-2025 09:28:32 Europe/Berlin] Raw input: {"phone":"9148074307"}
+[16-Apr-2025 09:28:32 Europe/Berlin] Decoded data: Array
+(
+    [phone] => 9148074307
+)
+
+[16-Apr-2025 09:28:32 Europe/Berlin] Processed phone number: 9148074307
+[16-Apr-2025 09:28:32 Europe/Berlin] Successfully generated OTP for phone: 9148074307, OTP: 503541
+[16-Apr-2025 09:28:32 Europe/Berlin] SMS API Response: {"errors":[{"code":3,"message":"Invalid login details"}],"status":"failure"}
+[16-Apr-2025 09:28:32 Europe/Berlin] Sending response: {"status":"success","message":"OTP has been sent to your phone number. Please check your messages.","debug_otp":"503541"}
+[16-Apr-2025 09:29:24 Europe/Berlin] Attempting to verify OTP: 503541 for phone: 9148074307
+[16-Apr-2025 09:29:24 Europe/Berlin] Stored OTP: 503541, Received OTP: 503541
+[16-Apr-2025 09:29:24 Europe/Berlin] OTP Expiry: 2025-04-16 09:43:32, Current Time: 2025-04-16 09:29:24
+[16-Apr-2025 09:29:24 Europe/Berlin] OTP verified successfully for phone: 9148074307
+[16-Apr-2025 09:31:59 Europe/Berlin] Request Method: POST
+[16-Apr-2025 09:31:59 Europe/Berlin] Content-Type: application/json
+[16-Apr-2025 09:31:59 Europe/Berlin] Raw input: {"phone":"9148074307"}
+[16-Apr-2025 09:31:59 Europe/Berlin] Decoded data: Array
+(
+    [phone] => 9148074307
+)
+
+[16-Apr-2025 09:31:59 Europe/Berlin] Processed phone number: 9148074307
+[16-Apr-2025 09:31:59 Europe/Berlin] Forgot password attempt for phone: 9148074307
+[16-Apr-2025 09:31:59 Europe/Berlin] OTP generated for phone: 9148074307, OTP: 672087, Expiry: 2025-04-16 09:41:59
+[16-Apr-2025 09:31:59 Europe/Berlin] Sending response: {"status":"success","message":"OTP has been generated. Please check the OTP page.","redirect":"view_otp.php"}
+[16-Apr-2025 09:36:11 Europe/Berlin] Request Method: POST
+[16-Apr-2025 09:36:11 Europe/Berlin] Content-Type: application/json
+[16-Apr-2025 09:36:11 Europe/Berlin] Raw input: {"phone":"9148074307"}
+[16-Apr-2025 09:36:11 Europe/Berlin] Decoded data: Array
+(
+    [phone] => 9148074307
+)
+
+[16-Apr-2025 09:36:11 Europe/Berlin] Processed phone number: 9148074307
+[16-Apr-2025 09:36:11 Europe/Berlin] Forgot password attempt for phone: 9148074307
+[16-Apr-2025 09:36:11 Europe/Berlin] OTP generated for phone: 9148074307, OTP: 109060, Expiry: 2025-04-16 09:46:11
+[16-Apr-2025 09:36:11 Europe/Berlin] Sending response: {"status":"success","message":"OTP has been generated. Please check the OTP page.","redirect":"view_otp.php"}
+[16-Apr-2025 09:38:00 Europe/Berlin] Request Method: POST
+[16-Apr-2025 09:38:00 Europe/Berlin] Content-Type: application/json
+[16-Apr-2025 09:38:00 Europe/Berlin] Raw input: {"phone":"9148074307"}
+[16-Apr-2025 09:38:00 Europe/Berlin] Decoded data: Array
+(
+    [phone] => 9148074307
+)
+
+[16-Apr-2025 09:38:00 Europe/Berlin] Processed phone number: 9148074307
+[16-Apr-2025 09:38:00 Europe/Berlin] Forgot password attempt for phone: 9148074307
+[16-Apr-2025 09:38:00 Europe/Berlin] OTP generated for phone: 9148074307, OTP: 655496, Expiry: 2025-04-16 09:48:00
+[16-Apr-2025 09:38:00 Europe/Berlin] Sending response: {"status":"success","message":"OTP has been generated. Please check the OTP page.","redirect":"view_otp.php"}
+[16-Apr-2025 09:42:20 Europe/Berlin] Request Method: POST
+[16-Apr-2025 09:42:20 Europe/Berlin] Content-Type: application/json
+[16-Apr-2025 09:42:20 Europe/Berlin] Raw input: {"phone":"9148074307"}
+[16-Apr-2025 09:42:20 Europe/Berlin] Decoded data: Array
+(
+    [phone] => 9148074307
+)
+
+[16-Apr-2025 09:42:20 Europe/Berlin] Processed phone number: 9148074307
+[16-Apr-2025 09:42:20 Europe/Berlin] Forgot password attempt for phone: 9148074307
+[16-Apr-2025 09:42:20 Europe/Berlin] OTP generated for phone: 9148074307, OTP: 331016, Expiry: 2025-04-16 09:52:20
+[16-Apr-2025 09:42:20 Europe/Berlin] Sending response: {"status":"success","message":"OTP has been generated. Please check the OTP page.","redirect":"view_otp.php"}
+[16-Apr-2025 09:45:24 Europe/Berlin] Request Method: POST
+[16-Apr-2025 09:45:24 Europe/Berlin] Content-Type: application/json
+[16-Apr-2025 09:45:24 Europe/Berlin] Raw input: {"phone":"9148074307"}
+[16-Apr-2025 09:45:24 Europe/Berlin] Decoded data: Array
+(
+    [phone] => 9148074307
+)
+
+[16-Apr-2025 09:45:24 Europe/Berlin] Processed phone number: 9148074307
+[16-Apr-2025 09:45:24 Europe/Berlin] Forgot password attempt for phone: 9148074307
+[16-Apr-2025 09:45:25 Europe/Berlin] MSG91 Response: {"request_id":"3564706d6f4464645075585a","type":"success"}
+[16-Apr-2025 09:45:25 Europe/Berlin] OTP generated for phone: 9148074307, OTP: 123023, Expiry: 2025-04-16 09:55:24
+[16-Apr-2025 09:45:25 Europe/Berlin] SMS sent: Yes
+[16-Apr-2025 09:45:25 Europe/Berlin] Sending response: {"status":"success","message":"OTP has been sent to your phone number. Please check your messages.","redirect":"view_otp.php"}

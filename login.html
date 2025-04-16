@@ -384,9 +384,9 @@
         <div class="form-container sign-up-container">
             <form action="register.php" method="POST" id="registerForm">
                 <h1>Create Account</h1>
-                <span>use your email for registration</span>
+                <span>use your phone number for registration</span>
                 <input type="text" name="name" placeholder="Name" required />
-                <input type="email" name="email" placeholder="Email" required />
+                <input type="tel" name="phone" placeholder="Phone Number (10 digits)" pattern="[6-9][0-9]{9}" required />
                 <input type="password" name="password" placeholder="Password" required />
                 <input type="password" name="confirm_password" placeholder="Confirm Password" required />
                 <button type="submit">Sign Up</button>
@@ -396,7 +396,7 @@
             <form action="login.php" method="POST" id="loginForm">
                 <h1>Sign in</h1>
                 <span>use your account</span>
-                <input type="email" name="email" placeholder="Email" required />
+                <input type="tel" name="phone" placeholder="Phone Number" pattern="[6-9][0-9]{9}" required />
                 <input type="password" name="password" placeholder="Password" required />
                 <a href="#" id="forgotPassword">Forgot your password?</a>
                 <button type="submit">Sign In</button>
@@ -423,18 +423,18 @@
         <div class="modal-content">
             <span class="close">&times;</span>
             
-            <!-- Email Section -->
-            <div id="emailSection">
+            <!-- Phone Section -->
+            <div id="phoneSection">
                 <h2>Forgot Password</h2>
-                <p>Enter your email address to reset your password.</p>
-                <input type="email" id="resetEmail" placeholder="Enter your email">
+                <p>Enter your phone number to reset your password.</p>
+                <input type="tel" id="resetPhone" placeholder="Enter your phone number" pattern="[6-9][0-9]{9}">
                 <button id="sendResetCode">Send Reset Code</button>
             </div>
 
             <!-- OTP Verification Section (Initially Hidden) -->
             <div id="otpSection" style="display: none;">
                 <h2>Enter OTP</h2>
-                <p>Enter the OTP shown in the alert message.</p>
+                <p>Enter the 6-digit OTP sent to your phone number <span id="displayPhone"></span>.</p>
                 <div class="otp-inputs">
                     <input type="text" maxlength="1" class="otp-input">
                     <input type="text" maxlength="1" class="otp-input">
@@ -503,7 +503,7 @@
         const forgotPasswordLink = document.getElementById('forgotPassword');
         const closeModal = document.querySelector('.close');
         const sendResetCode = document.getElementById('sendResetCode');
-        const emailSection = document.getElementById('emailSection');
+        const phoneSection = document.getElementById('phoneSection');
         const otpSection = document.getElementById('otpSection');
         const newPasswordSection = document.getElementById('newPasswordSection');
         const otpInputs = document.querySelectorAll('.otp-input');
@@ -524,39 +524,91 @@
             }
         });
 
+        // Phone number input validation
+        document.querySelectorAll('input[type="tel"]').forEach(input => {
+            input.addEventListener('input', function(e) {
+                let value = e.target.value.replace(/\D/g, ''); // Remove non-digits
+                
+                // Format for Indian mobile numbers (10 digits)
+                if (value.length > 0) {
+                    // Limit to 12 digits (including country code)
+                    value = value.substring(0, 12);
+                }
+                
+                e.target.value = value;
+            });
+
+            // Update placeholder
+            input.setAttribute('placeholder', 'Phone number (with country code)');
+        });
+
         sendResetCode.addEventListener('click', async () => {
-            const email = document.getElementById('resetEmail').value;
+            let phone = document.getElementById('resetPhone').value.replace(/\D/g, ''); // Remove all non-digits
             
-            if (!email) {
-                showAlert('Please enter your email address', 'error');
+            if (!phone) {
+                showAlert('Please enter your phone number', 'error');
+                return;
+            }
+
+            // Validate phone number format - allow country code
+            if (!phone.match(/^[0-9]{10,12}$/)) {
+                showAlert('Please enter a valid phone number (10-12 digits)', 'error');
                 return;
             }
 
             try {
+                console.log('Sending request with phone:', phone); // Debug log
+                
+                const requestData = { phone };
+                console.log('Request data:', JSON.stringify(requestData)); // Debug log
+
                 const response = await fetch('forgot_password.php', {
                     method: 'POST',
                     headers: {
-                        'Content-Type': 'application/json'
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
                     },
-                    body: JSON.stringify({ email })
+                    body: JSON.stringify(requestData)
                 });
                 
-                const data = await response.json();
+                console.log('Response status:', response.status); // Debug log
                 
-                if (data.status === 'success') {
+                const responseText = await response.text();
+                console.log('Raw response:', responseText); // Debug log
+                
+                let data;
+                try {
+                    data = JSON.parse(responseText);
+                } catch (e) {
+                    console.error('Failed to parse JSON response:', e);
+                    throw new Error('Invalid response from server');
+                }
+                
+                if (response.ok && data.status === 'success') {
                     // Remove any existing alerts first
                     const existingAlerts = document.querySelectorAll('.alert.persistent');
                     existingAlerts.forEach(alert => alert.remove());
                     
-                    currentOTP = data.message.match(/\d{6}/)[0]; // Extract OTP from message
-                    showAlert(data.message, 'success', true); // Keep alert visible with close button
-                    emailSection.style.display = 'none';
-                    otpSection.style.display = 'block';
+                    showAlert(data.message, 'success', true);
+                    
+                    // If redirect URL is provided, navigate to it
+                    if (data.redirect) {
+                        console.log('Redirecting to:', data.redirect); // Debug log
+                        window.location.href = data.redirect;
+                    } else {
+                        // Otherwise, show the OTP input form
+                        phoneSection.style.display = 'none';
+                        otpSection.style.display = 'block';
+                        
+                        // Display the phone number in the OTP section
+                        document.getElementById('displayPhone').textContent = phone;
+                    }
                 } else {
-                    showAlert(data.message, 'error');
+                    throw new Error(data.message || 'Failed to send reset code');
                 }
             } catch (error) {
-                showAlert('An error occurred. Please try again.', 'error');
+                console.error('Error details:', error); // Debug log
+                showAlert(error.message || 'An error occurred while processing your request', 'error');
             }
         });
 
@@ -584,9 +636,10 @@
                         'Accept': 'application/json'
                     },
                     body: JSON.stringify({ 
-                        otp: enteredOTP
+                        otp: enteredOTP,
+                        phone: document.getElementById('resetPhone').value.replace(/\D/g, '')
                     }),
-                    credentials: 'include' // This is important for session handling
+                    credentials: 'include'
                 });
                 
                 const data = await response.json();
@@ -657,6 +710,7 @@
         document.getElementById('resetPassword').addEventListener('click', async () => {
             const newPassword = document.getElementById('newPassword').value;
             const confirmPassword = document.getElementById('confirmPassword').value;
+            const phone = document.getElementById('resetPhone').value.replace(/\D/g, '');
 
             if (!newPassword || !confirmPassword) {
                 showAlert('Please fill in all fields', 'error');
@@ -697,7 +751,8 @@
                     },
                     body: JSON.stringify({ 
                         password: newPassword,
-                        confirm_password: confirmPassword
+                        confirm_password: confirmPassword,
+                        phone: phone
                     })
                 });
                 
@@ -722,12 +777,21 @@
         document.getElementById('loginForm').addEventListener('submit', async (e) => {
             e.preventDefault();
             const formData = new FormData(e.target);
+            const phone = formData.get('phone').replace(/\D/g, '');
+            
+            // Validate phone number
+            if (!phone.match(/^[0-9]{10,12}$/)) {
+                showAlert('Please enter a valid phone number (10-12 digits)', 'error');
+                return;
+            }
+
+            formData.set('phone', phone); // Use the full phone number
             
             try {
                 const response = await fetch('login.php', {
                     method: 'POST',
                     body: formData,
-                    credentials: 'include' // Important for session handling
+                    credentials: 'include'
                 });
                 
                 if (!response.ok) {
@@ -754,8 +818,18 @@
         document.getElementById('registerForm').addEventListener('submit', async (e) => {
             e.preventDefault();
             const formData = new FormData(e.target);
+            const phone = formData.get('phone').replace(/\D/g, '');
+            
+            // Validate phone number
+            if (!phone.match(/^[0-9]{10,12}$/)) {
+                showAlert('Please enter a valid phone number (10-12 digits)', 'error');
+                return;
+            }
+
             const formObject = {};
-            formData.forEach((value, key) => formObject[key] = value);
+            formData.forEach((value, key) => {
+                formObject[key] = key === 'phone' ? phone : value;
+            });
             
             try {
                 const response = await fetch('register.php', {
@@ -780,6 +854,58 @@
                 showAlert('An error occurred. Please try again.', 'error');
             }
         });
+
+        // Function to handle forgot password
+        function handleForgotPassword() {
+            const phone = document.getElementById('resetPhone').value.trim();
+            
+            // Validate phone number format
+            if (!phone.match(/^[6-9]\d{9}$/)) {
+                showAlert('Please enter a valid 10-digit Indian mobile number', 'error');
+                return;
+            }
+            
+            // Show loading state
+            const sendResetCodeBtn = document.getElementById('sendResetCode');
+            const originalText = sendResetCodeBtn.textContent;
+            sendResetCodeBtn.textContent = 'Sending...';
+            sendResetCodeBtn.disabled = true;
+            
+            // Send request to forgot_password.php
+            fetch('forgot_password.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ phone: phone })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    showAlert(data.message, 'success');
+                    
+                    // If redirect URL is provided, navigate to it
+                    if (data.redirect) {
+                        window.location.href = data.redirect;
+                    } else {
+                        // Otherwise, show the OTP input form
+                        document.getElementById('forgotPasswordForm').style.display = 'none';
+                        document.getElementById('otpVerificationForm').style.display = 'block';
+                    }
+                } else {
+                    showAlert(data.message || 'Failed to send reset code', 'error');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                showAlert('An error occurred. Please try again later.', 'error');
+            })
+            .finally(() => {
+                // Reset button state
+                sendResetCodeBtn.textContent = originalText;
+                sendResetCodeBtn.disabled = false;
+            });
+        }
     </script>
 </body>
 </html>

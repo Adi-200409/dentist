@@ -17,15 +17,15 @@ try {
 
     // Get and sanitize form data
     $name = trim($_POST['name']);
-    $email = trim($_POST['email']);
+    $phone = preg_replace('/\D/', '', $_POST['phone']); // Remove non-digits
     $password = $_POST['password'];
     $confirm_password = $_POST['confirm_password'];
 
     // Log registration attempt
-    error_log("Registration attempt for email: " . $email);
+    error_log("Registration attempt for phone: " . $phone);
 
     // Validate input
-    if (empty($name) || empty($email) || empty($password) || empty($confirm_password)) {
+    if (empty($name) || empty($phone) || empty($password) || empty($confirm_password)) {
         throw new Exception("Please fill in all fields");
     }
 
@@ -50,37 +50,37 @@ try {
         throw new Exception("Password must contain at least one number");
     }
 
-    // Validate email format
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        throw new Exception("Invalid email format");
+    // Validate phone number format (Indian mobile number)
+    if (!preg_match('/^[6-9]\d{9}$/', $phone)) {
+        throw new Exception("Please enter a valid Indian mobile number (10 digits starting with 6-9)");
     }
 
-    // Check if email already exists
-    $stmt = $conn->prepare("SELECT id FROM users WHERE email = ?");
+    // Check if phone already exists
+    $stmt = $conn->prepare("SELECT id FROM users WHERE phone = ?");
     if (!$stmt) {
         throw new Exception("Database error: " . $conn->error);
     }
 
-    $stmt->bind_param("s", $email);
+    $stmt->bind_param("s", $phone);
     if (!$stmt->execute()) {
         throw new Exception("Database error: " . $stmt->error);
     }
 
     $result = $stmt->get_result();
     if ($result->num_rows > 0) {
-        throw new Exception("Email already exists");
+        throw new Exception("Phone number already registered");
     }
 
     // Hash password
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
     // Insert user
-    $stmt = $conn->prepare("INSERT INTO users (name, email, password) VALUES (?, ?, ?)");
+    $stmt = $conn->prepare("INSERT INTO users (name, phone, password) VALUES (?, ?, ?)");
     if (!$stmt) {
         throw new Exception("Database error: " . $conn->error);
     }
 
-    $stmt->bind_param("sss", $name, $email, $hashed_password);
+    $stmt->bind_param("sss", $name, $phone, $hashed_password);
     if (!$stmt->execute()) {
         throw new Exception("Error creating user: " . $stmt->error);
     }
@@ -91,9 +91,9 @@ try {
     // Create session
     $_SESSION['user_id'] = $user_id;
     $_SESSION['user_name'] = $name;
-    $_SESSION['user_email'] = $email;
+    $_SESSION['user_phone'] = $phone;
 
-    error_log("Registration successful for email: " . $email);
+    error_log("Registration successful for phone: " . $phone);
 
     // Return success response
     echo json_encode([

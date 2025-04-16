@@ -62,22 +62,21 @@ document.addEventListener('DOMContentLoaded', function() {
         phoneInput.addEventListener('input', function(e) {
             let value = e.target.value.replace(/\D/g, ''); // Remove non-digits
             
-            // Only remove 91 prefix if it's at the start and the number is longer than 10 digits
-            if (value.length > 10 && value.startsWith('91')) {
-                const remainingDigits = value.substring(2);
-                // Only remove the 91 if the remaining digits form a valid Indian mobile number
-                if (remainingDigits.match(/^[6-9]\d{9}$/)) {
-                    value = remainingDigits;
+            // Format for Indian mobile numbers (10 digits)
+            if (value.length > 0) {
+                // Limit to 10 digits
+                value = value.substring(0, 10);
+                // Add space after 5 digits for readability
+                if (value.length > 5) {
+                    value = value.substring(0, 5) + ' ' + value.substring(5);
                 }
-            }
-            
-            // Keep only the first 10 digits if longer
-            if (value.length > 10) {
-                value = value.slice(0, 10);
             }
             
             e.target.value = value;
         });
+
+        // Update placeholder
+        phoneInput.setAttribute('placeholder', '91XXXXXXXX');
     }
 
     form.addEventListener('submit', function(e) {
@@ -87,10 +86,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const submitBtn = form.querySelector('button[type="submit"]');
         
         // Get form values
-        const phone = formData.get('phone').trim();
+        const phone = formData.get('phone').replace(/\D/g, ''); // Remove all non-digits
         const date = new Date(formData.get('date'));
         const time = formData.get('time');
-        const email = formData.get('email').trim();
         const name = formData.get('name').trim();
         const area = formData.get('area').trim();
         const city = formData.get('city').trim();
@@ -103,23 +101,14 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
-        if (!email || !email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
-            showToast('Please enter a valid email address');
+        // Phone validation for Indian numbers
+        if (!phone) {
+            showToast('Please enter your phone number');
             return;
         }
-
-        // Phone validation
-        let cleanPhone = phone.replace(/\D/g, '');
-        // Only remove 91 prefix if the remaining number is valid
-        if (cleanPhone.length > 10 && cleanPhone.startsWith('91')) {
-            const remainingDigits = cleanPhone.substring(2);
-            if (remainingDigits.match(/^[6-9]\d{9}$/)) {
-                cleanPhone = remainingDigits;
-            }
-        }
         
-        if (!cleanPhone.match(/^[6-9]\d{9}$/)) {
-            showToast('Please enter a valid 10-digit mobile number starting with 6-9');
+        if (!phone.match(/^[6-9]\d{9}$/)) {
+            showToast('Please enter a valid Indian mobile number (10 digits starting with 6-9)');
             return;
         }
 
@@ -138,16 +127,20 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
+        // Validate time (9 AM to 9 PM)
         const [hours, minutes] = time.split(':').map(Number);
         if (hours < 9 || hours >= 21) {
             showToast('Please select time between 9 AM and 9 PM');
             return;
         }
 
-        if (selectedDate.getTime() === today.getTime() && 
-            currentDate.getHours() >= hours) {
-            showToast('Please select a future time');
-            return;
+        // If it's today, validate time is not in the past
+        if (selectedDate.getTime() === today.getTime()) {
+            const currentHour = (int)(new Date()).getHours();
+            if (hours <= currentHour) {
+                showToast('Please select a future time');
+                return;
+            }
         }
 
         // Disable submit button and show loading state
@@ -166,22 +159,31 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 // Show appointment details
                 const appointmentDetails = document.getElementById('appointmentDetails');
-                if (appointmentDetails) {
+                const appointmentContent = appointmentDetails?.querySelector('.appointment-content');
+                
+                if (appointmentContent) {
                     const formattedDate = new Date(formData.get('date')).toLocaleDateString();
-                    appointmentDetails.innerHTML = `
-                        <div class="appointment-summary">
-                            <h2>Appointment Details</h2>
-                            <p><strong>Name:</strong> ${name}</p>
-                            <p><strong>Email:</strong> ${email}</p>
-                            <p><strong>Phone:</strong> ${phone}</p>
-                            <p><strong>Date:</strong> ${formattedDate}</p>
-                            <p><strong>Time:</strong> ${time}</p>
-                            <p><strong>Address:</strong> ${area}, ${city}, ${state} - ${postcode}</p>
-                        </div>
+                    appointmentContent.innerHTML = `
+                        <p><strong>Name:</strong> ${name}</p>
+                        <p><strong>Email:</strong> ${formData.get('email')}</p>
+                        <p><strong>Phone:</strong> ${phone}</p>
+                        <p><strong>Date:</strong> ${formattedDate}</p>
+                        <p><strong>Time:</strong> ${time}</p>
+                        <p><strong>Address:</strong> ${area}, ${city}, ${state} - ${postcode}</p>
                     `;
+                    // Store appointment data for cancellation
+                    appointmentDetails.dataset.appointmentData = JSON.stringify({
+                        id: data.appointment_id,
+                        name,
+                        email: formData.get('email'),
+                        phone,
+                        date: formattedDate,
+                        time,
+                        address: `${area}, ${city}, ${state} - ${postcode}`
+                    });
                     appointmentDetails.style.display = 'block';
                 }
-
+                
                 // Reset form
                 form.reset();
                 
@@ -206,6 +208,49 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+// Function to hide appointment details
+function hideAppointmentDetails() {
+    const appointmentDetails = document.getElementById('appointmentDetails');
+    if (appointmentDetails) {
+        appointmentDetails.style.display = 'none';
+    }
+}
+
+// Function to cancel appointment
+function cancelAppointment() {
+    if (!confirm('Are you sure you want to cancel this appointment?')) {
+        return;
+    }
+
+    const appointmentDetails = document.getElementById('appointmentDetails');
+    const appointmentData = JSON.parse(appointmentDetails.dataset.appointmentData || '{}');
+
+    if (!appointmentData.id) {
+        showToast('Error: Appointment ID not found', 'error');
+        return;
+    }
+
+    const formData = new FormData();
+    formData.append('appointment_id', appointmentData.id);
+
+    fetch('cancel_appointment.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            showToast(data.message, 'success');
+            hideAppointmentDetails();
+        } else {
+            throw new Error(data.error || 'Failed to cancel appointment');
+        }
+    })
+    .catch(error => {
+        showToast(error.message, 'error');
+    });
+}
 
 // Toast notification function
 function showToast(message, type = 'error', duration = 3000) {
