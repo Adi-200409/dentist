@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // If it's today, validate time is not in the past
         if (selectedDate.getTime() === today.getTime()) {
-            const currentHour = (int)(new Date()).getHours();
+            const currentHour = parseInt(new Date().getHours());
             if (hours <= currentHour) {
                 showToast('Please select a future time');
                 return;

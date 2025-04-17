@@ -53,6 +53,7 @@ try {
         name VARCHAR(100) NOT NULL,
         phone VARCHAR(15) NOT NULL,
         password VARCHAR(255) NOT NULL,
+        role ENUM('user', 'admin') DEFAULT 'user',
         reset_otp VARCHAR(6),
         otp_expiry DATETIME,
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
@@ -80,6 +81,35 @@ try {
             throw new Exception("Error adding phone column: " . $conn->error);
         }
         error_log("Phone column added successfully");
+    }
+
+    // Remove email column if it exists
+    $check_email_column = "SHOW COLUMNS FROM users LIKE 'email'";
+    $result = $conn->query($check_email_column);
+    
+    if ($result && $result->num_rows > 0) {
+        // Remove email column and its unique constraint
+        $remove_email_column = "ALTER TABLE users DROP COLUMN email";
+        
+        if (!$conn->query($remove_email_column)) {
+            throw new Exception("Error removing email column: " . $conn->error);
+        }
+        error_log("Email column removed successfully");
+    }
+
+    // Check if role column exists and add it if it doesn't
+    $check_role_column = "SHOW COLUMNS FROM users LIKE 'role'";
+    $result = $conn->query($check_role_column);
+    
+    if ($result && $result->num_rows === 0) {
+        // Add role column if it doesn't exist
+        $add_role_column = "ALTER TABLE users 
+            ADD COLUMN role ENUM('user', 'admin') DEFAULT 'user' AFTER password";
+        
+        if (!$conn->query($add_role_column)) {
+            throw new Exception("Error adding role column: " . $conn->error);
+        }
+        error_log("Role column added successfully");
     }
 
     // Create emergency_requests table if not exists
