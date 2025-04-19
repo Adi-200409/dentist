@@ -27,16 +27,28 @@ try {
     mysqli_query($conn, "CREATE DATABASE IF NOT EXISTS dentist");
     mysqli_select_db($conn, "dentist");
 
-    // Create table if not exists
-    $create_table = "CREATE TABLE IF NOT EXISTS emergency_requests (
-        id INT AUTO_INCREMENT PRIMARY KEY,
-        name VARCHAR(100) NOT NULL,
-        phone VARCHAR(15) NOT NULL,
-        issue TEXT NOT NULL,
-        urgency VARCHAR(50) NOT NULL,
-        submission_date DATETIME NOT NULL
-    )";
-    mysqli_query($conn, $create_table);
+    // Check if table exists, if not create it with the correct structure
+    $check_table = "SHOW TABLES LIKE 'emergency_requests'";
+    $table_exists = mysqli_query($conn, $check_table);
+    
+    if (mysqli_num_rows($table_exists) == 0) {
+        // Create table with the correct structure
+        $create_table = "CREATE TABLE emergency_requests (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            name VARCHAR(100) NOT NULL,
+            phone VARCHAR(15) NOT NULL,
+            location TEXT NOT NULL,
+            issue TEXT NOT NULL,
+            urgency VARCHAR(50) NOT NULL,
+            status ENUM('pending', 'in_progress', 'completed', 'cancelled') DEFAULT 'pending',
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+            updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4";
+        
+        if (!mysqli_query($conn, $create_table)) {
+            throw new Exception("Error creating table: " . mysqli_error($conn));
+        }
+    }
 
     // Handle form submission
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -45,24 +57,33 @@ try {
         $phone = mysqli_real_escape_string($conn, $_POST['phone'] ?? '');
         $issue = mysqli_real_escape_string($conn, $_POST['issue'] ?? '');
         $urgency = mysqli_real_escape_string($conn, $_POST['urgency'] ?? '');
+        $location = mysqli_real_escape_string($conn, $_POST['location'] ?? 'Not specified');
         
         // Validate fields
         if (empty($name) || empty($phone) || empty($issue) || empty($urgency)) {
             throw new Exception("All fields are required");
         }
 
-        // Insert data
-        $sql = "INSERT INTO emergency_requests (name, phone, issue, urgency, submission_date) 
-                VALUES ('$name', '$phone', '$issue', '$urgency', NOW())";
-
-        if (mysqli_query($conn, $sql)) {
+        // Use prepared statement for security
+        $stmt = mysqli_prepare($conn, "INSERT INTO emergency_requests (name, phone, location, issue, urgency) VALUES (?, ?, ?, ?, ?)");
+        
+        if (!$stmt) {
+            throw new Exception("Prepare failed: " . mysqli_error($conn));
+        }
+        
+        mysqli_stmt_bind_param($stmt, "sssss", $name, $phone, $location, $issue, $urgency);
+        
+        if (mysqli_stmt_execute($stmt)) {
             $response = [
                 'status' => 'success',
-                'message' => 'Emergency request submitted successfully'
+                'message' => 'Emergency request submitted successfully',
+                'id' => mysqli_insert_id($conn)
             ];
         } else {
-            throw new Exception("Error saving data");
+            throw new Exception("Error saving data: " . mysqli_stmt_error($stmt));
         }
+        
+        mysqli_stmt_close($stmt);
     } else {
         throw new Exception("Invalid request method");
     }

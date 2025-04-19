@@ -161,10 +161,7 @@ form {
 }
 
 .form-container {
-    background: white;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 .input-group {
@@ -231,6 +228,11 @@ form {
                 </div>
 
                 <div class="input-group">
+                    <label for="location">Your Location*</label>
+                    <input type="text" id="location" name="location" placeholder="Enter your address or location" required>
+                </div>
+
+                <div class="input-group">
                     <label for="issue">Describe Your Issue*</label>
                     <textarea id="issue" name="issue" rows="4" required></textarea>
                 </div>
@@ -281,7 +283,7 @@ form {
             }
 
             // Send the form data
-            fetch('emer.php', {
+            fetch('process_emergency.php', {
                 method: 'POST',
                 body: formData
             })

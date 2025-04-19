@@ -1,0 +1,22 @@
+[19-Apr-2025 04:39:09 Europe/Berlin] Emergency request received
+[19-Apr-2025 04:39:09 Europe/Berlin] POST data: Array
+(
+    [name] => Joel Castro
+    [phone] => +1 (658) 622-4777
+    [location] => Do molestiae est vol
+    [issue] => Reprehenderit nesci
+    [urgency] => Bleeding
+)
+
+[19-Apr-2025 04:39:09 Europe/Berlin] Raw input: 
+[19-Apr-2025 04:40:21 Europe/Berlin] Emergency request received
+[19-Apr-2025 04:40:21 Europe/Berlin] POST data: Array
+(
+    [name] => Ezekiel Rodgers
+    [phone] => +1 (717) 424-4631
+    [location] => Nulla obcaecati quib
+    [issue] => Asperiores a sit dol
+    [urgency] => Severe Pain
+)
+
+[19-Apr-2025 04:40:21 Europe/Berlin] Raw input: 

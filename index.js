@@ -128,7 +128,15 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         // Validate time (9 AM to 9 PM)
-        const [hours, minutes] = time.split(':').map(Number);
+        const timeParts = time.split(':');
+        const hours = Number(timeParts[0]);
+        const minutes = Number(timeParts[1]);
+        
+        if (isNaN(hours) || isNaN(minutes)) {
+            showToast('Please select a valid time');
+            return;
+        }
+
         if (hours < 9 || hours >= 21) {
             showToast('Please select time between 9 AM and 9 PM');
             return;
@@ -136,8 +144,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // If it's today, validate time is not in the past
         if (selectedDate.getTime() === today.getTime()) {
-            const currentHour = parseInt(new Date().getHours());
-            if (hours <= currentHour) {
+            const currentHour = new Date().getHours();
+            const currentMinutes = new Date().getMinutes();
+            
+            if (hours < currentHour || (hours === currentHour && minutes <= currentMinutes)) {
                 showToast('Please select a future time');
                 return;
             }

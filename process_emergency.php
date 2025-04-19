@@ -28,11 +28,12 @@ try {
     // Validate and sanitize input
     $name = isset($_POST['name']) ? trim($_POST['name']) : '';
     $phone = isset($_POST['phone']) ? trim($_POST['phone']) : '';
-    $emergency_type = isset($_POST['emergency_type']) ? trim($_POST['emergency_type']) : '';
-    $message = isset($_POST['message']) ? trim($_POST['message']) : '';
+    $location = isset($_POST['location']) ? trim($_POST['location']) : '';
+    $issue = isset($_POST['issue']) ? trim($_POST['issue']) : '';
+    $urgency = isset($_POST['urgency']) ? trim($_POST['urgency']) : '';
 
     // Log sanitized data
-    error_log("Sanitized input - Name: $name, Phone: $phone, Type: $emergency_type");
+    error_log("Sanitized input - Name: $name, Phone: $phone, Location: $location, Issue: $issue, Urgency: $urgency");
 
     // Validation
     $errors = [];
@@ -51,12 +52,16 @@ try {
         $errors[] = "Phone number must have at least 10 digits";
     }
 
-    if (empty($emergency_type)) {
-        $errors[] = "Please select the type of emergency";
+    if (empty($location)) {
+        $errors[] = "Please provide your location";
     }
 
-    if (empty($message) || strlen($message) < 10) {
+    if (empty($issue) || strlen($issue) < 10) {
         $errors[] = "Please provide a detailed description of your emergency (minimum 10 characters)";
+    }
+
+    if (empty($urgency)) {
+        $errors[] = "Please select the urgency level";
     }
 
     // If there are validation errors, return them
@@ -81,7 +86,7 @@ try {
     error_log("Database connection verified");
 
     // Prepare SQL statement
-    $stmt = $conn->prepare("INSERT INTO emergency_requests (name, phone, emergency_type, message, status) VALUES (?, ?, ?, ?, 'pending')");
+    $stmt = $conn->prepare("INSERT INTO emergency_requests (name, phone, location, issue, urgency) VALUES (?, ?, ?, ?, ?)");
     
     if (!$stmt) {
         throw new Exception("Failed to prepare statement: " . $conn->error);
@@ -89,7 +94,7 @@ try {
 
     // Bind parameters and execute
     error_log("Binding parameters to prepared statement");
-    $stmt->bind_param("ssss", $name, $phone, $emergency_type, $message);
+    $stmt->bind_param("sssss", $name, $phone, $location, $issue, $urgency);
     
     error_log("Executing prepared statement");
     if (!$stmt->execute()) {
