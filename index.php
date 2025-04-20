@@ -539,7 +539,7 @@ include "conn.php";
               <div class="ezy__team20-item mt-4 p-3">
                 <div class="ezy__team20-content">
                   <img class="profile_pic"
-                    src="img/nutti.jpg"
+                    src="img/WhatsApp Image 2025-04-19 at 11.25.21_2413755b.jpg"
                     alt="Dr. Raj Malhotra"
                     class="img-fluid w-100" />
                   <div class="p-3">

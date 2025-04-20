@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test JSON API</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #4bb6b7;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        #result {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            display: none;
+        }
+        .success {
+            background-color: #d4edda;
+            border-color: #c3e6cb;
+        }
+        .error {
+            background-color: #f8d7da;
+            border-color: #f5c6cb;
+        }
+    </style>
+</head>
+<body>
+    <h1>Test JSON API</h1>
+    
+    <div class="form-group">
+        <label for="jsonData">JSON Data:</label>
+        <textarea id="jsonData" rows="8">
+{
+    "name": "Test User",
+    "phone": "9876543210",
+    "favorite_number": 42,
+    "password": "test123"
+}
+        </textarea>
+    </div>
+    
+    <div class="form-group">
+        <label for="endpoint">Endpoint:</label>
+        <input type="text" id="endpoint" value="test_json.php">
+    </div>
+    
+    <button id="testBtn">Test Endpoint</button>
+    
+    <div id="result"></div>
+    
+    <script>
+        document.getElementById('testBtn').addEventListener('click', async function() {
+            const jsonData = document.getElementById('jsonData').value.trim();
+            const endpoint = document.getElementById('endpoint').value.trim();
+            const resultDiv = document.getElementById('result');
+            
+            resultDiv.className = '';
+            resultDiv.style.display = 'block';
+            resultDiv.innerHTML = '<p>Sending request...</p>';
+            
+            try {
+                // Parse JSON to validate it
+                const parsedData = JSON.parse(jsonData);
+                
+                // Send request
+                console.log(`Sending to ${endpoint}:`, parsedData);
+                
+                const response = await fetch(endpoint, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: jsonData
+                });
+                
+                console.log('Response status:', response.status);
+                
+                // Get response text
+                const responseText = await response.text();
+                console.log('Response text:', responseText);
+                
+                try {
+                    // Try to parse response as JSON
+                    const data = JSON.parse(responseText);
+                    console.log('Parsed response:', data);
+                    
+                    // Display result
+                    resultDiv.innerHTML = `
+                        <h3>${data.success ? 'Success' : 'Error'}</h3>
+                        <p>${data.message}</p>
+                        <h4>Response Data:</h4>
+                        <pre>${JSON.stringify(data, null, 2)}</pre>
+                    `;
+                    resultDiv.className = data.success ? 'success' : 'error';
+                    
+                } catch (jsonError) {
+                    // Not valid JSON
+                    resultDiv.innerHTML = `
+                        <h3>Error Parsing Response</h3>
+                        <p>The server did not return valid JSON</p>
+                        <h4>Raw Response:</h4>
+                        <pre>${responseText}</pre>
+                    `;
+                    resultDiv.className = 'error';
+                }
+                
+            } catch (error) {
+                console.error('Error:', error);
+                resultDiv.innerHTML = `
+                    <h3>Error</h3>
+                    <p>${error.message}</p>
+                `;
+                resultDiv.className = 'error';
+            }
+        });
+    </script>
+</body>
+</html> 

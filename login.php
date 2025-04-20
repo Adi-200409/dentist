@@ -11,19 +11,29 @@ ini_set('error_log', 'error.log');
 header('Content-Type: application/json');
 
 try {
+    // Get JSON data
+    $json_data = file_get_contents('php://input');
+    $data = json_decode($json_data, true);
+    
+    // Check if the JSON was valid
+    if ($data === null && json_last_error() !== JSON_ERROR_NONE) {
+        error_log("JSON Error: " . json_last_error_msg());
+        throw new Exception('Invalid request format');
+    }
+    
     // Check if phone and password are set
-    if (!isset($_POST['phone']) || !isset($_POST['password'])) {
+    if (!isset($data['phone']) || !isset($data['password'])) {
         throw new Exception('Phone number and password are required');
     }
 
-    $phone = preg_replace('/\D/', '', $_POST['phone']); // Remove non-digits
-    $password = $_POST['password'];
+    $phone = preg_replace('/\D/', '', $data['phone']); // Remove non-digits
+    $password = $data['password'];
 
     // Log the raw input
-    error_log("Login attempt - Raw phone: " . $_POST['phone'] . ", Processed phone: " . $phone);
+    error_log("Login attempt - Raw phone: " . $data['phone'] . ", Processed phone: " . $phone);
 
-    // Validate phone number format (Indian mobile number)
-    if (!preg_match('/^[6-9]\d{9}$/', $phone)) {
+    // Validate phone number format
+    if (!preg_match('/^[0-9]{10}$/', $phone)) {
         error_log("Invalid phone format: " . $phone);
         throw new Exception('Invalid phone number format');
     }
@@ -64,13 +74,12 @@ try {
     $_SESSION['role'] = $user['role'];
 
     // Clear any reset-related session variables
-    unset($_SESSION['reset_phone']);
-    unset($_SESSION['otp_verified']);
+    unset($_SESSION['reset_user_id']);
 
     // Return success response with appropriate redirect
     $redirect = $user['role'] === 'admin' ? 'admin.php' : 'index.php';
     echo json_encode([
-        'status' => 'success',
+        'success' => true,
         'message' => 'Login successful!',
         'redirect' => $redirect
     ]);
@@ -79,7 +88,7 @@ try {
     error_log("Login error: " . $e->getMessage());
     http_response_code(400);
     echo json_encode([
-        'status' => 'error',
+        'success' => false,
         'message' => $e->getMessage()
     ]);
 }

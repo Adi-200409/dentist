@@ -1,0 +1,168 @@
+[20-Apr-2025 07:53:42 Europe/Berlin] Request method: POST
+[20-Apr-2025 07:53:42 Europe/Berlin] Raw request data: {"name":"Olympia Dennis","phone":"9990113968","favorite_number":13,"password":"Password"}
+[20-Apr-2025 07:53:42 Europe/Berlin] Decoded data: Array
+(
+    [name] => Olympia Dennis
+    [phone] => 9990113968
+    [favorite_number] => 13
+    [password] => Password
+)
+
+[20-Apr-2025 07:53:42 Europe/Berlin] Registration attempt - Name: Olympia Dennis, Phone: 9990113968, Favorite number: 13
+[20-Apr-2025 07:53:42 Europe/Berlin] Registration successful for phone: 9990113968
+[20-Apr-2025 07:55:41 Europe/Berlin] Request method: POST
+[20-Apr-2025 07:55:41 Europe/Berlin] Raw request data: {"name":"Olympia Dennis","phone":"9990113968","favorite_number":3,"password":"ADd123456"}
+[20-Apr-2025 07:55:41 Europe/Berlin] Decoded data: Array
+(
+    [name] => Olympia Dennis
+    [phone] => 9990113968
+    [favorite_number] => 3
+    [password] => ADd123456
+)
+
+[20-Apr-2025 07:55:41 Europe/Berlin] Registration attempt - Name: Olympia Dennis, Phone: 9990113968, Favorite number: 3
+[20-Apr-2025 07:55:41 Europe/Berlin] Registration error: Phone number already registered
+[20-Apr-2025 08:31:45 Europe/Berlin] Request method: POST
+[20-Apr-2025 08:31:45 Europe/Berlin] Raw request data: {"name":"Olympia Dennis","phone":"9990113968","favorite_number":6,"password":"Ad123456"}
+[20-Apr-2025 08:31:45 Europe/Berlin] Decoded data: Array
+(
+    [name] => Olympia Dennis
+    [phone] => 9990113968
+    [favorite_number] => 6
+    [password] => Ad123456
+)
+
+[20-Apr-2025 08:31:45 Europe/Berlin] Registration attempt - Name: Olympia Dennis, Phone: 9990113968, Favorite number: 6
+[20-Apr-2025 08:31:45 Europe/Berlin] Registration error: Phone number already registered
+[20-Apr-2025 08:34:30 Europe/Berlin] Request method: POST
+[20-Apr-2025 08:34:30 Europe/Berlin] Raw request data: {"name":"Olympia Dennis","phone":"9990113968","favorite_number":6,"password":"Ad123456"}
+[20-Apr-2025 08:34:30 Europe/Berlin] Decoded data: Array
+(
+    [name] => Olympia Dennis
+    [phone] => 9990113968
+    [favorite_number] => 6
+    [password] => Ad123456
+)
+
+[20-Apr-2025 08:34:30 Europe/Berlin] Registration attempt - Name: Olympia Dennis, Phone: 9990113968, Favorite number: 6
+[20-Apr-2025 08:34:30 Europe/Berlin] Registration error: Phone number already registered
+[20-Apr-2025 08:35:57 Europe/Berlin] Request method: POST
+[20-Apr-2025 08:35:57 Europe/Berlin] Raw request data: {"name":"Olympia Dennis","phone":"9980113968","favorite_number":6,"password":"Ad123456"}
+[20-Apr-2025 08:35:57 Europe/Berlin] Decoded data: Array
+(
+    [name] => Olympia Dennis
+    [phone] => 9980113968
+    [favorite_number] => 6
+    [password] => Ad123456
+)
+
+[20-Apr-2025 08:35:57 Europe/Berlin] Registration attempt - Name: Olympia Dennis, Phone: 9980113968, Favorite number: 6
+[20-Apr-2025 08:35:57 Europe/Berlin] Registration successful for phone: 9980113968
+[20-Apr-2025 08:38:11 Europe/Berlin] Request method: POST
+[20-Apr-2025 08:38:11 Europe/Berlin] Raw request data: {"name":"Olympia Dennis","phone":"9990113968","favorite_number":6,"password":"Ad123456"}
+[20-Apr-2025 08:38:11 Europe/Berlin] Decoded data: Array
+(
+    [name] => Olympia Dennis
+    [phone] => 9990113968
+    [favorite_number] => 6
+    [password] => Ad123456
+)
+
+[20-Apr-2025 08:38:11 Europe/Berlin] Registration attempt - Name: Olympia Dennis, Phone: 9990113968, Favorite number: 6
+[20-Apr-2025 08:38:11 Europe/Berlin] Registration error: Phone number already registered
+[20-Apr-2025 08:38:16 Europe/Berlin] Request method: POST
+[20-Apr-2025 08:38:16 Europe/Berlin] Raw request data: {"name":"Olympia Dennis","phone":"9990113968","favorite_number":6,"password":"Ad123456"}
+[20-Apr-2025 08:38:16 Europe/Berlin] Decoded data: Array
+(
+    [name] => Olympia Dennis
+    [phone] => 9990113968
+    [favorite_number] => 6
+    [password] => Ad123456
+)
+
+[20-Apr-2025 08:38:16 Europe/Berlin] Registration attempt - Name: Olympia Dennis, Phone: 9990113968, Favorite number: 6
+[20-Apr-2025 08:38:16 Europe/Berlin] Registration error: Phone number already registered
+[20-Apr-2025 08:38:20 Europe/Berlin] Request method: POST
+[20-Apr-2025 08:38:20 Europe/Berlin] Raw request data: {"name":"Olympia Dennis","phone":"9990113968","favorite_number":6,"password":"Ad123456"}
+[20-Apr-2025 08:38:20 Europe/Berlin] Decoded data: Array
+(
+    [name] => Olympia Dennis
+    [phone] => 9990113968
+    [favorite_number] => 6
+    [password] => Ad123456
+)
+
+[20-Apr-2025 08:38:20 Europe/Berlin] Registration attempt - Name: Olympia Dennis, Phone: 9990113968, Favorite number: 6
+[20-Apr-2025 08:38:20 Europe/Berlin] Registration error: Phone number already registered
+[20-Apr-2025 08:38:27 Europe/Berlin] Request method: POST
+[20-Apr-2025 08:38:27 Europe/Berlin] Raw request data: {"name":"Olympia Dennis","phone":"9990113968","favorite_number":6,"password":"Ad123456"}
+[20-Apr-2025 08:38:27 Europe/Berlin] Decoded data: Array
+(
+    [name] => Olympia Dennis
+    [phone] => 9990113968
+    [favorite_number] => 6
+    [password] => Ad123456
+)
+
+[20-Apr-2025 08:38:27 Europe/Berlin] Registration attempt - Name: Olympia Dennis, Phone: 9990113968, Favorite number: 6
+[20-Apr-2025 08:38:27 Europe/Berlin] Registration error: Phone number already registered
+[20-Apr-2025 08:40:38 Europe/Berlin] Request method: POST
+[20-Apr-2025 08:40:38 Europe/Berlin] Raw request data: {"name":"Leigh Bates","phone":"9990113968","favorite_number":77,"password":"Pa$$w0rd!"}
+[20-Apr-2025 08:40:38 Europe/Berlin] Decoded data: Array
+(
+    [name] => Leigh Bates
+    [phone] => 9990113968
+    [favorite_number] => 77
+    [password] => Pa$$w0rd!
+)
+
+[20-Apr-2025 08:40:38 Europe/Berlin] Registration attempt - Name: Leigh Bates, Phone: 9990113968, Favorite number: 77
+[20-Apr-2025 08:40:38 Europe/Berlin] Registration error: Phone number already registered
+[20-Apr-2025 08:40:43 Europe/Berlin] Request method: POST
+[20-Apr-2025 08:40:43 Europe/Berlin] Raw request data: {"name":"Leigh Bates","phone":"9990113968","favorite_number":77,"password":"Pa$$w0rd!"}
+[20-Apr-2025 08:40:43 Europe/Berlin] Decoded data: Array
+(
+    [name] => Leigh Bates
+    [phone] => 9990113968
+    [favorite_number] => 77
+    [password] => Pa$$w0rd!
+)
+
+[20-Apr-2025 08:40:43 Europe/Berlin] Registration attempt - Name: Leigh Bates, Phone: 9990113968, Favorite number: 77
+[20-Apr-2025 08:40:43 Europe/Berlin] Registration error: Phone number already registered
+[20-Apr-2025 08:40:45 Europe/Berlin] Request method: POST
+[20-Apr-2025 08:40:45 Europe/Berlin] Raw request data: {"name":"Leigh Bates","phone":"9990113968","favorite_number":77,"password":"Pa$$w0rd!"}
+[20-Apr-2025 08:40:45 Europe/Berlin] Decoded data: Array
+(
+    [name] => Leigh Bates
+    [phone] => 9990113968
+    [favorite_number] => 77
+    [password] => Pa$$w0rd!
+)
+
+[20-Apr-2025 08:40:45 Europe/Berlin] Registration attempt - Name: Leigh Bates, Phone: 9990113968, Favorite number: 77
+[20-Apr-2025 08:40:45 Europe/Berlin] Registration error: Phone number already registered
+[20-Apr-2025 08:40:46 Europe/Berlin] Request method: POST
+[20-Apr-2025 08:40:46 Europe/Berlin] Raw request data: {"name":"Leigh Bates","phone":"9990113968","favorite_number":77,"password":"Pa$$w0rd!"}
+[20-Apr-2025 08:40:46 Europe/Berlin] Decoded data: Array
+(
+    [name] => Leigh Bates
+    [phone] => 9990113968
+    [favorite_number] => 77
+    [password] => Pa$$w0rd!
+)
+
+[20-Apr-2025 08:40:46 Europe/Berlin] Registration attempt - Name: Leigh Bates, Phone: 9990113968, Favorite number: 77
+[20-Apr-2025 08:40:46 Europe/Berlin] Registration error: Phone number already registered
+[20-Apr-2025 08:40:46 Europe/Berlin] Request method: POST
+[20-Apr-2025 08:40:46 Europe/Berlin] Raw request data: {"name":"Leigh Bates","phone":"9990113968","favorite_number":77,"password":"Pa$$w0rd!"}
+[20-Apr-2025 08:40:46 Europe/Berlin] Decoded data: Array
+(
+    [name] => Leigh Bates
+    [phone] => 9990113968
+    [favorite_number] => 77
+    [password] => Pa$$w0rd!
+)
+
+[20-Apr-2025 08:40:46 Europe/Berlin] Registration attempt - Name: Leigh Bates, Phone: 9990113968, Favorite number: 77
+[20-Apr-2025 08:40:46 Europe/Berlin] Registration error: Phone number already registered

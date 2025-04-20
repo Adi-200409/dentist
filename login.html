@@ -1,31 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login & Register - JUSTSmile</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
+        /* General Styles */
         * {
             box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+            margin: 0;
+            padding: 0;
+        }
 
         body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             flex-direction: column;
             font-family: 'Montserrat', sans-serif;
             height: 100vh;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            margin: -20px 0 50px;
+            background: #f6f5f7;
         }
 
         h1 {
             font-weight: bold;
             margin: 0;
-            color: #2c3e50;
         }
 
         p {
@@ -36,11 +38,6 @@
             margin: 20px 0 30px;
         }
 
-        span {
-            font-size: 12px;
-            color: #666;
-        }
-
         a {
             color: #333;
             font-size: 14px;
@@ -48,42 +45,109 @@
             margin: 15px 0;
         }
 
+        /* Container Styles */
         .container {
             background-color: #fff;
             border-radius: 10px;
             box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-    position: relative;
+            position: relative;
             overflow: hidden;
             width: 768px;
             max-width: 100%;
             min-height: 480px;
         }
 
-        .form-container form {
-            background-color: #fff;
+        /* Form Container Styles */
+        .form-container {
+            position: absolute;
+            top: 0;
+            height: 100%;
+            transition: all 0.6s ease-in-out;
+        }
+
+        .sign-in {
+            left: 0;
+            width: 50%;
+            z-index: 2;
+        }
+
+        .sign-up {
+            left: 0;
+            width: 50%;
+            opacity: 0;
+            z-index: 1;
+        }
+
+        .container.right-panel-active .sign-in {
+            transform: translateX(100%);
+        }
+
+        .container.right-panel-active .sign-up {
+            transform: translateX(100%);
+            opacity: 1;
+            z-index: 5;
+            animation: show 0.6s;
+        }
+
+        /* Form Styles */
+        form {
+            background-color: #FFFFFF;
             display: flex;
+            align-items: center;
+            justify-content: center;
             flex-direction: column;
             padding: 0 50px;
-    height: 100%;
-            justify-content: center;
-            align-items: center;
+            height: 100%;
             text-align: center;
         }
 
-        .form-container input {
+        input {
             background-color: #eee;
             border: none;
             padding: 12px 15px;
             margin: 8px 0;
             width: 100%;
             border-radius: 5px;
+            font-size: 14px;
         }
 
+        input:focus {
+            outline: none;
+            background-color: #f0f0f0;
+        }
+
+        /* Password Field Styles */
+        .password-field {
+            position: relative;
+            width: 100%;
+        }
+
+        .password-field input {
+            padding-right: 40px;
+        }
+
+        .toggle-password {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #666;
+            padding: 5px;
+        }
+
+        .toggle-password:hover {
+            color: #333;
+        }
+
+        /* Button Styles */
         button {
             border-radius: 20px;
-            border: 1px solid #00b8b8;
-            background-color: #00b8b8;
-            color: #ffffff;
+            border: 1px solid #4bb6b7;
+            background-color: #4bb6b7;
+            color: #FFFFFF;
             font-size: 12px;
             font-weight: bold;
             padding: 12px 45px;
@@ -98,52 +162,40 @@
         }
 
         button:focus {
-    outline: none;
+            outline: none;
         }
 
         button.ghost {
             background-color: transparent;
-            border-color: #ffffff;
+            border-color: #FFFFFF;
         }
 
-        .form-container {
+     
+
+        /* Overlay Styles */
+        .overlay-container {
             position: absolute;
             top: 0;
-            height: 100%;
-            transition: all 0.6s ease-in-out;
-        }
-
-        .sign-in-container {
-            left: 0;
-            width: 50%;
-            z-index: 2;
-        }
-
-        .sign-up-container {
-            left: 0;
-            width: 50%;
-    opacity: 0;
-            z-index: 1;
-        }
-
-        .overlay-container {
-    position: absolute;
-    top: 0;
             left: 50%;
-    width: 50%;
-    height: 100%;
+            width: 50%;
+            height: 100%;
             overflow: hidden;
             transition: transform 0.6s ease-in-out;
             z-index: 100;
         }
 
+        .container.right-panel-active .overlay-container {
+            transform: translateX(-100%);
+        }
+
         .overlay {
-            background: #00b8b8;
-            background: linear-gradient(to right, #008080, #00b8b8);
+            background: #4bb6b7;
+            background: -webkit-linear-gradient(to right, #4bb6b7, #4bb6b7);
+            background: linear-gradient(to right, #4bb6b7, #4bb6b7);
             background-repeat: no-repeat;
             background-size: cover;
             background-position: 0 0;
-            color: #ffffff;
+            color: #FFFFFF;
             position: relative;
             left: -100%;
             height: 100%;
@@ -152,53 +204,35 @@
             transition: transform 0.6s ease-in-out;
         }
 
-        .overlay-panel {
-            position: absolute;
-            top: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-            align-items: center;
-            padding: 0 40px;
-            height: 100%;
-            width: 50%;
-            text-align: center;
-            transform: translateX(0);
-            transition: transform 0.6s ease-in-out;
+        .container.right-panel-active .overlay {
+            transform: translateX(50%);
         }
 
-        .overlay-right {
-    right: 0;
+        .overlay-panel {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 0 40px;
+            text-align: center;
+            top: 0;
+            height: 100%;
+            width: 50%;
             transform: translateX(0);
+            transition: transform 0.6s ease-in-out;
         }
 
         .overlay-left {
             transform: translateX(-20%);
         }
 
-        /* Move signin to right */
-        .container.right-panel-active .sign-in-container {
-            transform: translateX(100%);
-        }
-
-        /* Move overlay to left */
-        .container.right-panel-active .overlay-container {
-            transform: translateX(-100%);
-        }
-
-        /* Bring signup over signin */
-        .container.right-panel-active .sign-up-container {
-            transform: translateX(100%);
-    opacity: 1;
-            z-index: 5;
-        }
-
-        /* Move overlay back to right */
-        .container.right-panel-active .overlay {
-            transform: translateX(50%);
-        }
-
         .container.right-panel-active .overlay-left {
+            transform: translateX(0);
+        }
+
+        .overlay-right {
+            right: 0;
             transform: translateX(0);
         }
 
@@ -206,107 +240,7 @@
             transform: translateX(20%);
         }
 
-        .alert-container {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 1000;
-        }
-
-        .alert {
-            padding: 15px 30px;
-            margin-bottom: 10px;
-            border-radius: 5px;
-            font-size: 16px;
-            opacity: 0;
-            transform: translateX(100%);
-            animation: slideIn 0.5s forwards;
-            display: flex;
-            align-items: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .alert:not(.persistent) {
-            animation: slideIn 0.5s forwards, fadeOut 0.5s 2.5s forwards;
-        }
-
-        .alert i {
-            margin-right: 10px;
-            font-size: 20px;
-        }
-
-        .alert .close-alert {
-            margin-left: 10px;
-            cursor: pointer;
-            font-size: 18px;
-            opacity: 0.7;
-        }
-
-        .alert .close-alert:hover {
-            opacity: 1;
-        }
-
-        .alert-success {
-            background-color: #4CAF50;
-            color: white;
-        }
-
-        .alert-error {
-            background-color: #f44336;
-            color: white;
-        }
-
-        @keyframes slideIn {
-            from {
-                transform: translateX(100%);
-    opacity: 0;
-}
-            to {
-    transform: translateX(0);
-    opacity: 1;
-            }
-        }
-
-        @keyframes fadeOut {
-            from {
-                opacity: 1;
-            }
-            to {
-                opacity: 0;
-            }
-        }
-
-        .forgot-password-modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 1000;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .modal-content {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            width: 90%;
-            max-width: 400px;
-            position: relative;
-        }
-
-        .close-modal {
-            position: absolute;
-            right: 15px;
-            top: 15px;
-            font-size: 24px;
-            cursor: pointer;
-            color: #666;
-        }
-
+        /* Modal Styles */
         .modal {
             display: none;
             position: fixed;
@@ -319,7 +253,7 @@
         }
 
         .modal-content {
-            background-color: #fff;
+            background-color: #fefefe;
             margin: 15% auto;
             padding: 20px;
             border-radius: 10px;
@@ -329,185 +263,108 @@
         }
 
         .close {
-            position: absolute;
-            right: 20px;
-            top: 10px;
+            color: #aaa;
+            float: right;
             font-size: 28px;
+            font-weight: bold;
             cursor: pointer;
         }
 
-        .otp-inputs {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin: 20px 0;
+        .close:hover {
+            color: #333;
         }
 
-        .otp-input {
-            width: 40px;
-            height: 40px;
-            text-align: center;
-            font-size: 20px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-
-        input[type="email"],
-        input[type="password"] {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-
-        button {
-            background-color: #00b8b8;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin: 10px 0;
-            width: 100%;
-        }
-
-        button:hover {
-            background-color: #009999;
-        }
-
-        .input-group {
-            position: relative;
-            width: 100%;
+        /* Alert Styles */
+        .alert {
+            padding: 15px;
             margin-bottom: 20px;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            display: none;
         }
 
-        .input-group input {
-            width: 100%;
-            padding: 12px 15px;
-            padding-right: 45px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 14px;
-            transition: all 0.3s ease;
-            background-color: #f8f9fa;
+        .alert-success {
+            color: #3c763d;
+            background-color: #dff0d8;
+            border-color: #d6e9c6;
         }
 
-        .input-group input:focus {
-            outline: none;
-            border-color: #00b8b8;
-            box-shadow: 0 0 0 2px rgba(0, 184, 184, 0.1);
-            background-color: #fff;
+        .alert-danger {
+            color: #a94442;
+            background-color: #f2dede;
+            border-color: #ebccd1;
         }
 
-        .input-group input[type="password"] {
-            letter-spacing: 2px;
+        /* Animation */
+        @keyframes show {
+            0%, 49.99% {
+                opacity: 0;
+                z-index: 1;
+            }
+            50%, 100% {
+                opacity: 1;
+                z-index: 5;
+            }
         }
 
-        .toggle-password {
-            position: absolute;
-            right: 15px;
-            top: 50%;
-            transform: translateY(-50%);
-            background: none;
-            border: none;
-            font-size: 16px;
-            color: #666;
-            cursor: pointer;
-            padding: 5px;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-        }
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .container {
+                width: 100%;
+                min-height: 100vh;
+                border-radius: 0;
+            }
 
-        .toggle-password:hover {
-            color: #00b8b8;
-            background-color: rgba(0, 184, 184, 0.1);
-        }
+            .form-container {
+                width: 100%;
+                position: relative;
+            }
 
-        .toggle-password:active {
-            transform: translateY(-50%) scale(0.95);
-        }
+            .sign-in, .sign-up {
+                width: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
 
-        .toggle-password i {
-            transition: transform 0.3s ease;
-        }
-
-        .toggle-password:hover i {
-            transform: scale(1.1);
-        }
-
-        /* Style for when password is visible */
-        .input-group input[type="text"] + .toggle-password i {
-            color: #00b8b8;
-        }
-
-        /* Error state */
-        .input-group.error input {
-            border-color: #dc3545;
-            background-color: #fff;
-        }
-
-        .input-group.error .toggle-password {
-            color: #dc3545;
-        }
-
-        /* Success state */
-        .input-group.success input {
-            border-color: #28a745;
-            background-color: #fff;
-        }
-
-        .input-group.success .toggle-password {
-            color: #28a745;
+            .overlay-container {
+                display: none;
+            }
         }
     </style>
 </head>
+
 <body>
     <div class="alert-container" id="alert-container"></div>
-    
+
     <div class="container" id="container">
-        <div class="form-container sign-up-container">
-            <form action="register.php" method="POST" id="registerForm">
+        <div class="form-container sign-up">
+            <form id="signupForm">
                 <h1>Create Account</h1>
-                <span>use your phone number for registration</span>
-                <div class="input-group">
-                    <input type="text" name="name" placeholder="Name" required />
+                
+                <span>or use your email for registration</span>
+                <input type="text" id="signupName" placeholder="Name" required />
+                <input type="tel" id="signupPhone" placeholder="Phone Number" required />
+                <input type="number" id="signupFavoriteNumber" placeholder="Favorite Number (1-100)" min="1" max="100" required />
+                <div class="password-field">
+                    <input type="password" id="signupPassword" placeholder="Password" required />
+                    <button type="button" class="toggle-password"><i class="fas fa-eye"></i></button>
                 </div>
-                <div class="input-group">
-                    <input type="tel" name="phone" placeholder="Phone Number (10 digits)" pattern="[6-9][0-9]{9}" required />
-                </div>
-                <div class="input-group">
-                    <input type="password" id="registerPassword" name="password" placeholder="Password" required />
-                    <button type="button" class="toggle-password" onclick="togglePassword('registerPassword')">
-                        <i class="fas fa-eye"></i>
-                    </button>
-                </div>
-                <div class="input-group">
-                    <input type="password" id="registerConfirmPassword" name="confirm_password" placeholder="Confirm Password" required />
-                    <button type="button" class="toggle-password" onclick="togglePassword('registerConfirmPassword')">
-                        <i class="fas fa-eye"></i>
-                    </button>
+                <div class="password-field">
+                    <input type="password" id="signupConfirmPassword" placeholder="Confirm Password" required />
+                    <button type="button" class="toggle-password"><i class="fas fa-eye"></i></button>
                 </div>
                 <button type="submit">Sign Up</button>
             </form>
         </div>
-        <div class="form-container sign-in-container">
-            <form action="login.php" method="POST" id="loginForm">
-                <h1>Sign in</h1>
-                <span>use your account</span>
-                <div class="input-group">
-                    <input type="tel" name="phone" placeholder="Phone Number" pattern="[6-9][0-9]{9}" required />
-                </div>
-                <div class="input-group">
-                    <input type="password" id="loginPassword" name="password" placeholder="Password" required />
-                    <button type="button" class="toggle-password" onclick="togglePassword('loginPassword')">
-                        <i class="fas fa-eye"></i>
-                    </button>
+        <div class="form-container sign-in">
+            <form id="signinForm">
+                <h1>Sign In</h1>
+                <span>or use your phone number and password</span>
+                <input type="tel" id="signinPhone" placeholder="Phone Number" required />
+                <div class="password-field">
+                    <input type="password" id="signinPassword" placeholder="Password" required />
+                    <button type="button" class="toggle-password"><i class="fas fa-eye"></i></button>
                 </div>
                 <a href="#" id="forgotPassword">Forgot your password?</a>
                 <button type="submit">Sign In</button>
@@ -517,94 +374,131 @@
             <div class="overlay">
                 <div class="overlay-panel overlay-left">
                     <h1>Welcome Back!</h1>
-                    <p>Please login with your personal info</p>
+                    <p>Please login with your personal details to use all features of the website</p>
                     <button class="ghost" id="signIn">Sign In</button>
                 </div>
                 <div class="overlay-panel overlay-right">
                     <h1>Hello, Friend!</h1>
-                    <p>Enter your personal details and start journey with us</p>
+                    <p>Enter your personal details and start your journey with us</p>
                     <button class="ghost" id="signUp">Sign Up</button>
                 </div>
-                </div>
-                </div>
-                </div>
-                
+            </div>
+        </div>
+    </div>
+
     <!-- Forgot Password Modal -->
     <div id="forgotPasswordModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            
-            <!-- Phone Section -->
-            <div id="phoneSection">
-                <h2>Forgot Password</h2>
-                <p>Enter your phone number to reset your password.</p>
-                <div class="input-group">
-                    <input type="tel" id="resetPhone" placeholder="Enter your phone number" pattern="[6-9][0-9]{9}">
-                </div>
-                <button id="sendResetCode">Send Reset Code</button>
-            </div>
-
-            <!-- OTP Verification Section (Initially Hidden) -->
-            <div id="otpSection" style="display: none;">
-                <h2>Enter OTP</h2>
-                <p>Enter the 6-digit OTP sent to your phone number <span id="displayPhone"></span>.</p>
-                <div class="otp-inputs">
-                    <input type="text" maxlength="1" class="otp-input">
-                    <input type="text" maxlength="1" class="otp-input">
-                    <input type="text" maxlength="1" class="otp-input">
-                    <input type="text" maxlength="1" class="otp-input">
-                    <input type="text" maxlength="1" class="otp-input">
-                    <input type="text" maxlength="1" class="otp-input">
-                </div>
-                <button id="verifyOTP">Verify OTP</button>
-            </div>
-
-            <!-- New Password Section (Initially Hidden) -->
-            <div id="newPasswordSection" style="display: none;">
-                <h2>Create New Password</h2>
-                <div class="input-group">
-                    <input type="password" id="resetNewPassword" name="newPassword" placeholder="New Password" required>
-                    <button type="button" class="toggle-password" onclick="togglePassword('resetNewPassword')">
-                        <i class="fas fa-eye"></i>
-                    </button>
-                </div>
-                <div class="input-group">
-                    <input type="password" id="resetConfirmPassword" name="confirmPassword" placeholder="Confirm Password" required>
-                    <button type="button" class="toggle-password" onclick="togglePassword('resetConfirmPassword')">
-                        <i class="fas fa-eye"></i>
-                    </button>
-                </div>
-                <button id="resetPassword">Reset Password</button>
-            </div>
+            <h2>Forgot Password</h2>
+            <form id="forgotPasswordForm">
+                <input type="tel" id="resetPhone" placeholder="Phone Number" required />
+                <input type="number" id="resetFavoriteNumber" placeholder="Favorite Number (1-100)" min="1" max="100" required />
+                <button type="submit">Verify Identity</button>
+            </form>
         </div>
     </div>
-    
+
+    <!-- Reset Password Modal -->
+    <div id="resetPasswordModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Reset Password</h2>
+            <form id="resetPasswordForm">
+                <div class="password-field">
+                    <input type="password" id="newPassword" placeholder="New Password" required />
+                    <button type="button" class="toggle-password"><i class="fas fa-eye"></i></button>
+                </div>
+                <div class="password-field">
+                    <input type="password" id="confirmNewPassword" placeholder="Confirm New Password" required />
+                    <button type="button" class="toggle-password"><i class="fas fa-eye"></i></button>
+                </div>
+                <button type="submit">Reset Password</button>
+            </form>
+        </div>
+    </div>
+
     <script>
-        function showAlert(message, type = 'success', persistent = false) {
+        function showAlert(message, type = 'danger') {
             const alertContainer = document.getElementById('alert-container');
+            alertContainer.innerHTML = '';
             
-            const alert = document.createElement('div');
-            alert.className = `alert alert-${type}${persistent ? ' persistent' : ''}`;
+            const alertDiv = document.createElement('div');
+            alertDiv.className = `alert alert-${type}`;
+            alertDiv.style.display = 'block';
+            alertDiv.style.position = 'fixed';
+            alertDiv.style.top = '20px';
+            alertDiv.style.left = '50%';
+            alertDiv.style.transform = 'translateX(-50%) translateY(-100px)';
+            alertDiv.style.zIndex = '9999';
+            alertDiv.style.minWidth = '300px';
+            alertDiv.style.textAlign = 'center';
+            alertDiv.style.boxShadow = '0 4px 15px rgba(0,0,0,0.2)';
+            alertDiv.style.fontSize = '16px';
+            alertDiv.style.padding = '15px 20px';
+            alertDiv.style.borderRadius = '8px';
+            alertDiv.style.fontWeight = '500';
+            alertDiv.style.opacity = '0';
+            alertDiv.style.transition = 'all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
             
-            const icon = document.createElement('i');
-            icon.className = type === 'success' ? 'fas fa-check-circle' : 'fas fa-exclamation-circle';
+            // Add icon based on alert type
+            const iconType = type === 'success' ? 'check-circle' : 'exclamation-circle';
+            alertDiv.innerHTML = `
+                <div style="display: flex; align-items: center; justify-content: center;">
+                    <i class="fas fa-${iconType}" style="margin-right: 10px; font-size: 20px;"></i>
+                    <span>${message}</span>
+                </div>
+            `;
             
-            alert.appendChild(icon);
-            alert.appendChild(document.createTextNode(' ' + message));
-
-            if (persistent) {
-                const closeBtn = document.createElement('i');
-                closeBtn.className = 'fas fa-times close-alert';
-                closeBtn.onclick = () => alert.remove();
-                alert.appendChild(closeBtn);
-            }
+            alertContainer.appendChild(alertDiv);
             
-            alertContainer.appendChild(alert);
-
-            if (!persistent) {
+            // Trigger entrance animation (slight delay for better effect)
+            setTimeout(() => {
+                alertDiv.style.opacity = '1';
+                alertDiv.style.transform = 'translateX(-50%) translateY(0)';
+            }, 10);
+            
+            // Add subtle pulse animation
+            setTimeout(() => {
+                alertDiv.style.animation = 'pulse 2s infinite';
+                
+                // Add the pulse keyframes if not already in the document
+                if (!document.getElementById('alert-keyframes')) {
+                    const style = document.createElement('style');
+                    style.id = 'alert-keyframes';
+                    style.textContent = `
+                        @keyframes pulse {
+                            0% { box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+                            50% { box-shadow: 0 4px 20px rgba(0,0,0,0.4); }
+                            100% { box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+                        }
+                    `;
+                    document.head.appendChild(style);
+                }
+            }, 500);
+            
+            // Auto-hide after 5 seconds with exit animation
+            setTimeout(() => {
+                alertDiv.style.opacity = '0';
+                alertDiv.style.transform = 'translateX(-50%) translateY(-100px)';
+                
                 setTimeout(() => {
-                    alert.remove();
-                }, 3000);
+                    alertContainer.innerHTML = '';
+                }, 500);
+            }, 5000);
+        }
+
+        function togglePassword(inputId) {
+            const input = document.getElementById(inputId);
+            const icon = input.nextElementSibling.querySelector('i');
+            if (input.type === 'password') {
+                input.type = 'text';
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+            } else {
+                input.type = 'password';
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
             }
         }
 
@@ -621,248 +515,242 @@
             container.classList.remove('right-panel-active');
         });
 
-        // Forgot Password Modal
-        const modal = document.getElementById('forgotPasswordModal');
-        const forgotPasswordLink = document.getElementById('forgotPassword');
-        const closeModal = document.querySelector('.close');
-        const sendResetCode = document.getElementById('sendResetCode');
-        const phoneSection = document.getElementById('phoneSection');
-        const otpSection = document.getElementById('otpSection');
-        const newPasswordSection = document.getElementById('newPasswordSection');
-        const otpInputs = document.querySelectorAll('.otp-input');
-        let currentOTP = '';
-
-        forgotPasswordLink.addEventListener('click', (e) => {
-            e.preventDefault();
-            modal.style.display = 'block';
-        });
-
-        closeModal.addEventListener('click', () => {
-            modal.style.display = 'none';
-        });
-
-        window.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                modal.style.display = 'none';
-            }
-        });
-
-        // Phone number input validation
-        document.querySelectorAll('input[type="tel"]').forEach(input => {
-            input.addEventListener('input', function(e) {
-                let value = e.target.value.replace(/\D/g, ''); // Remove non-digits
-                
-                // Format for Indian mobile numbers (10 digits)
-                if (value.length > 0) {
-                    // Limit to 12 digits (including country code)
-                    value = value.substring(0, 12);
-                }
-                
-                e.target.value = value;
+        // Toggle password visibility
+        document.querySelectorAll('.toggle-password').forEach(button => {
+            button.addEventListener('click', function() {
+                const input = this.previousElementSibling;
+                const type = input.getAttribute('type') === 'password' ? 'text' : 'password';
+                input.setAttribute('type', type);
+                this.innerHTML = type === 'password' ? '<i class="fas fa-eye"></i>' : '<i class="fas fa-eye-slash"></i>';
             });
-
-            // Update placeholder
-            input.setAttribute('placeholder', 'Phone number (with country code)');
         });
 
-        sendResetCode.addEventListener('click', async () => {
-            let phone = document.getElementById('resetPhone').value.replace(/\D/g, ''); // Remove all non-digits
+        // Form validation and submission
+        document.getElementById('signupForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
             
-            if (!phone) {
-                showAlert('Please enter your phone number', 'error');
+            const name = document.getElementById('signupName').value.trim();
+            const phone = document.getElementById('signupPhone').value.trim();
+            const favoriteNumber = document.getElementById('signupFavoriteNumber').value.trim();
+            const password = document.getElementById('signupPassword').value;
+            const confirmPassword = document.getElementById('signupConfirmPassword').value;
+
+            // Validate all fields are filled
+            if (!name || !phone || !favoriteNumber || !password || !confirmPassword) {
+                showAlert('Please fill in all fields', 'danger');
                 return;
             }
 
-            // Validate phone number format - allow country code
-            if (!phone.match(/^[0-9]{10,12}$/)) {
-                showAlert('Please enter a valid phone number (10-12 digits)', 'error');
+            // Validate phone number format
+            if (!/^[0-9]{10}$/.test(phone)) {
+                showAlert('Please enter a valid 10-digit phone number', 'danger');
                 return;
             }
+
+            // Validate favorite number
+            const favNum = parseInt(favoriteNumber);
+            if (isNaN(favNum) || favNum < 1 || favNum > 100) {
+                showAlert('Favorite number must be between 1 and 100', 'danger');
+                return;
+            }
+
+            // Validate password
+            if (password.length < 6) {
+                showAlert('Password must be at least 6 characters long', 'danger');
+                return;
+            }
+
+            if (password !== confirmPassword) {
+                showAlert('Passwords do not match', 'danger');
+                return;
+            }
+
+            // Prepare the data for sending
+            const userData = {
+                name,
+                phone,
+                favorite_number: favNum,
+                password
+            };
+            
+            console.log('Sending registration data:', userData);
 
             try {
-                console.log('Sending request with phone:', phone); // Debug log
-                
-                const requestData = { phone };
-                console.log('Request data:', JSON.stringify(requestData)); // Debug log
-
-                const response = await fetch('forgot_password.php', {
+                const response = await fetch('register.php', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
-                        'Accept': 'application/json'
                     },
-                    body: JSON.stringify(requestData)
+                    body: JSON.stringify(userData)
                 });
                 
-                console.log('Response status:', response.status); // Debug log
+                console.log('Response status:', response.status);
                 
+                // Parse the response regardless of status code
                 const responseText = await response.text();
-                console.log('Raw response:', responseText); // Debug log
-                
                 let data;
+                
                 try {
                     data = JSON.parse(responseText);
-                } catch (e) {
-                    console.error('Failed to parse JSON response:', e);
-                    throw new Error('Invalid response from server');
-                }
-                
-                if (response.ok && data.status === 'success') {
-                    // Remove any existing alerts first
-                    const existingAlerts = document.querySelectorAll('.alert.persistent');
-                    existingAlerts.forEach(alert => alert.remove());
+                    console.log('Response data:', data);
                     
-                    showAlert(data.message, 'success', true);
-                    
-                    // If redirect URL is provided, navigate to it
-                    if (data.redirect) {
-                        console.log('Redirecting to:', data.redirect); // Debug log
-                        window.location.href = data.redirect;
+                    // Display the error or success message directly from the server
+                    if (data.success) {
+                        showAlert('Registration successful! Please sign in.', 'success');
+                        setTimeout(() => {
+                            container.classList.remove('right-panel-active');
+                        }, 2000);
                     } else {
-                        // Otherwise, show the OTP input form
-                        phoneSection.style.display = 'none';
-                        otpSection.style.display = 'block';
-                        
-                        // Display the phone number in the OTP section
-                        document.getElementById('displayPhone').textContent = phone;
+                        // Show the error message from the server
+                        showAlert(data.message || 'Registration failed', 'danger');
                     }
-                } else {
-                    throw new Error(data.message || 'Failed to send reset code');
+                } catch (jsonError) {
+                    console.error('Error parsing JSON:', jsonError);
+                    showAlert('Server returned invalid response', 'danger');
                 }
             } catch (error) {
-                console.error('Error details:', error); // Debug log
-                showAlert(error.message || 'An error occurred while processing your request', 'error');
+                console.error('Registration error:', error);
+                showAlert('Error: ' + error.message, 'danger');
             }
         });
 
-        // Verify OTP
-        document.getElementById('verifyOTP').addEventListener('click', async () => {
-            const enteredOTP = Array.from(otpInputs).map(input => input.value).join('');
+        // Sign in form submission
+        document.getElementById('signinForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
             
-            if (enteredOTP.length !== 6) {
-                showAlert('Please enter a complete 6-digit OTP', 'error');
+            const phone = document.getElementById('signinPhone').value.trim();
+            const password = document.getElementById('signinPassword').value;
+
+            if (!phone || !password) {
+                showAlert('Please fill in all fields', 'danger');
                 return;
             }
 
-            if (!/^\d{6}$/.test(enteredOTP)) {
-                showAlert('OTP must contain only numbers', 'error');
+            // Add phone validation
+            if (!/^[0-9]{10}$/.test(phone)) {
+                showAlert('Please enter a valid 10-digit phone number', 'danger');
+                return;
+            }
+
+            // Prepare the data for sending
+            const loginData = {
+                phone,
+                password
+            };
+            
+            console.log('Sending login data:', loginData);
+
+            try {
+                const response = await fetch('login.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(loginData)
+                });
+                
+                console.log('Response status:', response.status);
+                
+                // Parse the response regardless of status code
+                const responseText = await response.text();
+                let data;
+                
+                try {
+                    data = JSON.parse(responseText);
+                    console.log('Response data:', data);
+                    
+                    // Display the error or success message directly from the server
+                    if (data.success) {
+                        window.location.href = data.redirect || 'index.php';
+                    } else {
+                        // Show the error message from the server
+                        showAlert(data.message || 'Invalid credentials', 'danger');
+                    }
+                } catch (jsonError) {
+                    console.error('Error parsing JSON:', jsonError);
+                    showAlert('Server returned invalid response', 'danger');
+                }
+            } catch (error) {
+                console.error('Login error:', error);
+                showAlert('Error: ' + error.message, 'danger');
+            }
+        });
+
+        // Forgot password link click handler
+        document.getElementById('forgotPassword').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('forgotPasswordModal').style.display = 'block';
+        });
+
+        // Forgot password form submission
+        document.getElementById('forgotPasswordForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const phone = document.getElementById('resetPhone').value.trim();
+            const favoriteNumber = document.getElementById('resetFavoriteNumber').value.trim();
+
+            if (!phone || !favoriteNumber) {
+                showAlert('Please fill in all fields', 'danger');
+                return;
+            }
+
+            // Validate phone number format
+            if (!/^[0-9]{10}$/.test(phone)) {
+                showAlert('Please enter a valid 10-digit phone number', 'danger');
+                return;
+            }
+
+            // Validate favorite number
+            const favNum = parseInt(favoriteNumber);
+            if (isNaN(favNum) || favNum < 1 || favNum > 100) {
+                showAlert('Favorite number must be between 1 and 100', 'danger');
                 return;
             }
 
             try {
-                showAlert('Verifying OTP...', 'success');
-                
-                const response = await fetch('verify_otp.php', {
+                const response = await fetch('verify_identity.php', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
-                        'Accept': 'application/json'
                     },
-                    body: JSON.stringify({ 
-                        otp: enteredOTP,
-                        phone: document.getElementById('resetPhone').value.replace(/\D/g, '')
-                    }),
-                    credentials: 'include'
+                    body: JSON.stringify({
+                        phone,
+                        favorite_number: favNum
+                    })
                 });
-                
+
                 const data = await response.json();
-                
-                if (response.ok && data.status === 'success') {
-                    // Remove all persistent alerts including the OTP alert
-                    const persistentAlerts = document.querySelectorAll('.alert.persistent');
-                    persistentAlerts.forEach(alert => alert.remove());
-                    
-                    showAlert('OTP verified successfully!', 'success');
-                    otpSection.style.display = 'none';
-                    newPasswordSection.style.display = 'block';
+
+                if (data.success) {
+                    document.getElementById('forgotPasswordModal').style.display = 'none';
+                    document.getElementById('resetPasswordModal').style.display = 'block';
                 } else {
-                    // Clear OTP inputs on error
-                    otpInputs.forEach(input => input.value = '');
-                    otpInputs[0].focus();
-                    
-                    showAlert(data.message || 'Invalid OTP. Please try again.', 'error');
+                    showAlert(data.message || 'Verification failed', 'danger');
                 }
             } catch (error) {
-                console.error('Error:', error);
-                showAlert('An error occurred while verifying OTP. Please try again.', 'error');
+                showAlert('An error occurred. Please try again.', 'danger');
             }
         });
 
-        // Handle OTP input
-        otpInputs.forEach((input, index) => {
-            // Clear any existing values
-            input.value = '';
+        // Reset password form submission
+        document.getElementById('resetPasswordForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
             
-            input.addEventListener('keyup', (e) => {
-                // Allow only numbers
-                input.value = input.value.replace(/[^0-9]/g, '');
-                
-                if (e.key === 'Backspace') {
-                    if (index > 0 && !input.value) {
-                        otpInputs[index - 1].focus();
-                        otpInputs[index - 1].value = '';
-                    }
-                } else if (input.value) {
-                    if (index < otpInputs.length - 1) {
-                        otpInputs[index + 1].focus();
-                    } else {
-                        // If we're on the last input and it's filled, verify automatically
-                        const allFilled = Array.from(otpInputs).every(input => input.value.length === 1);
-                        if (allFilled) {
-                            document.getElementById('verifyOTP').click();
-                        }
-                    }
-                }
-            });
+            const newPassword = document.getElementById('newPassword').value;
+            const confirmNewPassword = document.getElementById('confirmNewPassword').value;
 
-            // Handle paste event
-            input.addEventListener('paste', (e) => {
-                e.preventDefault();
-                const pastedData = e.clipboardData.getData('text').replace(/[^0-9]/g, '').slice(0, 6);
-                
-                if (pastedData.length === 6) {
-                    otpInputs.forEach((input, i) => {
-                        input.value = pastedData[i] || '';
-                    });
-                    document.getElementById('verifyOTP').click();
-                }
-            });
-        });
-
-        // Reset Password
-        document.getElementById('resetPassword').addEventListener('click', async () => {
-            const newPassword = document.getElementById('resetNewPassword').value;
-            const confirmPassword = document.getElementById('resetConfirmPassword').value;
-            const phone = document.getElementById('resetPhone').value.replace(/\D/g, '');
-
-            if (!newPassword || !confirmPassword) {
-                showAlert('Please fill in all fields', 'error');
+            if (!newPassword || !confirmNewPassword) {
+                showAlert('Please fill in all fields', 'danger');
                 return;
             }
 
-            // Password validation
-            if (newPassword.length < 8) {
-                showAlert('Password must be at least 8 characters long', 'error');
+            if (newPassword.length < 6) {
+                showAlert('Password must be at least 6 characters long', 'danger');
                 return;
             }
 
-            if (!/[A-Z]/.test(newPassword)) {
-                showAlert('Password must contain at least one uppercase letter', 'error');
-                return;
-            }
-
-            if (!/[a-z]/.test(newPassword)) {
-                showAlert('Password must contain at least one lowercase letter', 'error');
-                return;
-            }
-
-            if (!/[0-9]/.test(newPassword)) {
-                showAlert('Password must contain at least one number', 'error');
-                return;
-            }
-
-            if (newPassword !== confirmPassword) {
-                showAlert('Passwords do not match', 'error');
+            if (newPassword !== confirmNewPassword) {
+                showAlert('Passwords do not match', 'danger');
                 return;
             }
 
@@ -870,171 +758,43 @@
                 const response = await fetch('reset_password.php', {
                     method: 'POST',
                     headers: {
-                        'Content-Type': 'application/json'
+                        'Content-Type': 'application/json',
                     },
-                    body: JSON.stringify({ 
-                        password: newPassword,
-                        confirm_password: confirmPassword,
-                        phone: phone
+                    body: JSON.stringify({
+                        password: newPassword
                     })
                 });
-                
+
                 const data = await response.json();
-                
-                if (data.status === 'success') {
-                    showAlert('Password reset successful!', 'success');
-                    setTimeout(() => {
-                        modal.style.display = 'none';
-                        location.reload();
-                    }, 1500);
-                } else {
-                    showAlert(data.message || 'Failed to reset password. Please try again.', 'error');
-                }
-            } catch (error) {
-                console.error('Error:', error);
-                showAlert('An error occurred. Please try again.', 'error');
-            }
-        });
 
-        // Form Submissions
-        document.getElementById('loginForm').addEventListener('submit', async (e) => {
-            e.preventDefault();
-            const formData = new FormData(e.target);
-            const phone = formData.get('phone').replace(/\D/g, '');
-            
-            // Validate phone number
-            if (!phone.match(/^[0-9]{10,12}$/)) {
-                showAlert('Please enter a valid phone number (10-12 digits)', 'error');
-                return;
-            }
-
-            formData.set('phone', phone); // Use the full phone number
-            
-            try {
-                const response = await fetch('login.php', {
-                    method: 'POST',
-                    body: formData,
-                    credentials: 'include'
-                });
-                
-                if (!response.ok) {
-                    const errorData = await response.json();
-                    throw new Error(errorData.message || 'Login failed');
-                }
-                
-                const data = await response.json();
-                
-                if (data.status === 'success') {
-                    showAlert(data.message, 'success');
-                    setTimeout(() => {
-                        window.location.href = data.redirect;
-                    }, 1500);
-                } else {
-                    showAlert(data.message || 'Login failed. Please try again.', 'error');
-                }
-            } catch (error) {
-                console.error('Error:', error);
-                showAlert(error.message || 'An error occurred. Please try again.', 'error');
-            }
-        });
-
-        document.getElementById('registerForm').addEventListener('submit', async (e) => {
-            e.preventDefault();
-            const formData = new FormData(e.target);
-            const phone = formData.get('phone').replace(/\D/g, '');
-            
-            // Validate phone number
-            if (!phone.match(/^[0-9]{10,12}$/)) {
-                showAlert('Please enter a valid phone number (10-12 digits)', 'error');
-                return;
-            }
-
-            const formObject = {};
-            formData.forEach((value, key) => {
-                formObject[key] = key === 'phone' ? phone : value;
-            });
-            
-            try {
-                const response = await fetch('register.php', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/x-www-form-urlencoded',
-                    },
-                    body: new URLSearchParams(formObject)
-                });
-                
-                const data = await response.json();
-                
-                if (data.status === 'success') {
-                    showAlert(data.message, 'success');
+                if (data.success) {
+                    showAlert('Password reset successful! Please sign in.', 'success');
+                    document.getElementById('resetPasswordModal').style.display = 'none';
                     setTimeout(() => {
                         container.classList.remove('right-panel-active');
-                    }, 1500);
+                    }, 2000);
                 } else {
-                    showAlert(data.message, 'error');
+                    showAlert(data.message || 'Password reset failed', 'danger');
                 }
             } catch (error) {
-                showAlert('An error occurred. Please try again.', 'error');
+                showAlert('An error occurred. Please try again.', 'danger');
             }
         });
 
-        // Function to handle forgot password
-        function handleForgotPassword() {
-            const phone = document.getElementById('resetPhone').value.trim();
-            
-            // Validate phone number format
-            if (!phone.match(/^[6-9]\d{9}$/)) {
-                showAlert('Please enter a valid 10-digit Indian mobile number', 'error');
-                return;
+        // Close modals when clicking outside
+        window.onclick = function(event) {
+            if (event.target.className === 'modal') {
+                event.target.style.display = 'none';
             }
-            
-            // Show loading state
-            const sendResetCodeBtn = document.getElementById('sendResetCode');
-            const originalText = sendResetCodeBtn.textContent;
-            sendResetCodeBtn.textContent = 'Sending...';
-            sendResetCodeBtn.disabled = true;
-            
-            // Send request to forgot_password.php
-            fetch('forgot_password.php', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ phone: phone })
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    showAlert(data.message, 'success');
-                    
-                    // If redirect URL is provided, navigate to it
-                    if (data.redirect) {
-                        window.location.href = data.redirect;
-                    } else {
-                        // Otherwise, show the OTP input form
-                        document.getElementById('forgotPasswordForm').style.display = 'none';
-                        document.getElementById('otpVerificationForm').style.display = 'block';
-                    }
-                } else {
-                    showAlert(data.message || 'Failed to send reset code', 'error');
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                showAlert('An error occurred. Please try again later.', 'error');
-            })
-            .finally(() => {
-                // Reset button state
-                sendResetCodeBtn.textContent = originalText;
-                sendResetCodeBtn.disabled = false;
-            });
         }
 
-        function togglePassword(inputId) {
-            const input = document.getElementById(inputId);
-            const type = input.getAttribute('type') === 'password' ? 'text' : 'password';
-            input.setAttribute('type', type);
-        }
+        // Close modals when clicking close button
+        document.querySelectorAll('.close').forEach(button => {
+            button.onclick = function() {
+                this.closest('.modal').style.display = 'none';
+            }
+        });
     </script>
 </body>
+
 </html>

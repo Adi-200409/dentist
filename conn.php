@@ -53,9 +53,8 @@ try {
         name VARCHAR(100) NOT NULL,
         phone VARCHAR(15) NOT NULL,
         password VARCHAR(255) NOT NULL,
+        favorite_number INT,
         role ENUM('user', 'admin') DEFAULT 'user',
-        reset_otp VARCHAR(6),
-        otp_expiry DATETIME,
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
         updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
         UNIQUE KEY unique_phone (phone)
@@ -81,6 +80,21 @@ try {
             throw new Exception("Error adding phone column: " . $conn->error);
         }
         error_log("Phone column added successfully");
+    }
+
+    // Check if favorite_number column exists and add it if it doesn't
+    $check_favorite_number_column = "SHOW COLUMNS FROM users LIKE 'favorite_number'";
+    $result = $conn->query($check_favorite_number_column);
+    
+    if ($result && $result->num_rows === 0) {
+        // Add favorite_number column if it doesn't exist
+        $add_favorite_number_column = "ALTER TABLE users 
+            ADD COLUMN favorite_number INT AFTER password";
+        
+        if (!$conn->query($add_favorite_number_column)) {
+            throw new Exception("Error adding favorite_number column: " . $conn->error);
+        }
+        error_log("Favorite number column added successfully");
     }
 
     // Remove email column if it exists

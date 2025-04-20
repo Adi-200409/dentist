@@ -9,15 +9,15 @@ try {
         throw new Exception('Invalid appointment ID');
     }
 
-    // Update appointment status to cancelled
-    $stmt = $conn->prepare("UPDATE appointments SET status = 'cancelled' WHERE id = ?");
+    // Delete the appointment from the database
+    $stmt = $conn->prepare("DELETE FROM appointments WHERE id = ?");
     $stmt->bind_param("i", $appointment_id);
     
     if ($stmt->execute()) {
         if ($stmt->affected_rows > 0) {
             echo json_encode([
                 'success' => true,
-                'message' => 'Appointment cancelled successfully'
+                'message' => 'Appointment cancelled and removed successfully'
             ]);
         } else {
             throw new Exception('Appointment not found');
