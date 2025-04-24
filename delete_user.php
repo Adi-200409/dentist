@@ -19,13 +19,14 @@ try {
     }
 
     $user_id = intval($data['id']);
+    $force_delete = isset($data['force_delete']) && $data['force_delete'] === true;
     
     // Prevent admin from deleting themselves
     if ($user_id == $_SESSION['user_id']) {
         throw new Exception('Cannot delete your own account');
     }
 
-    // Check if user exists and is not an admin
+    // Check if user exists and is not an admin (unless force_delete is true)
     $check_stmt = $conn->prepare("SELECT role FROM users WHERE id = ?");
     $check_stmt->bind_param("i", $user_id);
     $check_stmt->execute();
@@ -36,8 +37,8 @@ try {
     }
     
     $user = $result->fetch_assoc();
-    if ($user['role'] === 'admin') {
-        throw new Exception('Cannot delete an admin account');
+    if ($user['role'] === 'admin' && !$force_delete) {
+        throw new Exception('Cannot delete an admin account. Use force_delete parameter if you want to proceed.');
     }
     
     // Delete user

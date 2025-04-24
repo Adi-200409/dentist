@@ -166,3 +166,67 @@
 
 [20-Apr-2025 08:40:46 Europe/Berlin] Registration attempt - Name: Leigh Bates, Phone: 9990113968, Favorite number: 77
 [20-Apr-2025 08:40:46 Europe/Berlin] Registration error: Phone number already registered
+[24-Apr-2025 16:44:08 Europe/Berlin] Request method: POST
+[24-Apr-2025 16:44:08 Europe/Berlin] Raw request data: {"name":"Olympia Dennis","phone":"9950113968","email":"adityap4til@gmail.com","password":"Ad123456"}
+[24-Apr-2025 16:44:08 Europe/Berlin] Decoded data: Array
+(
+    [name] => Olympia Dennis
+    [phone] => 9950113968
+    [email] => adityap4til@gmail.com
+    [password] => Ad123456
+)
+
+[24-Apr-2025 16:44:08 Europe/Berlin] Registration attempt - Name: Olympia Dennis, Phone: 9950113968, Email: adityap4til@gmail.com
+[24-Apr-2025 16:44:08 Europe/Berlin] Registration error: Unknown column 'email' in 'where clause'
+[24-Apr-2025 16:45:57 Europe/Berlin] Request method: POST
+[24-Apr-2025 16:45:57 Europe/Berlin] Raw request data: {"name":"Olympia Dennis","phone":"9950113968","email":"adityap4til@gmail.com","password":"Ad123456"}
+[24-Apr-2025 16:45:57 Europe/Berlin] Decoded data: Array
+(
+    [name] => Olympia Dennis
+    [phone] => 9950113968
+    [email] => adityap4til@gmail.com
+    [password] => Ad123456
+)
+
+[24-Apr-2025 16:45:57 Europe/Berlin] Registration attempt - Name: Olympia Dennis, Phone: 9950113968, Email: adityap4til@gmail.com
+[24-Apr-2025 16:45:57 Europe/Berlin] Registration error: Unknown column 'email' in 'where clause'
+[24-Apr-2025 16:48:35 Europe/Berlin] Request method: POST
+[24-Apr-2025 16:48:35 Europe/Berlin] Raw request data: {"name":"Olympia Dennis","phone":"9990113968","email":"adityap4til@gmail.com","password":"Ad123456"}
+[24-Apr-2025 16:48:35 Europe/Berlin] Decoded data: Array
+(
+    [name] => Olympia Dennis
+    [phone] => 9990113968
+    [email] => adityap4til@gmail.com
+    [password] => Ad123456
+)
+
+[24-Apr-2025 16:48:35 Europe/Berlin] Registration attempt - Name: Olympia Dennis, Phone: 9990113968, Email: adityap4til@gmail.com
+[24-Apr-2025 16:48:35 Europe/Berlin] Registration error: Phone number already registered
+[24-Apr-2025 16:48:54 Europe/Berlin] Request method: POST
+[24-Apr-2025 16:48:54 Europe/Berlin] Raw request data: {"name":"Olympia Dennis","phone":"9930113968","email":"adityap4til@gmail.com","password":"Ad123456"}
+[24-Apr-2025 16:48:54 Europe/Berlin] Decoded data: Array
+(
+    [name] => Olympia Dennis
+    [phone] => 9930113968
+    [email] => adityap4til@gmail.com
+    [password] => Ad123456
+)
+
+[24-Apr-2025 16:48:54 Europe/Berlin] Registration attempt - Name: Olympia Dennis, Phone: 9930113968, Email: adityap4til@gmail.com
+[24-Apr-2025 16:48:54 Europe/Berlin] Email column does not exist, attempting to add it
+[24-Apr-2025 16:48:54 Europe/Berlin] Email column added successfully
+[24-Apr-2025 16:48:54 Europe/Berlin] Registration successful for phone: 9930113968
+[24-Apr-2025 16:53:54 Europe/Berlin] Request method: POST
+[24-Apr-2025 16:53:54 Europe/Berlin] Raw request data: {"name":"ADITYA","phone":"9148074307","email":"adityap4til@gmail.com","password":"Ad123456"}
+[24-Apr-2025 16:53:54 Europe/Berlin] Decoded data: Array
+(
+    [name] => ADITYA
+    [phone] => 9148074307
+    [email] => adityap4til@gmail.com
+    [password] => Ad123456
+)
+
+[24-Apr-2025 16:53:54 Europe/Berlin] Registration attempt - Name: ADITYA, Phone: 9148074307, Email: adityap4til@gmail.com
+[24-Apr-2025 16:53:54 Europe/Berlin] Email column does not exist, attempting to add it
+[24-Apr-2025 16:53:54 Europe/Berlin] Email column added successfully
+[24-Apr-2025 16:53:55 Europe/Berlin] Registration successful for phone: 9148074307

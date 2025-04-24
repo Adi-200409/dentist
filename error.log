@@ -785,3 +785,34 @@ Stack trace:
 [20-Apr-2025 08:33:05 Europe/Berlin] Login attempt - Raw phone: 9148074307, Processed phone: 9148074307
 [20-Apr-2025 08:33:05 Europe/Berlin] Login attempt for phone: 9148074307
 [20-Apr-2025 08:33:05 Europe/Berlin] User found: {"id":1,"name":"ADITYA 007","phone":"9148074307","password":"$2y$10$.CHfDS6zQlm8tvRaJvmET.kkCA48piy4hPqJs9IfG4VaXk7jGzPuK","role":"admin"}
+[24-Apr-2025 16:15:47 Europe/Berlin] Login attempt - Raw phone: 9148074307, Processed phone: 9148074307
+[24-Apr-2025 16:15:47 Europe/Berlin] Login attempt for phone: 9148074307
+[24-Apr-2025 16:15:47 Europe/Berlin] User found: {"id":1,"name":"ADITYA 007","phone":"9148074307","password":"$2y$10$pMA9EuwsCnBRcyApr0wVlO8AayW.1QHSc8jUjQ9ovDo\/aEmciRGQ2","role":"admin"}
+[24-Apr-2025 16:15:47 Europe/Berlin] Invalid password for phone: 9148074307
+[24-Apr-2025 16:15:47 Europe/Berlin] Login error: Invalid phone number or password
+[24-Apr-2025 16:16:08 Europe/Berlin] Login attempt - Raw phone: 9148074307, Processed phone: 9148074307
+[24-Apr-2025 16:16:08 Europe/Berlin] Login attempt for phone: 9148074307
+[24-Apr-2025 16:16:08 Europe/Berlin] User found: {"id":1,"name":"ADITYA 007","phone":"9148074307","password":"$2y$10$pMA9EuwsCnBRcyApr0wVlO8AayW.1QHSc8jUjQ9ovDo\/aEmciRGQ2","role":"admin"}
+[24-Apr-2025 16:16:08 Europe/Berlin] Invalid password for phone: 9148074307
+[24-Apr-2025 16:16:08 Europe/Berlin] Login error: Invalid phone number or password
+[24-Apr-2025 16:50:01 Europe/Berlin] Login attempt - Raw phone: 9930113968, Processed phone: 9930113968
+[24-Apr-2025 16:50:01 Europe/Berlin] Login attempt for phone: 9930113968
+[24-Apr-2025 16:50:01 Europe/Berlin] User found: {"id":10,"name":"Olympia Dennis","phone":"9930113968","password":"$2y$10$k8.\/11LCMRnpyC1cnyRWw.G5MylGQqPbkrsvNaPiNPXBLnguW2XCW","role":"user"}
+[24-Apr-2025 16:51:54 Europe/Berlin] Login attempt - Raw phone: 9148074307, Processed phone: 9148074307
+[24-Apr-2025 16:51:54 Europe/Berlin] Login attempt for phone: 9148074307
+[24-Apr-2025 16:51:54 Europe/Berlin] User found: {"id":1,"name":"ADITYA 007","phone":"9148074307","password":"$2y$10$pMA9EuwsCnBRcyApr0wVlO8AayW.1QHSc8jUjQ9ovDo\/aEmciRGQ2","role":"admin"}
+[24-Apr-2025 16:51:54 Europe/Berlin] Invalid password for phone: 9148074307
+[24-Apr-2025 16:51:54 Europe/Berlin] Login error: Invalid phone number or password
+[24-Apr-2025 16:52:02 Europe/Berlin] Login attempt - Raw phone: 9148074307, Processed phone: 9148074307
+[24-Apr-2025 16:52:02 Europe/Berlin] Login attempt for phone: 9148074307
+[24-Apr-2025 16:52:02 Europe/Berlin] User found: {"id":1,"name":"ADITYA 007","phone":"9148074307","password":"$2y$10$pMA9EuwsCnBRcyApr0wVlO8AayW.1QHSc8jUjQ9ovDo\/aEmciRGQ2","role":"admin"}
+[24-Apr-2025 16:52:02 Europe/Berlin] Invalid password for phone: 9148074307
+[24-Apr-2025 16:52:02 Europe/Berlin] Login error: Invalid phone number or password
+[24-Apr-2025 16:52:11 Europe/Berlin] Login attempt - Raw phone: 9148074307, Processed phone: 9148074307
+[24-Apr-2025 16:52:11 Europe/Berlin] Login attempt for phone: 9148074307
+[24-Apr-2025 16:52:11 Europe/Berlin] User found: {"id":1,"name":"ADITYA 007","phone":"9148074307","password":"$2y$10$pMA9EuwsCnBRcyApr0wVlO8AayW.1QHSc8jUjQ9ovDo\/aEmciRGQ2","role":"admin"}
+[24-Apr-2025 16:52:11 Europe/Berlin] Invalid password for phone: 9148074307
+[24-Apr-2025 16:52:11 Europe/Berlin] Login error: Invalid phone number or password
+[24-Apr-2025 16:54:39 Europe/Berlin] Login attempt - Raw phone: 9148074307, Processed phone: 9148074307
+[24-Apr-2025 16:54:39 Europe/Berlin] Login attempt for phone: 9148074307
+[24-Apr-2025 16:54:39 Europe/Berlin] User found: {"id":11,"name":"ADITYA","phone":"9148074307","password":"$2y$10$\/Au1SVxVmibjZNfi4MGvYe9pvlbNrhZXYZzybNPyw02xjTT7sYMCu","role":"admin"}

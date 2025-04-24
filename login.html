@@ -345,7 +345,7 @@
                 <span>or use your email for registration</span>
                 <input type="text" id="signupName" placeholder="Name" required />
                 <input type="tel" id="signupPhone" placeholder="Phone Number" required />
-                <input type="number" id="signupFavoriteNumber" placeholder="Favorite Number (1-100)" min="1" max="100" required />
+                <input type="email" id="signupEmail" placeholder="Email Address" required />
                 <div class="password-field">
                     <input type="password" id="signupPassword" placeholder="Password" required />
                     <button type="button" class="toggle-password"><i class="fas fa-eye"></i></button>
@@ -393,8 +393,8 @@
             <h2>Forgot Password</h2>
             <form id="forgotPasswordForm">
                 <input type="tel" id="resetPhone" placeholder="Phone Number" required />
-                <input type="number" id="resetFavoriteNumber" placeholder="Favorite Number (1-100)" min="1" max="100" required />
-                <button type="submit">Verify Identity</button>
+                <input type="email" id="resetEmail" placeholder="Email Address" required />
+                <button type="submit">Send OTP</button>
             </form>
         </div>
     </div>
@@ -414,6 +414,19 @@
                     <button type="button" class="toggle-password"><i class="fas fa-eye"></i></button>
                 </div>
                 <button type="submit">Reset Password</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- OTP Verification Modal for Password Reset -->
+    <div id="otpVerificationModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>OTP Verification</h2>
+            <p>Enter the OTP sent to your email</p>
+            <form id="otpVerificationForm">
+                <input type="text" id="otpCode" placeholder="Enter OTP" required />
+                <button type="submit">Verify OTP</button>
             </form>
         </div>
     </div>
@@ -517,26 +530,36 @@
 
         // Toggle password visibility
         document.querySelectorAll('.toggle-password').forEach(button => {
-            button.addEventListener('click', function() {
+            button.addEventListener('click', function(e) {
+                e.preventDefault(); // Prevent form submission
                 const input = this.previousElementSibling;
                 const type = input.getAttribute('type') === 'password' ? 'text' : 'password';
                 input.setAttribute('type', type);
-                this.innerHTML = type === 'password' ? '<i class="fas fa-eye"></i>' : '<i class="fas fa-eye-slash"></i>';
+                
+                // Update the icon
+                const icon = this.querySelector('i');
+                if (type === 'password') {
+                    icon.classList.remove('fa-eye-slash');
+                    icon.classList.add('fa-eye');
+                } else {
+                    icon.classList.remove('fa-eye');
+                    icon.classList.add('fa-eye-slash');
+                }
             });
         });
 
-        // Form validation and submission
+        // Signup form submission - Include email
         document.getElementById('signupForm').addEventListener('submit', async function(e) {
             e.preventDefault();
             
             const name = document.getElementById('signupName').value.trim();
             const phone = document.getElementById('signupPhone').value.trim();
-            const favoriteNumber = document.getElementById('signupFavoriteNumber').value.trim();
+            const email = document.getElementById('signupEmail').value.trim();
             const password = document.getElementById('signupPassword').value;
             const confirmPassword = document.getElementById('signupConfirmPassword').value;
 
             // Validate all fields are filled
-            if (!name || !phone || !favoriteNumber || !password || !confirmPassword) {
+            if (!name || !phone || !email || !password || !confirmPassword) {
                 showAlert('Please fill in all fields', 'danger');
                 return;
             }
@@ -546,11 +569,10 @@
                 showAlert('Please enter a valid 10-digit phone number', 'danger');
                 return;
             }
-
-            // Validate favorite number
-            const favNum = parseInt(favoriteNumber);
-            if (isNaN(favNum) || favNum < 1 || favNum > 100) {
-                showAlert('Favorite number must be between 1 and 100', 'danger');
+            
+            // Validate email format
+            if (!/^\S+@\S+\.\S+$/.test(email)) {
+                showAlert('Please enter a valid email address', 'danger');
                 return;
             }
 
@@ -569,7 +591,7 @@
             const userData = {
                 name,
                 phone,
-                favorite_number: favNum,
+                email,
                 password
             };
             
@@ -679,17 +701,70 @@
         // Forgot password link click handler
         document.getElementById('forgotPassword').addEventListener('click', function(e) {
             e.preventDefault();
-            document.getElementById('forgotPasswordModal').style.display = 'block';
+            console.log('Forgot password link clicked');
+            const modal = document.getElementById('forgotPasswordModal');
+            modal.style.display = 'block';
         });
 
-        // Forgot password form submission
+        // Make sure all DOM elements are loaded before attaching event listeners
+        document.addEventListener('DOMContentLoaded', function() {
+            // Re-attach forgot password event listener
+            const forgotPasswordLink = document.getElementById('forgotPassword');
+            if (forgotPasswordLink) {
+                forgotPasswordLink.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    console.log('Forgot password link clicked (DOMContentLoaded)');
+            document.getElementById('forgotPasswordModal').style.display = 'block';
+                });
+            } else {
+                console.error('forgotPassword element not found');
+            }
+            
+            // Reinitialize password toggle buttons
+            document.querySelectorAll('.toggle-password').forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    console.log('Toggle password button clicked');
+                    const input = this.previousElementSibling;
+                    const type = input.getAttribute('type') === 'password' ? 'text' : 'password';
+                    input.setAttribute('type', type);
+                    
+                    // Update the icon
+                    const icon = this.querySelector('i');
+                    if (type === 'password') {
+                        icon.classList.remove('fa-eye-slash');
+                        icon.classList.add('fa-eye');
+                    } else {
+                        icon.classList.remove('fa-eye');
+                        icon.classList.add('fa-eye-slash');
+                    }
+                });
+            });
+            
+            // Ensure all modals have proper close button functionality
+            document.querySelectorAll('.modal .close').forEach(function(closeBtn) {
+                closeBtn.onclick = function() {
+                    this.closest('.modal').style.display = 'none';
+                };
+            });
+            
+            // Make sure clicking outside the modal also closes it
+            window.onclick = function(event) {
+                if (event.target.classList.contains('modal')) {
+                    event.target.style.display = 'none';
+                }
+            };
+        });
+
+        // Forgot password form submission - Update to use OTP
         document.getElementById('forgotPasswordForm').addEventListener('submit', async function(e) {
             e.preventDefault();
+            console.log('Forgot password form submitted');
             
             const phone = document.getElementById('resetPhone').value.trim();
-            const favoriteNumber = document.getElementById('resetFavoriteNumber').value.trim();
+            const email = document.getElementById('resetEmail').value.trim();
 
-            if (!phone || !favoriteNumber) {
+            if (!phone || !email) {
                 showAlert('Please fill in all fields', 'danger');
                 return;
             }
@@ -699,36 +774,101 @@
                 showAlert('Please enter a valid 10-digit phone number', 'danger');
                 return;
             }
-
-            // Validate favorite number
-            const favNum = parseInt(favoriteNumber);
-            if (isNaN(favNum) || favNum < 1 || favNum > 100) {
-                showAlert('Favorite number must be between 1 and 100', 'danger');
+            
+            // Validate email format
+            if (!/^\S+@\S+\.\S+$/.test(email)) {
+                showAlert('Please enter a valid email address', 'danger');
                 return;
             }
 
             try {
-                const response = await fetch('verify_identity.php', {
+                console.log('Sending identity verification request');
+                // Verify identity with phone number
+                const identityResponse = await fetch('verify_identity.php', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
                     },
                     body: JSON.stringify({
-                        phone,
-                        favorite_number: favNum
+                        phone
                     })
                 });
 
-                const data = await response.json();
+                console.log('Identity verification response received');
+                const identityData = await identityResponse.json();
+                console.log('Identity data:', identityData);
 
-                if (data.success) {
-                    document.getElementById('forgotPasswordModal').style.display = 'none';
-                    document.getElementById('resetPasswordModal').style.display = 'block';
+                if (identityData.success) {
+                    console.log('Identity verified, sending OTP');
+                    // Identity verified, now send OTP
+                    const formData = new FormData();
+                    formData.append('name', identityData.name || 'User');
+                    formData.append('email', email);
+                    formData.append('send', 'true');
+                    formData.append('reset_password', 'true');
+                    
+                    const otpResponse = await fetch('otp/otp.php', {
+                        method: 'POST',
+                        body: formData
+                    });
+                    
+                    const otpResponseText = await otpResponse.text();
+                    console.log('OTP response:', otpResponseText);
+                    
+                    if (otpResponseText.includes('OTP sent')) {
+                        showAlert('OTP sent to your email!', 'success');
+                        // Store phone number for later use
+                        sessionStorage.setItem('resetPhone', phone);
+                        // Close current modal and open OTP verification modal
+                        document.getElementById('forgotPasswordModal').style.display = 'none';
+                        document.getElementById('otpVerificationModal').style.display = 'block';
+                    } else {
+                        showAlert('Failed to send OTP. Please try again.', 'danger');
+                    }
                 } else {
-                    showAlert(data.message || 'Verification failed', 'danger');
+                    showAlert(identityData.message || 'Phone number not found', 'danger');
                 }
             } catch (error) {
+                console.error('Error:', error);
                 showAlert('An error occurred. Please try again.', 'danger');
+            }
+        });
+
+        // OTP verification for password reset
+        document.getElementById('otpVerificationForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const otp = document.getElementById('otpCode').value.trim();
+            
+            if (!otp) {
+                showAlert('Please enter the OTP', 'danger');
+                return;
+            }
+            
+            try {
+                const formData = new FormData();
+                formData.append('otp', otp);
+                formData.append('verify', 'true');
+                formData.append('reset_password', 'true');
+                
+                const response = await fetch('otp/otp.php', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                const responseText = await response.text();
+                
+                if (responseText.includes('Invalid OTP')) {
+                    showAlert('Invalid OTP. Please try again.', 'danger');
+                } else {
+                    showAlert('OTP verified successfully!', 'success');
+                    // Close current modal and open reset password modal
+                    document.getElementById('otpVerificationModal').style.display = 'none';
+                    document.getElementById('resetPasswordModal').style.display = 'block';
+                }
+            } catch (error) {
+                console.error('OTP verification error:', error);
+                showAlert('Error: ' + error.message, 'danger');
             }
         });
 
@@ -738,6 +878,7 @@
             
             const newPassword = document.getElementById('newPassword').value;
             const confirmNewPassword = document.getElementById('confirmNewPassword').value;
+            const phone = sessionStorage.getItem('resetPhone');
 
             if (!newPassword || !confirmNewPassword) {
                 showAlert('Please fill in all fields', 'danger');
@@ -753,6 +894,12 @@
                 showAlert('Passwords do not match', 'danger');
                 return;
             }
+            
+            if (!phone) {
+                showAlert('Session expired. Please start over.', 'danger');
+                document.getElementById('resetPasswordModal').style.display = 'none';
+                return;
+            }
 
             try {
                 const response = await fetch('reset_password.php', {
@@ -761,6 +908,7 @@
                         'Content-Type': 'application/json',
                     },
                     body: JSON.stringify({
+                        phone,
                         password: newPassword
                     })
                 });
@@ -770,6 +918,8 @@
                 if (data.success) {
                     showAlert('Password reset successful! Please sign in.', 'success');
                     document.getElementById('resetPasswordModal').style.display = 'none';
+                    // Clear the stored phone number
+                    sessionStorage.removeItem('resetPhone');
                     setTimeout(() => {
                         container.classList.remove('right-panel-active');
                     }, 2000);
@@ -781,18 +931,44 @@
             }
         });
 
-        // Close modals when clicking outside
-        window.onclick = function(event) {
-            if (event.target.className === 'modal') {
-                event.target.style.display = 'none';
-            }
-        }
-
-        // Close modals when clicking close button
-        document.querySelectorAll('.close').forEach(button => {
-            button.onclick = function() {
-                this.closest('.modal').style.display = 'none';
-            }
+        // Direct implementation of password toggle functionality that runs immediately
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Initializing password toggle buttons');
+            
+            // Get all toggle password buttons
+            const toggleButtons = document.querySelectorAll('.toggle-password');
+            
+            // Add click event listener to each button
+            toggleButtons.forEach(function(button) {
+                console.log('Found toggle button:', button);
+                
+                // Ensure any existing event listeners are removed
+                const newButton = button.cloneNode(true);
+                button.parentNode.replaceChild(newButton, button);
+                
+                // Add fresh event listener
+                newButton.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    console.log('Toggle button clicked');
+                    
+                    // Get the password input (previous sibling of the button)
+                    const passwordInput = this.previousElementSibling;
+                    if (!passwordInput) {
+                        console.error('No password input found');
+                        return;
+                    }
+                    
+                    // Toggle password visibility
+                    if (passwordInput.type === 'password') {
+                        passwordInput.type = 'text';
+                        this.innerHTML = '<i class="fas fa-eye-slash"></i>';
+                    } else {
+                        passwordInput.type = 'password';
+                        this.innerHTML = '<i class="fas fa-eye"></i>';
+                    }
+                });
+            });
         });
     </script>
 </body>

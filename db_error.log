@@ -10802,3 +10802,637 @@ Stack trace:
 [20-Apr-2025 08:40:46 Europe/Berlin] Emergency requests table created/verified successfully
 [20-Apr-2025 08:40:46 Europe/Berlin] Appointments table created/verified successfully
 [20-Apr-2025 08:40:46 Europe/Berlin] Database connection and setup completed successfully
+[24-Apr-2025 16:04:28 Europe/Berlin] Attempting to connect to MySQL server
+[24-Apr-2025 16:04:28 Europe/Berlin] MySQL server is running
+[24-Apr-2025 16:04:28 Europe/Berlin] Connected to MySQL server successfully
+[24-Apr-2025 16:04:28 Europe/Berlin] Database created/verified successfully
+[24-Apr-2025 16:04:28 Europe/Berlin] Database selected successfully
+[24-Apr-2025 16:04:28 Europe/Berlin] Users table created/verified successfully
+[24-Apr-2025 16:04:28 Europe/Berlin] Emergency requests table created/verified successfully
+[24-Apr-2025 16:04:28 Europe/Berlin] Appointments table created/verified successfully
+[24-Apr-2025 16:04:28 Europe/Berlin] Database connection and setup completed successfully
+[24-Apr-2025 16:13:20 Europe/Berlin] Attempting to connect to MySQL server
+[24-Apr-2025 16:13:20 Europe/Berlin] MySQL server is running
+[24-Apr-2025 16:13:20 Europe/Berlin] Connected to MySQL server successfully
+[24-Apr-2025 16:13:20 Europe/Berlin] Database created/verified successfully
+[24-Apr-2025 16:13:20 Europe/Berlin] Database selected successfully
+[24-Apr-2025 16:13:20 Europe/Berlin] Users table created/verified successfully
+[24-Apr-2025 16:13:20 Europe/Berlin] Emergency requests table created/verified successfully
+[24-Apr-2025 16:13:20 Europe/Berlin] Appointments table created/verified successfully
+[24-Apr-2025 16:13:20 Europe/Berlin] Database connection and setup completed successfully
+[24-Apr-2025 16:15:02 Europe/Berlin] Attempting to connect to MySQL server
+[24-Apr-2025 16:15:02 Europe/Berlin] MySQL server is running
+[24-Apr-2025 16:15:02 Europe/Berlin] Connected to MySQL server successfully
+[24-Apr-2025 16:15:02 Europe/Berlin] Database created/verified successfully
+[24-Apr-2025 16:15:02 Europe/Berlin] Database selected successfully
+[24-Apr-2025 16:15:02 Europe/Berlin] Users table created/verified successfully
+[24-Apr-2025 16:15:02 Europe/Berlin] Emergency requests table created/verified successfully
+[24-Apr-2025 16:15:02 Europe/Berlin] Appointments table created/verified successfully
+[24-Apr-2025 16:15:02 Europe/Berlin] Database connection and setup completed successfully
+[24-Apr-2025 16:15:35 Europe/Berlin] Attempting to connect to MySQL server
+[24-Apr-2025 16:15:35 Europe/Berlin] MySQL server is running
+[24-Apr-2025 16:15:35 Europe/Berlin] Connected to MySQL server successfully
+[24-Apr-2025 16:15:35 Europe/Berlin] Database created/verified successfully
+[24-Apr-2025 16:15:35 Europe/Berlin] Database selected successfully
+[24-Apr-2025 16:15:35 Europe/Berlin] Users table created/verified successfully
+[24-Apr-2025 16:15:35 Europe/Berlin] Emergency requests table created/verified successfully
+[24-Apr-2025 16:15:35 Europe/Berlin] Appointments table created/verified successfully
+[24-Apr-2025 16:15:35 Europe/Berlin] Database connection and setup completed successfully
+[24-Apr-2025 16:15:47 Europe/Berlin] Attempting to connect to MySQL server
+[24-Apr-2025 16:15:47 Europe/Berlin] MySQL server is running
+[24-Apr-2025 16:15:47 Europe/Berlin] Connected to MySQL server successfully
+[24-Apr-2025 16:15:47 Europe/Berlin] Database created/verified successfully
+[24-Apr-2025 16:15:47 Europe/Berlin] Database selected successfully
+[24-Apr-2025 16:15:47 Europe/Berlin] Users table created/verified successfully
+[24-Apr-2025 16:15:47 Europe/Berlin] Emergency requests table created/verified successfully
+[24-Apr-2025 16:15:47 Europe/Berlin] Appointments table created/verified successfully
+[24-Apr-2025 16:15:47 Europe/Berlin] Database connection and setup completed successfully
+[24-Apr-2025 16:16:08 Europe/Berlin] Attempting to connect to MySQL server
+[24-Apr-2025 16:16:08 Europe/Berlin] MySQL server is running
+[24-Apr-2025 16:16:08 Europe/Berlin] Connected to MySQL server successfully
+[24-Apr-2025 16:16:08 Europe/Berlin] Database created/verified successfully
+[24-Apr-2025 16:16:08 Europe/Berlin] Database selected successfully
+[24-Apr-2025 16:16:08 Europe/Berlin] Users table created/verified successfully
+[24-Apr-2025 16:16:08 Europe/Berlin] Emergency requests table created/verified successfully
+[24-Apr-2025 16:16:08 Europe/Berlin] Appointments table created/verified successfully
+[24-Apr-2025 16:16:08 Europe/Berlin] Database connection and setup completed successfully
+[24-Apr-2025 16:18:32 Europe/Berlin] Attempting to connect to MySQL server
+[24-Apr-2025 16:18:32 Europe/Berlin] MySQL server is running
+[24-Apr-2025 16:18:32 Europe/Berlin] Connected to MySQL server successfully
+[24-Apr-2025 16:18:32 Europe/Berlin] Database created/verified successfully
+[24-Apr-2025 16:18:32 Europe/Berlin] Database selected successfully
+[24-Apr-2025 16:18:32 Europe/Berlin] Users table created/verified successfully
+[24-Apr-2025 16:18:32 Europe/Berlin] Emergency requests table created/verified successfully
+[24-Apr-2025 16:18:32 Europe/Berlin] Appointments table created/verified successfully
+[24-Apr-2025 16:18:32 Europe/Berlin] Database connection and setup completed successfully
+[24-Apr-2025 16:20:15 Europe/Berlin] Attempting to connect to MySQL server
+[24-Apr-2025 16:20:20 Europe/Berlin] Database connection error: MySQL server is not running. Error: No connection could be made because the target machine actively refused it (10061)
+[24-Apr-2025 16:20:20 Europe/Berlin] Error trace: #0 C:\xampp\htdocs\dentist\verify_identity.php(3): require_once()
+#1 {main}
+[24-Apr-2025 16:20:31 Europe/Berlin] Attempting to connect to MySQL server
+[24-Apr-2025 16:20:35 Europe/Berlin] Database connection error: MySQL server is not running. Error: No connection could be made because the target machine actively refused it (10061)
+[24-Apr-2025 16:20:35 Europe/Berlin] Error trace: #0 C:\xampp\htdocs\dentist\verify_identity.php(3): require_once()
+#1 {main}
+[24-Apr-2025 16:21:04 Europe/Berlin] Attempting to connect to MySQL server
+[24-Apr-2025 16:21:09 Europe/Berlin] Database connection error: MySQL server is not running. Error: No connection could be made because the target machine actively refused it (10061)
+[24-Apr-2025 16:21:09 Europe/Berlin] Error trace: #0 C:\xampp\htdocs\dentist\register.php(3): require_once()
+#1 {main}
+[24-Apr-2025 16:24:05 Europe/Berlin] Attempting to connect to MySQL server
+[24-Apr-2025 16:24:09 Europe/Berlin] Database connection error: MySQL server is not running. Error: No connection could be made because the target machine actively refused it (10061)
+[24-Apr-2025 16:24:09 Europe/Berlin] Error trace: #0 C:\xampp\htdocs\dentist\verify_identity.php(3): require_once()
+#1 {main}
+[24-Apr-2025 16:29:23 Europe/Berlin] Attempting to connect to MySQL server
+[24-Apr-2025 16:29:27 Europe/Berlin] Database connection error: MySQL server is not running. Error: No connection could be made because the target machine actively refused it (10061)
+[24-Apr-2025 16:29:27 Europe/Berlin] Error trace: #0 C:\xampp\htdocs\dentist\verify_identity.php(3): require_once()
+#1 {main}
+[24-Apr-2025 16:35:27 Europe/Berlin] Attempting to connect to MySQL server
+[24-Apr-2025 16:35:31 Europe/Berlin] Database connection error: MySQL server is not running. Error: No connection could be made because the target machine actively refused it (10061)
+[24-Apr-2025 16:35:31 Europe/Berlin] Error trace: #0 C:\xampp\htdocs\dentist\register.php(3): require_once()
+#1 {main}
+[24-Apr-2025 16:39:59 Europe/Berlin] Attempting to connect to MySQL server
+[24-Apr-2025 16:40:03 Europe/Berlin] Database connection error: MySQL server is not running. Error: No connection could be made because the target machine actively refused it (10061)
+[24-Apr-2025 16:40:03 Europe/Berlin] Error trace: #0 C:\xampp\htdocs\dentist\register.php(3): require_once()
+#1 {main}
+[24-Apr-2025 16:44:08 Europe/Berlin] Attempting to connect to MySQL server
+[24-Apr-2025 16:44:08 Europe/Berlin] MySQL server is running
+[24-Apr-2025 16:44:08 Europe/Berlin] Connected to MySQL server successfully
+[24-Apr-2025 16:44:08 Europe/Berlin] Database created/verified successfully
+[24-Apr-2025 16:44:08 Europe/Berlin] Database selected successfully
+[24-Apr-2025 16:44:08 Europe/Berlin] Users table created/verified successfully
+[24-Apr-2025 16:44:08 Europe/Berlin] Emergency requests table created/verified successfully
+[24-Apr-2025 16:44:08 Europe/Berlin] Appointments table created/verified successfully
+[24-Apr-2025 16:44:08 Europe/Berlin] Database connection and setup completed successfully
+[24-Apr-2025 16:45:57 Europe/Berlin] Attempting to connect to MySQL server
+[24-Apr-2025 16:45:57 Europe/Berlin] MySQL server is running
+[24-Apr-2025 16:45:57 Europe/Berlin] Connected to MySQL server successfully
+[24-Apr-2025 16:45:57 Europe/Berlin] Database created/verified successfully
+[24-Apr-2025 16:45:57 Europe/Berlin] Database selected successfully
+[24-Apr-2025 16:45:57 Europe/Berlin] Users table created/verified successfully
+[24-Apr-2025 16:45:57 Europe/Berlin] Emergency requests table created/verified successfully
+[24-Apr-2025 16:45:57 Europe/Berlin] Appointments table created/verified successfully
+[24-Apr-2025 16:45:57 Europe/Berlin] Database connection and setup completed successfully
+[24-Apr-2025 16:48:35 Europe/Berlin] Attempting to connect to MySQL server
+[24-Apr-2025 16:48:35 Europe/Berlin] MySQL server is running
+[24-Apr-2025 16:48:35 Europe/Berlin] Connected to MySQL server successfully
+[24-Apr-2025 16:48:35 Europe/Berlin] Database created/verified successfully
+[24-Apr-2025 16:48:35 Europe/Berlin] Database selected successfully
+[24-Apr-2025 16:48:35 Europe/Berlin] Users table created/verified successfully
+[24-Apr-2025 16:48:35 Europe/Berlin] Emergency requests table created/verified successfully
+[24-Apr-2025 16:48:35 Europe/Berlin] Appointments table created/verified successfully
+[24-Apr-2025 16:48:35 Europe/Berlin] Database connection and setup completed successfully
+[24-Apr-2025 16:48:54 Europe/Berlin] Attempting to connect to MySQL server
+[24-Apr-2025 16:48:54 Europe/Berlin] MySQL server is running
+[24-Apr-2025 16:48:54 Europe/Berlin] Connected to MySQL server successfully
+[24-Apr-2025 16:48:54 Europe/Berlin] Database created/verified successfully
+[24-Apr-2025 16:48:54 Europe/Berlin] Database selected successfully
+[24-Apr-2025 16:48:54 Europe/Berlin] Users table created/verified successfully
+[24-Apr-2025 16:48:54 Europe/Berlin] Emergency requests table created/verified successfully
+[24-Apr-2025 16:48:54 Europe/Berlin] Appointments table created/verified successfully
+[24-Apr-2025 16:48:54 Europe/Berlin] Database connection and setup completed successfully
+[24-Apr-2025 16:49:09 Europe/Berlin] Attempting to connect to MySQL server
+[24-Apr-2025 16:49:09 Europe/Berlin] MySQL server is running
+[24-Apr-2025 16:49:09 Europe/Berlin] Connected to MySQL server successfully
+[24-Apr-2025 16:49:09 Europe/Berlin] Database created/verified successfully
+[24-Apr-2025 16:49:09 Europe/Berlin] Database selected successfully
+[24-Apr-2025 16:49:09 Europe/Berlin] Users table created/verified successfully
+[24-Apr-2025 16:49:09 Europe/Berlin] Email column removed successfully
+[24-Apr-2025 16:49:09 Europe/Berlin] Emergency requests table created/verified successfully
+[24-Apr-2025 16:49:09 Europe/Berlin] Appointments table created/verified successfully
+[24-Apr-2025 16:49:09 Europe/Berlin] Database connection and setup completed successfully
+[24-Apr-2025 16:49:38 Europe/Berlin] Attempting to connect to MySQL server
+[24-Apr-2025 16:49:38 Europe/Berlin] MySQL server is running
+[24-Apr-2025 16:49:38 Europe/Berlin] Connected to MySQL server successfully
+[24-Apr-2025 16:49:38 Europe/Berlin] Database created/verified successfully
+[24-Apr-2025 16:49:38 Europe/Berlin] Database selected successfully
+[24-Apr-2025 16:49:38 Europe/Berlin] Users table created/verified successfully
+[24-Apr-2025 16:49:38 Europe/Berlin] Emergency requests table created/verified successfully
+[24-Apr-2025 16:49:38 Europe/Berlin] Appointments table created/verified successfully
+[24-Apr-2025 16:49:38 Europe/Berlin] Database connection and setup completed successfully
+[24-Apr-2025 16:50:01 Europe/Berlin] Attempting to connect to MySQL server
+[24-Apr-2025 16:50:01 Europe/Berlin] MySQL server is running
+[24-Apr-2025 16:50:01 Europe/Berlin] Connected to MySQL server successfully
+[24-Apr-2025 16:50:01 Europe/Berlin] Database created/verified successfully
+[24-Apr-2025 16:50:01 Europe/Berlin] Database selected successfully
+[24-Apr-2025 16:50:01 Europe/Berlin] Users table created/verified successfully
+[24-Apr-2025 16:50:01 Europe/Berlin] Emergency requests table created/verified successfully
+[24-Apr-2025 16:50:01 Europe/Berlin] Appointments table created/verified successfully
+[24-Apr-2025 16:50:01 Europe/Berlin] Database connection and setup completed successfully
+[24-Apr-2025 16:50:02 Europe/Berlin] Attempting to connect to MySQL server
+[24-Apr-2025 16:50:02 Europe/Berlin] MySQL server is running
+[24-Apr-2025 16:50:02 Europe/Berlin] Connected to MySQL server successfully
+[24-Apr-2025 16:50:02 Europe/Berlin] Database created/verified successfully
+[24-Apr-2025 16:50:02 Europe/Berlin] Database selected successfully
+[24-Apr-2025 16:50:02 Europe/Berlin] Users table created/verified successfully
+[24-Apr-2025 16:50:02 Europe/Berlin] Emergency requests table created/verified successfully
+[24-Apr-2025 16:50:02 Europe/Berlin] Appointments table created/verified successfully
+[24-Apr-2025 16:50:02 Europe/Berlin] Database connection and setup completed successfully
+[24-Apr-2025 16:50:54 Europe/Berlin] Attempting to connect to MySQL server
+[24-Apr-2025 16:50:54 Europe/Berlin] MySQL server is running
+[24-Apr-2025 16:50:54 Europe/Berlin] Connected to MySQL server successfully
+[24-Apr-2025 16:50:54 Europe/Berlin] Database created/verified successfully
+[24-Apr-2025 16:50:54 Europe/Berlin] Database selected successfully
+[24-Apr-2025 16:50:54 Europe/Berlin] Users table created/verified successfully
+[24-Apr-2025 16:50:54 Europe/Berlin] Emergency requests table created/verified successfully
+[24-Apr-2025 16:50:54 Europe/Berlin] Appointments table created/verified successfully
+[24-Apr-2025 16:50:54 Europe/Berlin] Database connection and setup completed successfully
+[24-Apr-2025 16:50:54 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 8
+[24-Apr-2025 16:50:54 Europe/Berlin] PHP Warning:  Undefined array key "phone" in C:\xampp\htdocs\dentist\appointment.php on line 10
+[24-Apr-2025 16:50:54 Europe/Berlin] PHP Deprecated:  preg_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 10
+[24-Apr-2025 16:50:54 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 11
+[24-Apr-2025 16:50:54 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 12
+[24-Apr-2025 16:50:54 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 13
+[24-Apr-2025 16:50:54 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 14
+[24-Apr-2025 16:50:54 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 15
+[24-Apr-2025 16:50:54 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\dentist\appointment.php on line 16
+[24-Apr-2025 16:51:09 Europe/Berlin] Attempting to connect to MySQL server
+[24-Apr-2025 16:51:09 Europe/Berlin] MySQL server is running
+[24-Apr-2025 16:51:09 Europe/Berlin] Connected to MySQL server successfully
+[24-Apr-2025 16:51:09 Europe/Berlin] Database created/verified successfully
+[24-Apr-2025 16:51:09 Europe/Berlin] Database selected successfully
+[24-Apr-2025 16:51:09 Europe/Berlin] Users table created/verified successfully
+[24-Apr-2025 16:51:09 Europe/Berlin] Emergency requests table created/verified successfully
+[24-Apr-2025 16:51:09 Europe/Berlin] Appointments table created/verified successfully
+[24-Apr-2025 16:51:09 Europe/Berlin] Database connection and setup completed successfully
+[24-Apr-2025 16:51:54 Europe/Berlin] Attempting to connect to MySQL server
+[24-Apr-2025 16:51:54 Europe/Berlin] MySQL server is running
+[24-Apr-2025 16:51:54 Europe/Berlin] Connected to MySQL server successfully
+[24-Apr-2025 16:51:54 Europe/Berlin] Database created/verified successfully
+[24-Apr-2025 16:51:54 Europe/Berlin] Database selected successfully
+[24-Apr-2025 16:51:54 Europe/Berlin] Users table created/verified successfully
+[24-Apr-2025 16:51:54 Europe/Berlin] Emergency requests table created/verified successfully
+[24-Apr-2025 16:51:54 Europe/Berlin] Appointments table created/verified successfully
+[24-Apr-2025 16:51:54 Europe/Berlin] Database connection and setup completed successfully
+[24-Apr-2025 16:52:02 Europe/Berlin] Attempting to connect to MySQL server
+[24-Apr-2025 16:52:02 Europe/Berlin] MySQL server is running
+[24-Apr-2025 16:52:02 Europe/Berlin] Connected to MySQL server successfully
+[24-Apr-2025 16:52:02 Europe/Berlin] Database created/verified successfully
+[24-Apr-2025 16:52:02 Europe/Berlin] Database selected successfully
+[24-Apr-2025 16:52:02 Europe/Berlin] Users table created/verified successfully
+[24-Apr-2025 16:52:02 Europe/Berlin] Emergency requests table created/verified successfully
+[24-Apr-2025 16:52:02 Europe/Berlin] Appointments table created/verified successfully
+[24-Apr-2025 16:52:02 Europe/Berlin] Database connection and setup completed successfully
+[24-Apr-2025 16:52:11 Europe/Berlin] Attempting to connect to MySQL server
+[24-Apr-2025 16:52:11 Europe/Berlin] MySQL server is running
+[24-Apr-2025 16:52:11 Europe/Berlin] Connected to MySQL server successfully
+[24-Apr-2025 16:52:11 Europe/Berlin] Database created/verified successfully
+[24-Apr-2025 16:52:11 Europe/Berlin] Database selected successfully
+[24-Apr-2025 16:52:11 Europe/Berlin] Users table created/verified successfully
+[24-Apr-2025 16:52:11 Europe/Berlin] Emergency requests table created/verified successfully
+[24-Apr-2025 16:52:11 Europe/Berlin] Appointments table created/verified successfully
+[24-Apr-2025 16:52:11 Europe/Berlin] Database connection and setup completed successfully
+[24-Apr-2025 16:53:54 Europe/Berlin] Attempting to connect to MySQL server
+[24-Apr-2025 16:53:54 Europe/Berlin] MySQL server is running
+[24-Apr-2025 16:53:54 Europe/Berlin] Connected to MySQL server successfully
+[24-Apr-2025 16:53:54 Europe/Berlin] Database created/verified successfully
+[24-Apr-2025 16:53:54 Europe/Berlin] Database selected successfully
+[24-Apr-2025 16:53:54 Europe/Berlin] Users table created/verified successfully
+[24-Apr-2025 16:53:54 Europe/Berlin] Emergency requests table created/verified successfully
+[24-Apr-2025 16:53:54 Europe/Berlin] Appointments table created/verified successfully
+[24-Apr-2025 16:53:54 Europe/Berlin] Database connection and setup completed successfully
+[24-Apr-2025 16:54:38 Europe/Berlin] Attempting to connect to MySQL server
+[24-Apr-2025 16:54:38 Europe/Berlin] MySQL server is running
+[24-Apr-2025 16:54:38 Europe/Berlin] Connected to MySQL server successfully
+[24-Apr-2025 16:54:39 Europe/Berlin] Database created/verified successfully
+[24-Apr-2025 16:54:39 Europe/Berlin] Database selected successfully
+[24-Apr-2025 16:54:39 Europe/Berlin] Users table created/verified successfully
+[24-Apr-2025 16:54:39 Europe/Berlin] Email column removed successfully
+[24-Apr-2025 16:54:39 Europe/Berlin] Emergency requests table created/verified successfully
+[24-Apr-2025 16:54:39 Europe/Berlin] Appointments table created/verified successfully
+[24-Apr-2025 16:54:39 Europe/Berlin] Database connection and setup completed successfully
+[24-Apr-2025 16:54:39 Europe/Berlin] Attempting to connect to MySQL server
+[24-Apr-2025 16:54:39 Europe/Berlin] MySQL server is running
+[24-Apr-2025 16:54:39 Europe/Berlin] Connected to MySQL server successfully
+[24-Apr-2025 16:54:39 Europe/Berlin] Database created/verified successfully
+[24-Apr-2025 16:54:39 Europe/Berlin] Database selected successfully
+[24-Apr-2025 16:54:39 Europe/Berlin] Users table created/verified successfully
+[24-Apr-2025 16:54:39 Europe/Berlin] Emergency requests table created/verified successfully
+[24-Apr-2025 16:54:39 Europe/Berlin] Appointments table created/verified successfully
+[24-Apr-2025 16:54:39 Europe/Berlin] Database connection and setup completed successfully
+[24-Apr-2025 16:54:39 Europe/Berlin] Attempting to connect to MySQL server
+[24-Apr-2025 16:54:39 Europe/Berlin] MySQL server is running
+[24-Apr-2025 16:54:39 Europe/Berlin] Connected to MySQL server successfully
+[24-Apr-2025 16:54:39 Europe/Berlin] Database created/verified successfully
+[24-Apr-2025 16:54:39 Europe/Berlin] Database selected successfully
+[24-Apr-2025 16:54:39 Europe/Berlin] Users table created/verified successfully
+[24-Apr-2025 16:54:39 Europe/Berlin] Emergency requests table created/verified successfully
+[24-Apr-2025 16:54:39 Europe/Berlin] Appointments table created/verified successfully
+[24-Apr-2025 16:54:39 Europe/Berlin] Database connection and setup completed successfully
+[24-Apr-2025 16:54:39 Europe/Berlin] Attempting to connect to MySQL server
+[24-Apr-2025 16:54:39 Europe/Berlin] MySQL server is running
+[24-Apr-2025 16:54:39 Europe/Berlin] Connected to MySQL server successfully
+[24-Apr-2025 16:54:39 Europe/Berlin] Database created/verified successfully
+[24-Apr-2025 16:54:39 Europe/Berlin] Database selected successfully
+[24-Apr-2025 16:54:39 Europe/Berlin] Users table created/verified successfully
+[24-Apr-2025 16:54:39 Europe/Berlin] Emergency requests table created/verified successfully
+[24-Apr-2025 16:54:39 Europe/Berlin] Appointments table created/verified successfully
+[24-Apr-2025 16:54:39 Europe/Berlin] Database connection and setup completed successfully
+[24-Apr-2025 16:54:39 Europe/Berlin] Attempting to connect to MySQL server
+[24-Apr-2025 16:54:39 Europe/Berlin] MySQL server is running
+[24-Apr-2025 16:54:39 Europe/Berlin] Connected to MySQL server successfully
+[24-Apr-2025 16:54:39 Europe/Berlin] Database created/verified successfully
+[24-Apr-2025 16:54:39 Europe/Berlin] Database selected successfully
+[24-Apr-2025 16:54:39 Europe/Berlin] Users table created/verified successfully
+[24-Apr-2025 16:54:39 Europe/Berlin] Emergency requests table created/verified successfully
+[24-Apr-2025 16:54:39 Europe/Berlin] Appointments table created/verified successfully
+[24-Apr-2025 16:54:39 Europe/Berlin] Database connection and setup completed successfully
+[24-Apr-2025 16:54:39 Europe/Berlin] Attempting to connect to MySQL server
+[24-Apr-2025 16:54:39 Europe/Berlin] MySQL server is running
+[24-Apr-2025 16:54:39 Europe/Berlin] Connected to MySQL server successfully
+[24-Apr-2025 16:54:39 Europe/Berlin] Database created/verified successfully
+[24-Apr-2025 16:54:39 Europe/Berlin] Database selected successfully
+[24-Apr-2025 16:54:39 Europe/Berlin] Users table created/verified successfully
+[24-Apr-2025 16:54:39 Europe/Berlin] Emergency requests table created/verified successfully
+[24-Apr-2025 16:54:39 Europe/Berlin] Appointments table created/verified successfully
+[24-Apr-2025 16:54:39 Europe/Berlin] Database connection and setup completed successfully
+[24-Apr-2025 16:54:42 Europe/Berlin] Attempting to connect to MySQL server
+[24-Apr-2025 16:54:42 Europe/Berlin] MySQL server is running
+[24-Apr-2025 16:54:42 Europe/Berlin] Connected to MySQL server successfully
+[24-Apr-2025 16:54:42 Europe/Berlin] Database created/verified successfully
+[24-Apr-2025 16:54:42 Europe/Berlin] Database selected successfully
+[24-Apr-2025 16:54:42 Europe/Berlin] Users table created/verified successfully
+[24-Apr-2025 16:54:42 Europe/Berlin] Emergency requests table created/verified successfully
+[24-Apr-2025 16:54:42 Europe/Berlin] Appointments table created/verified successfully
+[24-Apr-2025 16:54:42 Europe/Berlin] Database connection and setup completed successfully
+[24-Apr-2025 16:54:42 Europe/Berlin] Attempting to connect to MySQL server
+[24-Apr-2025 16:54:42 Europe/Berlin] MySQL server is running
+[24-Apr-2025 16:54:42 Europe/Berlin] Connected to MySQL server successfully
+[24-Apr-2025 16:54:42 Europe/Berlin] Database created/verified successfully
+[24-Apr-2025 16:54:42 Europe/Berlin] Database selected successfully
+[24-Apr-2025 16:54:42 Europe/Berlin] Users table created/verified successfully
+[24-Apr-2025 16:54:42 Europe/Berlin] Emergency requests table created/verified successfully
+[24-Apr-2025 16:54:42 Europe/Berlin] Appointments table created/verified successfully
+[24-Apr-2025 16:54:42 Europe/Berlin] Database connection and setup completed successfully
+[24-Apr-2025 16:54:42 Europe/Berlin] Attempting to connect to MySQL server
+[24-Apr-2025 16:54:42 Europe/Berlin] MySQL server is running
+[24-Apr-2025 16:54:42 Europe/Berlin] Connected to MySQL server successfully
+[24-Apr-2025 16:54:42 Europe/Berlin] Database created/verified successfully
+[24-Apr-2025 16:54:42 Europe/Berlin] Database selected successfully
+[24-Apr-2025 16:54:42 Europe/Berlin] Users table created/verified successfully
+[24-Apr-2025 16:54:43 Europe/Berlin] Emergency requests table created/verified successfully
+[24-Apr-2025 16:54:43 Europe/Berlin] Appointments table created/verified successfully
+[24-Apr-2025 16:54:43 Europe/Berlin] Database connection and setup completed successfully
+[24-Apr-2025 16:54:48 Europe/Berlin] Attempting to connect to MySQL server
+[24-Apr-2025 16:54:48 Europe/Berlin] MySQL server is running
+[24-Apr-2025 16:54:48 Europe/Berlin] Connected to MySQL server successfully
+[24-Apr-2025 16:54:48 Europe/Berlin] Database created/verified successfully
+[24-Apr-2025 16:54:48 Europe/Berlin] Database selected successfully
+[24-Apr-2025 16:54:48 Europe/Berlin] Users table created/verified successfully
+[24-Apr-2025 16:54:48 Europe/Berlin] Emergency requests table created/verified successfully
+[24-Apr-2025 16:54:48 Europe/Berlin] Appointments table created/verified successfully
+[24-Apr-2025 16:54:48 Europe/Berlin] Database connection and setup completed successfully
+[24-Apr-2025 16:54:48 Europe/Berlin] Attempting to connect to MySQL server
+[24-Apr-2025 16:54:48 Europe/Berlin] MySQL server is running
+[24-Apr-2025 16:54:48 Europe/Berlin] Connected to MySQL server successfully
+[24-Apr-2025 16:54:48 Europe/Berlin] Database created/verified successfully
+[24-Apr-2025 16:54:48 Europe/Berlin] Database selected successfully
+[24-Apr-2025 16:54:48 Europe/Berlin] Users table created/verified successfully
+[24-Apr-2025 16:54:48 Europe/Berlin] Emergency requests table created/verified successfully
+[24-Apr-2025 16:54:48 Europe/Berlin] Appointments table created/verified successfully
+[24-Apr-2025 16:54:48 Europe/Berlin] Database connection and setup completed successfully
+[24-Apr-2025 16:54:48 Europe/Berlin] Attempting to connect to MySQL server
+[24-Apr-2025 16:54:48 Europe/Berlin] MySQL server is running
+[24-Apr-2025 16:54:48 Europe/Berlin] Connected to MySQL server successfully
+[24-Apr-2025 16:54:48 Europe/Berlin] Database created/verified successfully
+[24-Apr-2025 16:54:48 Europe/Berlin] Database selected successfully
+[24-Apr-2025 16:54:48 Europe/Berlin] Users table created/verified successfully
+[24-Apr-2025 16:54:48 Europe/Berlin] Emergency requests table created/verified successfully
+[24-Apr-2025 16:54:48 Europe/Berlin] Appointments table created/verified successfully
+[24-Apr-2025 16:54:48 Europe/Berlin] Database connection and setup completed successfully
+[24-Apr-2025 16:54:48 Europe/Berlin] Attempting to connect to MySQL server
+[24-Apr-2025 16:54:48 Europe/Berlin] MySQL server is running
+[24-Apr-2025 16:54:48 Europe/Berlin] Connected to MySQL server successfully
+[24-Apr-2025 16:54:48 Europe/Berlin] Database created/verified successfully
+[24-Apr-2025 16:54:48 Europe/Berlin] Database selected successfully
+[24-Apr-2025 16:54:48 Europe/Berlin] Users table created/verified successfully
+[24-Apr-2025 16:54:48 Europe/Berlin] Emergency requests table created/verified successfully
+[24-Apr-2025 16:54:48 Europe/Berlin] Appointments table created/verified successfully
+[24-Apr-2025 16:54:48 Europe/Berlin] Database connection and setup completed successfully
+[24-Apr-2025 16:54:48 Europe/Berlin] Attempting to connect to MySQL server
+[24-Apr-2025 16:54:48 Europe/Berlin] MySQL server is running
+[24-Apr-2025 16:54:48 Europe/Berlin] Connected to MySQL server successfully
+[24-Apr-2025 16:54:48 Europe/Berlin] Database created/verified successfully
+[24-Apr-2025 16:54:48 Europe/Berlin] Database selected successfully
+[24-Apr-2025 16:54:48 Europe/Berlin] Users table created/verified successfully
+[24-Apr-2025 16:54:48 Europe/Berlin] Emergency requests table created/verified successfully
+[24-Apr-2025 16:54:48 Europe/Berlin] Appointments table created/verified successfully
+[24-Apr-2025 16:54:48 Europe/Berlin] Database connection and setup completed successfully
+[24-Apr-2025 16:54:51 Europe/Berlin] Attempting to connect to MySQL server
+[24-Apr-2025 16:54:51 Europe/Berlin] MySQL server is running
+[24-Apr-2025 16:54:51 Europe/Berlin] Connected to MySQL server successfully
+[24-Apr-2025 16:54:51 Europe/Berlin] Database created/verified successfully
+[24-Apr-2025 16:54:51 Europe/Berlin] Database selected successfully
+[24-Apr-2025 16:54:51 Europe/Berlin] Users table created/verified successfully
+[24-Apr-2025 16:54:51 Europe/Berlin] Emergency requests table created/verified successfully
+[24-Apr-2025 16:54:51 Europe/Berlin] Appointments table created/verified successfully
+[24-Apr-2025 16:54:51 Europe/Berlin] Database connection and setup completed successfully
+[24-Apr-2025 16:56:04 Europe/Berlin] Attempting to connect to MySQL server
+[24-Apr-2025 16:56:04 Europe/Berlin] MySQL server is running
+[24-Apr-2025 16:56:04 Europe/Berlin] Connected to MySQL server successfully
+[24-Apr-2025 16:56:04 Europe/Berlin] Database created/verified successfully
+[24-Apr-2025 16:56:04 Europe/Berlin] Database selected successfully
+[24-Apr-2025 16:56:04 Europe/Berlin] Users table created/verified successfully
+[24-Apr-2025 16:56:04 Europe/Berlin] Emergency requests table created/verified successfully
+[24-Apr-2025 16:56:04 Europe/Berlin] Appointments table created/verified successfully
+[24-Apr-2025 16:56:04 Europe/Berlin] Database connection and setup completed successfully
+[24-Apr-2025 16:56:04 Europe/Berlin] Error in delete_user.php: Cannot delete an admin account
+[24-Apr-2025 16:58:25 Europe/Berlin] Attempting to connect to MySQL server
+[24-Apr-2025 16:58:25 Europe/Berlin] MySQL server is running
+[24-Apr-2025 16:58:25 Europe/Berlin] Connected to MySQL server successfully
+[24-Apr-2025 16:58:25 Europe/Berlin] Database created/verified successfully
+[24-Apr-2025 16:58:25 Europe/Berlin] Database selected successfully
+[24-Apr-2025 16:58:25 Europe/Berlin] Users table created/verified successfully
+[24-Apr-2025 16:58:25 Europe/Berlin] Emergency requests table created/verified successfully
+[24-Apr-2025 16:58:25 Europe/Berlin] Appointments table created/verified successfully
+[24-Apr-2025 16:58:25 Europe/Berlin] Database connection and setup completed successfully
+[24-Apr-2025 16:58:26 Europe/Berlin] Attempting to connect to MySQL server
+[24-Apr-2025 16:58:26 Europe/Berlin] MySQL server is running
+[24-Apr-2025 16:58:26 Europe/Berlin] Connected to MySQL server successfully
+[24-Apr-2025 16:58:26 Europe/Berlin] Database created/verified successfully
+[24-Apr-2025 16:58:26 Europe/Berlin] Database selected successfully
+[24-Apr-2025 16:58:26 Europe/Berlin] Users table created/verified successfully
+[24-Apr-2025 16:58:26 Europe/Berlin] Emergency requests table created/verified successfully
+[24-Apr-2025 16:58:26 Europe/Berlin] Appointments table created/verified successfully
+[24-Apr-2025 16:58:26 Europe/Berlin] Database connection and setup completed successfully
+[24-Apr-2025 16:58:26 Europe/Berlin] Attempting to connect to MySQL server
+[24-Apr-2025 16:58:26 Europe/Berlin] MySQL server is running
+[24-Apr-2025 16:58:26 Europe/Berlin] Connected to MySQL server successfully
+[24-Apr-2025 16:58:26 Europe/Berlin] Database created/verified successfully
+[24-Apr-2025 16:58:26 Europe/Berlin] Database selected successfully
+[24-Apr-2025 16:58:26 Europe/Berlin] Users table created/verified successfully
+[24-Apr-2025 16:58:26 Europe/Berlin] Emergency requests table created/verified successfully
+[24-Apr-2025 16:58:26 Europe/Berlin] Appointments table created/verified successfully
+[24-Apr-2025 16:58:26 Europe/Berlin] Database connection and setup completed successfully
+[24-Apr-2025 16:58:26 Europe/Berlin] Attempting to connect to MySQL server
+[24-Apr-2025 16:58:26 Europe/Berlin] MySQL server is running
+[24-Apr-2025 16:58:26 Europe/Berlin] Connected to MySQL server successfully
+[24-Apr-2025 16:58:26 Europe/Berlin] Database created/verified successfully
+[24-Apr-2025 16:58:26 Europe/Berlin] Database selected successfully
+[24-Apr-2025 16:58:26 Europe/Berlin] Users table created/verified successfully
+[24-Apr-2025 16:58:26 Europe/Berlin] Emergency requests table created/verified successfully
+[24-Apr-2025 16:58:26 Europe/Berlin] Appointments table created/verified successfully
+[24-Apr-2025 16:58:26 Europe/Berlin] Database connection and setup completed successfully
+[24-Apr-2025 16:58:26 Europe/Berlin] Attempting to connect to MySQL server
+[24-Apr-2025 16:58:26 Europe/Berlin] MySQL server is running
+[24-Apr-2025 16:58:26 Europe/Berlin] Connected to MySQL server successfully
+[24-Apr-2025 16:58:26 Europe/Berlin] Database created/verified successfully
+[24-Apr-2025 16:58:26 Europe/Berlin] Database selected successfully
+[24-Apr-2025 16:58:26 Europe/Berlin] Users table created/verified successfully
+[24-Apr-2025 16:58:26 Europe/Berlin] Emergency requests table created/verified successfully
+[24-Apr-2025 16:58:26 Europe/Berlin] Appointments table created/verified successfully
+[24-Apr-2025 16:58:26 Europe/Berlin] Database connection and setup completed successfully
+[24-Apr-2025 16:58:28 Europe/Berlin] Attempting to connect to MySQL server
+[24-Apr-2025 16:58:28 Europe/Berlin] MySQL server is running
+[24-Apr-2025 16:58:28 Europe/Berlin] Connected to MySQL server successfully
+[24-Apr-2025 16:58:28 Europe/Berlin] Database created/verified successfully
+[24-Apr-2025 16:58:28 Europe/Berlin] Database selected successfully
+[24-Apr-2025 16:58:28 Europe/Berlin] Users table created/verified successfully
+[24-Apr-2025 16:58:28 Europe/Berlin] Emergency requests table created/verified successfully
+[24-Apr-2025 16:58:28 Europe/Berlin] Appointments table created/verified successfully
+[24-Apr-2025 16:58:28 Europe/Berlin] Database connection and setup completed successfully
+[24-Apr-2025 16:58:28 Europe/Berlin] Attempting to connect to MySQL server
+[24-Apr-2025 16:58:28 Europe/Berlin] MySQL server is running
+[24-Apr-2025 16:58:28 Europe/Berlin] Connected to MySQL server successfully
+[24-Apr-2025 16:58:28 Europe/Berlin] Database created/verified successfully
+[24-Apr-2025 16:58:28 Europe/Berlin] Database selected successfully
+[24-Apr-2025 16:58:28 Europe/Berlin] Users table created/verified successfully
+[24-Apr-2025 16:58:28 Europe/Berlin] Emergency requests table created/verified successfully
+[24-Apr-2025 16:58:28 Europe/Berlin] Appointments table created/verified successfully
+[24-Apr-2025 16:58:28 Europe/Berlin] Database connection and setup completed successfully
+[24-Apr-2025 16:58:32 Europe/Berlin] Attempting to connect to MySQL server
+[24-Apr-2025 16:58:32 Europe/Berlin] MySQL server is running
+[24-Apr-2025 16:58:32 Europe/Berlin] Connected to MySQL server successfully
+[24-Apr-2025 16:58:32 Europe/Berlin] Database created/verified successfully
+[24-Apr-2025 16:58:32 Europe/Berlin] Database selected successfully
+[24-Apr-2025 16:58:32 Europe/Berlin] Users table created/verified successfully
+[24-Apr-2025 16:58:32 Europe/Berlin] Emergency requests table created/verified successfully
+[24-Apr-2025 16:58:32 Europe/Berlin] Appointments table created/verified successfully
+[24-Apr-2025 16:58:32 Europe/Berlin] Database connection and setup completed successfully
+[24-Apr-2025 16:58:32 Europe/Berlin] Attempting to connect to MySQL server
+[24-Apr-2025 16:58:32 Europe/Berlin] MySQL server is running
+[24-Apr-2025 16:58:32 Europe/Berlin] Connected to MySQL server successfully
+[24-Apr-2025 16:58:32 Europe/Berlin] Database created/verified successfully
+[24-Apr-2025 16:58:32 Europe/Berlin] Database selected successfully
+[24-Apr-2025 16:58:32 Europe/Berlin] Users table created/verified successfully
+[24-Apr-2025 16:58:32 Europe/Berlin] Emergency requests table created/verified successfully
+[24-Apr-2025 16:58:32 Europe/Berlin] Appointments table created/verified successfully
+[24-Apr-2025 16:58:32 Europe/Berlin] Database connection and setup completed successfully
+[24-Apr-2025 16:58:41 Europe/Berlin] Attempting to connect to MySQL server
+[24-Apr-2025 16:58:41 Europe/Berlin] MySQL server is running
+[24-Apr-2025 16:58:41 Europe/Berlin] Connected to MySQL server successfully
+[24-Apr-2025 16:58:41 Europe/Berlin] Database created/verified successfully
+[24-Apr-2025 16:58:41 Europe/Berlin] Database selected successfully
+[24-Apr-2025 16:58:41 Europe/Berlin] Users table created/verified successfully
+[24-Apr-2025 16:58:41 Europe/Berlin] Emergency requests table created/verified successfully
+[24-Apr-2025 16:58:41 Europe/Berlin] Appointments table created/verified successfully
+[24-Apr-2025 16:58:41 Europe/Berlin] Database connection and setup completed successfully
+[24-Apr-2025 16:58:41 Europe/Berlin] Attempting to connect to MySQL server
+[24-Apr-2025 16:58:41 Europe/Berlin] MySQL server is running
+[24-Apr-2025 16:58:41 Europe/Berlin] Connected to MySQL server successfully
+[24-Apr-2025 16:58:41 Europe/Berlin] Database created/verified successfully
+[24-Apr-2025 16:58:41 Europe/Berlin] Database selected successfully
+[24-Apr-2025 16:58:41 Europe/Berlin] Users table created/verified successfully
+[24-Apr-2025 16:58:41 Europe/Berlin] Emergency requests table created/verified successfully
+[24-Apr-2025 16:58:41 Europe/Berlin] Appointments table created/verified successfully
+[24-Apr-2025 16:58:41 Europe/Berlin] Database connection and setup completed successfully
+[24-Apr-2025 16:58:43 Europe/Berlin] Attempting to connect to MySQL server
+[24-Apr-2025 16:58:43 Europe/Berlin] MySQL server is running
+[24-Apr-2025 16:58:43 Europe/Berlin] Connected to MySQL server successfully
+[24-Apr-2025 16:58:43 Europe/Berlin] Database created/verified successfully
+[24-Apr-2025 16:58:43 Europe/Berlin] Database selected successfully
+[24-Apr-2025 16:58:43 Europe/Berlin] Users table created/verified successfully
+[24-Apr-2025 16:58:43 Europe/Berlin] Emergency requests table created/verified successfully
+[24-Apr-2025 16:58:43 Europe/Berlin] Appointments table created/verified successfully
+[24-Apr-2025 16:58:43 Europe/Berlin] Database connection and setup completed successfully
+[24-Apr-2025 16:58:44 Europe/Berlin] Attempting to connect to MySQL server
+[24-Apr-2025 16:58:44 Europe/Berlin] MySQL server is running
+[24-Apr-2025 16:58:44 Europe/Berlin] Connected to MySQL server successfully
+[24-Apr-2025 16:58:44 Europe/Berlin] Database created/verified successfully
+[24-Apr-2025 16:58:44 Europe/Berlin] Database selected successfully
+[24-Apr-2025 16:58:44 Europe/Berlin] Users table created/verified successfully
+[24-Apr-2025 16:58:44 Europe/Berlin] Emergency requests table created/verified successfully
+[24-Apr-2025 16:58:44 Europe/Berlin] Appointments table created/verified successfully
+[24-Apr-2025 16:58:44 Europe/Berlin] Database connection and setup completed successfully
+[24-Apr-2025 16:58:44 Europe/Berlin] Attempting to connect to MySQL server
+[24-Apr-2025 16:58:44 Europe/Berlin] MySQL server is running
+[24-Apr-2025 16:58:44 Europe/Berlin] Connected to MySQL server successfully
+[24-Apr-2025 16:58:44 Europe/Berlin] Database created/verified successfully
+[24-Apr-2025 16:58:44 Europe/Berlin] Database selected successfully
+[24-Apr-2025 16:58:44 Europe/Berlin] Users table created/verified successfully
+[24-Apr-2025 16:58:44 Europe/Berlin] Emergency requests table created/verified successfully
+[24-Apr-2025 16:58:44 Europe/Berlin] Appointments table created/verified successfully
+[24-Apr-2025 16:58:44 Europe/Berlin] Database connection and setup completed successfully
+[24-Apr-2025 16:58:44 Europe/Berlin] Attempting to connect to MySQL server
+[24-Apr-2025 16:58:44 Europe/Berlin] MySQL server is running
+[24-Apr-2025 16:58:44 Europe/Berlin] Connected to MySQL server successfully
+[24-Apr-2025 16:58:44 Europe/Berlin] Database created/verified successfully
+[24-Apr-2025 16:58:44 Europe/Berlin] Database selected successfully
+[24-Apr-2025 16:58:44 Europe/Berlin] Users table created/verified successfully
+[24-Apr-2025 16:58:44 Europe/Berlin] Emergency requests table created/verified successfully
+[24-Apr-2025 16:58:44 Europe/Berlin] Appointments table created/verified successfully
+[24-Apr-2025 16:58:44 Europe/Berlin] Database connection and setup completed successfully
+[24-Apr-2025 16:58:44 Europe/Berlin] Attempting to connect to MySQL server
+[24-Apr-2025 16:58:44 Europe/Berlin] MySQL server is running
+[24-Apr-2025 16:58:44 Europe/Berlin] Connected to MySQL server successfully
+[24-Apr-2025 16:58:44 Europe/Berlin] Database created/verified successfully
+[24-Apr-2025 16:58:44 Europe/Berlin] Database selected successfully
+[24-Apr-2025 16:58:44 Europe/Berlin] Users table created/verified successfully
+[24-Apr-2025 16:58:44 Europe/Berlin] Emergency requests table created/verified successfully
+[24-Apr-2025 16:58:44 Europe/Berlin] Appointments table created/verified successfully
+[24-Apr-2025 16:58:44 Europe/Berlin] Database connection and setup completed successfully
+[24-Apr-2025 16:58:46 Europe/Berlin] Attempting to connect to MySQL server
+[24-Apr-2025 16:58:46 Europe/Berlin] MySQL server is running
+[24-Apr-2025 16:58:46 Europe/Berlin] Connected to MySQL server successfully
+[24-Apr-2025 16:58:46 Europe/Berlin] Database created/verified successfully
+[24-Apr-2025 16:58:46 Europe/Berlin] Database selected successfully
+[24-Apr-2025 16:58:46 Europe/Berlin] Users table created/verified successfully
+[24-Apr-2025 16:58:46 Europe/Berlin] Emergency requests table created/verified successfully
+[24-Apr-2025 16:58:46 Europe/Berlin] Appointments table created/verified successfully
+[24-Apr-2025 16:58:46 Europe/Berlin] Database connection and setup completed successfully
+[24-Apr-2025 16:58:47 Europe/Berlin] Attempting to connect to MySQL server
+[24-Apr-2025 16:58:47 Europe/Berlin] MySQL server is running
+[24-Apr-2025 16:58:47 Europe/Berlin] Connected to MySQL server successfully
+[24-Apr-2025 16:58:47 Europe/Berlin] Database created/verified successfully
+[24-Apr-2025 16:58:47 Europe/Berlin] Database selected successfully
+[24-Apr-2025 16:58:47 Europe/Berlin] Users table created/verified successfully
+[24-Apr-2025 16:58:47 Europe/Berlin] Emergency requests table created/verified successfully
+[24-Apr-2025 16:58:47 Europe/Berlin] Appointments table created/verified successfully
+[24-Apr-2025 16:58:47 Europe/Berlin] Database connection and setup completed successfully
+[24-Apr-2025 16:58:51 Europe/Berlin] Attempting to connect to MySQL server
+[24-Apr-2025 16:58:51 Europe/Berlin] MySQL server is running
+[24-Apr-2025 16:58:51 Europe/Berlin] Connected to MySQL server successfully
+[24-Apr-2025 16:58:51 Europe/Berlin] Database created/verified successfully
+[24-Apr-2025 16:58:51 Europe/Berlin] Database selected successfully
+[24-Apr-2025 16:58:51 Europe/Berlin] Users table created/verified successfully
+[24-Apr-2025 16:58:51 Europe/Berlin] Emergency requests table created/verified successfully
+[24-Apr-2025 16:58:51 Europe/Berlin] Appointments table created/verified successfully
+[24-Apr-2025 16:58:51 Europe/Berlin] Database connection and setup completed successfully
+[24-Apr-2025 16:58:51 Europe/Berlin] Attempting to connect to MySQL server
+[24-Apr-2025 16:58:51 Europe/Berlin] MySQL server is running
+[24-Apr-2025 16:58:51 Europe/Berlin] Connected to MySQL server successfully
+[24-Apr-2025 16:58:51 Europe/Berlin] Database created/verified successfully
+[24-Apr-2025 16:58:51 Europe/Berlin] Database selected successfully
+[24-Apr-2025 16:58:51 Europe/Berlin] Users table created/verified successfully
+[24-Apr-2025 16:58:51 Europe/Berlin] Emergency requests table created/verified successfully
+[24-Apr-2025 16:58:51 Europe/Berlin] Appointments table created/verified successfully
+[24-Apr-2025 16:58:51 Europe/Berlin] Database connection and setup completed successfully
+[24-Apr-2025 16:58:53 Europe/Berlin] Attempting to connect to MySQL server
+[24-Apr-2025 16:58:53 Europe/Berlin] MySQL server is running
+[24-Apr-2025 16:58:53 Europe/Berlin] Connected to MySQL server successfully
+[24-Apr-2025 16:58:53 Europe/Berlin] Database created/verified successfully
+[24-Apr-2025 16:58:53 Europe/Berlin] Database selected successfully
+[24-Apr-2025 16:58:53 Europe/Berlin] Users table created/verified successfully
+[24-Apr-2025 16:58:53 Europe/Berlin] Emergency requests table created/verified successfully
+[24-Apr-2025 16:58:53 Europe/Berlin] Appointments table created/verified successfully
+[24-Apr-2025 16:58:53 Europe/Berlin] Database connection and setup completed successfully
+[24-Apr-2025 16:58:53 Europe/Berlin] Attempting to connect to MySQL server
+[24-Apr-2025 16:58:53 Europe/Berlin] MySQL server is running
+[24-Apr-2025 16:58:53 Europe/Berlin] Connected to MySQL server successfully
+[24-Apr-2025 16:58:53 Europe/Berlin] Database created/verified successfully
+[24-Apr-2025 16:58:53 Europe/Berlin] Database selected successfully
+[24-Apr-2025 16:58:53 Europe/Berlin] Users table created/verified successfully
+[24-Apr-2025 16:58:53 Europe/Berlin] Emergency requests table created/verified successfully
+[24-Apr-2025 16:58:53 Europe/Berlin] Appointments table created/verified successfully
+[24-Apr-2025 16:58:53 Europe/Berlin] Database connection and setup completed successfully
+[24-Apr-2025 16:58:55 Europe/Berlin] Attempting to connect to MySQL server
+[24-Apr-2025 16:58:55 Europe/Berlin] MySQL server is running
+[24-Apr-2025 16:58:55 Europe/Berlin] Connected to MySQL server successfully
+[24-Apr-2025 16:58:55 Europe/Berlin] Database created/verified successfully
+[24-Apr-2025 16:58:55 Europe/Berlin] Database selected successfully
+[24-Apr-2025 16:58:55 Europe/Berlin] Users table created/verified successfully
+[24-Apr-2025 16:58:55 Europe/Berlin] Emergency requests table created/verified successfully
+[24-Apr-2025 16:58:55 Europe/Berlin] Appointments table created/verified successfully
+[24-Apr-2025 16:58:55 Europe/Berlin] Database connection and setup completed successfully
+[24-Apr-2025 16:58:55 Europe/Berlin] Attempting to connect to MySQL server
+[24-Apr-2025 16:58:55 Europe/Berlin] MySQL server is running
+[24-Apr-2025 16:58:55 Europe/Berlin] Connected to MySQL server successfully
+[24-Apr-2025 16:58:55 Europe/Berlin] Database created/verified successfully
+[24-Apr-2025 16:58:55 Europe/Berlin] Database selected successfully
+[24-Apr-2025 16:58:55 Europe/Berlin] Users table created/verified successfully
+[24-Apr-2025 16:58:55 Europe/Berlin] Emergency requests table created/verified successfully
+[24-Apr-2025 16:58:55 Europe/Berlin] Appointments table created/verified successfully
+[24-Apr-2025 16:58:55 Europe/Berlin] Database connection and setup completed successfully
+[24-Apr-2025 16:58:58 Europe/Berlin] Attempting to connect to MySQL server
+[24-Apr-2025 16:58:58 Europe/Berlin] MySQL server is running
+[24-Apr-2025 16:58:58 Europe/Berlin] Connected to MySQL server successfully
+[24-Apr-2025 16:58:58 Europe/Berlin] Database created/verified successfully
+[24-Apr-2025 16:58:58 Europe/Berlin] Database selected successfully
+[24-Apr-2025 16:58:58 Europe/Berlin] Users table created/verified successfully
+[24-Apr-2025 16:58:58 Europe/Berlin] Emergency requests table created/verified successfully
+[24-Apr-2025 16:58:58 Europe/Berlin] Appointments table created/verified successfully
+[24-Apr-2025 16:58:58 Europe/Berlin] Database connection and setup completed successfully
+[24-Apr-2025 16:58:58 Europe/Berlin] Attempting to connect to MySQL server
+[24-Apr-2025 16:58:58 Europe/Berlin] MySQL server is running
+[24-Apr-2025 16:58:58 Europe/Berlin] Connected to MySQL server successfully
+[24-Apr-2025 16:58:58 Europe/Berlin] Database created/verified successfully
+[24-Apr-2025 16:58:58 Europe/Berlin] Database selected successfully
+[24-Apr-2025 16:58:58 Europe/Berlin] Users table created/verified successfully
+[24-Apr-2025 16:58:58 Europe/Berlin] Emergency requests table created/verified successfully
+[24-Apr-2025 16:58:58 Europe/Berlin] Appointments table created/verified successfully
+[24-Apr-2025 16:58:58 Europe/Berlin] Database connection and setup completed successfully
+[24-Apr-2025 16:58:58 Europe/Berlin] Attempting to connect to MySQL server
+[24-Apr-2025 16:58:58 Europe/Berlin] MySQL server is running
+[24-Apr-2025 16:58:58 Europe/Berlin] Connected to MySQL server successfully
+[24-Apr-2025 16:58:58 Europe/Berlin] Database created/verified successfully
+[24-Apr-2025 16:58:58 Europe/Berlin] Database selected successfully
+[24-Apr-2025 16:58:58 Europe/Berlin] Users table created/verified successfully
+[24-Apr-2025 16:58:58 Europe/Berlin] Emergency requests table created/verified successfully
+[24-Apr-2025 16:58:58 Europe/Berlin] Appointments table created/verified successfully
+[24-Apr-2025 16:58:58 Europe/Berlin] Database connection and setup completed successfully
+[24-Apr-2025 16:58:58 Europe/Berlin] Attempting to connect to MySQL server
+[24-Apr-2025 16:58:58 Europe/Berlin] MySQL server is running
+[24-Apr-2025 16:58:58 Europe/Berlin] Connected to MySQL server successfully
+[24-Apr-2025 16:58:58 Europe/Berlin] Database created/verified successfully
+[24-Apr-2025 16:58:58 Europe/Berlin] Database selected successfully
+[24-Apr-2025 16:58:58 Europe/Berlin] Users table created/verified successfully
+[24-Apr-2025 16:58:58 Europe/Berlin] Emergency requests table created/verified successfully
+[24-Apr-2025 16:58:58 Europe/Berlin] Appointments table created/verified successfully
+[24-Apr-2025 16:58:58 Europe/Berlin] Database connection and setup completed successfully
+[24-Apr-2025 16:58:58 Europe/Berlin] Attempting to connect to MySQL server
+[24-Apr-2025 16:58:58 Europe/Berlin] MySQL server is running
+[24-Apr-2025 16:58:58 Europe/Berlin] Connected to MySQL server successfully
+[24-Apr-2025 16:58:58 Europe/Berlin] Database created/verified successfully
+[24-Apr-2025 16:58:58 Europe/Berlin] Database selected successfully
+[24-Apr-2025 16:58:58 Europe/Berlin] Users table created/verified successfully
+[24-Apr-2025 16:58:58 Europe/Berlin] Emergency requests table created/verified successfully
+[24-Apr-2025 16:58:58 Europe/Berlin] Appointments table created/verified successfully
+[24-Apr-2025 16:58:58 Europe/Berlin] Database connection and setup completed successfully

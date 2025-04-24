@@ -32,14 +32,14 @@ try {
     // Get and sanitize form data
     $name = isset($data['name']) ? trim($data['name']) : '';
     $phone = isset($data['phone']) ? preg_replace('/\D/', '', $data['phone']) : ''; // Remove non-digits
-    $favorite_number = isset($data['favorite_number']) ? intval($data['favorite_number']) : null;
+    $email = isset($data['email']) ? trim($data['email']) : '';
     $password = isset($data['password']) ? $data['password'] : '';
 
     // Log registration attempt
-    error_log("Registration attempt - Name: $name, Phone: $phone, Favorite number: $favorite_number");
+    error_log("Registration attempt - Name: $name, Phone: $phone, Email: $email");
 
     // Validate input
-    if (empty($name) || empty($phone) || empty($password) || $favorite_number === null) {
+    if (empty($name) || empty($phone) || empty($email) || empty($password)) {
         throw new Exception("Please fill in all fields");
     }
 
@@ -47,14 +47,14 @@ try {
         throw new Exception("Password must be at least 6 characters long");
     }
 
-    // Validate favorite number
-    if ($favorite_number < 1 || $favorite_number > 100) {
-        throw new Exception("Favorite number must be between 1 and 100");
-    }
-
     // Validate phone number format
     if (!preg_match('/^[0-9]{10}$/', $phone)) {
         throw new Exception("Please enter a valid 10-digit phone number");
+    }
+    
+    // Validate email format
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        throw new Exception("Please enter a valid email address");
     }
 
     // Check if phone already exists
@@ -76,18 +76,67 @@ try {
     }
     $stmt->close();
 
+    // First check if email column exists
+    $email_column_exists = false;
+    $check_email_column = $conn->query("SHOW COLUMNS FROM users LIKE 'email'");
+    if ($check_email_column && $check_email_column->num_rows > 0) {
+        $email_column_exists = true;
+        
+        // Only check for duplicate email if the column exists
+        $stmt = $conn->prepare("SELECT id FROM users WHERE email = ?");
+        if (!$stmt) {
+            error_log("Database error (prepare): " . $conn->error);
+            throw new Exception("Database error: " . $conn->error);
+        }
+
+        $stmt->bind_param("s", $email);
+        if (!$stmt->execute()) {
+            error_log("Database error (execute): " . $stmt->error);
+            throw new Exception("Database error: " . $stmt->error);
+        }
+
+        $result = $stmt->get_result();
+        if ($result->num_rows > 0) {
+            throw new Exception("Email already registered");
+        }
+        $stmt->close();
+    } else {
+        // Add email column if it doesn't exist
+        error_log("Email column does not exist, attempting to add it");
+        if (!$conn->query("ALTER TABLE users ADD COLUMN email VARCHAR(100) AFTER phone")) {
+            error_log("Error adding email column: " . $conn->error);
+            // Continue even if we can't add the column
+        } else {
+            error_log("Email column added successfully");
+            $email_column_exists = true;
+        }
+    }
+
     // Hash password
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-    // Insert user
-    $stmt = $conn->prepare("INSERT INTO users (name, phone, password, favorite_number, role) VALUES (?, ?, ?, ?, 'user')");
-    if (!$stmt) {
-        error_log("Database error (prepare insert): " . $conn->error);
-        throw new Exception("Database error: " . $conn->error);
-    }
+    // Prepare the insert statement based on whether email column exists
+    if ($email_column_exists) {
+        // Insert user with email
+        $stmt = $conn->prepare("INSERT INTO users (name, phone, email, password, role) VALUES (?, ?, ?, ?, 'user')");
+        if (!$stmt) {
+            error_log("Database error (prepare insert): " . $conn->error);
+            throw new Exception("Database error: " . $conn->error);
+        }
 
-    // Properly bind parameters
-    $stmt->bind_param("sssi", $name, $phone, $hashed_password, $favorite_number);
+        // Properly bind parameters
+        $stmt->bind_param("ssss", $name, $phone, $email, $hashed_password);
+    } else {
+        // Insert user without email
+        $stmt = $conn->prepare("INSERT INTO users (name, phone, password, role) VALUES (?, ?, ?, 'user')");
+        if (!$stmt) {
+            error_log("Database error (prepare insert): " . $conn->error);
+            throw new Exception("Database error: " . $conn->error);
+        }
+
+        // Properly bind parameters
+        $stmt->bind_param("sss", $name, $phone, $hashed_password);
+    }
     
     if (!$stmt->execute()) {
         error_log("Database error (execute insert): " . $stmt->error);

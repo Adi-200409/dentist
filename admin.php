@@ -1530,7 +1530,7 @@ $stmt->close();
                                     <td>${user.role || 'User'}</td>
                                     <td>${new Date(user.created_at).toLocaleDateString()}</td>
                                     <td>
-                                        <button class="action-btn" onclick="deleteUser(${user.id})" title="Delete User">
+                                        <button class="action-btn" onclick="deleteUser(${user.id}, ${user.role === 'admin'})" title="Delete User">
                                             <i class="fas fa-trash"></i>
                                         </button>
                                     </td>
@@ -1844,15 +1844,22 @@ $stmt->close();
             });
         }
 
-        function deleteUser(id) {
-            showCustomConfirm('Are you sure you want to delete this user? This action cannot be undone.', (confirmed) => {
+        function deleteUser(id, isAdmin = false) {
+            const confirmMessage = isAdmin 
+                ? 'You are about to delete an ADMIN account. This action cannot be undone. Are you absolutely sure?' 
+                : 'Are you sure you want to delete this user? This action cannot be undone.';
+            
+            showCustomConfirm(confirmMessage, (confirmed) => {
                 if (confirmed) {
                     fetch('delete_user.php', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',
                         },
-                        body: JSON.stringify({ id: id })
+                        body: JSON.stringify({ 
+                            id: id,
+                            force_delete: isAdmin
+                        })
                     })
                     .then(response => response.json())
                     .then(data => {

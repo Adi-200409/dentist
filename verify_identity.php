@@ -8,31 +8,26 @@ try {
     // Get JSON data
     $data = json_decode(file_get_contents('php://input'), true);
     
-    if (!isset($data['phone']) || !isset($data['favorite_number'])) {
-        throw new Exception('Missing required fields');
+    if (!isset($data['phone'])) {
+        throw new Exception('Missing phone number');
     }
 
     $phone = $data['phone'];
-    $favorite_number = $data['favorite_number'];
 
     // Validate phone number format
     if (!preg_match('/^[0-9]{10}$/', $phone)) {
         throw new Exception('Invalid phone number format');
     }
 
-    // Validate favorite number
-    if (!is_numeric($favorite_number) || $favorite_number < 1 || $favorite_number > 100) {
-        throw new Exception('Invalid favorite number');
-    }
-
-    // Check if user exists and favorite number matches
-    $stmt = $conn->prepare("SELECT id FROM users WHERE phone = ? AND favorite_number = ?");
-    $stmt->bind_param("si", $phone, $favorite_number);
+    // Just check if user exists with this phone number
+    $stmt = $conn->prepare("SELECT id, name FROM users WHERE phone = ?");
+    $stmt->bind_param("s", $phone);
+    
     $stmt->execute();
     $result = $stmt->get_result();
 
     if ($result->num_rows === 0) {
-        throw new Exception('Invalid phone number or favorite number');
+        throw new Exception('User not found with this phone number');
     }
 
     $user = $result->fetch_assoc();
@@ -42,7 +37,8 @@ try {
     
     echo json_encode([
         'success' => true,
-        'message' => 'Identity verified successfully'
+        'message' => 'Identity verified successfully',
+        'name' => $user['name']
     ]);
 
 } catch (Exception $e) {
