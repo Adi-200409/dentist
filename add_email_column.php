@@ -1,44 +1,62 @@
 <?php
+// Enable error reporting
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+// Connect to database
 require_once 'conn.php';
 
-// Set error reporting
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-ini_set('log_errors', 1);
-ini_set('error_log', 'db_error.log');
+echo "<h1>Add Email Column to Users Table</h1>";
 
-try {
-    echo "<h1>Adding Email Column to Users Table</h1>";
+// Check if email column already exists
+$result = $conn->query("SHOW COLUMNS FROM users LIKE 'email'");
+$exists = ($result->num_rows > 0);
+
+if ($exists) {
+    echo "<p>Email column already exists in users table.</p>";
+} else {
+    // Add email column
+    $sql = "ALTER TABLE users ADD COLUMN email VARCHAR(255) AFTER phone";
     
-    // Check if email column exists
-    $check_email_column = "SHOW COLUMNS FROM users LIKE 'email'";
-    $result = $conn->query($check_email_column);
-    
-    if ($result && $result->num_rows === 0) {
-        // Add email column if it doesn't exist
-        $add_email_column = "ALTER TABLE users 
-            ADD COLUMN email VARCHAR(100) AFTER phone,
-            ADD UNIQUE KEY unique_email (email)";
+    if ($conn->query($sql) === TRUE) {
+        echo "<p>Email column added successfully.</p>";
         
-        if ($conn->query($add_email_column)) {
-            echo "<p style='color:green'>✅ Email column added successfully to users table</p>";
-            error_log("Email column added successfully to users table");
+        // Update existing users with dummy email
+        $updateSql = "UPDATE users SET email = CONCAT(name, '_', id, '@example.com') WHERE email IS NULL";
+        if ($conn->query($updateSql) === TRUE) {
+            echo "<p>Default email values added to existing users.</p>";
         } else {
-            throw new Exception("Error adding email column: " . $conn->error);
+            echo "<p>Error updating users with default email: " . $conn->error . "</p>";
         }
     } else {
-        echo "<p style='color:blue'>ℹ️ Email column already exists in users table</p>";
-        error_log("Email column already exists in users table");
-    }
-    
-    echo "<p>You can now <a href='login.html'>return to the login page</a>.</p>";
-    
-} catch (Exception $e) {
-    echo "<p style='color:red'>⚠️ Error: " . $e->getMessage() . "</p>";
-    error_log("Error in add_email_column.php: " . $e->getMessage());
-} finally {
-    if (isset($conn)) {
-        $conn->close();
+        echo "<p>Error adding email column: " . $conn->error . "</p>";
     }
 }
+
+// Show the updated table structure
+echo "<h2>Users Table Structure</h2>";
+$result = $conn->query("DESCRIBE users");
+
+if ($result->num_rows > 0) {
+    echo "<table border='1'>";
+    echo "<tr><th>Field</th><th>Type</th><th>Null</th><th>Key</th><th>Default</th><th>Extra</th></tr>";
+    
+    while($row = $result->fetch_assoc()) {
+        echo "<tr>";
+        echo "<td>" . $row["Field"] . "</td>";
+        echo "<td>" . $row["Type"] . "</td>";
+        echo "<td>" . $row["Null"] . "</td>";
+        echo "<td>" . $row["Key"] . "</td>";
+        echo "<td>" . $row["Default"] . "</td>";
+        echo "<td>" . $row["Extra"] . "</td>";
+        echo "</tr>";
+    }
+    
+    echo "</table>";
+} else {
+    echo "<p>No results</p>";
+}
+
+$conn->close();
 ?> 

@@ -230,3 +230,45 @@
 [24-Apr-2025 16:53:54 Europe/Berlin] Email column does not exist, attempting to add it
 [24-Apr-2025 16:53:54 Europe/Berlin] Email column added successfully
 [24-Apr-2025 16:53:55 Europe/Berlin] Registration successful for phone: 9148074307
+[26-Apr-2025 07:31:50 Europe/Berlin] Request method: POST
+[26-Apr-2025 07:31:50 Europe/Berlin] Raw request data: {"name":"ADITYA","phone":"9148074307","email":"adityap4til@gmail.com","password":"Admin123"}
+[26-Apr-2025 07:31:50 Europe/Berlin] Decoded data: Array
+(
+    [name] => ADITYA
+    [phone] => 9148074307
+    [email] => adityap4til@gmail.com
+    [password] => Admin123
+)
+
+[26-Apr-2025 07:31:50 Europe/Berlin] Registration attempt - Name: ADITYA, Phone: 9148074307, Email: adityap4til@gmail.com
+[26-Apr-2025 07:31:50 Europe/Berlin] Email column does not exist, attempting to add it
+[26-Apr-2025 07:31:50 Europe/Berlin] Email column added successfully
+[26-Apr-2025 07:31:50 Europe/Berlin] Registration successful for phone: 9148074307
+[26-Apr-2025 09:13:13 Europe/Berlin] Request method: POST
+[26-Apr-2025 09:13:13 Europe/Berlin] Raw request data: {"name":"nutan holi","phone":"8147527902","email":"nutanholi963@gmail.com","password":"Nu123456"}
+[26-Apr-2025 09:13:13 Europe/Berlin] Decoded data: Array
+(
+    [name] => nutan holi
+    [phone] => 8147527902
+    [email] => nutanholi963@gmail.com
+    [password] => Nu123456
+)
+
+[26-Apr-2025 09:13:13 Europe/Berlin] Registration attempt - Name: nutan holi, Phone: 8147527902, Email: nutanholi963@gmail.com
+[26-Apr-2025 09:13:13 Europe/Berlin] Email column does not exist, attempting to add it
+[26-Apr-2025 09:13:13 Europe/Berlin] Email column added successfully
+[26-Apr-2025 09:13:13 Europe/Berlin] Registration successful for phone: 8147527902
+[27-Apr-2025 19:42:02 Europe/Berlin] Request method: POST
+[27-Apr-2025 19:42:02 Europe/Berlin] Raw request data: {"name":"ADITYA","phone":"9990113968","email":"adityap4til@gmail.com","password":"Aa123456"}
+[27-Apr-2025 19:42:02 Europe/Berlin] Decoded data: Array
+(
+    [name] => ADITYA
+    [phone] => 9990113968
+    [email] => adityap4til@gmail.com
+    [password] => Aa123456
+)
+
+[27-Apr-2025 19:42:02 Europe/Berlin] Registration attempt - Name: ADITYA, Phone: 9990113968, Email: adityap4til@gmail.com
+[27-Apr-2025 19:42:02 Europe/Berlin] Email column does not exist, attempting to add it
+[27-Apr-2025 19:42:02 Europe/Berlin] Email column added successfully
+[27-Apr-2025 19:42:02 Europe/Berlin] Registration successful for phone: 9990113968

@@ -10,7 +10,17 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
 
 // Get user info
 $user_id = $_SESSION['user_id'];
-$stmt = $conn->prepare("SELECT name, phone, created_at FROM users WHERE id = ?");
+
+// Check if email field exists in users table
+$result = $conn->query("SHOW COLUMNS FROM users LIKE 'email'");
+$hasEmailField = ($result->num_rows > 0);
+
+if ($hasEmailField) {
+    $stmt = $conn->prepare("SELECT name, phone, email, created_at FROM users WHERE id = ?");
+} else {
+    $stmt = $conn->prepare("SELECT name, phone, created_at FROM users WHERE id = ?");
+}
+
 $stmt->bind_param("i", $user_id);
 $stmt->execute();
 $result = $stmt->get_result();
@@ -283,7 +293,6 @@ $stmt->close();
         .filter-btn.active {
             background: var(--primary-color);
             color: white;
-            border-color: var(--primary-color);
         }
 
         table {
@@ -352,41 +361,90 @@ $stmt->close();
             color: #991b1b;
         }
 
-        /* Settings Styles */
+        /* Settings Section Styling */
+        .settings-tabs {
+            display: flex;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            overflow-x: auto;
+            padding-bottom: 0.25rem;
+            gap: 0.5rem;
+        }
+
+        .settings-tab {
+            background: transparent;
+            border: none;
+            padding: 0.75rem 1.25rem;
+            cursor: pointer;
+            font-weight: 500;
+            color: #6c757d;
+            border-radius: 8px 8px 0 0;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .settings-tab:hover {
+            color: #007bff;
+            background-color: rgba(13, 110, 253, 0.05);
+        }
+
+        .settings-tab.active {
+            color: #007bff;
+            background-color: rgba(13, 110, 253, 0.1);
+            border-bottom: 3px solid #007bff;
+        }
+
+        .settings-tab i {
+            margin-right: 6px;
+        }
+
         .settings-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: 1fr;
             gap: 1.5rem;
-            margin-top: 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .settings-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
 
         .settings-card {
-            background: white;
-            border-radius: 0.75rem;
-            box-shadow: var(--card-shadow);
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
             padding: 1.5rem;
-            border: 1px solid var(--border-color);
             transition: all 0.3s ease;
+            border: 1px solid rgba(0,0,0,0.05);
+            height: fit-content;
         }
 
         .settings-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+            transform: translateY(-2px);
         }
 
         .settings-card h4 {
-            color: var(--text-color);
-            font-size: 1.125rem;
-            font-weight: 600;
-            margin-bottom: 1.25rem;
+            color: #333;
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
             display: flex;
             align-items: center;
-            gap: 0.75rem;
+            position: relative;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
         }
 
         .settings-card h4 i {
-            color: var(--primary-color);
-            font-size: 1.25rem;
+            color: #007bff;
+            margin-right: 0.5rem;
+            font-size: 1.2rem;
         }
 
         .settings-form {
@@ -395,68 +453,172 @@ $stmt->close();
             gap: 1rem;
         }
 
-        .form-group {
+        .form-row {
             display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .form-row .form-group {
+            flex: 1 1 220px;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
         }
 
         .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
             font-weight: 500;
-            color: var(--text-color);
-            font-size: 0.875rem;
+            color: #555;
+            font-size: 0.9rem;
         }
 
-        .form-group input,
-        .form-group select {
-            padding: 0.75rem;
-            border: 1px solid var(--border-color);
-            border-radius: 0.5rem;
-            font-size: 0.875rem;
+        .form-group input, 
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.65rem 1rem;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            font-family: inherit;
+            font-size: 0.95rem;
             transition: all 0.2s;
         }
 
-        .form-group input:focus,
-        .form-group select:focus {
+        .form-group textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .form-group input:focus, 
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: #007bff;
             outline: none;
-            border-color: var(--primary-color);
-            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
         }
 
-        .checkbox-group {
-            flex-direction: row;
-            align-items: center;
-            gap: 0.75rem;
+        .input-with-icon {
+            position: relative;
         }
 
-        .checkbox-group input[type="checkbox"] {
-            width: 1.25rem;
-            height: 1.25rem;
-            border-radius: 0.25rem;
-            border: 1px solid var(--border-color);
-            cursor: pointer;
+        .input-with-icon label i {
+            color: #007bff;
+            margin-right: 0.25rem;
         }
 
-        .checkbox-group label {
-            margin: 0;
-            cursor: pointer;
+        .help-text {
+            color: #6c757d;
+            font-size: 0.8rem;
+            margin-top: 0.25rem;
+            margin-bottom: 0;
         }
 
-        .btn-primary {
-            background: var(--primary-color);
-            color: white;
-            border: none;
-            padding: 0.75rem 1.25rem;
-            border-radius: 0.5rem;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.2s;
+        .form-actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 1rem;
             margin-top: 1rem;
         }
 
+        .btn-primary, .btn-secondary {
+            padding: 0.6rem 1.25rem;
+            border-radius: 8px;
+            border: none;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: #007bff;
+            color: white;
+        }
+
         .btn-primary:hover {
-            background: var(--primary-dark);
-            transform: translateY(-1px);
+            background: #0069d9;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+        }
+
+        .btn-secondary {
+            background: #f8f9fa;
+            color: #6c757d;
+            border: 1px solid #ddd;
+        }
+
+        .btn-secondary:hover {
+            background: #e9ecef;
+            color: #495057;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            margin: 0;
+        }
+
+        .checkbox-group label {
+            margin-bottom: 0;
+            cursor: pointer;
+        }
+
+        .blocked-dates-list {
+            max-height: 200px;
+            overflow-y: auto;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .blocked-date-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem;
+            background: #f8f9fa;
+            border-radius: 6px;
+            margin-bottom: 0.5rem;
+        }
+
+        .blocked-date-item .date-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blocked-date-item .date {
+            font-weight: 500;
+        }
+
+        .blocked-date-item .reason {
+            font-size: 0.85rem;
+            color: #6c757d;
+        }
+
+        .blocked-date-item .delete-date {
+            color: #dc3545;
+            cursor: pointer;
+            padding: 0.25rem;
+            border-radius: 4px;
+            transition: all 0.2s;
+        }
+
+        .blocked-date-item .delete-date:hover {
+            background: rgba(220, 53, 69, 0.1);
         }
 
         @media (max-width: 1024px) {
@@ -561,57 +723,94 @@ $stmt->close();
 
         /* Emergency Section Styles - Updated */
         .emergency-section {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            background: linear-gradient(135deg, #1e1f21 0%, #2d3436 100%);
             border-radius: 1.5rem;
-            padding: 2rem;
+            padding: 2.5rem;
             margin-bottom: 2rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .emergency-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIgdmlld0JveD0iMCAwIDUwIDUwIj48cGF0aCBmaWxsPSIjZmZmZmZmIiBmaWxsLW9wYWNpdHk9IjAuMDMiIGQ9Ik0xMiAxM2gxdjFoLTF6TTEzIDEzaDJ2MWgtMnpNMTUgMTNoMXYxaC0xek0xNiAxM2gxdjFoLTF6Ii8+PC9zdmc+');
+            opacity: 0.3;
+            z-index: 1;
         }
 
         .emergency-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 2rem;
-            padding-bottom: 1rem;
-            border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+            margin-bottom: 2.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            z-index: 2;
         }
 
         .emergency-title {
             display: flex;
             align-items: center;
-            gap: 1rem;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #343a40;
+            gap: 1.25rem;
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .emergency-title i {
-            color: #e74c3c;
-            font-size: 2rem;
-            background: rgba(231, 76, 60, 0.1);
-            padding: 0.75rem;
+            color: #ff3b30;
+            font-size: 2.25rem;
+            background: rgba(255, 59, 48, 0.15);
+            padding: 1rem;
             border-radius: 1rem;
+            box-shadow: 0 8px 20px rgba(255, 59, 48, 0.25);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(255, 59, 48, 0.4);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(255, 59, 48, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(255, 59, 48, 0);
+            }
         }
 
         .emergency-filters {
             display: flex;
             gap: 0.75rem;
             flex-wrap: wrap;
+            position: relative;
+            z-index: 2;
         }
 
         .emergency-filter {
-            padding: 0.75rem 1.25rem;
-            border-radius: 0.75rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4rem;
             font-weight: 600;
             font-size: 0.9rem;
             cursor: pointer;
             transition: all 0.3s ease;
             display: flex;
             align-items: center;
-            gap: 0.5rem;
-            background: white;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            gap: 0.75rem;
+            background: rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
         }
 
         .emergency-filter i {
@@ -619,33 +818,40 @@ $stmt->close();
         }
 
         .emergency-filter.active {
-            background: #e74c3c;
+            background: #ff3b30;
             color: white;
+            border-color: #ff3b30;
+            box-shadow: 0 8px 15px rgba(255, 59, 48, 0.25);
         }
 
         .emergency-filter:hover:not(.active) {
             transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            background: rgba(255, 255, 255, 0.15);
+            color: rgba(255, 255, 255, 0.9);
         }
 
         .emergency-stats {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 1.5rem;
-            margin-bottom: 2rem;
+            margin-bottom: 2.5rem;
+            position: relative;
+            z-index: 2;
         }
 
         .emergency-stat {
-            background: white;
+            background: rgba(255, 255, 255, 0.05);
             border-radius: 1rem;
-            padding: 1.5rem;
+            padding: 1.75rem;
             display: flex;
             align-items: center;
-            gap: 1.25rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            gap: 1.5rem;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
         }
 
         .emergency-stat::before {
@@ -654,85 +860,120 @@ $stmt->close();
             top: 0;
             left: 0;
             width: 100%;
-            height: 4px;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
+            z-index: -1;
         }
 
-        .emergency-stat.pending::before {
-            background: linear-gradient(90deg, #f39c12, #f1c40f);
+        .emergency-stat.pending {
+            border-left: 4px solid #ff9500;
         }
 
-        .emergency-stat.in-progress::before {
-            background: linear-gradient(90deg, #3498db, #2980b9);
+        .emergency-stat.in-progress {
+            border-left: 4px solid #007aff;
         }
 
-        .emergency-stat.completed::before {
-            background: linear-gradient(90deg, #2ecc71, #27ae60);
+        .emergency-stat.completed {
+            border-left: 4px solid #34c759;
         }
 
         .emergency-stat:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+            background: rgba(255, 255, 255, 0.08);
         }
 
         .stat-icon {
-            width: 3.5rem;
-            height: 3.5rem;
-            border-radius: 1rem;
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
+            font-size: 1.75rem;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
         }
 
         .stat-icon.pending {
-            background: rgba(243, 156, 18, 0.1);
-            color: #f39c12;
+            background: rgba(255, 149, 0, 0.15);
+            color: #ff9500;
         }
 
         .stat-icon.in-progress {
-            background: rgba(52, 152, 219, 0.1);
-            color: #3498db;
+            background: rgba(0, 122, 255, 0.15);
+            color: #007aff;
         }
 
         .stat-icon.completed {
-            background: rgba(46, 204, 113, 0.1);
-            color: #2ecc71;
+            background: rgba(52, 199, 89, 0.15);
+            color: #34c759;
         }
 
-        .stat-info {
+        .stat-data {
             flex: 1;
         }
 
-        .stat-value {
-            font-size: 2rem;
-            font-weight: 700;
-            color: #2c3e50;
-            line-height: 1;
+        .stat-data h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.7);
             margin-bottom: 0.5rem;
         }
 
-        .stat-label {
-            font-size: 0.9rem;
-            color: #7f8c8d;
-            font-weight: 500;
+        .stat-data p {
+            font-size: 2.25rem;
+            font-weight: 800;
+            color: #fff;
+            line-height: 1;
+            margin: 0;
         }
 
         .emergency-list {
             display: grid;
             gap: 1.5rem;
+            position: relative;
+            z-index: 2;
         }
 
         .emergency-card {
-            background: white;
+            background: rgba(255, 255, 255, 0.05);
             border-radius: 1rem;
-            padding: 1.5rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            padding: 1.75rem;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
             display: grid;
             grid-template-columns: 1fr auto;
             gap: 1.5rem;
             position: relative;
             overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .emergency-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            opacity: 1;
+        }
+
+        .emergency-card.pending::before {
+            background: #ff9500;
+        }
+
+        .emergency-card.in_progress::before {
+            background: #007aff;
+        }
+
+        .emergency-card.completed::before {
+            background: #34c759;
+        }
+
+        .emergency-card.cancelled::before {
+            background: #ff3b30;
         }
 
         .emergency-card::after {
@@ -743,77 +984,78 @@ $stmt->close();
             width: 0;
             height: 0;
             border-style: solid;
-            border-width: 0 3rem 3rem 0;
+            border-width: 0 4rem 4rem 0;
             opacity: 0.1;
         }
 
         .emergency-card.pending::after {
-            border-color: transparent #f39c12 transparent transparent;
+            border-color: transparent #ff9500 transparent transparent;
         }
 
-        .emergency-card.in-progress::after {
-            border-color: transparent #3498db transparent transparent;
+        .emergency-card.in_progress::after {
+            border-color: transparent #007aff transparent transparent;
         }
 
         .emergency-card.completed::after {
-            border-color: transparent #2ecc71 transparent transparent;
+            border-color: transparent #34c759 transparent transparent;
+        }
+
+        .emergency-card.cancelled::after {
+            border-color: transparent #ff3b30 transparent transparent;
         }
 
         .emergency-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+            background: rgba(255, 255, 255, 0.08);
         }
 
-        .emergency-content {
-            display: grid;
-            gap: 1rem;
-        }
-
-        .emergency-top {
+        .emergency-header {
             display: flex;
             justify-content: space-between;
-            align-items: flex-start;
+            align-items: center;
+            margin-bottom: 1.25rem;
+            padding-bottom: 1.25rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        .emergency-patient {
+        .patient-info {
             display: flex;
             align-items: center;
             gap: 1rem;
         }
 
         .patient-avatar {
-            width: 3rem;
-            height: 3rem;
+            width: 3.5rem;
+            height: 3.5rem;
             border-radius: 50%;
-            background: #e74c3c;
-            color: white;
+            background: rgba(255, 59, 48, 0.15);
+            color: #fff;
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: 600;
+            font-size: 1.5rem;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .patient-details h3 {
+            font-weight: 700;
+            color: #fff;
             font-size: 1.25rem;
+            margin: 0 0 0.35rem 0;
         }
 
-        .patient-info {
-            display: grid;
-            gap: 0.25rem;
-        }
-
-        .patient-name {
-            font-weight: 600;
-            color: #2c3e50;
-            font-size: 1.1rem;
-        }
-
-        .patient-contact {
-            color: #7f8c8d;
-            font-size: 0.9rem;
+        .patient-details p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+            margin: 0;
             display: flex;
             align-items: center;
             gap: 0.5rem;
         }
 
-        .emergency-status {
+        .status-badge {
             padding: 0.5rem 1rem;
             border-radius: 2rem;
             font-size: 0.85rem;
@@ -821,113 +1063,117 @@ $stmt->close();
             display: flex;
             align-items: center;
             gap: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
-        .status-pending {
-            background: rgba(243, 156, 18, 0.1);
-            color: #f39c12;
+        .status-badge.pending {
+            background: rgba(255, 149, 0, 0.15);
+            color: #ff9500;
+            border: 1px solid rgba(255, 149, 0, 0.3);
         }
 
-        .status-in_progress {
-            background: rgba(52, 152, 219, 0.1);
-            color: #3498db;
+        .status-badge.in_progress {
+            background: rgba(0, 122, 255, 0.15);
+            color: #007aff;
+            border: 1px solid rgba(0, 122, 255, 0.3);
         }
 
-        .status-completed {
-            background: rgba(46, 204, 113, 0.1);
-            color: #2ecc71;
+        .status-badge.completed {
+            background: rgba(52, 199, 89, 0.15);
+            color: #34c759;
+            border: 1px solid rgba(52, 199, 89, 0.3);
         }
 
-        .status-cancelled {
-            background: rgba(231, 76, 60, 0.1);
-            color: #e74c3c;
+        .status-badge.cancelled {
+            background: rgba(255, 59, 48, 0.15);
+            color: #ff3b30;
+            border: 1px solid rgba(255, 59, 48, 0.3);
         }
 
-        .emergency-details {
+        .emergency-body {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            margin-top: 1rem;
-            padding-top: 1rem;
-            border-top: 1px solid rgba(0, 0, 0, 0.05);
+            gap: 1.25rem;
         }
 
         .detail-item {
             display: flex;
             align-items: center;
-            gap: 0.75rem;
+            gap: 1rem;
+            color: rgba(255, 255, 255, 0.8);
         }
 
-        .detail-icon {
+        .detail-item i {
             width: 2.5rem;
+            min-width: 2.5rem;
             height: 2.5rem;
             border-radius: 0.75rem;
-            background: rgba(231, 76, 60, 0.1);
-            color: #e74c3c;
+            background: rgba(255, 255, 255, 0.08);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1rem;
+            font-size: 1.15rem;
+            color: #fff;
         }
 
-        .detail-text {
-            display: grid;
-            gap: 0.25rem;
-        }
-
-        .detail-label {
-            font-size: 0.8rem;
-            color: #7f8c8d;
-        }
-
-        .detail-value {
-            font-weight: 600;
-            color: #2c3e50;
+        .detail-item span {
+            font-weight: 500;
+            line-height: 1.4;
         }
 
         .emergency-actions {
             display: flex;
             flex-direction: column;
-            gap: 0.75rem;
+            gap: 1rem;
             align-items: flex-end;
             justify-content: center;
         }
 
         .action-btn {
-            padding: 0.75rem 1.25rem;
+            padding: 0.85rem 1.5rem;
             border: none;
             border-radius: 0.75rem;
             font-weight: 600;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             cursor: pointer;
             transition: all 0.3s ease;
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.75rem;
             color: white;
-            min-width: 140px;
+            min-width: 150px;
             justify-content: center;
         }
 
         .action-btn i {
-            font-size: 1rem;
+            font-size: 1.1rem;
         }
 
-        .action-btn.progress {
-            background: #3498db;
+        .action-btn.accept {
+            background: linear-gradient(135deg, #007aff, #5856d6);
+            box-shadow: 0 8px 15px rgba(0, 122, 255, 0.25);
         }
 
         .action-btn.complete {
-            background: #2ecc71;
+            background: linear-gradient(135deg, #34c759, #32d74b);
+            box-shadow: 0 8px 15px rgba(52, 199, 89, 0.25);
         }
 
         .action-btn.cancel {
-            background: #e74c3c;
+            background: linear-gradient(135deg, #ff3b30, #ff453a);
+            box-shadow: 0 8px 15px rgba(255, 59, 48, 0.25);
         }
 
         .action-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .action-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
         }
 
         @media (max-width: 992px) {
@@ -938,9 +1184,9 @@ $stmt->close();
             .emergency-actions {
                 flex-direction: row;
                 justify-content: flex-start;
-                margin-top: 1rem;
-                padding-top: 1rem;
-                border-top: 1px solid rgba(0, 0, 0, 0.05);
+                margin-top: 1.5rem;
+                padding-top: 1.5rem;
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
             }
         }
 
@@ -956,10 +1202,6 @@ $stmt->close();
             }
 
             .emergency-stats {
-                grid-template-columns: 1fr;
-            }
-
-            .emergency-details {
                 grid-template-columns: 1fr;
             }
         }
@@ -1248,27 +1490,27 @@ $stmt->close();
                         <div class="stat-icon pending">
                             <i class="fas fa-clock"></i>
                         </div>
-                        <div class="stat-info">
-                            <div class="stat-value" id="pendingCount">0</div>
-                            <div class="stat-label">Pending Requests</div>
+                        <div class="stat-data">
+                            <h3>Pending</h3>
+                            <p id="pendingEmergencyCount">0</p>
                         </div>
                     </div>
                     <div class="emergency-stat in-progress">
                         <div class="stat-icon in-progress">
                             <i class="fas fa-spinner fa-spin"></i>
                         </div>
-                        <div class="stat-info">
-                            <div class="stat-value" id="inProgressCount">0</div>
-                            <div class="stat-label">In Progress</div>
+                        <div class="stat-data">
+                            <h3>In Progress</h3>
+                            <p id="inProgressEmergencyCount">0</p>
                         </div>
                     </div>
                     <div class="emergency-stat completed">
                         <div class="stat-icon completed">
                             <i class="fas fa-check-circle"></i>
                         </div>
-                        <div class="stat-info">
-                            <div class="stat-value" id="completedCount">0</div>
-                            <div class="stat-label">Completed Today</div>
+                        <div class="stat-data">
+                            <h3>Completed</h3>
+                            <p id="completedEmergencyCount">0</p>
                         </div>
                     </div>
                 </div>
@@ -1301,57 +1543,286 @@ $stmt->close();
         <div class="content-section" id="settings" style="display: none;">
             <div class="section-header">
                 <h3 class="section-title">System Settings</h3>
+                <p class="section-description">Configure your clinic settings and preferences</p>
             </div>
             
-            <div class="settings-container">
+            <div class="settings-tabs">
+                <button class="settings-tab active" data-tab="profile">
+                    <i class="fas fa-user-shield"></i> Profile
+                </button>
+                <button class="settings-tab" data-tab="appointments">
+                    <i class="fas fa-calendar-alt"></i> Appointments
+                </button>
+                <button class="settings-tab" data-tab="notifications">
+                    <i class="fas fa-bell"></i> Notifications
+                </button>
+                <button class="settings-tab" data-tab="system">
+                    <i class="fas fa-cogs"></i> System
+                </button>
+            </div>
+            
+            <div class="settings-container" id="profileSettings">
                 <div class="settings-card">
                     <h4><i class="fas fa-user-shield"></i> Admin Profile</h4>
                     <form id="adminProfileForm" class="settings-form">
-                        <div class="form-group">
-                            <label for="adminName">Name</label>
-                            <input type="text" id="adminName" name="name" value="<?php echo htmlspecialchars($user['name']); ?>" required>
+                        <div class="form-row">
+                            <div class="form-group input-with-icon">
+                                <label for="adminName"><i class="fas fa-user"></i> Name</label>
+                                <input type="text" id="adminName" name="name" value="<?php echo htmlspecialchars($user['name']); ?>" required>
+                            </div>
+                            <div class="form-group input-with-icon">
+                                <label for="adminPhone"><i class="fas fa-phone"></i> Phone</label>
+                                <input type="text" id="adminPhone" name="phone" value="<?php echo htmlspecialchars($user['phone']); ?>" required>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for="adminPhone">Phone</label>
-                            <input type="text" id="adminPhone" name="phone" value="<?php echo htmlspecialchars($user['phone']); ?>" required>
+                        <?php if (isset($hasEmailField) && $hasEmailField): ?>
+                        <div class="form-group input-with-icon">
+                            <label for="adminEmail"><i class="fas fa-envelope"></i> Email</label>
+                            <input type="email" id="adminEmail" name="email" value="<?php echo isset($user['email']) ? htmlspecialchars($user['email']) : ''; ?>">
+                            <p class="help-text">This email will be used for notifications and password recovery</p>
                         </div>
-                        <div class="form-group">
-                            <label for="adminPassword">New Password (leave blank to keep current)</label>
-                            <input type="password" id="adminPassword" name="password">
+                        <?php endif; ?>
+                        <div class="form-group input-with-icon">
+                            <label for="adminPassword"><i class="fas fa-lock"></i> New Password</label>
+                            <input type="password" id="adminPassword" name="password" placeholder="Leave blank to keep current password">
                         </div>
-                        <div class="form-group">
-                            <label for="adminConfirmPassword">Confirm New Password</label>
-                            <input type="password" id="adminConfirmPassword" name="confirm_password">
+                        <div class="form-group input-with-icon">
+                            <label for="adminConfirmPassword"><i class="fas fa-check-circle"></i> Confirm New Password</label>
+                            <input type="password" id="adminConfirmPassword" name="confirm_password" placeholder="Confirm your new password">
                         </div>
-                        <button type="submit" class="btn-primary">Update Profile</button>
+                        <div class="form-actions">
+                            <button type="reset" class="btn-secondary">
+                                <i class="fas fa-undo"></i> Reset
+                            </button>
+                            <button type="submit" class="btn-primary">
+                                <i class="fas fa-save"></i> Update Profile
+                            </button>
+                        </div>
                     </form>
                 </div>
                 
                 <div class="settings-card">
+                    <h4><i class="fas fa-clinic-medical"></i> Clinic Information</h4>
+                    <form id="clinicInfoForm" class="settings-form">
+                        <div class="form-group input-with-icon">
+                            <label for="clinicName"><i class="fas fa-hospital"></i> Clinic Name</label>
+                            <input type="text" id="clinicName" name="clinic_name" value="JUSTSmile Dental Clinic">
+                        </div>
+                        <div class="form-group input-with-icon">
+                            <label for="clinicAddress"><i class="fas fa-map-marker-alt"></i> Address</label>
+                            <input type="text" id="clinicAddress" name="clinic_address" placeholder="Enter clinic address">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group input-with-icon">
+                                <label for="clinicPhone"><i class="fas fa-phone"></i> Contact Phone</label>
+                                <input type="text" id="clinicPhone" name="clinic_phone" placeholder="Enter contact phone">
+                            </div>
+                            <div class="form-group input-with-icon">
+                                <label for="clinicEmail"><i class="fas fa-envelope"></i> Contact Email</label>
+                                <input type="email" id="clinicEmail" name="clinic_email" placeholder="Enter contact email">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="clinicDescription"><i class="fas fa-info-circle"></i> Description</label>
+                            <textarea id="clinicDescription" name="clinic_description" rows="3" placeholder="Short description about your clinic"></textarea>
+                        </div>
+                        <div class="form-actions">
+                            <button type="reset" class="btn-secondary">
+                                <i class="fas fa-undo"></i> Reset
+                            </button>
+                            <button type="submit" class="btn-primary">
+                                <i class="fas fa-save"></i> Save Information
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="settings-container" id="appointmentsSettings" style="display: none;">
+                <div class="settings-card">
                     <h4><i class="fas fa-clock"></i> Appointment Settings</h4>
                     <form id="appointmentSettingsForm" class="settings-form">
-                        <div class="form-group">
-                            <label for="workingHoursStart">Working Hours Start</label>
-                            <input type="time" id="workingHoursStart" name="working_hours_start" value="09:00" required>
+                        <div class="form-row">
+                            <div class="form-group input-with-icon">
+                                <label for="workingHoursStart"><i class="fas fa-hourglass-start"></i> Working Hours Start</label>
+                                <input type="time" id="workingHoursStart" name="working_hours_start" value="09:00" required>
+                            </div>
+                            <div class="form-group input-with-icon">
+                                <label for="workingHoursEnd"><i class="fas fa-hourglass-end"></i> Working Hours End</label>
+                                <input type="time" id="workingHoursEnd" name="working_hours_end" value="21:00" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group input-with-icon">
+                                <label for="appointmentDuration"><i class="fas fa-stopwatch"></i> Appointment Duration</label>
+                                <select id="appointmentDuration" name="appointment_duration">
+                                    <option value="15">15 minutes</option>
+                                    <option value="30" selected>30 minutes</option>
+                                    <option value="45">45 minutes</option>
+                                    <option value="60">1 hour</option>
+                                </select>
+                            </div>
+                            <div class="form-group input-with-icon">
+                                <label for="maxAppointmentsPerDay"><i class="fas fa-calendar-day"></i> Max Appointments Per Day</label>
+                                <input type="number" id="maxAppointmentsPerDay" name="max_appointments_per_day" value="20" min="1" max="100" required>
+                            </div>
+                        </div>
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="allowWeekends" name="allow_weekends">
+                            <label for="allowWeekends">Allow weekend appointments</label>
+                        </div>
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="requireConfirmation" name="require_confirmation" checked>
+                            <label for="requireConfirmation">Require admin confirmation for appointments</label>
                         </div>
                         <div class="form-group">
-                            <label for="workingHoursEnd">Working Hours End</label>
-                            <input type="time" id="workingHoursEnd" name="working_hours_end" value="21:00" required>
+                            <label>Buffer Time Between Appointments</label>
+                            <div class="form-row">
+                                <div class="form-group input-with-icon">
+                                    <input type="number" id="bufferTime" name="buffer_time" value="10" min="0" max="60">
+                                    <p class="help-text">Minutes between appointments for preparation</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button type="reset" class="btn-secondary">
+                                <i class="fas fa-undo"></i> Reset
+                            </button>
+                            <button type="submit" class="btn-primary">
+                                <i class="fas fa-save"></i> Save Settings
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="settings-card">
+                    <h4><i class="fas fa-ban"></i> Blocked Dates</h4>
+                    <form id="blockedDatesForm" class="settings-form">
+                        <div class="form-group">
+                            <label><i class="fas fa-calendar-times"></i> Add Blocked Date</label>
+                            <div class="form-row">
+                                <div class="form-group input-with-icon">
+                                    <input type="date" id="blockedDate" name="blocked_date">
+                                </div>
+                                <div class="form-group input-with-icon">
+                                    <input type="text" id="blockReason" name="block_reason" placeholder="Reason for blocking (optional)">
+                                </div>
+                            </div>
                         </div>
                         <div class="form-group">
-                            <label for="appointmentDuration">Appointment Duration (minutes)</label>
-                            <select id="appointmentDuration" name="appointment_duration">
-                                <option value="15">15 minutes</option>
-                                <option value="30" selected>30 minutes</option>
-                                <option value="45">45 minutes</option>
-                                <option value="60">1 hour</option>
-                            </select>
+                            <label><i class="fas fa-list"></i> Current Blocked Dates</label>
+                            <div id="blockedDatesList" class="blocked-dates-list">
+                                <!-- Blocked dates will be dynamically inserted here -->
+                                <p class="help-text">No blocked dates added yet</p>
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" id="addBlockedDate" class="btn-primary">
+                                <i class="fas fa-plus"></i> Add Blocked Date
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="settings-container" id="notificationsSettings" style="display: none;">
+                <div class="settings-card">
+                    <h4><i class="fas fa-bell"></i> Notification Preferences</h4>
+                    <form id="notificationSettingsForm" class="settings-form">
+                        <div class="form-group">
+                            <label><i class="fas fa-envelope"></i> Email Notifications</label>
+                            <div class="form-group checkbox-group">
+                                <input type="checkbox" id="emailNewAppointment" name="email_new_appointment" checked>
+                                <label for="emailNewAppointment">New appointment notifications</label>
+                            </div>
+                            <div class="form-group checkbox-group">
+                                <input type="checkbox" id="emailCancelledAppointment" name="email_cancelled_appointment" checked>
+                                <label for="emailCancelledAppointment">Cancelled appointment notifications</label>
+                            </div>
+                            <div class="form-group checkbox-group">
+                                <input type="checkbox" id="emailEmergencyRequest" name="email_emergency_request" checked>
+                                <label for="emailEmergencyRequest">Emergency request notifications</label>
+                            </div>
                         </div>
                         <div class="form-group">
-                            <label for="maxAppointmentsPerDay">Maximum Appointments Per Day</label>
-                            <input type="number" id="maxAppointmentsPerDay" name="max_appointments_per_day" value="20" min="1" max="100" required>
+                            <label><i class="fas fa-desktop"></i> Browser Notifications</label>
+                            <div class="form-group checkbox-group">
+                                <input type="checkbox" id="browserNotifications" name="browser_notifications" checked>
+                                <label for="browserNotifications">Enable browser notifications</label>
+                            </div>
                         </div>
-                        <button type="submit" class="btn-primary">Save Appointment Settings</button>
+                        <div class="form-group">
+                            <label><i class="fas fa-sms"></i> SMS Notifications</label>
+                            <div class="form-group checkbox-group">
+                                <input type="checkbox" id="smsNewAppointment" name="sms_new_appointment">
+                                <label for="smsNewAppointment">New appointment notifications</label>
+                            </div>
+                            <div class="form-group checkbox-group">
+                                <input type="checkbox" id="smsEmergencyRequest" name="sms_emergency_request" checked>
+                                <label for="smsEmergencyRequest">Emergency request notifications</label>
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button type="reset" class="btn-secondary">
+                                <i class="fas fa-undo"></i> Reset
+                            </button>
+                            <button type="submit" class="btn-primary">
+                                <i class="fas fa-save"></i> Save Preferences
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="settings-container" id="systemSettings" style="display: none;">
+                <div class="settings-card">
+                    <h4><i class="fas fa-cogs"></i> System Settings</h4>
+                    <form id="systemSettingsForm" class="settings-form">
+                        <div class="form-group">
+                            <label><i class="fas fa-database"></i> Database Backup</label>
+                            <div class="form-group checkbox-group">
+                                <input type="checkbox" id="enableAutoBackup" name="enable_auto_backup">
+                                <label for="enableAutoBackup">Enable automatic database backup</label>
+                            </div>
+                            <div class="form-group">
+                                <label for="backupFrequency"><i class="fas fa-clock"></i> Backup Frequency</label>
+                                <select id="backupFrequency" name="backup_frequency">
+                                    <option value="daily">Daily</option>
+                                    <option value="weekly" selected>Weekly</option>
+                                    <option value="monthly">Monthly</option>
+                                </select>
+                            </div>
+                            <div class="form-actions">
+                                <button type="button" id="manualBackup" class="btn-secondary">
+                                    <i class="fas fa-download"></i> Manual Backup Now
+                                </button>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fas fa-trash-alt"></i> Data Cleanup</label>
+                            <div class="form-group checkbox-group">
+                                <input type="checkbox" id="enableDataCleanup" name="enable_data_cleanup">
+                                <label for="enableDataCleanup">Automatically remove old completed appointments</label>
+                            </div>
+                            <div class="form-group">
+                                <label for="dataRetentionPeriod"><i class="fas fa-calendar"></i> Data Retention Period</label>
+                                <select id="dataRetentionPeriod" name="data_retention_period">
+                                    <option value="30">30 days</option>
+                                    <option value="60">60 days</option>
+                                    <option value="90" selected>90 days</option>
+                                    <option value="180">6 months</option>
+                                    <option value="365">1 year</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button type="reset" class="btn-secondary">
+                                <i class="fas fa-undo"></i> Reset
+                            </button>
+                            <button type="submit" class="btn-primary">
+                                <i class="fas fa-save"></i> Save Settings
+                            </button>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -1363,31 +1834,25 @@ $stmt->close();
         let emergenciesData = [];
         let usersData = [];
 
-        // Load all data when page loads
         document.addEventListener('DOMContentLoaded', function() {
+            // Load initial data
             loadAppointments();
             loadEmergencies();
             loadUsers();
             loadSettings();
-        });
-
-        // Navigation handling
-        document.querySelectorAll('.nav-item').forEach(item => {
-            item.addEventListener('click', function(e) {
-                e.preventDefault();
-                // Remove active class from all items
-                document.querySelectorAll('.nav-item').forEach(nav => nav.classList.remove('active'));
-                // Add active class to clicked item
-                this.classList.add('active');
-                
-                // Handle navigation
-                const section = this.getAttribute('data-section');
-                if (section) {
+            
+            // Set up section switching
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.addEventListener('click', function() {
+                    document.querySelectorAll('.nav-item').forEach(i => i.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    const section = this.getAttribute('data-section');
                     showSection(section);
-                }
+                });
             });
         });
-
+        
         function showSection(section) {
             // Hide all sections
             document.querySelectorAll('.content-section').forEach(section => {
@@ -1398,21 +1863,6 @@ $stmt->close();
             const selectedSection = document.getElementById(section);
             if (selectedSection) {
                 selectedSection.style.display = 'block';
-                // Load data for the section
-                switch(section) {
-                    case 'appointments':
-                        loadAppointments();
-                        break;
-                    case 'emergencies':
-                        loadEmergencies();
-                        break;
-                    case 'users':
-                        loadUsers();
-                        break;
-                    case 'settings':
-                        loadSettings();
-                        break;
-                }
             }
         }
 
@@ -1456,6 +1906,14 @@ $stmt->close();
                 .then(response => response.json())
                 .then(data => {
                     if (data.success) {
+                        emergenciesData = data.emergencies;
+                        
+                        // Update stats
+                        document.getElementById('pendingEmergencyCount').textContent = emergenciesData.filter(e => e.status === 'pending').length;
+                        document.getElementById('inProgressEmergencyCount').textContent = emergenciesData.filter(e => e.status === 'in_progress').length;
+                        document.getElementById('completedEmergencyCount').textContent = emergenciesData.filter(e => e.status === 'completed').length;
+                        
+                        // Render emergency cards
                         const emergencyList = document.querySelector('.emergency-list');
                         emergencyList.innerHTML = '';
                         
@@ -1490,15 +1948,7 @@ $stmt->close();
                                     </div>
                                 </div>
                                 <div class="emergency-actions">
-                                    <button class="action-btn accept" onclick="updateEmergencyStatus(${emergency.id}, 'in_progress')" ${emergency.status !== 'pending' ? 'disabled' : ''}>
-                                        <i class="fas fa-check"></i> Accept
-                                    </button>
-                                    <button class="action-btn complete" onclick="updateEmergencyStatus(${emergency.id}, 'completed')" ${emergency.status !== 'in_progress' ? 'disabled' : ''}>
-                                        <i class="fas fa-check-double"></i> Complete
-                                    </button>
-                                    <button class="action-btn cancel" onclick="updateEmergencyStatus(${emergency.id}, 'cancelled')" ${emergency.status === 'completed' || emergency.status === 'cancelled' ? 'disabled' : ''}>
-                                        <i class="fas fa-times"></i> Cancel
-                                    </button>
+                                    ${getActionButtons(emergency)}
                                 </div>
                             `;
                             emergencyList.appendChild(card);
@@ -1646,147 +2096,6 @@ $stmt->close();
             });
         }
 
-        function getActionButtons(emergency) {
-            let buttons = '';
-            
-            if (emergency.status === 'pending') {
-                buttons += `
-                    <button class="action-btn progress" onclick="updateEmergencyStatus(${emergency.id}, 'in_progress')">
-                        <i class="fas fa-play"></i> Start
-                    </button>
-                `;
-            } else if (emergency.status === 'in_progress') {
-                buttons += `
-                    <button class="action-btn complete" onclick="updateEmergencyStatus(${emergency.id}, 'completed')">
-                        <i class="fas fa-check"></i> Complete
-                    </button>
-                `;
-            }
-            
-            if (emergency.status !== 'completed' && emergency.status !== 'cancelled') {
-                buttons += `
-                    <button class="action-btn cancel" onclick="updateEmergencyStatus(${emergency.id}, 'cancelled')">
-                        <i class="fas fa-times"></i> Cancel
-                    </button>
-                `;
-            }
-            
-            return buttons;
-        }
-
-        function filterEmergencies(status) {
-            // Update filter buttons
-            document.querySelectorAll('.emergency-filter').forEach(btn => {
-                btn.classList.remove('active');
-            });
-            event.target.classList.add('active');
-            
-            const tbody = document.getElementById('emergenciesTableBody');
-            tbody.innerHTML = '';
-            
-            const filteredData = status === 'all' 
-                ? emergenciesData 
-                : emergenciesData.filter(emergency => emergency.status.toLowerCase() === status);
-            
-            // Re-render the filtered emergencies
-            filteredData.forEach(emergency => {
-                const statusClass = `status-${emergency.status.toLowerCase()}`;
-                const cardClass = `emergency-card ${emergency.status.toLowerCase()}`;
-                const patientInitial = emergency.name.charAt(0).toUpperCase();
-                
-                tbody.innerHTML += `
-                    <div class="${cardClass}">
-                        <div class="emergency-content">
-                            <div class="emergency-top">
-                                <div class="emergency-patient">
-                                    <div class="patient-avatar">${patientInitial}</div>
-                                    <div class="patient-info">
-                                        <div class="patient-name">${emergency.name}</div>
-                                        <div class="patient-contact">
-                                            <i class="fas fa-phone"></i> ${emergency.phone}
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="emergency-status ${statusClass}">
-                                    <i class="fas fa-${getStatusIcon(emergency.status)}"></i>
-                                    ${formatStatus(emergency.status)}
-                                </div>
-                            </div>
-                            <div class="emergency-details">
-                                <div class="detail-item">
-                                    <div class="detail-icon">
-                                        <i class="fas fa-map-marker-alt"></i>
-                                    </div>
-                                    <div class="detail-text">
-                                        <div class="detail-label">Location</div>
-                                        <div class="detail-value">${emergency.location}</div>
-                                    </div>
-                                </div>
-                                <div class="detail-item">
-                                    <div class="detail-icon">
-                                        <i class="fas fa-calendar-alt"></i>
-                                    </div>
-                                    <div class="detail-text">
-                                        <div class="detail-label">Date</div>
-                                        <div class="detail-value">${formatDate(emergency.created_at)}</div>
-                                    </div>
-                                </div>
-                                <div class="detail-item">
-                                    <div class="detail-icon">
-                                        <i class="fas fa-clock"></i>
-                                    </div>
-                                    <div class="detail-text">
-                                        <div class="detail-label">Time</div>
-                                        <div class="detail-value">${formatTime(emergency.created_at)}</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="emergency-actions">
-                            ${getActionButtons(emergency)}
-                        </div>
-                    </div>
-                `;
-            });
-        }
-
-        // Custom Alert and Confirm Functions
-        let confirmCallback = null;
-
-        function showCustomAlert(message) {
-            const modal = document.getElementById('customAlert');
-            const messageEl = document.getElementById('alertMessage');
-            messageEl.textContent = message;
-            modal.classList.add('show');
-        }
-
-        function closeCustomAlert() {
-            const modal = document.getElementById('customAlert');
-            modal.classList.remove('show');
-        }
-
-        function showCustomConfirm(message, callback) {
-            const modal = document.getElementById('customConfirm');
-            const messageEl = document.getElementById('confirmMessage');
-            messageEl.textContent = message;
-            confirmCallback = callback;
-            modal.classList.add('show');
-        }
-
-        function closeCustomConfirm(result) {
-            const modal = document.getElementById('customConfirm');
-            modal.classList.remove('show');
-            if (confirmCallback) {
-                confirmCallback(result);
-                confirmCallback = null;
-            }
-        }
-
-        // Replace default alert and confirm
-        window.alert = showCustomAlert;
-        window.confirm = showCustomConfirm;
-
-        // Update existing functions to use custom alerts
         function updateAppointmentStatus(id, status) {
             showCustomConfirm(`Are you sure you want to mark this appointment as ${status}?`, (confirmed) => {
                 if (confirmed) {
@@ -1932,6 +2241,12 @@ $stmt->close();
                 phone: document.getElementById('adminPhone').value
             };
             
+            // Only include email if the field exists in the form
+            const emailField = document.getElementById('adminEmail');
+            if (emailField) {
+                formData.email = emailField.value;
+            }
+            
             if (password) {
                 formData.password = password;
             }
@@ -1990,6 +2305,387 @@ $stmt->close();
                 console.error('Error:', error);
                 showNotification(error.message, 'error');
             });
+        });
+
+        function filterEmergencies(status) {
+            // Update filter buttons
+            document.querySelectorAll('.emergency-filter').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            
+            const emergencyList = document.querySelector('.emergency-list');
+            emergencyList.innerHTML = '';
+            
+            const filteredData = status === 'all' 
+                ? emergenciesData 
+                : emergenciesData.filter(emergency => emergency.status.toLowerCase() === status);
+            
+            filteredData.forEach(emergency => {
+                const statusClass = `status-${emergency.status.toLowerCase()}`;
+                const cardClass = `emergency-card ${emergency.status.toLowerCase()}`;
+                
+                const card = document.createElement('div');
+                card.className = cardClass;
+                card.innerHTML = `
+                    <div class="emergency-header">
+                        <div class="patient-info">
+                            <div class="patient-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="patient-details">
+                                <h3>${emergency.name}</h3>
+                                <p class="phone"><i class="fas fa-phone"></i> ${emergency.phone}</p>
+                            </div>
+                        </div>
+                        <div class="status-badge ${emergency.status}">${emergency.status.replace('_', ' ')}</div>
+                    </div>
+                    <div class="emergency-body">
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>${emergency.location}</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-exclamation-circle"></i>
+                            <span>${emergency.issue}</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-clock"></i>
+                            <span>${new Date(emergency.created_at).toLocaleString()}</span>
+                        </div>
+                    </div>
+                    <div class="emergency-actions">
+                        ${getActionButtons(emergency)}
+                    </div>
+                `;
+                emergencyList.appendChild(card);
+            });
+        }
+        
+        function getActionButtons(emergency) {
+            let buttons = '';
+            
+            if (emergency.status === 'pending') {
+                buttons += `
+                    <button class="action-btn accept" onclick="updateEmergencyStatus(${emergency.id}, 'in_progress')">
+                        <i class="fas fa-check"></i> Accept
+                    </button>
+                `;
+            } else if (emergency.status === 'in_progress') {
+                buttons += `
+                    <button class="action-btn complete" onclick="updateEmergencyStatus(${emergency.id}, 'completed')">
+                        <i class="fas fa-check-double"></i> Complete
+                    </button>
+                `;
+            }
+            
+            if (emergency.status !== 'completed' && emergency.status !== 'cancelled') {
+                buttons += `
+                    <button class="action-btn cancel" onclick="updateEmergencyStatus(${emergency.id}, 'cancelled')">
+                        <i class="fas fa-times"></i> Cancel
+                    </button>
+                `;
+            }
+            
+            return buttons;
+        }
+
+        // Custom Alert and Confirm Functions
+        let confirmCallback = null;
+
+        function showCustomAlert(message) {
+            const modal = document.getElementById('customAlert');
+            const messageEl = document.getElementById('alertMessage');
+            messageEl.textContent = message;
+            modal.classList.add('show');
+        }
+
+        function closeCustomAlert() {
+            const modal = document.getElementById('customAlert');
+            modal.classList.remove('show');
+        }
+
+        function showCustomConfirm(message, callback) {
+            const modal = document.getElementById('customConfirm');
+            const messageEl = document.getElementById('confirmMessage');
+            messageEl.textContent = message;
+            confirmCallback = callback;
+            modal.classList.add('show');
+        }
+
+        function closeCustomConfirm(result) {
+            const modal = document.getElementById('customConfirm');
+            modal.classList.remove('show');
+            if (confirmCallback) {
+                confirmCallback(result);
+                confirmCallback = null;
+            }
+        }
+
+        // Replace default alert and confirm
+        window.alert = showCustomAlert;
+        window.confirm = showCustomConfirm;
+
+        // Settings Tab Functionality
+        function initSettingsTabs() {
+            const tabs = document.querySelectorAll('.settings-tab');
+            const settingsForms = document.querySelectorAll('.settings-form');
+            
+            // Initialize - show the first tab content by default
+            if (tabs.length > 0) {
+                tabs[0].classList.add('active');
+                const targetId = tabs[0].getAttribute('data-target');
+                document.querySelectorAll(`.settings-form[data-form="${targetId}"]`).forEach(form => {
+                    form.style.display = 'flex';
+                });
+            }
+            
+            // Hide all other forms initially
+            settingsForms.forEach(form => {
+                if (!form.getAttribute('data-form') || form.getAttribute('data-form') !== tabs[0]?.getAttribute('data-target')) {
+                    form.style.display = 'none';
+                }
+            });
+            
+            // Add click event to tabs
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    // Remove active class from all tabs
+                    tabs.forEach(t => t.classList.remove('active'));
+                    
+                    // Add active class to clicked tab
+                    tab.classList.add('active');
+                    
+                    // Hide all forms
+                    settingsForms.forEach(form => {
+                        form.style.display = 'none';
+                    });
+                    
+                    // Show forms corresponding to the selected tab
+                    const targetId = tab.getAttribute('data-target');
+                    document.querySelectorAll(`.settings-form[data-form="${targetId}"]`).forEach(form => {
+                        form.style.display = 'flex';
+                    });
+                });
+            });
+        }
+
+        // Save Settings Form
+        function setupSettingsForms() {
+            const settingsForms = document.querySelectorAll('.settings-form');
+            
+            settingsForms.forEach(form => {
+                form.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const formId = form.getAttribute('data-form');
+                    const formData = new FormData(form);
+                    
+                    // Show loading indicator
+                    const submitBtn = form.querySelector('button[type="submit"]');
+                    const originalText = submitBtn.innerHTML;
+                    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Saving...';
+                    submitBtn.disabled = true;
+                    
+                    // Convert FormData to JSON
+                    const data = {};
+                    formData.forEach((value, key) => {
+                        data[key] = value;
+                    });
+                    
+                    // Send AJAX request
+                    fetch('save_settings.php', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            form_id: formId,
+                            data: data
+                        })
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            // Show success message
+                            showAlert('success', data.message || 'Settings saved successfully!');
+                        } else {
+                            // Show error message
+                            showAlert('error', data.message || 'Failed to save settings.');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error saving settings:', error);
+                        showAlert('error', 'An unexpected error occurred. Please try again.');
+                    })
+                    .finally(() => {
+                        // Reset button state
+                        submitBtn.innerHTML = originalText;
+                        submitBtn.disabled = false;
+                    });
+                });
+            });
+        }
+
+        // Add Blocked Date
+        function setupBlockedDatesFunctionality() {
+            const addBlockedDateForm = document.getElementById('add-blocked-date-form');
+            const blockedDatesList = document.querySelector('.blocked-dates-list');
+            
+            if (addBlockedDateForm) {
+                addBlockedDateForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const dateInput = addBlockedDateForm.querySelector('input[name="blocked_date"]');
+                    const reasonInput = addBlockedDateForm.querySelector('input[name="block_reason"]');
+                    
+                    if (!dateInput.value) {
+                        showAlert('error', 'Please select a date');
+                        return;
+                    }
+                    
+                    const date = new Date(dateInput.value);
+                    const formattedDate = date.toLocaleDateString('en-US', {
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric'
+                    });
+                    
+                    const blockedDateItem = document.createElement('div');
+                    blockedDateItem.className = 'blocked-date-item';
+                    blockedDateItem.innerHTML = `
+                        <div class="date-info">
+                            <span class="date">${formattedDate}</span>
+                            <span class="reason">${reasonInput.value || 'No reason provided'}</span>
+                        </div>
+                        <div class="delete-date" title="Remove this date">
+                            <i class="fas fa-times"></i>
+                        </div>
+                    `;
+                    
+                    // Add delete functionality
+                    const deleteBtn = blockedDateItem.querySelector('.delete-date');
+                    deleteBtn.addEventListener('click', () => {
+                        if (confirm('Are you sure you want to remove this blocked date?')) {
+                            blockedDateItem.remove();
+                            saveBlockedDates();
+                        }
+                    });
+                    
+                    blockedDatesList.appendChild(blockedDateItem);
+                    saveBlockedDates();
+                    
+                    // Reset form
+                    dateInput.value = '';
+                    reasonInput.value = '';
+                });
+            }
+            
+            // Load existing blocked dates
+            loadBlockedDates();
+            
+            // Setup delete buttons for existing items
+            setupDeleteBlockedDates();
+        }
+
+        function saveBlockedDates() {
+            const blockedDates = [];
+            document.querySelectorAll('.blocked-date-item').forEach(item => {
+                const dateText = item.querySelector('.date').textContent;
+                const reason = item.querySelector('.reason').textContent;
+                
+                // Convert the date from "Month Day, Year" format to "YYYY-MM-DD"
+                const date = new Date(dateText);
+                let formattedDate = '';
+                
+                if (!isNaN(date.getTime())) {
+                    // Format date as YYYY-MM-DD
+                    const year = date.getFullYear();
+                    const month = String(date.getMonth() + 1).padStart(2, '0');
+                    const day = String(date.getDate()).padStart(2, '0');
+                    formattedDate = `${year}-${month}-${day}`;
+                } else {
+                    // If we can't parse the date, use the original text
+                    formattedDate = dateText;
+                }
+                
+                blockedDates.push({
+                    date: formattedDate,
+                    reason: reason
+                });
+            });
+            
+            fetch('save_blocked_dates.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    blocked_dates: blockedDates
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    showAlert('success', 'Blocked dates updated');
+                } else {
+                    showAlert('error', data.message || 'Failed to update blocked dates');
+                }
+            })
+            .catch(error => {
+                console.error('Error saving blocked dates:', error);
+            });
+        }
+
+        function loadBlockedDates() {
+            const blockedDatesList = document.querySelector('.blocked-dates-list');
+            
+            if (blockedDatesList) {
+                fetch('get_blocked_dates.php')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success && data.blocked_dates) {
+                        blockedDatesList.innerHTML = '';
+                        
+                        data.blocked_dates.forEach(blockedDate => {
+                            const blockedDateItem = document.createElement('div');
+                            blockedDateItem.className = 'blocked-date-item';
+                            blockedDateItem.innerHTML = `
+                                <div class="date-info">
+                                    <span class="date">${blockedDate.date}</span>
+                                    <span class="reason">${blockedDate.reason || 'No reason provided'}</span>
+                                </div>
+                                <div class="delete-date" title="Remove this date">
+                                    <i class="fas fa-times"></i>
+                                </div>
+                            `;
+                            
+                            blockedDatesList.appendChild(blockedDateItem);
+                        });
+                        
+                        setupDeleteBlockedDates();
+                    }
+                })
+                .catch(error => {
+                    console.error('Error loading blocked dates:', error);
+                });
+            }
+        }
+
+        function setupDeleteBlockedDates() {
+            document.querySelectorAll('.blocked-date-item .delete-date').forEach(deleteBtn => {
+                deleteBtn.addEventListener('click', () => {
+                    if (confirm('Are you sure you want to remove this blocked date?')) {
+                        deleteBtn.closest('.blocked-date-item').remove();
+                        saveBlockedDates();
+                    }
+                });
+            });
+        }
+
+        // Initialize settings functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            initSettingsTabs();
+            setupSettingsForms();
+            setupBlockedDatesFunctionality();
         });
     </script>
 </body>

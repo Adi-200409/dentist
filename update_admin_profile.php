@@ -26,16 +26,39 @@ try {
     $name = $data['name'];
     $phone = $data['phone'];
     
+    // Check if email field exists in the users table
+    $result = $conn->query("DESCRIBE users");
+    $hasEmailField = false;
+    while ($row = $result->fetch_assoc()) {
+        if ($row['Field'] === 'email') {
+            $hasEmailField = true;
+            break;
+        }
+    }
+    
     // Update admin profile
     if (isset($data['password']) && !empty($data['password'])) {
         // Update with password
         $password = password_hash($data['password'], PASSWORD_DEFAULT);
-        $stmt = $conn->prepare("UPDATE users SET name = ?, phone = ?, password = ? WHERE id = ?");
-        $stmt->bind_param("sssi", $name, $phone, $password, $user_id);
+        
+        if ($hasEmailField && isset($data['email'])) {
+            $email = $data['email'];
+            $stmt = $conn->prepare("UPDATE users SET name = ?, phone = ?, email = ?, password = ? WHERE id = ?");
+            $stmt->bind_param("ssssi", $name, $phone, $email, $password, $user_id);
+        } else {
+            $stmt = $conn->prepare("UPDATE users SET name = ?, phone = ?, password = ? WHERE id = ?");
+            $stmt->bind_param("sssi", $name, $phone, $password, $user_id);
+        }
     } else {
         // Update without password
-        $stmt = $conn->prepare("UPDATE users SET name = ?, phone = ? WHERE id = ?");
-        $stmt->bind_param("ssi", $name, $phone, $user_id);
+        if ($hasEmailField && isset($data['email'])) {
+            $email = $data['email'];
+            $stmt = $conn->prepare("UPDATE users SET name = ?, phone = ?, email = ? WHERE id = ?");
+            $stmt->bind_param("sssi", $name, $phone, $email, $user_id);
+        } else {
+            $stmt = $conn->prepare("UPDATE users SET name = ?, phone = ? WHERE id = ?");
+            $stmt->bind_param("ssi", $name, $phone, $user_id);
+        }
     }
     
     if (!$stmt->execute()) {

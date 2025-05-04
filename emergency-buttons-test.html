@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Buttons Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #333;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+        
+        .emergency-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: white;
+        }
+        
+        .patient-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .patient-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #4c52e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            margin-right: 15px;
+        }
+        
+        .patient-details h2 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+        
+        .patient-details p {
+            margin: 5px 0 0;
+            color: #666;
+        }
+        
+        .emergency-details {
+            margin-bottom: 20px;
+        }
+        
+        .status-badge {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.8rem;
+            margin-left: 10px;
+        }
+        
+        .status-pending {
+            background-color: #fff3cd;
+            color: #856404;
+        }
+        
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .btn {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: background-color 0.2s;
+        }
+        
+        .btn-accept {
+            background-color: #4c52e0;
+            color: white;
+        }
+        
+        .btn-complete {
+            background-color: #4CAF50;
+            color: white;
+        }
+        
+        .btn-cancel {
+            background-color: #F44336;
+            color: white;
+        }
+        
+        .btn:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+        
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        .log-container {
+            margin-top: 30px;
+            background-color: #222;
+            color: #0f0;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: monospace;
+            height: 200px;
+            overflow-y: auto;
+        }
+        
+        .log-entry {
+            margin: 5px 0;
+            line-height: 1.5;
+        }
+        
+        .log-error {
+            color: #ff5252;
+        }
+        
+        .log-success {
+            color: #4CAF50;
+        }
+        
+        .test-control {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #e9ecef;
+            border-radius: 8px;
+        }
+        
+        .input-group {
+            margin-bottom: 15px;
+        }
+        
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        .input-group input,
+        .input-group select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Emergency Buttons Test</h1>
+        
+        <div class="emergency-card">
+            <div class="patient-info">
+                <div class="patient-avatar">
+                    ER
+                </div>
+                <div class="patient-details">
+                    <h2>Ezekiel Rodgers <span id="statusBadge" class="status-badge status-pending">Pending</span></h2>
+                    <p>+1 (717) 424-46</p>
+                </div>
+            </div>
+            
+            <div class="emergency-details">
+                <p><strong>Location:</strong> Nulla obcaecati quib, Asperiores a sit dol</p>
+                <p><strong>Issue:</strong> Severe toothache and swelling in the left side of mouth.</p>
+                <p><strong>Urgency:</strong> Severe Pain</p>
+            </div>
+            
+            <div class="action-buttons">
+                <button id="btnAccept" class="btn btn-accept">Accept</button>
+                <button id="btnComplete" class="btn btn-complete" disabled>Complete</button>
+                <button id="btnCancel" class="btn btn-cancel">Cancel</button>
+            </div>
+        </div>
+        
+        <div class="test-control">
+            <h3>Test Control Panel</h3>
+            <div class="input-group">
+                <label for="emergencyId">Emergency ID:</label>
+                <input type="number" id="emergencyId" value="1">
+            </div>
+            <div class="input-group">
+                <label for="currentStatus">Current Status:</label>
+                <select id="currentStatus">
+                    <option value="pending">Pending</option>
+                    <option value="in_progress">In Progress</option>
+                    <option value="completed">Completed</option>
+                    <option value="cancelled">Cancelled</option>
+                </select>
+            </div>
+            <button id="updateStatus" class="btn btn-accept">Update Status Display</button>
+        </div>
+        
+        <div class="log-container" id="logContainer">
+            <div class="log-entry">Test log initialized...</div>
+        </div>
+    </div>
+    
+    <script>
+        // Log function
+        function log(message, type = 'info') {
+            const logContainer = document.getElementById('logContainer');
+            const logEntry = document.createElement('div');
+            logEntry.className = `log-entry log-${type}`;
+            logEntry.innerText = `[${new Date().toLocaleTimeString()}] ${message}`;
+            logContainer.appendChild(logEntry);
+            logContainer.scrollTop = logContainer.scrollHeight;
+        }
+        
+        // Update button states based on status
+        function updateButtonStates(status) {
+            const btnAccept = document.getElementById('btnAccept');
+            const btnComplete = document.getElementById('btnComplete');
+            const btnCancel = document.getElementById('btnCancel');
+            const statusBadge = document.getElementById('statusBadge');
+            
+            // Update status badge
+            statusBadge.className = `status-badge status-${status}`;
+            statusBadge.innerText = status.charAt(0).toUpperCase() + status.slice(1).replace('_', ' ');
+            
+            // Update button states
+            btnAccept.disabled = (status !== 'pending');
+            btnComplete.disabled = (status !== 'in_progress');
+            btnCancel.disabled = (status === 'completed' || status === 'cancelled');
+            
+            log(`Button states updated for status: ${status}`);
+        }
+        
+        // Simulate updating emergency status
+        function updateEmergencyStatus(emergencyId, status) {
+            log(`Updating emergency #${emergencyId} to status: ${status}`);
+            
+            // Build request body
+            const requestBody = {
+                id: emergencyId,
+                status: status
+            };
+            
+            log(`Request payload: ${JSON.stringify(requestBody)}`);
+            
+            // Simulate API call
+            fetch('update_emergency.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(requestBody)
+            })
+            .then(response => {
+                log(`Response status: ${response.status}`);
+                return response.json();
+            })
+            .then(data => {
+                log(`Response data: ${JSON.stringify(data)}`, data.success ? 'success' : 'error');
+                
+                if (data.success) {
+                    // Update button states based on new status
+                    updateButtonStates(status);
+                    // Update status selector
+                    document.getElementById('currentStatus').value = status;
+                } else {
+                    log(`Error: ${data.message}`, 'error');
+                }
+            })
+            .catch(error => {
+                log(`Fetch error: ${error.message}`, 'error');
+            });
+        }
+        
+        // Event listeners
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get initial status
+            const currentStatus = document.getElementById('currentStatus').value;
+            updateButtonStates(currentStatus);
+            
+            // Button click handlers
+            document.getElementById('btnAccept').addEventListener('click', function() {
+                const emergencyId = document.getElementById('emergencyId').value;
+                updateEmergencyStatus(emergencyId, 'in_progress');
+            });
+            
+            document.getElementById('btnComplete').addEventListener('click', function() {
+                const emergencyId = document.getElementById('emergencyId').value;
+                updateEmergencyStatus(emergencyId, 'completed');
+            });
+            
+            document.getElementById('btnCancel').addEventListener('click', function() {
+                const emergencyId = document.getElementById('emergencyId').value;
+                updateEmergencyStatus(emergencyId, 'cancelled');
+            });
+            
+            // Update status display button
+            document.getElementById('updateStatus').addEventListener('click', function() {
+                const status = document.getElementById('currentStatus').value;
+                updateButtonStates(status);
+            });
+            
+            log('Test page initialized successfully');
+        });
+    </script>
+</body>
+</html> 
