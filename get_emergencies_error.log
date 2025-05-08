@@ -1610,3 +1610,757 @@
 [04-May-2025 05:53:17 Europe/Berlin] Executing query
 [04-May-2025 05:53:17 Europe/Berlin] Query executed successfully, processing results
 [04-May-2025 05:53:17 Europe/Berlin] Processed 8 emergency requests
+[04-May-2025 06:23:32 Europe/Berlin] Fetching emergency requests from database
+[04-May-2025 06:23:32 Europe/Berlin] Preparing SQL query: 
+        SELECT 
+            id,
+            name,
+            phone,
+            location,
+            issue,
+            urgency,
+            status,
+            created_at,
+            updated_at
+        FROM emergency_requests
+        ORDER BY 
+            CASE 
+                WHEN status = 'pending' THEN 1
+                WHEN status = 'in_progress' THEN 2
+                WHEN status = 'completed' THEN 3
+                WHEN status = 'cancelled' THEN 4
+                ELSE 5
+            END,
+            created_at DESC
+    
+[04-May-2025 06:23:32 Europe/Berlin] Executing query
+[04-May-2025 06:23:32 Europe/Berlin] Query executed successfully, processing results
+[04-May-2025 06:23:32 Europe/Berlin] Processed 8 emergency requests
+[04-May-2025 06:26:55 Europe/Berlin] Fetching emergency requests from database
+[04-May-2025 06:26:55 Europe/Berlin] Preparing SQL query: 
+        SELECT 
+            id,
+            name,
+            phone,
+            location,
+            issue,
+            urgency,
+            status,
+            created_at,
+            updated_at
+        FROM emergency_requests
+        ORDER BY 
+            CASE 
+                WHEN status = 'pending' THEN 1
+                WHEN status = 'in_progress' THEN 2
+                WHEN status = 'completed' THEN 3
+                WHEN status = 'cancelled' THEN 4
+                ELSE 5
+            END,
+            created_at DESC
+    
+[04-May-2025 06:26:55 Europe/Berlin] Executing query
+[04-May-2025 06:26:55 Europe/Berlin] Query executed successfully, processing results
+[04-May-2025 06:26:55 Europe/Berlin] Processed 8 emergency requests
+[04-May-2025 07:01:52 Europe/Berlin] Fetching emergency requests from database
+[04-May-2025 07:01:52 Europe/Berlin] Preparing SQL query: 
+        SELECT 
+            id,
+            name,
+            phone,
+            location,
+            issue,
+            urgency,
+            status,
+            created_at,
+            updated_at
+        FROM emergency_requests
+        ORDER BY 
+            CASE 
+                WHEN status = 'pending' THEN 1
+                WHEN status = 'in_progress' THEN 2
+                WHEN status = 'completed' THEN 3
+                WHEN status = 'cancelled' THEN 4
+                ELSE 5
+            END,
+            created_at DESC
+    
+[04-May-2025 07:01:52 Europe/Berlin] Executing query
+[04-May-2025 07:01:52 Europe/Berlin] Query executed successfully, processing results
+[04-May-2025 07:01:52 Europe/Berlin] Processed 8 emergency requests
+[04-May-2025 07:03:28 Europe/Berlin] Fetching emergency requests from database
+[04-May-2025 07:03:28 Europe/Berlin] Preparing SQL query: 
+        SELECT 
+            id,
+            name,
+            phone,
+            location,
+            issue,
+            urgency,
+            status,
+            created_at,
+            updated_at
+        FROM emergency_requests
+        ORDER BY 
+            CASE 
+                WHEN status = 'pending' THEN 1
+                WHEN status = 'in_progress' THEN 2
+                WHEN status = 'completed' THEN 3
+                WHEN status = 'cancelled' THEN 4
+                ELSE 5
+            END,
+            created_at DESC
+    
+[04-May-2025 07:03:28 Europe/Berlin] Executing query
+[04-May-2025 07:03:28 Europe/Berlin] Query executed successfully, processing results
+[04-May-2025 07:03:28 Europe/Berlin] Processed 8 emergency requests
+[04-May-2025 07:04:56 Europe/Berlin] Fetching emergency requests from database
+[04-May-2025 07:04:56 Europe/Berlin] Preparing SQL query: 
+        SELECT 
+            id,
+            name,
+            phone,
+            location,
+            issue,
+            urgency,
+            status,
+            created_at,
+            updated_at
+        FROM emergency_requests
+        ORDER BY 
+            CASE 
+                WHEN status = 'pending' THEN 1
+                WHEN status = 'in_progress' THEN 2
+                WHEN status = 'completed' THEN 3
+                WHEN status = 'cancelled' THEN 4
+                ELSE 5
+            END,
+            created_at DESC
+    
+[04-May-2025 07:04:56 Europe/Berlin] Executing query
+[04-May-2025 07:04:56 Europe/Berlin] Query executed successfully, processing results
+[04-May-2025 07:04:56 Europe/Berlin] Processed 8 emergency requests
+[04-May-2025 07:06:51 Europe/Berlin] Fetching emergency requests from database
+[04-May-2025 07:06:51 Europe/Berlin] Preparing SQL query: 
+        SELECT 
+            id,
+            name,
+            phone,
+            location,
+            issue,
+            urgency,
+            status,
+            created_at,
+            updated_at
+        FROM emergency_requests
+        ORDER BY 
+            CASE 
+                WHEN status = 'pending' THEN 1
+                WHEN status = 'in_progress' THEN 2
+                WHEN status = 'completed' THEN 3
+                WHEN status = 'cancelled' THEN 4
+                ELSE 5
+            END,
+            created_at DESC
+    
+[04-May-2025 07:06:51 Europe/Berlin] Executing query
+[04-May-2025 07:06:51 Europe/Berlin] Query executed successfully, processing results
+[04-May-2025 07:06:51 Europe/Berlin] Processed 8 emergency requests
+[04-May-2025 07:10:50 Europe/Berlin] Fetching emergency requests from database
+[04-May-2025 07:10:50 Europe/Berlin] Preparing SQL query: 
+        SELECT 
+            id,
+            name,
+            phone,
+            location,
+            issue,
+            urgency,
+            status,
+            created_at,
+            updated_at
+        FROM emergency_requests
+        ORDER BY 
+            CASE 
+                WHEN status = 'pending' THEN 1
+                WHEN status = 'in_progress' THEN 2
+                WHEN status = 'completed' THEN 3
+                WHEN status = 'cancelled' THEN 4
+                ELSE 5
+            END,
+            created_at DESC
+    
+[04-May-2025 07:10:50 Europe/Berlin] Executing query
+[04-May-2025 07:10:50 Europe/Berlin] Query executed successfully, processing results
+[04-May-2025 07:10:50 Europe/Berlin] Processed 8 emergency requests
+[04-May-2025 07:12:34 Europe/Berlin] Fetching emergency requests from database
+[04-May-2025 07:12:34 Europe/Berlin] Preparing SQL query: 
+        SELECT 
+            id,
+            name,
+            phone,
+            location,
+            issue,
+            urgency,
+            status,
+            created_at,
+            updated_at
+        FROM emergency_requests
+        ORDER BY 
+            CASE 
+                WHEN status = 'pending' THEN 1
+                WHEN status = 'in_progress' THEN 2
+                WHEN status = 'completed' THEN 3
+                WHEN status = 'cancelled' THEN 4
+                ELSE 5
+            END,
+            created_at DESC
+    
+[04-May-2025 07:12:34 Europe/Berlin] Executing query
+[04-May-2025 07:12:34 Europe/Berlin] Query executed successfully, processing results
+[04-May-2025 07:12:34 Europe/Berlin] Processed 8 emergency requests
+[07-May-2025 16:34:25 Europe/Berlin] Fetching emergency requests from database
+[07-May-2025 16:34:25 Europe/Berlin] Preparing SQL query: 
+        SELECT 
+            id,
+            name,
+            phone,
+            location,
+            issue,
+            urgency,
+            status,
+            created_at,
+            updated_at
+        FROM emergency_requests
+        ORDER BY 
+            CASE 
+                WHEN status = 'pending' THEN 1
+                WHEN status = 'in_progress' THEN 2
+                WHEN status = 'completed' THEN 3
+                WHEN status = 'cancelled' THEN 4
+                ELSE 5
+            END,
+            created_at DESC
+    
+[07-May-2025 16:34:25 Europe/Berlin] Executing query
+[07-May-2025 16:34:25 Europe/Berlin] Query executed successfully, processing results
+[07-May-2025 16:34:25 Europe/Berlin] Processed 11 emergency requests
+[07-May-2025 16:45:30 Europe/Berlin] Fetching emergency requests from database
+[07-May-2025 16:45:30 Europe/Berlin] Preparing SQL query: 
+        SELECT 
+            id,
+            name,
+            phone,
+            location,
+            issue,
+            urgency,
+            status,
+            created_at,
+            updated_at
+        FROM emergency_requests
+        ORDER BY 
+            CASE 
+                WHEN status = 'pending' THEN 1
+                WHEN status = 'in_progress' THEN 2
+                WHEN status = 'completed' THEN 3
+                WHEN status = 'cancelled' THEN 4
+                ELSE 5
+            END,
+            created_at DESC
+    
+[07-May-2025 16:45:30 Europe/Berlin] Executing query
+[07-May-2025 16:45:30 Europe/Berlin] Query executed successfully, processing results
+[07-May-2025 16:45:30 Europe/Berlin] Processed 11 emergency requests
+[07-May-2025 16:45:54 Europe/Berlin] Fetching emergency requests from database
+[07-May-2025 16:45:54 Europe/Berlin] Preparing SQL query: 
+        SELECT 
+            id,
+            name,
+            phone,
+            location,
+            issue,
+            urgency,
+            status,
+            created_at,
+            updated_at
+        FROM emergency_requests
+        ORDER BY 
+            CASE 
+                WHEN status = 'pending' THEN 1
+                WHEN status = 'in_progress' THEN 2
+                WHEN status = 'completed' THEN 3
+                WHEN status = 'cancelled' THEN 4
+                ELSE 5
+            END,
+            created_at DESC
+    
+[07-May-2025 16:45:54 Europe/Berlin] Executing query
+[07-May-2025 16:45:54 Europe/Berlin] Query executed successfully, processing results
+[07-May-2025 16:45:54 Europe/Berlin] Processed 11 emergency requests
+[07-May-2025 16:46:12 Europe/Berlin] Fetching emergency requests from database
+[07-May-2025 16:46:12 Europe/Berlin] Preparing SQL query: 
+        SELECT 
+            id,
+            name,
+            phone,
+            location,
+            issue,
+            urgency,
+            status,
+            created_at,
+            updated_at
+        FROM emergency_requests
+        ORDER BY 
+            CASE 
+                WHEN status = 'pending' THEN 1
+                WHEN status = 'in_progress' THEN 2
+                WHEN status = 'completed' THEN 3
+                WHEN status = 'cancelled' THEN 4
+                ELSE 5
+            END,
+            created_at DESC
+    
+[07-May-2025 16:46:12 Europe/Berlin] Executing query
+[07-May-2025 16:46:12 Europe/Berlin] Query executed successfully, processing results
+[07-May-2025 16:46:12 Europe/Berlin] Processed 11 emergency requests
+[07-May-2025 16:46:46 Europe/Berlin] Fetching emergency requests from database
+[07-May-2025 16:46:46 Europe/Berlin] Preparing SQL query: 
+        SELECT 
+            id,
+            name,
+            phone,
+            location,
+            issue,
+            urgency,
+            status,
+            created_at,
+            updated_at
+        FROM emergency_requests
+        ORDER BY 
+            CASE 
+                WHEN status = 'pending' THEN 1
+                WHEN status = 'in_progress' THEN 2
+                WHEN status = 'completed' THEN 3
+                WHEN status = 'cancelled' THEN 4
+                ELSE 5
+            END,
+            created_at DESC
+    
+[07-May-2025 16:46:46 Europe/Berlin] Executing query
+[07-May-2025 16:46:46 Europe/Berlin] Query executed successfully, processing results
+[07-May-2025 16:46:46 Europe/Berlin] Processed 11 emergency requests
+[07-May-2025 16:48:51 Europe/Berlin] Fetching emergency requests from database
+[07-May-2025 16:48:51 Europe/Berlin] Preparing SQL query: 
+        SELECT 
+            id,
+            name,
+            phone,
+            location,
+            issue,
+            urgency,
+            status,
+            created_at,
+            updated_at
+        FROM emergency_requests
+        ORDER BY 
+            CASE 
+                WHEN status = 'pending' THEN 1
+                WHEN status = 'in_progress' THEN 2
+                WHEN status = 'completed' THEN 3
+                WHEN status = 'cancelled' THEN 4
+                ELSE 5
+            END,
+            created_at DESC
+    
+[07-May-2025 16:48:51 Europe/Berlin] Executing query
+[07-May-2025 16:48:51 Europe/Berlin] Query executed successfully, processing results
+[07-May-2025 16:48:51 Europe/Berlin] Processed 11 emergency requests
+[07-May-2025 16:49:59 Europe/Berlin] Fetching emergency requests from database
+[07-May-2025 16:49:59 Europe/Berlin] Preparing SQL query: 
+        SELECT 
+            id,
+            name,
+            phone,
+            location,
+            issue,
+            urgency,
+            status,
+            created_at,
+            updated_at
+        FROM emergency_requests
+        ORDER BY 
+            CASE 
+                WHEN status = 'pending' THEN 1
+                WHEN status = 'in_progress' THEN 2
+                WHEN status = 'completed' THEN 3
+                WHEN status = 'cancelled' THEN 4
+                ELSE 5
+            END,
+            created_at DESC
+    
+[07-May-2025 16:49:59 Europe/Berlin] Executing query
+[07-May-2025 16:49:59 Europe/Berlin] Query executed successfully, processing results
+[07-May-2025 16:49:59 Europe/Berlin] Processed 11 emergency requests
+[07-May-2025 16:51:49 Europe/Berlin] Fetching emergency requests from database
+[07-May-2025 16:51:49 Europe/Berlin] Preparing SQL query: 
+        SELECT 
+            id,
+            name,
+            phone,
+            location,
+            issue,
+            urgency,
+            status,
+            created_at,
+            updated_at
+        FROM emergency_requests
+        ORDER BY 
+            CASE 
+                WHEN status = 'pending' THEN 1
+                WHEN status = 'in_progress' THEN 2
+                WHEN status = 'completed' THEN 3
+                WHEN status = 'cancelled' THEN 4
+                ELSE 5
+            END,
+            created_at DESC
+    
+[07-May-2025 16:51:49 Europe/Berlin] Executing query
+[07-May-2025 16:51:49 Europe/Berlin] Query executed successfully, processing results
+[07-May-2025 16:51:49 Europe/Berlin] Processed 11 emergency requests
+[07-May-2025 16:54:21 Europe/Berlin] Fetching emergency requests from database
+[07-May-2025 16:54:21 Europe/Berlin] Preparing SQL query: 
+        SELECT 
+            id,
+            name,
+            phone,
+            location,
+            issue,
+            urgency,
+            status,
+            created_at,
+            updated_at
+        FROM emergency_requests
+        ORDER BY 
+            CASE 
+                WHEN status = 'pending' THEN 1
+                WHEN status = 'in_progress' THEN 2
+                WHEN status = 'completed' THEN 3
+                WHEN status = 'cancelled' THEN 4
+                ELSE 5
+            END,
+            created_at DESC
+    
+[07-May-2025 16:54:21 Europe/Berlin] Executing query
+[07-May-2025 16:54:21 Europe/Berlin] Query executed successfully, processing results
+[07-May-2025 16:54:21 Europe/Berlin] Processed 11 emergency requests
+[07-May-2025 16:55:27 Europe/Berlin] Fetching emergency requests from database
+[07-May-2025 16:55:27 Europe/Berlin] Preparing SQL query: 
+        SELECT 
+            id,
+            name,
+            phone,
+            location,
+            issue,
+            urgency,
+            status,
+            created_at,
+            updated_at
+        FROM emergency_requests
+        ORDER BY 
+            CASE 
+                WHEN status = 'pending' THEN 1
+                WHEN status = 'in_progress' THEN 2
+                WHEN status = 'completed' THEN 3
+                WHEN status = 'cancelled' THEN 4
+                ELSE 5
+            END,
+            created_at DESC
+    
+[07-May-2025 16:55:27 Europe/Berlin] Executing query
+[07-May-2025 16:55:27 Europe/Berlin] Query executed successfully, processing results
+[07-May-2025 16:55:27 Europe/Berlin] Processed 11 emergency requests
+[07-May-2025 16:55:53 Europe/Berlin] Fetching emergency requests from database
+[07-May-2025 16:55:53 Europe/Berlin] Preparing SQL query: 
+        SELECT 
+            id,
+            name,
+            phone,
+            location,
+            issue,
+            urgency,
+            status,
+            created_at,
+            updated_at
+        FROM emergency_requests
+        ORDER BY 
+            CASE 
+                WHEN status = 'pending' THEN 1
+                WHEN status = 'in_progress' THEN 2
+                WHEN status = 'completed' THEN 3
+                WHEN status = 'cancelled' THEN 4
+                ELSE 5
+            END,
+            created_at DESC
+    
+[07-May-2025 16:55:53 Europe/Berlin] Executing query
+[07-May-2025 16:55:53 Europe/Berlin] Query executed successfully, processing results
+[07-May-2025 16:55:53 Europe/Berlin] Processed 11 emergency requests
+[07-May-2025 16:56:22 Europe/Berlin] Fetching emergency requests from database
+[07-May-2025 16:56:22 Europe/Berlin] Preparing SQL query: 
+        SELECT 
+            id,
+            name,
+            phone,
+            location,
+            issue,
+            urgency,
+            status,
+            created_at,
+            updated_at
+        FROM emergency_requests
+        ORDER BY 
+            CASE 
+                WHEN status = 'pending' THEN 1
+                WHEN status = 'in_progress' THEN 2
+                WHEN status = 'completed' THEN 3
+                WHEN status = 'cancelled' THEN 4
+                ELSE 5
+            END,
+            created_at DESC
+    
+[07-May-2025 16:56:22 Europe/Berlin] Executing query
+[07-May-2025 16:56:22 Europe/Berlin] Query executed successfully, processing results
+[07-May-2025 16:56:22 Europe/Berlin] Processed 11 emergency requests
+[07-May-2025 17:04:25 Europe/Berlin] Fetching emergency requests from database
+[07-May-2025 17:04:25 Europe/Berlin] Preparing SQL query: 
+        SELECT 
+            id,
+            name,
+            phone,
+            location,
+            issue,
+            urgency,
+            status,
+            created_at,
+            updated_at
+        FROM emergency_requests
+        ORDER BY 
+            CASE 
+                WHEN status = 'pending' THEN 1
+                WHEN status = 'in_progress' THEN 2
+                WHEN status = 'completed' THEN 3
+                WHEN status = 'cancelled' THEN 4
+                ELSE 5
+            END,
+            created_at DESC
+    
+[07-May-2025 17:04:25 Europe/Berlin] Executing query
+[07-May-2025 17:04:25 Europe/Berlin] Query executed successfully, processing results
+[07-May-2025 17:04:25 Europe/Berlin] Processed 11 emergency requests
+[07-May-2025 17:06:32 Europe/Berlin] Fetching emergency requests from database
+[07-May-2025 17:06:32 Europe/Berlin] Preparing SQL query: 
+        SELECT 
+            id,
+            name,
+            phone,
+            location,
+            issue,
+            urgency,
+            status,
+            created_at,
+            updated_at
+        FROM emergency_requests
+        ORDER BY 
+            CASE 
+                WHEN status = 'pending' THEN 1
+                WHEN status = 'in_progress' THEN 2
+                WHEN status = 'completed' THEN 3
+                WHEN status = 'cancelled' THEN 4
+                ELSE 5
+            END,
+            created_at DESC
+    
+[07-May-2025 17:06:32 Europe/Berlin] Executing query
+[07-May-2025 17:06:32 Europe/Berlin] Query executed successfully, processing results
+[07-May-2025 17:06:32 Europe/Berlin] Processed 11 emergency requests
+[07-May-2025 17:07:23 Europe/Berlin] Fetching emergency requests from database
+[07-May-2025 17:07:23 Europe/Berlin] Preparing SQL query: 
+        SELECT 
+            id,
+            name,
+            phone,
+            location,
+            issue,
+            urgency,
+            status,
+            created_at,
+            updated_at
+        FROM emergency_requests
+        ORDER BY 
+            CASE 
+                WHEN status = 'pending' THEN 1
+                WHEN status = 'in_progress' THEN 2
+                WHEN status = 'completed' THEN 3
+                WHEN status = 'cancelled' THEN 4
+                ELSE 5
+            END,
+            created_at DESC
+    
+[07-May-2025 17:07:23 Europe/Berlin] Executing query
+[07-May-2025 17:07:23 Europe/Berlin] Query executed successfully, processing results
+[07-May-2025 17:07:23 Europe/Berlin] Processed 11 emergency requests
+[07-May-2025 17:07:50 Europe/Berlin] Fetching emergency requests from database
+[07-May-2025 17:07:50 Europe/Berlin] Preparing SQL query: 
+        SELECT 
+            id,
+            name,
+            phone,
+            location,
+            issue,
+            urgency,
+            status,
+            created_at,
+            updated_at
+        FROM emergency_requests
+        ORDER BY 
+            CASE 
+                WHEN status = 'pending' THEN 1
+                WHEN status = 'in_progress' THEN 2
+                WHEN status = 'completed' THEN 3
+                WHEN status = 'cancelled' THEN 4
+                ELSE 5
+            END,
+            created_at DESC
+    
+[07-May-2025 17:07:50 Europe/Berlin] Executing query
+[07-May-2025 17:07:50 Europe/Berlin] Query executed successfully, processing results
+[07-May-2025 17:07:50 Europe/Berlin] Processed 11 emergency requests
+[07-May-2025 17:08:15 Europe/Berlin] Fetching emergency requests from database
+[07-May-2025 17:08:15 Europe/Berlin] Preparing SQL query: 
+        SELECT 
+            id,
+            name,
+            phone,
+            location,
+            issue,
+            urgency,
+            status,
+            created_at,
+            updated_at
+        FROM emergency_requests
+        ORDER BY 
+            CASE 
+                WHEN status = 'pending' THEN 1
+                WHEN status = 'in_progress' THEN 2
+                WHEN status = 'completed' THEN 3
+                WHEN status = 'cancelled' THEN 4
+                ELSE 5
+            END,
+            created_at DESC
+    
+[07-May-2025 17:08:15 Europe/Berlin] Executing query
+[07-May-2025 17:08:15 Europe/Berlin] Query executed successfully, processing results
+[07-May-2025 17:08:15 Europe/Berlin] Processed 11 emergency requests
+[07-May-2025 17:08:29 Europe/Berlin] Fetching emergency requests from database
+[07-May-2025 17:08:29 Europe/Berlin] Preparing SQL query: 
+        SELECT 
+            id,
+            name,
+            phone,
+            location,
+            issue,
+            urgency,
+            status,
+            created_at,
+            updated_at
+        FROM emergency_requests
+        ORDER BY 
+            CASE 
+                WHEN status = 'pending' THEN 1
+                WHEN status = 'in_progress' THEN 2
+                WHEN status = 'completed' THEN 3
+                WHEN status = 'cancelled' THEN 4
+                ELSE 5
+            END,
+            created_at DESC
+    
+[07-May-2025 17:08:29 Europe/Berlin] Executing query
+[07-May-2025 17:08:29 Europe/Berlin] Query executed successfully, processing results
+[07-May-2025 17:08:29 Europe/Berlin] Processed 11 emergency requests
+[07-May-2025 17:08:52 Europe/Berlin] Fetching emergency requests from database
+[07-May-2025 17:08:52 Europe/Berlin] Preparing SQL query: 
+        SELECT 
+            id,
+            name,
+            phone,
+            location,
+            issue,
+            urgency,
+            status,
+            created_at,
+            updated_at
+        FROM emergency_requests
+        ORDER BY 
+            CASE 
+                WHEN status = 'pending' THEN 1
+                WHEN status = 'in_progress' THEN 2
+                WHEN status = 'completed' THEN 3
+                WHEN status = 'cancelled' THEN 4
+                ELSE 5
+            END,
+            created_at DESC
+    
+[07-May-2025 17:08:52 Europe/Berlin] Executing query
+[07-May-2025 17:08:52 Europe/Berlin] Query executed successfully, processing results
+[07-May-2025 17:08:52 Europe/Berlin] Processed 11 emergency requests
+[07-May-2025 17:09:08 Europe/Berlin] Fetching emergency requests from database
+[07-May-2025 17:09:08 Europe/Berlin] Preparing SQL query: 
+        SELECT 
+            id,
+            name,
+            phone,
+            location,
+            issue,
+            urgency,
+            status,
+            created_at,
+            updated_at
+        FROM emergency_requests
+        ORDER BY 
+            CASE 
+                WHEN status = 'pending' THEN 1
+                WHEN status = 'in_progress' THEN 2
+                WHEN status = 'completed' THEN 3
+                WHEN status = 'cancelled' THEN 4
+                ELSE 5
+            END,
+            created_at DESC
+    
+[07-May-2025 17:09:08 Europe/Berlin] Executing query
+[07-May-2025 17:09:08 Europe/Berlin] Query executed successfully, processing results
+[07-May-2025 17:09:08 Europe/Berlin] Processed 11 emergency requests
+[08-May-2025 05:54:33 Europe/Berlin] Fetching emergency requests from database
+[08-May-2025 05:54:33 Europe/Berlin] Preparing SQL query: 
+        SELECT 
+            id,
+            name,
+            phone,
+            location,
+            issue,
+            urgency,
+            status,
+            created_at,
+            updated_at
+        FROM emergency_requests
+        ORDER BY 
+            CASE 
+                WHEN status = 'pending' THEN 1
+                WHEN status = 'in_progress' THEN 2
+                WHEN status = 'completed' THEN 3
+                WHEN status = 'cancelled' THEN 4
+                ELSE 5
+            END,
+            created_at DESC
+    
+[08-May-2025 05:54:33 Europe/Berlin] Executing query
+[08-May-2025 05:54:33 Europe/Berlin] Query executed successfully, processing results
+[08-May-2025 05:54:33 Europe/Berlin] Processed 11 emergency requests

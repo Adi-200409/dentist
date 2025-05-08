@@ -133,33 +133,6 @@ try {
             color: #721c24;
         }
         
-        .info-section {
-            margin-bottom: 2rem;
-        }
-        
-        .info-section h3 {
-            margin-bottom: 1rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .info-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 1.5rem;
-        }
-        
-        .info-item {
-            margin-bottom: 1rem;
-        }
-        
-        .info-label {
-            display: block;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            color: #555;
-        }
-        
         .emergency-description {
             padding: 1.5rem;
             background-color: #f9f9f9;
@@ -239,24 +212,6 @@ try {
             </span>
         </div>
         
-        <div class="info-section">
-            <h3>Emergency Details</h3>
-            <div class="info-grid">
-                <div class="info-item">
-                    <span class="info-label">Location</span>
-                    <span><?php echo htmlspecialchars($emergency['location'] ?? 'Not specified'); ?></span>
-                </div>
-                <div class="info-item">
-                    <span class="info-label">Urgency</span>
-                    <span><?php echo htmlspecialchars($emergency['urgency'] ?? 'Not specified'); ?></span>
-                </div>
-                <div class="info-item">
-                    <span class="info-label">Requested On</span>
-                    <span><?php echo isset($emergency['created_at']) ? date('M d, Y h:i A', strtotime($emergency['created_at'])) : 'Unknown'; ?></span>
-                </div>
-            </div>
-        </div>
-        
         <div class="emergency-description">
             <h3>Issue Description</h3>
             <p><?php echo nl2br(htmlspecialchars($emergency['issue'] ?? 'No description provided')); ?></p>
@@ -297,6 +252,6 @@ try {
     console.log('Emergency status:', <?php echo json_encode($emergency['status'] ?? null); ?>);
     </script>
     
-    <script src="emergency-buttons.js"></script>
+    <script src="emergency-detail.js"></script>
 </body>
 </html> 

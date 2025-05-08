@@ -2,7 +2,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Emergency buttons script loaded');
 
-    // Find buttons directly
+    // Find buttons by their classes
     const acceptButton = document.querySelector('.btn-accept');
     const completeButton = document.querySelector('.btn-complete');
     const cancelButton = document.querySelector('.btn-cancel');
@@ -36,6 +36,12 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     } else {
         console.log('Cancel button not found');
+    }
+
+    // Show emergency details in the details section if it exists
+    const emergencyData = document.getElementById('emergencyData');
+    if (emergencyData) {
+        showEmergencyDetails(emergencyData.dataset.emergencyId);
     }
 });
 
@@ -90,6 +96,11 @@ function updateEmergencyStatus(status) {
         console.log('Data received:', data);
         if (data.success) {
             alert('Emergency status updated successfully');
+            
+            // Update UI without reloading
+            updateUIStatus(status);
+            
+            // Reload after short delay
             setTimeout(() => { window.location.reload(); }, 1000);
         } else {
             throw new Error(data.message || 'Update failed');
@@ -105,6 +116,75 @@ function updateEmergencyStatus(status) {
             btn.style.opacity = '1';
         });
     });
+}
+
+// Function to update UI status without reloading
+function updateUIStatus(status) {
+    // Update status badge
+    const statusBadge = document.querySelector('.status-badge');
+    if (statusBadge) {
+        statusBadge.className = 'status-badge status-' + status;
+        statusBadge.textContent = status.charAt(0).toUpperCase() + status.slice(1).replace('_', ' ');
+    }
+    
+    // Update button states
+    const acceptButton = document.querySelector('.btn-accept');
+    const completeButton = document.querySelector('.btn-complete');
+    const cancelButton = document.querySelector('.btn-cancel');
+    
+    if (acceptButton) acceptButton.disabled = (status !== 'pending');
+    if (completeButton) completeButton.disabled = (status !== 'in_progress');
+    if (cancelButton) cancelButton.disabled = (status === 'completed' || status === 'cancelled');
+}
+
+// Function to show emergency details
+function showEmergencyDetails(emergencyId) {
+    if (!emergencyId) return;
+    
+    const detailsSection = document.querySelector('.emergency-description');
+    if (!detailsSection) return;
+    
+    // If there's already content, don't fetch again
+    if (detailsSection.querySelector('p')?.textContent.trim() !== 'No description provided' &&
+        detailsSection.querySelector('p')?.textContent.trim() !== '') {
+        return;
+    }
+    
+    // Only fetch if additional details are needed
+    fetch(`get_emergency_details.php?id=${emergencyId}`)
+    .then(response => {
+        if (!response.ok) throw new Error('Failed to fetch details');
+        return response.json();
+    })
+    .then(data => {
+        if (data.success && data.emergency) {
+            // Update any missing details in the UI
+            updateEmergencyDetailsUI(data.emergency);
+        }
+    })
+    .catch(error => {
+        console.error('Error fetching emergency details:', error);
+    });
+}
+
+// Function to update emergency details in the UI
+function updateEmergencyDetailsUI(emergency) {
+    // Update patient info
+    const patientName = document.querySelector('.patient-info h2');
+    if (patientName && !patientName.textContent.trim()) {
+        patientName.textContent = emergency.name || 'Unknown';
+    }
+    
+    const patientPhone = document.querySelector('.patient-info p');
+    if (patientPhone && patientPhone.textContent.includes('N/A')) {
+        patientPhone.innerHTML = `<i class="fas fa-phone"></i> ${emergency.phone || 'N/A'}`;
+    }
+    
+    // Update description
+    const descriptionEl = document.querySelector('.emergency-description p');
+    if (descriptionEl && (descriptionEl.textContent === 'No description provided' || !descriptionEl.textContent.trim())) {
+        descriptionEl.innerHTML = emergency.issue ? emergency.issue.replace(/\n/g, '<br>') : 'No description provided';
+    }
 }
 
 // Helper to get emergency ID from URL

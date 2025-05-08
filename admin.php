@@ -35,7 +35,9 @@ $stmt = $conn->prepare("
         (SELECT COUNT(*) FROM users) as total_users,
         (SELECT COUNT(*) FROM appointments WHERE status = 'scheduled') as pending_appointments,
         (SELECT COUNT(*) FROM appointments WHERE status = 'completed') as completed_appointments,
-        (SELECT COUNT(*) FROM appointments WHERE status = 'cancelled') as cancelled_appointments
+        (SELECT COUNT(*) FROM appointments WHERE status = 'cancelled') as cancelled_appointments,
+        (SELECT COUNT(*) FROM consultations) as total_consultations,
+        (SELECT COUNT(*) FROM consultations WHERE status = 'pending') as pending_consultations
 ");
 $stmt->execute();
 $result = $stmt->get_result();
@@ -321,6 +323,7 @@ $stmt->close();
         }
 
         .action-btn {
+            margin: 10px;
             padding: 0.5rem;
             border: none;
             border-radius: 0.5rem;
@@ -359,316 +362,6 @@ $stmt->close();
         .status-cancelled {
             background: #fee2e2;
             color: #991b1b;
-        }
-
-        /* Settings Section Styling */
-        .settings-tabs {
-            display: flex;
-            margin-bottom: 1.5rem;
-            border-bottom: 1px solid rgba(0,0,0,0.1);
-            overflow-x: auto;
-            padding-bottom: 0.25rem;
-            gap: 0.5rem;
-        }
-
-        .settings-tab {
-            background: transparent;
-            border: none;
-            padding: 0.75rem 1.25rem;
-            cursor: pointer;
-            font-weight: 500;
-            color: #6c757d;
-            border-radius: 8px 8px 0 0;
-            transition: all 0.3s ease;
-            flex-shrink: 0;
-            position: relative;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .settings-tab:hover {
-            color: #007bff;
-            background-color: rgba(13, 110, 253, 0.05);
-        }
-
-        .settings-tab.active {
-            color: #007bff;
-            background-color: rgba(13, 110, 253, 0.1);
-            border-bottom: 3px solid #007bff;
-        }
-
-        .settings-tab i {
-            margin-right: 6px;
-        }
-
-        .settings-container {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-        }
-
-        @media (min-width: 768px) {
-            .settings-container {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        .settings-card {
-            background: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-            padding: 1.5rem;
-            transition: all 0.3s ease;
-            border: 1px solid rgba(0,0,0,0.05);
-            height: fit-content;
-        }
-
-        .settings-card:hover {
-            box-shadow: 0 6px 16px rgba(0,0,0,0.1);
-            transform: translateY(-2px);
-        }
-
-        .settings-card h4 {
-            color: #333;
-            margin-top: 0;
-            margin-bottom: 1.5rem;
-            font-size: 1.1rem;
-            display: flex;
-            align-items: center;
-            position: relative;
-            padding-bottom: 0.75rem;
-            border-bottom: 1px solid rgba(0,0,0,0.05);
-        }
-
-        .settings-card h4 i {
-            color: #007bff;
-            margin-right: 0.5rem;
-            font-size: 1.2rem;
-        }
-
-        .settings-form {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .form-row {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .form-row .form-group {
-            flex: 1 1 220px;
-        }
-
-        .form-group {
-            margin-bottom: 1rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 500;
-            color: #555;
-            font-size: 0.9rem;
-        }
-
-        .form-group input, 
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 0.65rem 1rem;
-            border-radius: 8px;
-            border: 1px solid #ddd;
-            font-family: inherit;
-            font-size: 0.95rem;
-            transition: all 0.2s;
-        }
-
-        .form-group textarea {
-            min-height: 100px;
-            resize: vertical;
-        }
-
-        .form-group input:focus, 
-        .form-group select:focus,
-        .form-group textarea:focus {
-            border-color: #007bff;
-            outline: none;
-            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
-        }
-
-        .input-with-icon {
-            position: relative;
-        }
-
-        .input-with-icon label i {
-            color: #007bff;
-            margin-right: 0.25rem;
-        }
-
-        .help-text {
-            color: #6c757d;
-            font-size: 0.8rem;
-            margin-top: 0.25rem;
-            margin-bottom: 0;
-        }
-
-        .form-actions {
-            display: flex;
-            justify-content: flex-end;
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-
-        .btn-primary, .btn-secondary {
-            padding: 0.6rem 1.25rem;
-            border-radius: 8px;
-            border: none;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.2s;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-        }
-
-        .btn-primary {
-            background: #007bff;
-            color: white;
-        }
-
-        .btn-primary:hover {
-            background: #0069d9;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
-        }
-
-        .btn-secondary {
-            background: #f8f9fa;
-            color: #6c757d;
-            border: 1px solid #ddd;
-        }
-
-        .btn-secondary:hover {
-            background: #e9ecef;
-            color: #495057;
-        }
-
-        .checkbox-group {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .checkbox-group input[type="checkbox"] {
-            width: 18px;
-            height: 18px;
-            margin: 0;
-        }
-
-        .checkbox-group label {
-            margin-bottom: 0;
-            cursor: pointer;
-        }
-
-        .blocked-dates-list {
-            max-height: 200px;
-            overflow-y: auto;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 0.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .blocked-date-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0.5rem;
-            background: #f8f9fa;
-            border-radius: 6px;
-            margin-bottom: 0.5rem;
-        }
-
-        .blocked-date-item .date-info {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .blocked-date-item .date {
-            font-weight: 500;
-        }
-
-        .blocked-date-item .reason {
-            font-size: 0.85rem;
-            color: #6c757d;
-        }
-
-        .blocked-date-item .delete-date {
-            color: #dc3545;
-            cursor: pointer;
-            padding: 0.25rem;
-            border-radius: 4px;
-            transition: all 0.2s;
-        }
-
-        .blocked-date-item .delete-date:hover {
-            background: rgba(220, 53, 69, 0.1);
-        }
-
-        @media (max-width: 1024px) {
-            .sidebar {
-                width: 80px;
-                padding: 1rem;
-            }
-
-            .sidebar-header h1,
-            .sidebar-header p,
-            .nav-item span {
-                display: none;
-            }
-
-            .nav-item {
-                justify-content: center;
-                padding: 0.75rem;
-            }
-
-            .nav-item i {
-                margin: 0;
-            }
-
-            .main-content {
-                margin-left: 80px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .main-content {
-                padding: 1rem;
-            }
-
-            .dashboard {
-                grid-template-columns: 1fr;
-            }
-
-            .header {
-                flex-direction: column;
-                gap: 1rem;
-                text-align: center;
-            }
-
-            .user-info {
-                flex-direction: column;
-            }
-
-            .settings-container {
-                grid-template-columns: 1fr;
-            }
         }
 
         /* Add notification styles */
@@ -1191,22 +884,26 @@ $stmt->close();
         }
 
         @media (max-width: 768px) {
-            .emergency-filters {
-                flex-direction: column;
-                width: 100%;
+            .main-content {
+                padding: 1rem;
             }
 
-            .emergency-filter {
-                width: 100%;
-                justify-content: center;
-            }
-
-            .emergency-stats {
+            .dashboard {
                 grid-template-columns: 1fr;
+            }
+
+            .header {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+
+            .user-info {
+                flex-direction: column;
             }
         }
 
-        /* Custom Alert and Confirm Panel Styles */
+        /* Custom Modal Styles */
         .custom-modal {
             display: none;
             position: fixed;
@@ -1335,6 +1032,210 @@ $stmt->close();
                 justify-content: center;
             }
         }
+
+        /* Add these styles to your existing CSS */
+        .status-badge {
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .status-pending {
+            background-color: var(--warning-color);
+            color: white;
+        }
+
+        .status-approved {
+            background-color: var(--success-color);
+            color: white;
+        }
+
+        .status-rejected {
+            background-color: var(--danger-color);
+            color: white;
+        }
+
+        .action-btn {
+            padding: 0.5rem;
+            border: none;
+            border-radius: 0.375rem;
+            cursor: pointer;
+            margin-right: 0.25rem;
+            transition: all 0.2s;
+        }
+
+        .view-btn {
+            background-color: var(--info-color);
+            color: white;
+        }
+
+        .approve-btn {
+            background-color: var(--success-color);
+            color: white;
+        }
+
+        .reject-btn {
+            background-color: var(--danger-color);
+            color: white;
+        }
+
+        .action-btn:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            overflow-y: auto;
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 3% auto;
+            padding: 2.5rem;
+            border-radius: 1.5rem;
+            width: 90%;
+            max-width: 900px;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .modal-content h2 {
+            color: var(--primary-color);
+            font-size: 1.75rem;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .close {
+            position: absolute;
+            right: 1.5rem;
+            top: 1.5rem;
+            font-size: 1.75rem;
+            color: var(--text-color);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 2.5rem;
+            height: 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            border-radius: 50%;
+            background: var(--light-color);
+        }
+
+        .close:hover {
+            background: var(--danger-color);
+            color: white;
+            transform: rotate(90deg);
+        }
+        .close-icon{
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            right: 10px;
+            top: -10px;
+            
+        }
+        .close-icon:hover{
+            right: 10px;
+            top: -15px;
+            background: var(--danger-color);
+            color: white;
+            transform: rotate(90deg);
+        }
+
+        #consultationDetails {
+            margin-top: 1.5rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .detail-group {
+            background: var(--light-color);
+            padding: 1.5rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .detail-group:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .detail-group h4 {
+            color: var(--primary-color);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .detail-group h4 i {
+            font-size: 1.25rem;
+        }
+
+        .detail-group p {
+            color: var(--text-color);
+            margin-bottom: 0.75rem;
+            line-height: 1.6;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+
+        .detail-group p strong {
+            min-width: 150px;
+            color: var(--dark-color);
+        }
+
+        .consultation-image {
+            max-width: 100%;
+            border-radius: 1rem;
+            margin-top: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .consultation-image:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        @media (max-width: 768px) {
+            .modal-content {
+                margin: 5% auto;
+                padding: 1.5rem;
+                width: 95%;
+            }
+
+            #consultationDetails {
+                grid-template-columns: 1fr;
+            }
+
+            .detail-group p {
+                flex-direction: column;
+                gap: 0.25rem;
+            }
+
+            .detail-group p strong {
+                min-width: auto;
+            }
+        }
     </style>
 </head>
 <body>
@@ -1383,25 +1284,25 @@ $stmt->close();
             <p>Admin Dashboard</p>
         </div>
         <nav class="nav-menu">
-            <a href="#" class="nav-item active" data-section="appointments">
-                <i class="fas fa-home"></i>
+            <a href="#" class="nav-item active" data-section="dashboard">
+                <i class="fas fa-tachometer-alt"></i>
                 <span>Dashboard</span>
             </a>
             <a href="#" class="nav-item" data-section="appointments">
-                <i class="fas fa-calendar-check"></i>
+                <i class="fas fa-calendar-alt"></i>
                 <span>Appointments</span>
             </a>
             <a href="#" class="nav-item" data-section="emergencies">
                 <i class="fas fa-ambulance"></i>
                 <span>Emergencies</span>
             </a>
+            <a href="#" class="nav-item" data-section="consultations">
+                <i class="fas fa-comment-medical"></i>
+                <span>Consultations</span>
+            </a>
             <a href="#" class="nav-item" data-section="users">
                 <i class="fas fa-users"></i>
                 <span>Users</span>
-            </a>
-            <a href="#" class="nav-item" data-section="settings">
-                <i class="fas fa-cog"></i>
-                <span>Settings</span>
             </a>
         </nav>
     </div>
@@ -1429,6 +1330,11 @@ $stmt->close();
             <div class="card">
                 <h3><i class="fas fa-users"></i> Total Users</h3>
                 <div class="number"><?php echo $counts['total_users']; ?></div>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-comment-medical"></i> Online Consultations</h3>
+                <div class="number"><?php echo $counts['total_consultations']; ?></div>
+                <p>Pending: <?php echo $counts['pending_consultations']; ?></p>
             </div>
         </div>
 
@@ -1521,6 +1427,76 @@ $stmt->close();
             </div>
         </div>
 
+        <div class="content-section" id="consultations" style="display: none;">
+            <div class="section-header">
+                <h3 class="section-title">Online Consultation Requests</h3>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" onclick="filterConsultations('all')">All</button>
+                    <button class="filter-btn" onclick="filterConsultations('pending')">Pending</button>
+                    <button class="filter-btn" onclick="filterConsultations('approved')">Approved</button>
+                    <button class="filter-btn" onclick="filterConsultations('rejected')">Rejected</button>
+                </div>
+            </div>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>Contact</th>
+                            <th>Preferred Date</th>
+                            <th>Preferred Time</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="consultationsTableBody">
+                        <?php
+                        $consultations_query = "SELECT * FROM consultations ORDER BY submission_date DESC";
+                        $consultations_result = $conn->query($consultations_query);
+                        
+                        while ($consultation = $consultations_result->fetch_assoc()) {
+                            $status_class = '';
+                            switch ($consultation['status']) {
+                                case 'pending':
+                                    $status_class = 'status-pending';
+                                    break;
+                                case 'approved':
+                                    $status_class = 'status-approved';
+                                    break;
+                                case 'rejected':
+                                    $status_class = 'status-rejected';
+                                    break;
+                            }
+                            ?>
+                            <tr>
+                                <td><?php echo htmlspecialchars($consultation['name']); ?></td>
+                                <td><?php echo htmlspecialchars($consultation['age']); ?></td>
+                                <td>
+                                    Email: <?php echo htmlspecialchars($consultation['email']); ?><br>
+                                    Phone: <?php echo htmlspecialchars($consultation['phone']); ?>
+                                </td>
+                                <td><?php echo date('M d, Y', strtotime($consultation['preferred_date'])); ?></td>
+                                <td><?php echo date('h:i A', strtotime($consultation['preferred_time'])); ?></td>
+                                <td><span class="status-badge <?php echo $status_class; ?>"><?php echo ucfirst($consultation['status']); ?></span></td>
+                                <td>
+                                    <button class="action-btn view-btn" onclick="viewConsultation(<?php echo $consultation['id']; ?>)" title="View Details">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                    <button class="action-btn approve-btn" onclick="updateConsultationStatus(<?php echo $consultation['id']; ?>, 'approved')" title="Approve">
+                                        <i class="fas fa-check"></i>
+                                    </button>
+                                    <button class="action-btn reject-btn" onclick="updateConsultationStatus(<?php echo $consultation['id']; ?>, 'rejected')" title="Reject">
+                                        <i class="fas fa-times"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        <?php } ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
         <div class="content-section" id="users" style="display: none;">
             <div class="section-header">
                 <h3 class="section-title">User Management</h3>
@@ -1539,293 +1515,14 @@ $stmt->close();
                 <tbody id="usersTableBody"></tbody>
             </table>
         </div>
+    </div>
 
-        <div class="content-section" id="settings" style="display: none;">
-            <div class="section-header">
-                <h3 class="section-title">System Settings</h3>
-                <p class="section-description">Configure your clinic settings and preferences</p>
-            </div>
-            
-            <div class="settings-tabs">
-                <button class="settings-tab active" data-tab="profile">
-                    <i class="fas fa-user-shield"></i> Profile
-                </button>
-                <button class="settings-tab" data-tab="appointments">
-                    <i class="fas fa-calendar-alt"></i> Appointments
-                </button>
-                <button class="settings-tab" data-tab="notifications">
-                    <i class="fas fa-bell"></i> Notifications
-                </button>
-                <button class="settings-tab" data-tab="system">
-                    <i class="fas fa-cogs"></i> System
-                </button>
-            </div>
-            
-            <div class="settings-container" id="profileSettings">
-                <div class="settings-card">
-                    <h4><i class="fas fa-user-shield"></i> Admin Profile</h4>
-                    <form id="adminProfileForm" class="settings-form">
-                        <div class="form-row">
-                            <div class="form-group input-with-icon">
-                                <label for="adminName"><i class="fas fa-user"></i> Name</label>
-                                <input type="text" id="adminName" name="name" value="<?php echo htmlspecialchars($user['name']); ?>" required>
-                            </div>
-                            <div class="form-group input-with-icon">
-                                <label for="adminPhone"><i class="fas fa-phone"></i> Phone</label>
-                                <input type="text" id="adminPhone" name="phone" value="<?php echo htmlspecialchars($user['phone']); ?>" required>
-                            </div>
-                        </div>
-                        <?php if (isset($hasEmailField) && $hasEmailField): ?>
-                        <div class="form-group input-with-icon">
-                            <label for="adminEmail"><i class="fas fa-envelope"></i> Email</label>
-                            <input type="email" id="adminEmail" name="email" value="<?php echo isset($user['email']) ? htmlspecialchars($user['email']) : ''; ?>">
-                            <p class="help-text">This email will be used for notifications and password recovery</p>
-                        </div>
-                        <?php endif; ?>
-                        <div class="form-group input-with-icon">
-                            <label for="adminPassword"><i class="fas fa-lock"></i> New Password</label>
-                            <input type="password" id="adminPassword" name="password" placeholder="Leave blank to keep current password">
-                        </div>
-                        <div class="form-group input-with-icon">
-                            <label for="adminConfirmPassword"><i class="fas fa-check-circle"></i> Confirm New Password</label>
-                            <input type="password" id="adminConfirmPassword" name="confirm_password" placeholder="Confirm your new password">
-                        </div>
-                        <div class="form-actions">
-                            <button type="reset" class="btn-secondary">
-                                <i class="fas fa-undo"></i> Reset
-                            </button>
-                            <button type="submit" class="btn-primary">
-                                <i class="fas fa-save"></i> Update Profile
-                            </button>
-                        </div>
-                    </form>
-                </div>
-                
-                <div class="settings-card">
-                    <h4><i class="fas fa-clinic-medical"></i> Clinic Information</h4>
-                    <form id="clinicInfoForm" class="settings-form">
-                        <div class="form-group input-with-icon">
-                            <label for="clinicName"><i class="fas fa-hospital"></i> Clinic Name</label>
-                            <input type="text" id="clinicName" name="clinic_name" value="JUSTSmile Dental Clinic">
-                        </div>
-                        <div class="form-group input-with-icon">
-                            <label for="clinicAddress"><i class="fas fa-map-marker-alt"></i> Address</label>
-                            <input type="text" id="clinicAddress" name="clinic_address" placeholder="Enter clinic address">
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group input-with-icon">
-                                <label for="clinicPhone"><i class="fas fa-phone"></i> Contact Phone</label>
-                                <input type="text" id="clinicPhone" name="clinic_phone" placeholder="Enter contact phone">
-                            </div>
-                            <div class="form-group input-with-icon">
-                                <label for="clinicEmail"><i class="fas fa-envelope"></i> Contact Email</label>
-                                <input type="email" id="clinicEmail" name="clinic_email" placeholder="Enter contact email">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="clinicDescription"><i class="fas fa-info-circle"></i> Description</label>
-                            <textarea id="clinicDescription" name="clinic_description" rows="3" placeholder="Short description about your clinic"></textarea>
-                        </div>
-                        <div class="form-actions">
-                            <button type="reset" class="btn-secondary">
-                                <i class="fas fa-undo"></i> Reset
-                            </button>
-                            <button type="submit" class="btn-primary">
-                                <i class="fas fa-save"></i> Save Information
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            
-            <div class="settings-container" id="appointmentsSettings" style="display: none;">
-                <div class="settings-card">
-                    <h4><i class="fas fa-clock"></i> Appointment Settings</h4>
-                    <form id="appointmentSettingsForm" class="settings-form">
-                        <div class="form-row">
-                            <div class="form-group input-with-icon">
-                                <label for="workingHoursStart"><i class="fas fa-hourglass-start"></i> Working Hours Start</label>
-                                <input type="time" id="workingHoursStart" name="working_hours_start" value="09:00" required>
-                            </div>
-                            <div class="form-group input-with-icon">
-                                <label for="workingHoursEnd"><i class="fas fa-hourglass-end"></i> Working Hours End</label>
-                                <input type="time" id="workingHoursEnd" name="working_hours_end" value="21:00" required>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group input-with-icon">
-                                <label for="appointmentDuration"><i class="fas fa-stopwatch"></i> Appointment Duration</label>
-                                <select id="appointmentDuration" name="appointment_duration">
-                                    <option value="15">15 minutes</option>
-                                    <option value="30" selected>30 minutes</option>
-                                    <option value="45">45 minutes</option>
-                                    <option value="60">1 hour</option>
-                                </select>
-                            </div>
-                            <div class="form-group input-with-icon">
-                                <label for="maxAppointmentsPerDay"><i class="fas fa-calendar-day"></i> Max Appointments Per Day</label>
-                                <input type="number" id="maxAppointmentsPerDay" name="max_appointments_per_day" value="20" min="1" max="100" required>
-                            </div>
-                        </div>
-                        <div class="form-group checkbox-group">
-                            <input type="checkbox" id="allowWeekends" name="allow_weekends">
-                            <label for="allowWeekends">Allow weekend appointments</label>
-                        </div>
-                        <div class="form-group checkbox-group">
-                            <input type="checkbox" id="requireConfirmation" name="require_confirmation" checked>
-                            <label for="requireConfirmation">Require admin confirmation for appointments</label>
-                        </div>
-                        <div class="form-group">
-                            <label>Buffer Time Between Appointments</label>
-                            <div class="form-row">
-                                <div class="form-group input-with-icon">
-                                    <input type="number" id="bufferTime" name="buffer_time" value="10" min="0" max="60">
-                                    <p class="help-text">Minutes between appointments for preparation</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-actions">
-                            <button type="reset" class="btn-secondary">
-                                <i class="fas fa-undo"></i> Reset
-                            </button>
-                            <button type="submit" class="btn-primary">
-                                <i class="fas fa-save"></i> Save Settings
-                            </button>
-                        </div>
-                    </form>
-                </div>
-                
-                <div class="settings-card">
-                    <h4><i class="fas fa-ban"></i> Blocked Dates</h4>
-                    <form id="blockedDatesForm" class="settings-form">
-                        <div class="form-group">
-                            <label><i class="fas fa-calendar-times"></i> Add Blocked Date</label>
-                            <div class="form-row">
-                                <div class="form-group input-with-icon">
-                                    <input type="date" id="blockedDate" name="blocked_date">
-                                </div>
-                                <div class="form-group input-with-icon">
-                                    <input type="text" id="blockReason" name="block_reason" placeholder="Reason for blocking (optional)">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label><i class="fas fa-list"></i> Current Blocked Dates</label>
-                            <div id="blockedDatesList" class="blocked-dates-list">
-                                <!-- Blocked dates will be dynamically inserted here -->
-                                <p class="help-text">No blocked dates added yet</p>
-                            </div>
-                        </div>
-                        <div class="form-actions">
-                            <button type="button" id="addBlockedDate" class="btn-primary">
-                                <i class="fas fa-plus"></i> Add Blocked Date
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            
-            <div class="settings-container" id="notificationsSettings" style="display: none;">
-                <div class="settings-card">
-                    <h4><i class="fas fa-bell"></i> Notification Preferences</h4>
-                    <form id="notificationSettingsForm" class="settings-form">
-                        <div class="form-group">
-                            <label><i class="fas fa-envelope"></i> Email Notifications</label>
-                            <div class="form-group checkbox-group">
-                                <input type="checkbox" id="emailNewAppointment" name="email_new_appointment" checked>
-                                <label for="emailNewAppointment">New appointment notifications</label>
-                            </div>
-                            <div class="form-group checkbox-group">
-                                <input type="checkbox" id="emailCancelledAppointment" name="email_cancelled_appointment" checked>
-                                <label for="emailCancelledAppointment">Cancelled appointment notifications</label>
-                            </div>
-                            <div class="form-group checkbox-group">
-                                <input type="checkbox" id="emailEmergencyRequest" name="email_emergency_request" checked>
-                                <label for="emailEmergencyRequest">Emergency request notifications</label>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label><i class="fas fa-desktop"></i> Browser Notifications</label>
-                            <div class="form-group checkbox-group">
-                                <input type="checkbox" id="browserNotifications" name="browser_notifications" checked>
-                                <label for="browserNotifications">Enable browser notifications</label>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label><i class="fas fa-sms"></i> SMS Notifications</label>
-                            <div class="form-group checkbox-group">
-                                <input type="checkbox" id="smsNewAppointment" name="sms_new_appointment">
-                                <label for="smsNewAppointment">New appointment notifications</label>
-                            </div>
-                            <div class="form-group checkbox-group">
-                                <input type="checkbox" id="smsEmergencyRequest" name="sms_emergency_request" checked>
-                                <label for="smsEmergencyRequest">Emergency request notifications</label>
-                            </div>
-                        </div>
-                        <div class="form-actions">
-                            <button type="reset" class="btn-secondary">
-                                <i class="fas fa-undo"></i> Reset
-                            </button>
-                            <button type="submit" class="btn-primary">
-                                <i class="fas fa-save"></i> Save Preferences
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            
-            <div class="settings-container" id="systemSettings" style="display: none;">
-                <div class="settings-card">
-                    <h4><i class="fas fa-cogs"></i> System Settings</h4>
-                    <form id="systemSettingsForm" class="settings-form">
-                        <div class="form-group">
-                            <label><i class="fas fa-database"></i> Database Backup</label>
-                            <div class="form-group checkbox-group">
-                                <input type="checkbox" id="enableAutoBackup" name="enable_auto_backup">
-                                <label for="enableAutoBackup">Enable automatic database backup</label>
-                            </div>
-                            <div class="form-group">
-                                <label for="backupFrequency"><i class="fas fa-clock"></i> Backup Frequency</label>
-                                <select id="backupFrequency" name="backup_frequency">
-                                    <option value="daily">Daily</option>
-                                    <option value="weekly" selected>Weekly</option>
-                                    <option value="monthly">Monthly</option>
-                                </select>
-                            </div>
-                            <div class="form-actions">
-                                <button type="button" id="manualBackup" class="btn-secondary">
-                                    <i class="fas fa-download"></i> Manual Backup Now
-                                </button>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label><i class="fas fa-trash-alt"></i> Data Cleanup</label>
-                            <div class="form-group checkbox-group">
-                                <input type="checkbox" id="enableDataCleanup" name="enable_data_cleanup">
-                                <label for="enableDataCleanup">Automatically remove old completed appointments</label>
-                            </div>
-                            <div class="form-group">
-                                <label for="dataRetentionPeriod"><i class="fas fa-calendar"></i> Data Retention Period</label>
-                                <select id="dataRetentionPeriod" name="data_retention_period">
-                                    <option value="30">30 days</option>
-                                    <option value="60">60 days</option>
-                                    <option value="90" selected>90 days</option>
-                                    <option value="180">6 months</option>
-                                    <option value="365">1 year</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-actions">
-                            <button type="reset" class="btn-secondary">
-                                <i class="fas fa-undo"></i> Reset
-                            </button>
-                            <button type="submit" class="btn-primary">
-                                <i class="fas fa-save"></i> Save Settings
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </div>
+    <!-- Add Modal for Viewing Consultation Details -->
+    <div id="consultationModal" class="modal">
+        <div class="modal-content">
+            <span class="close"><span class="close-icon">&times;</span></span>
+            <h2>Consultation Details</h2>
+            <div id="consultationDetails"></div>
         </div>
     </div>
 
@@ -1833,13 +1530,13 @@ $stmt->close();
         let appointmentsData = [];
         let emergenciesData = [];
         let usersData = [];
+        let confirmCallback = null;
 
         document.addEventListener('DOMContentLoaded', function() {
             // Load initial data
             loadAppointments();
             loadEmergencies();
             loadUsers();
-            loadSettings();
             
             // Set up section switching
             document.querySelectorAll('.nav-item').forEach(item => {
@@ -1855,8 +1552,8 @@ $stmt->close();
         
         function showSection(section) {
             // Hide all sections
-            document.querySelectorAll('.content-section').forEach(section => {
-                section.style.display = 'none';
+            document.querySelectorAll('.content-section').forEach(s => {
+                s.style.display = 'none';
             });
             
             // Show selected section
@@ -1864,6 +1561,14 @@ $stmt->close();
             if (selectedSection) {
                 selectedSection.style.display = 'block';
             }
+            
+            // Update active nav item
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('data-section') === section) {
+                    item.classList.add('active');
+                }
+            });
         }
 
         function loadAppointments() {
@@ -1989,31 +1694,6 @@ $stmt->close();
                         });
                     } else {
                         throw new Error(response.message || 'Failed to load users');
-                    }
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    showNotification(error.message, 'error');
-                });
-        }
-
-        function loadSettings() {
-            // Load admin profile settings
-            fetch('get_admin_settings.php')
-                .then(response => response.json())
-                .then(response => {
-                    if (response.success) {
-                        const settings = response.data;
-                        
-                        // Populate appointment settings
-                        if (settings.appointment_settings) {
-                            document.getElementById('workingHoursStart').value = settings.appointment_settings.working_hours_start || '09:00';
-                            document.getElementById('workingHoursEnd').value = settings.appointment_settings.working_hours_end || '21:00';
-                            document.getElementById('appointmentDuration').value = settings.appointment_settings.appointment_duration || '30';
-                            document.getElementById('maxAppointmentsPerDay').value = settings.appointment_settings.max_appointments_per_day || '20';
-                        }
-                    } else {
-                        throw new Error(response.message || 'Failed to load settings');
                     }
                 })
                 .catch(error => {
@@ -2224,89 +1904,6 @@ $stmt->close();
             }, 3000);
         }
 
-        // Admin Profile Form Submission
-        document.getElementById('adminProfileForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const password = document.getElementById('adminPassword').value;
-            const confirmPassword = document.getElementById('adminConfirmPassword').value;
-            
-            if (password && password !== confirmPassword) {
-                showNotification('Passwords do not match', 'error');
-                return;
-            }
-            
-            const formData = {
-                name: document.getElementById('adminName').value,
-                phone: document.getElementById('adminPhone').value
-            };
-            
-            // Only include email if the field exists in the form
-            const emailField = document.getElementById('adminEmail');
-            if (emailField) {
-                formData.email = emailField.value;
-            }
-            
-            if (password) {
-                formData.password = password;
-            }
-            
-            fetch('update_admin_profile.php', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData)
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    showNotification('Profile updated successfully', 'success');
-                    // Clear password fields
-                    document.getElementById('adminPassword').value = '';
-                    document.getElementById('adminConfirmPassword').value = '';
-                } else {
-                    throw new Error(data.message || 'Failed to update profile');
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                showNotification(error.message, 'error');
-            });
-        });
-
-        // Appointment Settings Form Submission
-        document.getElementById('appointmentSettingsForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const formData = {
-                working_hours_start: document.getElementById('workingHoursStart').value,
-                working_hours_end: document.getElementById('workingHoursEnd').value,
-                appointment_duration: document.getElementById('appointmentDuration').value,
-                max_appointments_per_day: document.getElementById('maxAppointmentsPerDay').value
-            };
-            
-            fetch('update_appointment_settings.php', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData)
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    showNotification('Appointment settings updated successfully', 'success');
-                } else {
-                    throw new Error(data.message || 'Failed to update appointment settings');
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                showNotification(error.message, 'error');
-            });
-        });
-
         function filterEmergencies(status) {
             // Update filter buttons
             document.querySelectorAll('.emergency-filter').forEach(btn => {
@@ -2391,8 +1988,6 @@ $stmt->close();
         }
 
         // Custom Alert and Confirm Functions
-        let confirmCallback = null;
-
         function showCustomAlert(message) {
             const modal = document.getElementById('customAlert');
             const messageEl = document.getElementById('alertMessage');
@@ -2422,271 +2017,124 @@ $stmt->close();
             }
         }
 
-        // Replace default alert and confirm
+        // Replace only window.alert with showCustomAlert to avoid recursion issues
         window.alert = showCustomAlert;
-        window.confirm = showCustomConfirm;
+        // Do NOT replace window.confirm as this causes recursion issues
 
-        // Settings Tab Functionality
-        function initSettingsTabs() {
-            const tabs = document.querySelectorAll('.settings-tab');
-            const settingsForms = document.querySelectorAll('.settings-form');
-            
-            // Initialize - show the first tab content by default
-            if (tabs.length > 0) {
-                tabs[0].classList.add('active');
-                const targetId = tabs[0].getAttribute('data-target');
-                document.querySelectorAll(`.settings-form[data-form="${targetId}"]`).forEach(form => {
-                    form.style.display = 'flex';
-                });
-            }
-            
-            // Hide all other forms initially
-            settingsForms.forEach(form => {
-                if (!form.getAttribute('data-form') || form.getAttribute('data-form') !== tabs[0]?.getAttribute('data-target')) {
-                    form.style.display = 'none';
-                }
-            });
-            
-            // Add click event to tabs
-            tabs.forEach(tab => {
-                tab.addEventListener('click', () => {
-                    // Remove active class from all tabs
-                    tabs.forEach(t => t.classList.remove('active'));
-                    
-                    // Add active class to clicked tab
-                    tab.classList.add('active');
-                    
-                    // Hide all forms
-                    settingsForms.forEach(form => {
-                        form.style.display = 'none';
-                    });
-                    
-                    // Show forms corresponding to the selected tab
-                    const targetId = tab.getAttribute('data-target');
-                    document.querySelectorAll(`.settings-form[data-form="${targetId}"]`).forEach(form => {
-                        form.style.display = 'flex';
-                    });
-                });
-            });
-        }
+        // Initialize functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // initSettingsTabs - Removed
+            // setupSettingsForms - Removed
+            // setupBlockedDatesFunctionality - Removed
+        });
 
-        // Save Settings Form
-        function setupSettingsForms() {
-            const settingsForms = document.querySelectorAll('.settings-form');
+        function viewConsultation(id) {
+            const modal = document.getElementById('consultationModal');
+            const detailsDiv = document.getElementById('consultationDetails');
             
-            settingsForms.forEach(form => {
-                form.addEventListener('submit', (e) => {
-                    e.preventDefault();
-                    const formId = form.getAttribute('data-form');
-                    const formData = new FormData(form);
-                    
-                    // Show loading indicator
-                    const submitBtn = form.querySelector('button[type="submit"]');
-                    const originalText = submitBtn.innerHTML;
-                    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Saving...';
-                    submitBtn.disabled = true;
-                    
-                    // Convert FormData to JSON
-                    const data = {};
-                    formData.forEach((value, key) => {
-                        data[key] = value;
-                    });
-                    
-                    // Send AJAX request
-                    fetch('save_settings.php', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify({
-                            form_id: formId,
-                            data: data
-                        })
-                    })
-                    .then(response => response.json())
-                    .then(data => {
-                        if (data.success) {
-                            // Show success message
-                            showAlert('success', data.message || 'Settings saved successfully!');
-                        } else {
-                            // Show error message
-                            showAlert('error', data.message || 'Failed to save settings.');
-                        }
-                    })
-                    .catch(error => {
-                        console.error('Error saving settings:', error);
-                        showAlert('error', 'An unexpected error occurred. Please try again.');
-                    })
-                    .finally(() => {
-                        // Reset button state
-                        submitBtn.innerHTML = originalText;
-                        submitBtn.disabled = false;
-                    });
-                });
-            });
-        }
-
-        // Add Blocked Date
-        function setupBlockedDatesFunctionality() {
-            const addBlockedDateForm = document.getElementById('add-blocked-date-form');
-            const blockedDatesList = document.querySelector('.blocked-dates-list');
-            
-            if (addBlockedDateForm) {
-                addBlockedDateForm.addEventListener('submit', (e) => {
-                    e.preventDefault();
-                    const dateInput = addBlockedDateForm.querySelector('input[name="blocked_date"]');
-                    const reasonInput = addBlockedDateForm.querySelector('input[name="block_reason"]');
-                    
-                    if (!dateInput.value) {
-                        showAlert('error', 'Please select a date');
-                        return;
-                    }
-                    
-                    const date = new Date(dateInput.value);
-                    const formattedDate = date.toLocaleDateString('en-US', {
-                        year: 'numeric',
-                        month: 'long',
-                        day: 'numeric'
-                    });
-                    
-                    const blockedDateItem = document.createElement('div');
-                    blockedDateItem.className = 'blocked-date-item';
-                    blockedDateItem.innerHTML = `
-                        <div class="date-info">
-                            <span class="date">${formattedDate}</span>
-                            <span class="reason">${reasonInput.value || 'No reason provided'}</span>
+            // Fetch consultation details
+            fetch(`get_consultation_details.php?id=${id}`)
+                .then(response => response.json())
+                .then(data => {
+                    detailsDiv.innerHTML = `
+                        <div class="detail-group">
+                            <h4><i class="fas fa-user"></i> Personal Information</h4>
+                            <p><strong>Name:</strong> ${data.name}</p>
+                            <p><strong>Age:</strong> ${data.age}</p>
+                            <p><strong>Email:</strong> ${data.email}</p>
+                            <p><strong>Phone:</strong> ${data.phone}</p>
                         </div>
-                        <div class="delete-date" title="Remove this date">
-                            <i class="fas fa-times"></i>
+                        <div class="detail-group">
+                            <h4><i class="fas fa-calendar-alt"></i> Preferred Schedule</h4>
+                            <p><strong>Date:</strong> ${new Date(data.preferred_date).toLocaleDateString()}</p>
+                            <p><strong>Time:</strong> ${new Date('1970-01-01T' + data.preferred_time).toLocaleTimeString()}</p>
                         </div>
+                        <div class="detail-group">
+                            <h4><i class="fas fa-notes-medical"></i> Medical Information</h4>
+                            <p><strong>Dental History:</strong> ${data.dental_history || 'None provided'}</p>
+                            <p><strong>Current Symptoms:</strong> ${data.current_symptoms}</p>
+                            <p><strong>Medical Conditions:</strong> ${data.medical_conditions || 'None provided'}</p>
+                            <p><strong>Medications:</strong> ${data.medications || 'None provided'}</p>
+                        </div>
+                        <div class="detail-group">
+                            <h4><i class="fas fa-question-circle"></i> Additional Information</h4>
+                            <p><strong>Questions:</strong> ${data.questions || 'None provided'}</p>
+                        </div>
+                        ${data.image_path ? `
+                        <div class="detail-group">
+                            <h4><i class="fas fa-camera"></i> Dental Image</h4>
+                            <img src="${data.image_path}" alt="Dental Image" class="consultation-image">
+                        </div>
+                        ` : ''}
                     `;
-                    
-                    // Add delete functionality
-                    const deleteBtn = blockedDateItem.querySelector('.delete-date');
-                    deleteBtn.addEventListener('click', () => {
-                        if (confirm('Are you sure you want to remove this blocked date?')) {
-                            blockedDateItem.remove();
-                            saveBlockedDates();
-                        }
-                    });
-                    
-                    blockedDatesList.appendChild(blockedDateItem);
-                    saveBlockedDates();
-                    
-                    // Reset form
-                    dateInput.value = '';
-                    reasonInput.value = '';
+                    modal.style.display = 'block';
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    showNotification('Error loading consultation details', 'error');
                 });
-            }
-            
-            // Load existing blocked dates
-            loadBlockedDates();
-            
-            // Setup delete buttons for existing items
-            setupDeleteBlockedDates();
         }
 
-        function saveBlockedDates() {
-            const blockedDates = [];
-            document.querySelectorAll('.blocked-date-item').forEach(item => {
-                const dateText = item.querySelector('.date').textContent;
-                const reason = item.querySelector('.reason').textContent;
-                
-                // Convert the date from "Month Day, Year" format to "YYYY-MM-DD"
-                const date = new Date(dateText);
-                let formattedDate = '';
-                
-                if (!isNaN(date.getTime())) {
-                    // Format date as YYYY-MM-DD
-                    const year = date.getFullYear();
-                    const month = String(date.getMonth() + 1).padStart(2, '0');
-                    const day = String(date.getDate()).padStart(2, '0');
-                    formattedDate = `${year}-${month}-${day}`;
-                } else {
-                    // If we can't parse the date, use the original text
-                    formattedDate = dateText;
-                }
-                
-                blockedDates.push({
-                    date: formattedDate,
-                    reason: reason
-                });
-            });
+        function updateConsultationStatus(id, status) {
+            if (!confirm(`Are you sure you want to ${status} this consultation request?`)) {
+                return;
+            }
             
-            fetch('save_blocked_dates.php', {
+            fetch('update_consultation_status.php', {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
-                    blocked_dates: blockedDates
+                    id: id,
+                    status: status
                 })
             })
             .then(response => response.json())
             .then(data => {
                 if (data.success) {
-                    showAlert('success', 'Blocked dates updated');
+                    location.reload();
                 } else {
-                    showAlert('error', data.message || 'Failed to update blocked dates');
+                    alert('Error updating consultation status');
                 }
             })
             .catch(error => {
-                console.error('Error saving blocked dates:', error);
+                console.error('Error:', error);
+                alert('Error updating consultation status');
             });
         }
 
-        function loadBlockedDates() {
-            const blockedDatesList = document.querySelector('.blocked-dates-list');
-            
-            if (blockedDatesList) {
-                fetch('get_blocked_dates.php')
-                .then(response => response.json())
-                .then(data => {
-                    if (data.success && data.blocked_dates) {
-                        blockedDatesList.innerHTML = '';
-                        
-                        data.blocked_dates.forEach(blockedDate => {
-                            const blockedDateItem = document.createElement('div');
-                            blockedDateItem.className = 'blocked-date-item';
-                            blockedDateItem.innerHTML = `
-                                <div class="date-info">
-                                    <span class="date">${blockedDate.date}</span>
-                                    <span class="reason">${blockedDate.reason || 'No reason provided'}</span>
-                                </div>
-                                <div class="delete-date" title="Remove this date">
-                                    <i class="fas fa-times"></i>
-                                </div>
-                            `;
-                            
-                            blockedDatesList.appendChild(blockedDateItem);
-                        });
-                        
-                        setupDeleteBlockedDates();
-                    }
-                })
-                .catch(error => {
-                    console.error('Error loading blocked dates:', error);
-                });
+        // Close modal when clicking the X or outside the modal
+        document.querySelector('.close').onclick = function() {
+            document.getElementById('consultationModal').style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('consultationModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
             }
         }
 
-        function setupDeleteBlockedDates() {
-            document.querySelectorAll('.blocked-date-item .delete-date').forEach(deleteBtn => {
-                deleteBtn.addEventListener('click', () => {
-                    if (confirm('Are you sure you want to remove this blocked date?')) {
-                        deleteBtn.closest('.blocked-date-item').remove();
-                        saveBlockedDates();
-                    }
-                });
+        function filterConsultations(status) {
+            // Update filter buttons
+            document.querySelectorAll('#consultations .filter-btn').forEach(btn => {
+                btn.classList.remove('active');
             });
+            event.target.classList.add('active');
+            
+            const tbody = document.getElementById('consultationsTableBody');
+            const rows = tbody.getElementsByTagName('tr');
+            
+            for (let row of rows) {
+                const statusCell = row.querySelector('.status-badge');
+                if (status === 'all' || statusCell.textContent.toLowerCase() === status) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            }
         }
-
-        // Initialize settings functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            initSettingsTabs();
-            setupSettingsForms();
-            setupBlockedDatesFunctionality();
-        });
     </script>
 </body>
 </html>

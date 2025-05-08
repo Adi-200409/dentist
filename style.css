@@ -873,39 +873,7 @@ blockquote:hover {
    backdrop-filter: blur(9px);
     
 }
-/*
-.contact label{
-    font-size: 1.7rem;
- 
-}
-.contact form .box{
-    width: 100%;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
-    border-radius: .5rem;
-    background-color: white;
-    padding: 1.2rem 1.4rem;
-    font-size: 1.6rem;
-    color: black;
-    text-transform: none;
-    transform: none;
-}
 
-.contact form span{
-    font-size: 1rem;
-    color: #666;
-}
-.contact button{
-    padding: 1.5rem 3rem;
-    border-radius: .5rem;
-    background-color: #00b8b8;
-    color: white;
-    font-size: 2rem;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    margin: auto;
-} */
 
 .appointment_heading{
   font-size: 2.7rem;
@@ -1224,7 +1192,6 @@ blockquote:hover {
   color: white;
 }
 /* Contact */
-/* From Uiverse.io by Smit-Prajapati */ 
 .orange {
   color: #01ff38;
 }

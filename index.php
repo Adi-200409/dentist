@@ -598,20 +598,8 @@ include "conn.php";
           </div>
           <div id="ezy__testimonial23-carousel" class="carousel slide"
             data-bs-ride="carousel">
-            <div class="carousel-indicators m-0">
-              <button type="button"
-                data-bs-target="#ezy__testimonial23-carousel"
-                data-bs-slide-to="0" class="active" aria-current="true"
-                aria-label="Slide 1"></button>
-              <button type="button"
-                data-bs-target="#ezy__testimonial23-carousel"
-                data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button type="button"
-                data-bs-target="#ezy__testimonial23-carousel"
-                data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
             <div class="carousel-inner overflow-visible">
-              <div class="carousel-item active">
+              <div class="carousel-item active overflow-visible">
                 <div class="row">
                   <div class="col-12 col-lg-4">
                     <div class="card ezy__testimonial23-item border-0 p-4 mt-4">

@@ -272,3 +272,31 @@
 [27-Apr-2025 19:42:02 Europe/Berlin] Email column does not exist, attempting to add it
 [27-Apr-2025 19:42:02 Europe/Berlin] Email column added successfully
 [27-Apr-2025 19:42:02 Europe/Berlin] Registration successful for phone: 9990113968
+[04-May-2025 07:13:04 Europe/Berlin] Request method: POST
+[04-May-2025 07:13:04 Europe/Berlin] Raw request data: {"name":"Olympia Dennis","phone":"9950113968","email":"adityap4til@gmail.com","password":"Aa123456"}
+[04-May-2025 07:13:04 Europe/Berlin] Decoded data: Array
+(
+    [name] => Olympia Dennis
+    [phone] => 9950113968
+    [email] => adityap4til@gmail.com
+    [password] => Aa123456
+)
+
+[04-May-2025 07:13:04 Europe/Berlin] Registration attempt - Name: Olympia Dennis, Phone: 9950113968, Email: adityap4til@gmail.com
+[04-May-2025 07:13:04 Europe/Berlin] Email column does not exist, attempting to add it
+[04-May-2025 07:13:04 Europe/Berlin] Email column added successfully
+[04-May-2025 07:13:04 Europe/Berlin] Registration successful for phone: 9950113968
+[07-May-2025 16:33:39 Europe/Berlin] Request method: POST
+[07-May-2025 16:33:39 Europe/Berlin] Raw request data: {"name":"Derek Travis","phone":"9960113968","email":"rolus@mailinator.com","password":"Aa123456"}
+[07-May-2025 16:33:39 Europe/Berlin] Decoded data: Array
+(
+    [name] => Derek Travis
+    [phone] => 9960113968
+    [email] => rolus@mailinator.com
+    [password] => Aa123456
+)
+
+[07-May-2025 16:33:39 Europe/Berlin] Registration attempt - Name: Derek Travis, Phone: 9960113968, Email: rolus@mailinator.com
+[07-May-2025 16:33:39 Europe/Berlin] Email column does not exist, attempting to add it
+[07-May-2025 16:33:39 Europe/Berlin] Email column added successfully
+[07-May-2025 16:33:39 Europe/Berlin] Registration successful for phone: 9960113968
