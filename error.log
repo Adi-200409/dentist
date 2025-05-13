@@ -916,3 +916,18 @@ Stack trace:
 [08-May-2025 05:54:33 Europe/Berlin] Login attempt - Raw phone: 9148074307, Processed phone: 9148074307
 [08-May-2025 05:54:33 Europe/Berlin] Login attempt for phone: 9148074307
 [08-May-2025 05:54:33 Europe/Berlin] User found: {"id":1,"name":"ADITYA","phone":"9148074307","password":"$2y$10$mS2APZcXOL3llRBdknxRWO8TKvLy2jh7TLhxS2m6XiCYofOZn8fSe","role":"admin"}
+[09-May-2025 14:00:35 Europe/Berlin] Login attempt - Raw phone: 9950113968, Processed phone: 9950113968
+[09-May-2025 14:00:35 Europe/Berlin] Login attempt for phone: 9950113968
+[09-May-2025 14:00:35 Europe/Berlin] User found: {"id":1,"name":"Cullen Miles","phone":"9950113968","password":"$2y$10$YZwefDJKc\/CgOtn3ZuRjQOVYzuo4\/osYKIXq.1nEtfptciGQZEfRm","role":"user"}
+[09-May-2025 14:15:44 Europe/Berlin] Login attempt - Raw phone: 9148074307, Processed phone: 9148074307
+[09-May-2025 14:15:44 Europe/Berlin] Login attempt for phone: 9148074307
+[09-May-2025 14:15:44 Europe/Berlin] User found: {"id":2,"name":"ADITYA","phone":"9148074307","password":"$2y$10$PHdYYjY1.Buxadw1PeKYseuWp4oEKE9tcx.pU8YYRTiTvPj00Vr\/e","role":"admin"}
+[10-May-2025 10:17:36 Europe/Berlin] Login attempt - Raw phone: 9148074307, Processed phone: 9148074307
+[10-May-2025 10:17:36 Europe/Berlin] Login attempt for phone: 9148074307
+[10-May-2025 10:17:36 Europe/Berlin] User found: {"id":2,"name":"ADITYA","phone":"9148074307","password":"$2y$10$PHdYYjY1.Buxadw1PeKYseuWp4oEKE9tcx.pU8YYRTiTvPj00Vr\/e","role":"admin"}
+[10-May-2025 10:20:27 Europe/Berlin] Login attempt - Raw phone: 7020512229, Processed phone: 7020512229
+[10-May-2025 10:20:27 Europe/Berlin] Login attempt for phone: 7020512229
+[10-May-2025 10:20:27 Europe/Berlin] User found: {"id":3,"name":"Courtney Velazquez","phone":"7020512229","password":"$2y$10$17mb5aCFt1jbWO48C7CHdePo5KA2k88jI5XdBzQTmPz7Fp7x2oms.","role":"user"}
+[10-May-2025 10:23:49 Europe/Berlin] Login attempt - Raw phone: 9148074307, Processed phone: 9148074307
+[10-May-2025 10:23:49 Europe/Berlin] Login attempt for phone: 9148074307
+[10-May-2025 10:23:49 Europe/Berlin] User found: {"id":2,"name":"ADITYA","phone":"9148074307","password":"$2y$10$PHdYYjY1.Buxadw1PeKYseuWp4oEKE9tcx.pU8YYRTiTvPj00Vr\/e","role":"admin"}

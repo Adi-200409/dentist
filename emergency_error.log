@@ -174,3 +174,14 @@
 )
 
 [04-May-2025 07:22:04 Europe/Berlin] Raw input: 
+[09-May-2025 14:02:54 Europe/Berlin] Emergency request received
+[09-May-2025 14:02:54 Europe/Berlin] POST data: Array
+(
+    [name] => Clementine Joseph
+    [phone] => 9148074307
+    [location] => Obcaecati distinctio
+    [issue] => Aliqua Saepe qui ve
+    [urgency] => Bleeding
+)
+
+[09-May-2025 14:02:54 Europe/Berlin] Raw input: 

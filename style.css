@@ -309,10 +309,12 @@ left: 100px;
     overflow: hidden;
     padding: 60px 0;
     position: relative;
-    margin-left: 130px;
+    /* margin-left: 10px; */
+    
   }
   .ezy__about13 .container{
     /* padding:0PX; */
+    margin-right: 100px;
     margin: 0;
 
   }
@@ -371,7 +373,7 @@ left: 100px;
   .ezy__about13 img {
     transform: rotate(45deg);
     position: relative;
-    top: 60px;
+    left: 150px;
     width: 400px;
     height: 400px;
     object-fit: cover;
@@ -408,7 +410,7 @@ left: 100px;
     width: 36vw;
     position: absolute;
     top: 0;
-    right:-150px;
+    right:-121px;
     bottom: 0;
     background-color: #a3eaea;
     float: left;

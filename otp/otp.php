@@ -34,7 +34,7 @@ if (isset($_POST['send'])) {
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
             $mail->Port = 465;
 
-            $mail->setFrom('election25@gmail.com', 'Election Team');
+            $mail->setFrom('election25@gmail.com', 'JUSTSmile Dental Care');
             $mail->addAddress($email);
 
             $mail->isHTML(true);

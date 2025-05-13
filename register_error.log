@@ -300,3 +300,71 @@
 [07-May-2025 16:33:39 Europe/Berlin] Email column does not exist, attempting to add it
 [07-May-2025 16:33:39 Europe/Berlin] Email column added successfully
 [07-May-2025 16:33:39 Europe/Berlin] Registration successful for phone: 9960113968
+[09-May-2025 14:00:13 Europe/Berlin] Request method: POST
+[09-May-2025 14:00:13 Europe/Berlin] Raw request data: {"name":"Cullen Miles","phone":"9950113968","email":"pajyfici@mailinator.com","password":"Pa$$w0rd!"}
+[09-May-2025 14:00:13 Europe/Berlin] Decoded data: Array
+(
+    [name] => Cullen Miles
+    [phone] => 9950113968
+    [email] => pajyfici@mailinator.com
+    [password] => Pa$$w0rd!
+)
+
+[09-May-2025 14:00:13 Europe/Berlin] Registration attempt - Name: Cullen Miles, Phone: 9950113968, Email: pajyfici@mailinator.com
+[09-May-2025 14:00:13 Europe/Berlin] Email column does not exist, attempting to add it
+[09-May-2025 14:00:13 Europe/Berlin] Email column added successfully
+[09-May-2025 14:00:13 Europe/Berlin] Registration successful for phone: 9950113968
+[09-May-2025 14:11:23 Europe/Berlin] Request method: POST
+[09-May-2025 14:11:23 Europe/Berlin] Raw request data: {"name":"ADITYA","phone":"9148074307","email":"adityap4til@gmail.com","password":"Admin123"}
+[09-May-2025 14:11:23 Europe/Berlin] Decoded data: Array
+(
+    [name] => ADITYA
+    [phone] => 9148074307
+    [email] => adityap4til@gmail.com
+    [password] => Admin123
+)
+
+[09-May-2025 14:11:23 Europe/Berlin] Registration attempt - Name: ADITYA, Phone: 9148074307, Email: adityap4til@gmail.com
+[09-May-2025 14:11:23 Europe/Berlin] Email column does not exist, attempting to add it
+[09-May-2025 14:11:23 Europe/Berlin] Email column added successfully
+[09-May-2025 14:11:23 Europe/Berlin] Registration successful for phone: 9148074307
+[10-May-2025 10:19:47 Europe/Berlin] Request method: POST
+[10-May-2025 10:19:47 Europe/Berlin] Raw request data: {"name":"Courtney Velazquez","phone":"9950113968","email":"tezakobiwe@mailinator.com","password":"Pass123"}
+[10-May-2025 10:19:47 Europe/Berlin] Decoded data: Array
+(
+    [name] => Courtney Velazquez
+    [phone] => 9950113968
+    [email] => tezakobiwe@mailinator.com
+    [password] => Pass123
+)
+
+[10-May-2025 10:19:47 Europe/Berlin] Registration attempt - Name: Courtney Velazquez, Phone: 9950113968, Email: tezakobiwe@mailinator.com
+[10-May-2025 10:19:47 Europe/Berlin] Registration error: Phone number already registered
+[10-May-2025 10:20:07 Europe/Berlin] Request method: POST
+[10-May-2025 10:20:07 Europe/Berlin] Raw request data: {"name":"Courtney Velazquez","phone":"7020512229","email":"tezakobiwe@mailinator.com","password":"Pass123"}
+[10-May-2025 10:20:07 Europe/Berlin] Decoded data: Array
+(
+    [name] => Courtney Velazquez
+    [phone] => 7020512229
+    [email] => tezakobiwe@mailinator.com
+    [password] => Pass123
+)
+
+[10-May-2025 10:20:07 Europe/Berlin] Registration attempt - Name: Courtney Velazquez, Phone: 7020512229, Email: tezakobiwe@mailinator.com
+[10-May-2025 10:20:07 Europe/Berlin] Email column does not exist, attempting to add it
+[10-May-2025 10:20:07 Europe/Berlin] Email column added successfully
+[10-May-2025 10:20:07 Europe/Berlin] Registration successful for phone: 7020512229
+[10-May-2025 10:28:42 Europe/Berlin] Request method: POST
+[10-May-2025 10:28:42 Europe/Berlin] Raw request data: {"name":"nutan","phone":"8147527902","email":"nutanholi963@gmail.com","password":"Nut123456"}
+[10-May-2025 10:28:42 Europe/Berlin] Decoded data: Array
+(
+    [name] => nutan
+    [phone] => 8147527902
+    [email] => nutanholi963@gmail.com
+    [password] => Nut123456
+)
+
+[10-May-2025 10:28:42 Europe/Berlin] Registration attempt - Name: nutan, Phone: 8147527902, Email: nutanholi963@gmail.com
+[10-May-2025 10:28:42 Europe/Berlin] Email column does not exist, attempting to add it
+[10-May-2025 10:28:42 Europe/Berlin] Email column added successfully
+[10-May-2025 10:28:42 Europe/Berlin] Registration successful for phone: 8147527902

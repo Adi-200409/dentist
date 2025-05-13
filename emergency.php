@@ -394,7 +394,7 @@ body::before {
         <p>We're here to help. Call now or fill out the form for immediate attention.</p>
         
         <!-- Immediate Call Button -->
-        <a href="tel:+91 9148074307" class="call-now-btn">📞 Call Now</a>
+        <a href="tel:+91 7760119327" class="call-now-btn">📞 Call Now</a>
 
         <!-- Add alert message container -->
         <div id="alertMessage" class="alert-message"></div>

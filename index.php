@@ -50,7 +50,7 @@ include "conn.php";
             <a href="#ezy__about13">about</a>
             <a href="#services">services</a>
             <a href="#treatment">Treatment</a>
-            <a href="#ezy__contact13">contact</a>
+            <a href="#team">Team</a>
           </nav>
 
           <!-- <a href="" class="link-btn">Emergency call</a> -->
@@ -66,7 +66,7 @@ include "conn.php";
 
     <!--home section starts-->
    
-      <div class="ezy__header34 dark">
+      <div class="ezy__header34 dark" id="home">
         <!-- shape one -->
         <svg
           class="position-absolute top-0 start-0"
@@ -220,7 +220,7 @@ include "conn.php";
       
       <section class="ezy__about13 light" id="ezy__about13">
         <div class="container">
-          <div class="row justify-content-center align-items-center">
+          <div class="row align-items-center">
             <div class="col-12 col-lg-5 mb-5 mb-lg-0">
               <div>
                 <h1 class="ezy__about13-heading">ABOUT US</h1>
@@ -495,7 +495,7 @@ include "conn.php";
       </section>
 
       <!-- team -->
-      <section class="ezy__team20 gray">
+      <section class="ezy__team20 gray" id="team">
         <div class="container">
           <div class="row justify-content-center mb-4 mb-md-5">
             <div class="col-lg-6 col-xl-5 text-center">
@@ -873,12 +873,12 @@ include "conn.php";
       <!--footer section starst-->
       <section class="ezy__footer15 dark">
         <div class="container">
-          <div class="row text-center text-sm-start mb-md-5">
+          <div class="row text-center text-sm-start mb-md-5 justify-content-center align-items-center">
             <div class="col-lg-4">
               <h2 class="fw-bold margin"><span
                   class="color">JUST</span><span>Smile</span></h2>
               <div class="row">
-                <div class="col-12 col-lg-7">
+                <div class="col-17 col-lg-7">
                   <p class="ezy__footer15-text opacity-50 mt-3">
                     clab rood camp belguam
                   </p>
@@ -893,9 +893,6 @@ include "conn.php";
                 </li>
                 <li>
                   <a href="#"><i class="fab fa-twitter"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fab fa-pinterest-p"></i></a>
                 </li>
                 <li>
                   <a href="#"><i class="fab fa-linkedin-in"></i></a>
@@ -944,24 +941,11 @@ include "conn.php";
           <hr />
           <div
             class="row d-flex justify-content-between align-items-center text-center text-lg-start">
-            <div class="col-md-6">
-              <p class="opacity-50 mb-0 mt-1">Copyright &copy; JUSTSmile, All
+            <div class="col-md-12">
+              <p class="opacity-50  mb-0 mt-1">Copyright &copy; JUSTSmile, All
                 rights reserved</p>
             </div>
-            <div class="col-md-6">
-              <ul
-                class="ezy__footer15-nav nav justify-content-center justify-content-md-end mt-1">
-                <li class="nav-item">
-                  <a class="opacity-50 nav-link" href="#!">Privacy</a>
-                </li>
-                <li class="nav-item">
-                  <a class="opacity-50 nav-link" href="#!">Security</a>
-                </li>
-                <li class="nav-item">
-                  <a class="opacity-50 nav-link" href="#!">Terms</a>
-                </li>
-              </ul>
-            </div>
+
           </div>
         </div>
       </section>
